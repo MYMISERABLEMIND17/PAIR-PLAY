@@ -41,6 +41,14 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
     }
   }, [state?.lastReaction?.timestamp]);
 
+  // Instantly trigger offline mode if joining via the offline fallback route
+  useEffect(() => {
+    if (roomId.startsWith('offline-demo-')) {
+      const gameId = roomId.replace('offline-demo-', '');
+      enableOfflineMode(gameId);
+    }
+  }, [roomId]);
+
   if (loading || (!state && !error) || !userId) {
     return (
       <div className="min-h-[calc(100vh-64px)] flex items-center justify-center">

@@ -96,10 +96,10 @@ export default function GameCard({ title, description, href, colorClass, iconNam
                 Dismiss
               </button>
               <button
-                onClick={() => window.location.reload()}
-                className="flex-1 py-2 rounded-lg bg-amber-500/20 text-amber-300 hover:bg-amber-500/30 transition-colors font-bold text-sm"
+                onClick={() => router.push(`/room/offline-demo-${href.replace('/', '').replace(/-/g, '_')}`)}
+                className="flex-1 py-2 rounded-lg bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 transition-colors font-bold text-sm"
               >
-                Refresh
+                Play Offline
               </button>
             </div>
           </div>
