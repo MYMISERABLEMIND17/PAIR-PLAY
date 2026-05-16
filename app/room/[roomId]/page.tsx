@@ -2,7 +2,7 @@
 
 import { useState, useEffect, use } from "react";
 import Link from "next/link";
-import { Heart, MessageCircle, Copy, Check, AlertTriangle, XCircle, WifiOff } from "lucide-react";
+import { Heart, MessageCircle, Copy, Check, AlertTriangle, XCircle, WifiOff, Activity } from "lucide-react";
 import truthOrDareData from "../../data/truth_or_dare.json";
 import wouldYouRatherData from "../../data/would_you_rather.json";
 import conversationStartersData from "../../data/conversation_starters.json";
@@ -22,7 +22,11 @@ const gameRegistry: Record<string, { data: any, Component: any }> = {
 
 export default function CoupleRoom({ params }: { params: Promise<{ roomId: string }> }) {
   const { roomId } = use(params);
-  const { state, userId, loading, error, flipCard, nextPrompt, sendReaction, submitAnswer } = useRoom(roomId);
+  const { 
+    state, userId, loading, error, isOfflineMode, 
+    flipCard, nextPrompt, sendReaction, submitAnswer,
+    enableOfflineMode, simulatePartnerJoin
+  } = useRoom(roomId);
   const [reactions, setReactions] = useState<{ id: number; left: number }[]>([]);
   const [copied, setCopied] = useState(false);
 
@@ -83,9 +87,17 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
         </div>
         <h1 className="text-3xl font-bold mb-4 text-white">Connection Blocked</h1>
         <p className="text-white/60 mb-8 max-w-md">Your internet network or browser is blocking the connection to our database (ERR_BLOCKED_BY_CLIENT). Try turning off your VPN, disabling Adblockers, or switching off a school/work Wi-Fi network.</p>
-        <Link href="/games" className="bg-white text-black px-8 py-3 rounded-xl font-bold hover:bg-gray-200 transition-colors">
-          Back to Lobby
-        </Link>
+        <div className="flex flex-col gap-3">
+          <button 
+            onClick={() => enableOfflineMode('truth_or_dare')}
+            className="bg-indigo-500 text-white px-8 py-3 rounded-xl font-bold hover:bg-indigo-600 transition-colors"
+          >
+            Play in Offline Demo Mode
+          </button>
+          <Link href="/games" className="bg-white/10 text-white px-8 py-3 rounded-xl font-bold hover:bg-white/20 transition-colors">
+            Back to Lobby
+          </Link>
+        </div>
       </div>
     );
   }
@@ -154,6 +166,17 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
 
       {/* Top Bar: Player Avatars & Status */}
       <div className="w-full flex justify-between items-center px-8 mb-4">
+        {isOfflineMode && !isPartnerOnline && (
+          <div className="absolute top-4 right-4 z-50">
+            <button 
+              onClick={simulatePartnerJoin}
+              className="text-xs font-bold px-4 py-2 rounded-full bg-indigo-500/20 text-indigo-400 border border-indigo-500/50 hover:bg-indigo-500/30 transition-colors flex items-center gap-2"
+            >
+              <Activity className="w-4 h-4" />
+              Simulate Partner
+            </button>
+          </div>
+        )}
         <div className="flex flex-col items-center gap-2">
           <div className="relative">
             <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${isPlayer1 ? 'from-purple-500 to-indigo-500 shadow-[0_0_20px_rgba(168,85,247,0.4)]' : 'from-pink-500 to-rose-500 shadow-[0_0_20px_rgba(236,72,153,0.4)]'} border-2 border-white/20 flex items-center justify-center text-lg font-bold`}>

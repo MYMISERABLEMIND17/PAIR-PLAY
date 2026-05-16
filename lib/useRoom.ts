@@ -18,6 +18,7 @@ export function useRoom(roomId: string) {
   const [userId, setUserId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<'not_found' | 'full' | 'network_blocked' | null>(null);
+  const [isOfflineMode, setIsOfflineMode] = useState(false);
 
   useEffect(() => {
     // 1. Authenticate the user anonymously
@@ -31,7 +32,7 @@ export function useRoom(roomId: string) {
   }, []);
 
   useEffect(() => {
-    if (!userId) return;
+    if (!userId || isOfflineMode) return;
 
     // Set a timeout to detect if Firebase is blocked by the network/adblocker
     const timeoutId = setTimeout(() => {
@@ -82,13 +83,50 @@ export function useRoom(roomId: string) {
   }, [roomId, userId, loading]);
 
   // Actions
+  const enableOfflineMode = (gameId: string) => {
+    setIsOfflineMode(true);
+    setError(null);
+    setLoading(false);
+    // Setup local dummy state
+    const localId = userId || "offline_user_1";
+    setUserId(localId);
+    setState({
+      gameId,
+      currentPromptIndex: 0,
+      isFlipped: false,
+      players: [localId],
+      answers: {},
+    });
+  };
+
+  const simulatePartnerJoin = () => {
+    if (!state || !isOfflineMode) return;
+    setState({
+      ...state,
+      players: [...state.players, "mock_partner_2"]
+    });
+  };
+
   const flipCard = () => {
     if (!state) return;
+    if (isOfflineMode) {
+      setState({ ...state, isFlipped: true });
+      return;
+    }
     updateDoc(doc(db, "rooms", roomId), { isFlipped: true });
   };
 
   const nextPrompt = (totalPrompts: number) => {
     if (!state) return;
+    if (isOfflineMode) {
+      setState({
+        ...state,
+        isFlipped: false,
+        answers: {},
+        currentPromptIndex: (state.currentPromptIndex + 1) % totalPrompts
+      });
+      return;
+    }
     updateDoc(doc(db, "rooms", roomId), {
       isFlipped: false,
       answers: {},
@@ -97,18 +135,36 @@ export function useRoom(roomId: string) {
   };
 
   const submitAnswer = (text: string) => {
-    if (!userId) return;
+    if (!userId || !state) return;
+    if (isOfflineMode) {
+      setState({
+        ...state,
+        answers: { ...state.answers, [userId]: text }
+      });
+      return;
+    }
     updateDoc(doc(db, "rooms", roomId), {
       [`answers.${userId}`]: text
     });
   };
 
   const sendReaction = (type: string) => {
-    if (!userId) return;
+    if (!userId || !state) return;
+    if (isOfflineMode) {
+      setState({
+        ...state,
+        lastReaction: { type, timestamp: Date.now(), by: userId }
+      });
+      return;
+    }
     updateDoc(doc(db, "rooms", roomId), {
       lastReaction: { type, timestamp: Date.now(), by: userId }
     });
   };
 
-  return { state, userId, loading, error, flipCard, nextPrompt, sendReaction, submitAnswer };
+  return { 
+    state, userId, loading, error, isOfflineMode, 
+    flipCard, nextPrompt, sendReaction, submitAnswer, 
+    enableOfflineMode, simulatePartnerJoin 
+  };
 }
