@@ -12,6 +12,8 @@ import {
   Smile, 
   MicOff, 
   RefreshCw,
+  Plus,
+  ArrowRight,
   type LucideIcon 
 } from "lucide-react";
 import { createNewRoom } from "../../lib/roomUtils";
@@ -19,35 +21,27 @@ import { createNewRoom } from "../../lib/roomUtils";
 interface GameCardProps {
   title: string;
   description: string;
-  href: string; // The gameId is derived from this href, e.g., /truth-or-dare -> truth_or_dare
+  href: string; // e.g., /truth-or-dare
   colorClass: string;
   iconName: string;
 }
 
 const iconMap: Record<string, LucideIcon> = {
-  Flame,
-  HelpCircle,
-  MessageCircleHeart,
-  Users,
-  AlertTriangle,
-  Heart,
-  Smile,
-  MicOff,
-  RefreshCw,
+  Flame, HelpCircle, MessageCircleHeart, Users, AlertTriangle, Heart, Smile, MicOff, RefreshCw,
 };
 
 export default function GameCard({ title, description, href, colorClass, iconName }: GameCardProps) {
   const Icon = iconMap[iconName] || Flame;
   const router = useRouter();
   const [isCreating, setIsCreating] = useState(false);
+  const [isJoining, setIsJoining] = useState(false);
+  const [joinCode, setJoinCode] = useState("");
 
-  const handleClick = async () => {
-    // Determine the gameId from the href
-    // e.g. /truth-or-dare -> truth_or_dare
+  const handleCreate = async (e: React.MouseEvent) => {
+    e.stopPropagation();
     const rawGameId = href.startsWith('/') ? href.slice(1) : href;
     const gameId = rawGameId.replace(/-/g, '_');
 
-    // If it's a dummy link, do nothing for now
     if (gameId === '#' || gameId === '') return;
 
     setIsCreating(true);
@@ -60,11 +54,16 @@ export default function GameCard({ title, description, href, colorClass, iconNam
     }
   };
 
+  const handleJoinSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (joinCode.trim().length > 0) {
+      router.push(`/room/${joinCode.trim()}`);
+    }
+  };
+
   return (
-    <div 
-      onClick={handleClick}
-      className={`elevated-card rounded-2xl p-6 h-full flex flex-col relative overflow-hidden group cursor-pointer block ${isCreating ? 'opacity-50 pointer-events-none' : ''}`}
-    >
+    <div className={`elevated-card rounded-2xl p-6 h-full flex flex-col relative overflow-hidden group block ${isCreating ? 'opacity-50 pointer-events-none' : ''}`}>
       {/* Subtle top border highlight for depth */}
       <div className={`absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r ${colorClass} opacity-50 group-hover:opacity-100 transition-opacity`} />
       
@@ -81,11 +80,57 @@ export default function GameCard({ title, description, href, colorClass, iconNam
         {description}
       </p>
       
-      <div className={`mt-6 flex items-center text-sm font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 text-transparent bg-clip-text bg-gradient-to-r ${colorClass}`}>
-        {isCreating ? "Creating Room..." : "Create Room"}
-        <svg className="w-4 h-4 ml-1 text-white/50 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
+      {/* Hover Actions Overlay */}
+      <div className="absolute inset-0 bg-[#0a0a0a]/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center p-6 translate-y-4 group-hover:translate-y-0">
+        
+        {!isJoining ? (
+          <div className="flex flex-col gap-3 w-full">
+            <button 
+              onClick={handleCreate}
+              className={`w-full py-3 rounded-xl font-bold text-sm text-white bg-gradient-to-r ${colorClass} hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-lg`}
+            >
+              <Plus className="w-4 h-4" />
+              {isCreating ? "Creating..." : "Create Room"}
+            </button>
+            <button 
+              onClick={(e) => { e.stopPropagation(); setIsJoining(true); }}
+              className="w-full py-3 rounded-xl font-bold text-sm text-white/80 bg-[#1a1a1e] border border-white/10 hover:bg-[#2a2a2e] hover:text-white transition-all flex items-center justify-center gap-2"
+            >
+              Join Room
+            </button>
+          </div>
+        ) : (
+          <form onSubmit={handleJoinSubmit} className="flex flex-col gap-3 w-full animate-in fade-in zoom-in duration-200">
+            <p className="text-xs font-bold text-white/50 uppercase tracking-widest text-center mb-1">Enter Room Code</p>
+            <div className="flex items-center bg-[#1a1a1e] border border-white/20 rounded-xl overflow-hidden focus-within:border-white/50 transition-colors">
+              <input 
+                type="text" 
+                autoFocus
+                value={joinCode}
+                onChange={(e) => setJoinCode(e.target.value.toUpperCase())}
+                placeholder="e.g. XJ9P2"
+                className="w-full bg-transparent p-3 text-center font-mono text-white outline-none placeholder:text-white/20"
+                maxLength={6}
+              />
+            </div>
+            <div className="flex gap-2">
+              <button 
+                type="button"
+                onClick={(e) => { e.stopPropagation(); setIsJoining(false); }}
+                className="flex-1 py-2 rounded-xl text-xs font-bold text-white/50 hover:text-white hover:bg-white/5 transition-colors"
+              >
+                Cancel
+              </button>
+              <button 
+                type="submit"
+                disabled={!joinCode.trim()}
+                className={`flex-1 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r ${colorClass} hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center gap-1`}
+              >
+                Join <ArrowRight className="w-3 h-3" />
+              </button>
+            </div>
+          </form>
+        )}
       </div>
     </div>
   );
