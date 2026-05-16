@@ -1,5 +1,5 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { initializeFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
@@ -12,11 +12,20 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
-// Initialize Firebase (Singleton pattern to prevent re-initialization in Next.js)
+// Initialize Firebase
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
-// Initialize Firestore & Auth
-const db = getFirestore(app);
-const auth = getAuth(app);
+// 🔒 THE FIREWALL FIX: Force Long Polling
+// Many adblockers, Brave Shields, and corporate firewalls block Firestore's 
+// default "Streaming" connection. Forcing "Long Polling" uses standard HTTPS 
+// requests which bypasses most of these blocks.
+const db = initializeFirestore(app, {
+  experimentalForceLongPolling: true,
+});
 
-export { app, db, auth };
+const auth = getAuth(auth ? undefined : app);
+// Note: We use a ternary above just to ensure we don't re-init auth if it exists, 
+// though getAuth(app) is already a singleton.
+const finalAuth = getAuth(app);
+
+export { app, db, auth: finalAuth };
