@@ -1,0 +1,196 @@
+"use client";
+
+import { useState, useEffect, use } from "react";
+import { Heart, MessageCircle, Copy, Check } from "lucide-react";
+import truthOrDareData from "../../data/truth_or_dare.json";
+import wouldYouRatherData from "../../data/would_you_rather.json";
+import conversationStartersData from "../../data/conversation_starters.json";
+import deepConnectionData from "../../data/deep_connection.json";
+import { useRoom } from "../../../lib/useRoom";
+import TruthOrDare from "../../components/games/TruthOrDare";
+import WouldYouRather from "../../components/games/WouldYouRather";
+import ConversationStarters from "../../components/games/ConversationStarters";
+import DeepConnection from "../../components/games/DeepConnection";
+
+const gameRegistry: Record<string, { data: any, Component: any }> = {
+  truth_or_dare: { data: truthOrDareData, Component: TruthOrDare },
+  would_you_rather: { data: wouldYouRatherData, Component: WouldYouRather },
+  conversation_starters: { data: conversationStartersData, Component: ConversationStarters },
+  deep_connection: { data: deepConnectionData, Component: DeepConnection },
+};
+
+export default function CoupleRoom({ params }: { params: Promise<{ roomId: string }> }) {
+  const { roomId } = use(params);
+  const { state, userId, loading, flipCard, nextPrompt, sendReaction, submitAnswer } = useRoom(roomId);
+  const [reactions, setReactions] = useState<{ id: number; left: number }[]>([]);
+  const [copied, setCopied] = useState(false);
+
+  // Listen for new reactions from Firebase
+  useEffect(() => {
+    if (state?.lastReaction) {
+      const newReaction = { id: state.lastReaction.timestamp, left: Math.random() * 80 + 10 };
+      setReactions((prev) => [...prev, newReaction]);
+      setTimeout(() => {
+        setReactions((prev) => prev.filter((r) => r.id !== newReaction.id));
+      }, 2000);
+    }
+  }, [state?.lastReaction?.timestamp]);
+
+  if (loading || !state || !userId) {
+    return (
+      <div className="min-h-[calc(100vh-64px)] flex items-center justify-center">
+        <div className="w-12 h-12 rounded-full border-4 border-pink-500 border-t-transparent animate-spin" />
+      </div>
+    );
+  }
+
+  const isPlayer1 = state.players[0] === userId;
+  const partnerId = state.players.find(id => id !== userId);
+  const isPartnerOnline = !!partnerId; 
+
+  const handleCopyLink = () => {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  // Determine the active game
+  const activeGame = gameRegistry[state.gameId] || gameRegistry['truth_or_dare'];
+  const prompts = activeGame.data.prompts;
+  const currentPrompt = prompts[state.currentPromptIndex];
+  const GameComponent = activeGame.Component;
+
+  return (
+    <div className="relative flex flex-col items-center justify-between min-h-[calc(100vh-64px)] py-8 max-w-4xl mx-auto w-full">
+      
+      {/* Waiting Overlay */}
+      {!isPartnerOnline && (
+        <div className="absolute inset-0 z-50 flex items-center justify-center backdrop-blur-md bg-black/40 rounded-3xl m-4">
+          <div className="elevated-card p-10 max-w-md w-full text-center flex flex-col items-center border border-pink-500/30 shadow-[0_0_50px_rgba(236,72,153,0.15)]">
+            <div className="w-20 h-20 mb-6 rounded-full border-4 border-pink-500 border-t-transparent animate-spin flex items-center justify-center">
+               <div className="w-12 h-12 rounded-full bg-pink-500/20" />
+            </div>
+            <h2 className="text-2xl font-bold mb-2">Waiting for Partner...</h2>
+            <p className="text-white/60 mb-8">Share this unique link with them so they can join your private room.</p>
+            
+            <div className="flex w-full items-center bg-[#0a0a0a] rounded-lg p-1 border border-white/10 mb-4">
+              <input 
+                type="text" 
+                readOnly 
+                value={`pairplay.app/room/${roomId}`} 
+                className="bg-transparent flex-grow text-center text-sm font-mono text-white/50 outline-none"
+              />
+              <button 
+                onClick={handleCopyLink}
+                className="bg-pink-500 hover:bg-pink-600 transition-colors text-white px-4 py-2 rounded-md text-sm font-bold flex items-center gap-2"
+              >
+                {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                {copied ? "Copied!" : "Copy"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Floating Reactions Layer */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-40">
+        {reactions.map((reaction) => (
+          <div
+            key={reaction.id}
+            className="absolute bottom-20 animate-float-up opacity-0"
+            style={{ left: `${reaction.left}%` }}
+          >
+            <Heart className="w-8 h-8 text-pink-500 fill-pink-500 drop-shadow-[0_0_15px_rgba(236,72,153,0.8)]" />
+          </div>
+        ))}
+      </div>
+
+      {/* Top Bar: Player Avatars & Status */}
+      <div className="w-full flex justify-between items-center px-8 mb-4">
+        <div className="flex flex-col items-center gap-2">
+          <div className="relative">
+            <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${isPlayer1 ? 'from-purple-500 to-indigo-500 shadow-[0_0_20px_rgba(168,85,247,0.4)]' : 'from-pink-500 to-rose-500 shadow-[0_0_20px_rgba(236,72,153,0.4)]'} border-2 border-white/20 flex items-center justify-center text-lg font-bold`}>
+              {isPlayer1 ? 'P1' : 'P2'}
+            </div>
+            <div className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-green-500 border-2 border-[#0a0a0a]" />
+          </div>
+          <span className="text-xs font-medium text-white/70">You</span>
+        </div>
+
+        <div className="text-center">
+           <h1 className="text-lg font-bold text-white/80 uppercase tracking-widest">{activeGame.data.name}</h1>
+           <p className="text-xs text-white/40">Room: {roomId}</p>
+        </div>
+
+        <div className="flex flex-col items-center gap-2 opacity-50 transition-opacity duration-500" style={{ opacity: isPartnerOnline ? 1 : 0.4 }}>
+           <div className="relative">
+            <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${!isPlayer1 ? 'from-purple-500 to-indigo-500' : 'from-pink-500 to-rose-500'} border-2 border-white/20 flex items-center justify-center text-lg font-bold`}>
+              {!isPlayer1 ? 'P1' : 'P2'}
+            </div>
+            <div className={`absolute bottom-0 right-0 w-3 h-3 rounded-full ${isPartnerOnline ? 'bg-green-500 shadow-[0_0_10px_#22c55e]' : 'bg-gray-500'} border-2 border-[#0a0a0a]`} />
+          </div>
+          <span className="text-xs font-medium text-white/70">
+            {isPartnerOnline ? 'Partner' : 'Waiting'}
+          </span>
+        </div>
+      </div>
+
+      {/* Dynamic Center Stage */}
+      <GameComponent 
+        currentPrompt={currentPrompt} 
+        isFlipped={state.isFlipped} 
+        onFlip={flipCard} 
+        onNext={() => nextPrompt(prompts.length)}
+        answers={state.answers || {}}
+        userId={userId}
+        partnerId={partnerId}
+        onSubmitAnswer={submitAnswer}
+      />
+
+      {/* Bottom Controls */}
+      <div className="w-full flex justify-center items-center gap-6 mt-8 px-4 relative z-30">
+        <button 
+          onClick={() => sendReaction("heart")}
+          className="w-14 h-14 rounded-full elevated-card flex items-center justify-center hover:bg-pink-500/10 hover:border-pink-500/50 transition-colors group"
+        >
+          <Heart className="w-6 h-6 text-pink-500 group-hover:fill-pink-500 transition-all group-active:scale-90" />
+        </button>
+
+        <button 
+          onClick={() => nextPrompt(prompts.length)}
+          className={`px-8 py-4 rounded-full font-bold tracking-wide transition-all bg-[#1a1a1e] text-white hover:bg-[#2a2a2e] active:scale-95 border border-white/10`}
+        >
+          Next Prompt
+        </button>
+
+        <button className="w-14 h-14 rounded-full elevated-card flex items-center justify-center hover:bg-blue-500/10 hover:border-blue-500/50 transition-colors group">
+          <MessageCircle className="w-6 h-6 text-blue-400 transition-all group-active:scale-90" />
+        </button>
+      </div>
+
+      <style jsx global>{`
+        .perspective-1000 {
+          perspective: 1000px;
+        }
+        .preserve-3d {
+          transform-style: preserve-3d;
+        }
+        .backface-hidden {
+          backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+          transform: rotateY(180deg);
+        }
+        @keyframes floatUp {
+          0% { transform: translateY(0) scale(1) rotate(-10deg); opacity: 1; }
+          50% { transform: translateY(-100px) scale(1.2) rotate(10deg); opacity: 0.8; }
+          100% { transform: translateY(-250px) scale(1.5) rotate(-5deg); opacity: 0; }
+        }
+        .animate-float-up {
+          animation: floatUp 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+      `}</style>
+    </div>
+  );
+}

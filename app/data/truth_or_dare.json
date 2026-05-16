@@ -1,0 +1,38 @@
+{
+  "name": "Truth or Dare",
+  "description": "The classic party game. Choose truth and answer honestly, or dare and do something wild!",
+  "color": "from-purple-500 to-pink-500",
+  "icon": "Flame",
+  "prompts": [
+    {
+      "id": "t1",
+      "type": "truth",
+      "text": "What is your most embarrassing childhood memory?"
+    },
+    {
+      "id": "t2",
+      "type": "truth",
+      "text": "Have you ever lied to get out of a bad date?"
+    },
+    {
+      "id": "t3",
+      "type": "truth",
+      "text": "What is the most childish thing you still do?"
+    },
+    {
+      "id": "d1",
+      "type": "dare",
+      "text": "Do your best impression of someone else in the room."
+    },
+    {
+      "id": "d2",
+      "type": "dare",
+      "text": "Let another player text anyone from your phone."
+    },
+    {
+      "id": "d3",
+      "type": "dare",
+      "text": "Speak in an accent for the next 3 rounds."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Would You Rather",
+  "description": "Faced with two terrible choices, which one will you choose? A game of difficult decisions.",
+  "color": "from-blue-500 to-cyan-400",
+  "icon": "HelpCircle",
+  "prompts": [
+    {
+      "id": "wyr1",
+      "optionA": "Always have to say everything on your mind",
+      "optionB": "Never speak again"
+    },
+    {
+      "id": "wyr2",
+      "optionA": "Have the ability to fly but only at 5 mph",
+      "optionB": "Be invisible but only when your eyes are closed"
+    },
+    {
+      "id": "wyr3",
+      "optionA": "Fight one horse-sized duck",
+      "optionB": "Fight 100 duck-sized horses"
+    },
+    {
+      "id": "wyr4",
+      "optionA": "Have a rewind button for your life",
+      "optionB": "Have a pause button for your life"
+    }
+  ]
+}

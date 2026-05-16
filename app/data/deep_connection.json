@@ -1,0 +1,28 @@
+{
+  "name": "Deep Connection",
+  "description": "Blind answers to deep questions. Reveal only when both have answered.",
+  "color": "from-indigo-500 to-cyan-400",
+  "icon": "Heart",
+  "prompts": [
+    {
+      "id": 1,
+      "text": "What was your exact first thought when we met?"
+    },
+    {
+      "id": 2,
+      "text": "What is something I do that always makes you smile, even if I don't realize it?"
+    },
+    {
+      "id": 3,
+      "text": "If you could freeze one memory of us forever, which one would it be?"
+    },
+    {
+      "id": 4,
+      "text": "What is a dream or goal you have that you haven't told many people about?"
+    },
+    {
+      "id": 5,
+      "text": "What do you think is our greatest strength as a pair?"
+    }
+  ]
+}

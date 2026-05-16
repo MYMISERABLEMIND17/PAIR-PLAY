@@ -1,0 +1,28 @@
+{
+  "name": "Conversation Starters",
+  "description": "Deep questions, funny scenarios, and thought-provoking topics to spark amazing conversations.",
+  "color": "from-emerald-400 to-teal-500",
+  "icon": "MessageCircleHeart",
+  "prompts": [
+    {
+      "id": "cs1",
+      "text": "If you didn't have to sleep, what would you do with the extra time?"
+    },
+    {
+      "id": "cs2",
+      "text": "What's the most useless talent you have?"
+    },
+    {
+      "id": "cs3",
+      "text": "If you could instantly become an expert in one subject, what would it be?"
+    },
+    {
+      "id": "cs4",
+      "text": "What is the best piece of advice you've ever received?"
+    },
+    {
+      "id": "cs5",
+      "text": "If your life was a movie, what genre would it be and who would play you?"
+    }
+  ]
+}
