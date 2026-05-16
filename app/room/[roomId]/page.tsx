@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect, use } from "react";
-import { Heart, MessageCircle, Copy, Check } from "lucide-react";
+import Link from "next/link";
+import { Heart, MessageCircle, Copy, Check, AlertTriangle, XCircle } from "lucide-react";
 import truthOrDareData from "../../data/truth_or_dare.json";
 import wouldYouRatherData from "../../data/would_you_rather.json";
 import conversationStartersData from "../../data/conversation_starters.json";
@@ -21,7 +22,7 @@ const gameRegistry: Record<string, { data: any, Component: any }> = {
 
 export default function CoupleRoom({ params }: { params: Promise<{ roomId: string }> }) {
   const { roomId } = use(params);
-  const { state, userId, loading, flipCard, nextPrompt, sendReaction, submitAnswer } = useRoom(roomId);
+  const { state, userId, loading, error, flipCard, nextPrompt, sendReaction, submitAnswer } = useRoom(roomId);
   const [reactions, setReactions] = useState<{ id: number; left: number }[]>([]);
   const [copied, setCopied] = useState(false);
 
@@ -36,7 +37,7 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
     }
   }, [state?.lastReaction?.timestamp]);
 
-  if (loading || !state || !userId) {
+  if (loading || (!state && !error) || !userId) {
     return (
       <div className="min-h-[calc(100vh-64px)] flex items-center justify-center">
         <div className="w-12 h-12 rounded-full border-4 border-pink-500 border-t-transparent animate-spin" />
@@ -44,8 +45,38 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
     );
   }
 
-  const isPlayer1 = state.players[0] === userId;
-  const partnerId = state.players.find(id => id !== userId);
+  if (error === 'not_found') {
+    return (
+      <div className="min-h-[calc(100vh-64px)] flex flex-col items-center justify-center text-center px-4">
+        <div className="w-20 h-20 rounded-full bg-red-500/10 flex items-center justify-center mb-6 border border-red-500/20">
+          <AlertTriangle className="w-10 h-10 text-red-500" />
+        </div>
+        <h1 className="text-3xl font-bold mb-4 text-white">Room Not Found</h1>
+        <p className="text-white/60 mb-8 max-w-md">We couldn't find a room with the code <strong>{roomId}</strong>. Please check your link or enter the correct code.</p>
+        <Link href="/games" className="bg-white text-black px-8 py-3 rounded-xl font-bold hover:bg-gray-200 transition-colors">
+          Back to Games
+        </Link>
+      </div>
+    );
+  }
+
+  if (error === 'full') {
+    return (
+      <div className="min-h-[calc(100vh-64px)] flex flex-col items-center justify-center text-center px-4">
+        <div className="w-20 h-20 rounded-full bg-yellow-500/10 flex items-center justify-center mb-6 border border-yellow-500/20">
+          <XCircle className="w-10 h-10 text-yellow-500" />
+        </div>
+        <h1 className="text-3xl font-bold mb-4 text-white">Room is Full</h1>
+        <p className="text-white/60 mb-8 max-w-md">This room already has two players in it! PairPlay rooms are strictly private for two people.</p>
+        <Link href="/games" className="bg-white text-black px-8 py-3 rounded-xl font-bold hover:bg-gray-200 transition-colors">
+          Create Your Own Room
+        </Link>
+      </div>
+    );
+  }
+
+  const isPlayer1 = state!.players[0] === userId;
+  const partnerId = state!.players.find(id => id !== userId);
   const isPartnerOnline = !!partnerId; 
 
   const handleCopyLink = () => {

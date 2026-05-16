@@ -17,6 +17,7 @@ export function useRoom(roomId: string) {
   const [state, setState] = useState<RoomState | null>(null);
   const [userId, setUserId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<'not_found' | 'full' | null>(null);
 
   useEffect(() => {
     // 1. Authenticate the user anonymously
@@ -38,25 +39,24 @@ export function useRoom(roomId: string) {
     const unsubscribe = onSnapshot(roomRef, (snapshot) => {
       if (snapshot.exists()) {
         const data = snapshot.data() as RoomState;
+
+        // Check if the room is full and we are not already in it
+        if (data.players.length >= 2 && !data.players.includes(userId)) {
+          setError('full');
+          setLoading(false);
+          return;
+        }
+
         setState(data);
         
-        // If we are not in the players array, join the room (limit to 2 players logic could go here)
+        // If we are not in the players array, join the room
         if (!data.players.includes(userId)) {
            updateDoc(roomRef, {
              players: [...data.players, userId]
            });
         }
       } else {
-        // Room doesn't exist, create it with a default fallback
-        const initialState: RoomState = {
-          gameId: 'truth_or_dare', // fallback if created manually
-          currentPromptIndex: 0,
-          isFlipped: false,
-          players: [userId],
-          answers: {},
-        };
-        setDoc(roomRef, initialState);
-        setState(initialState);
+        setError('not_found');
       }
       setLoading(false);
     }, (error) => {
@@ -95,5 +95,5 @@ export function useRoom(roomId: string) {
     });
   };
 
-  return { state, userId, loading, flipCard, nextPrompt, sendReaction, submitAnswer };
+  return { state, userId, loading, error, flipCard, nextPrompt, sendReaction, submitAnswer };
 }
