@@ -2,7 +2,7 @@
 
 import { useState, useEffect, use } from "react";
 import Link from "next/link";
-import { Heart, MessageCircle, Copy, Check, AlertTriangle, XCircle } from "lucide-react";
+import { Heart, MessageCircle, Copy, Check, AlertTriangle, XCircle, WifiOff } from "lucide-react";
 import truthOrDareData from "../../data/truth_or_dare.json";
 import wouldYouRatherData from "../../data/would_you_rather.json";
 import conversationStartersData from "../../data/conversation_starters.json";
@@ -70,6 +70,21 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
         <p className="text-white/60 mb-8 max-w-md">This room already has two players in it! PairPlay rooms are strictly private for two people.</p>
         <Link href="/games" className="bg-white text-black px-8 py-3 rounded-xl font-bold hover:bg-gray-200 transition-colors">
           Create Your Own Room
+        </Link>
+      </div>
+    );
+  }
+
+  if (error === 'network_blocked') {
+    return (
+      <div className="min-h-[calc(100vh-64px)] flex flex-col items-center justify-center text-center px-4">
+        <div className="w-20 h-20 rounded-full bg-red-500/10 flex items-center justify-center mb-6 border border-red-500/20">
+          <WifiOff className="w-10 h-10 text-red-500" />
+        </div>
+        <h1 className="text-3xl font-bold mb-4 text-white">Connection Blocked</h1>
+        <p className="text-white/60 mb-8 max-w-md">Your internet network or browser is blocking the connection to our database (ERR_BLOCKED_BY_CLIENT). Try turning off your VPN, disabling Adblockers, or switching off a school/work Wi-Fi network.</p>
+        <Link href="/games" className="bg-white text-black px-8 py-3 rounded-xl font-bold hover:bg-gray-200 transition-colors">
+          Back to Lobby
         </Link>
       </div>
     );

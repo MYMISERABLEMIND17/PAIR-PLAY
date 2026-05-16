@@ -17,7 +17,7 @@ export function useRoom(roomId: string) {
   const [state, setState] = useState<RoomState | null>(null);
   const [userId, setUserId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<'not_found' | 'full' | null>(null);
+  const [error, setError] = useState<'not_found' | 'full' | 'network_blocked' | null>(null);
 
   useEffect(() => {
     // 1. Authenticate the user anonymously
@@ -32,6 +32,14 @@ export function useRoom(roomId: string) {
 
   useEffect(() => {
     if (!userId) return;
+
+    // Set a timeout to detect if Firebase is blocked by the network/adblocker
+    const timeoutId = setTimeout(() => {
+      if (loading) {
+        setError('network_blocked');
+        setLoading(false);
+      }
+    }, 10000);
 
     const roomRef = doc(db, "rooms", roomId);
 
@@ -59,12 +67,19 @@ export function useRoom(roomId: string) {
         setError('not_found');
       }
       setLoading(false);
+      clearTimeout(timeoutId);
     }, (error) => {
       console.error("Firestore Error:", error);
+      setError('network_blocked');
+      setLoading(false);
+      clearTimeout(timeoutId);
     });
 
-    return () => unsubscribe();
-  }, [roomId, userId]);
+    return () => {
+      unsubscribe();
+      clearTimeout(timeoutId);
+    };
+  }, [roomId, userId, loading]);
 
   // Actions
   const flipCard = () => {
