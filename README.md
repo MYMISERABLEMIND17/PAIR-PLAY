@@ -1,5 +1,91 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+# PAIR-PLAY
+
+Interactive social games platform for couples, friends, and parties. Play Truth or Dare, Would You Rather, Conversation Starters, and more in real-time rooms!
+
+## ⚡ Quick Start
+
+### 1. Setup Firebase
+
+You **must** configure Firebase for the app to work. Room creation and joining require Firebase Firestore and Authentication.
+
+**Steps:**
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Create a new project
+3. Enable **Firestore Database** (start in test mode for development)
+4. Enable **Authentication** → Sign-in method → **Anonymous**
+5. Go to **Project Settings** and copy your config
+
+**Configure Firestore Rules** (Security tab):
+```
+match /rooms/{roomId} {
+  allow create, read, update: if request.auth != null;
+}
+```
+
+6. Copy the config values to `.env.local`:
+```bash
+cp .env.local.example .env.local
+# Edit .env.local and add your Firebase credentials
+```
+
+### 2. Install & Run
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to see the app.
+
+## 🎮 Features
+
+- **Truth or Dare** - Classic party game with truths & dares
+- **Would You Rather** - Choose between two scenarios
+- **Conversation Starters** - Break the ice with fun questions
+- **Deep Connection** - Deepen your bond with meaningful questions
+- **Real-time Sync** - Firebase Firestore powers live multiplayer rooms
+- **Anonymous Play** - No login required (Firebase Anonymous Auth)
+
+## 📝 Development
+
+- Edit game data in `app/data/*.json`
+- Add new games in `app/components/games/*.tsx`
+- Game routing in `app/games/page.tsx`
+- Room logic in `lib/useRoom.ts`
+
+### Available Scripts
+
+```bash
+npm run dev      # Start dev server
+npm run build    # Build for production
+npm run start    # Start production server
+npm run lint     # Run ESLint
+```
+
+## 🔧 Troubleshooting
+
+**"Connection Blocked" error?**
+- Disable VPN/Adblocker
+- Check `.env.local` has correct Firebase keys
+- Verify Firestore Rules allow anonymous access
+
+**"Room Not Found"?**
+- Check room code is correct
+- Verify both users have internet access
+- Firestore may need time to sync
+
+**"Room is Full"?**
+- Rooms are limited to 2 players for privacy
+- Create a new room to play again
+
+## Learn More
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Firebase Documentation](https://firebase.google.com/docs)
+- [React Documentation](https://react.dev)
+
 ## Getting Started
 
 First, run the development server:

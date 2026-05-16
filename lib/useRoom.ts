@@ -37,10 +37,11 @@ export function useRoom(roomId: string) {
     // Set a timeout to detect if Firebase is blocked by the network/adblocker
     const timeoutId = setTimeout(() => {
       if (loading) {
+        console.warn("Firebase connection timeout after 8 seconds - possible network block");
         setError('network_blocked');
         setLoading(false);
       }
-    }, 10000);
+    }, 8000);
 
     const roomRef = doc(db, "rooms", roomId);
 
@@ -53,6 +54,7 @@ export function useRoom(roomId: string) {
         if (data.players.length >= 2 && !data.players.includes(userId)) {
           setError('full');
           setLoading(false);
+          clearTimeout(timeoutId);
           return;
         }
 
@@ -62,6 +64,8 @@ export function useRoom(roomId: string) {
         if (!data.players.includes(userId)) {
            updateDoc(roomRef, {
              players: [...data.players, userId]
+           }).catch((err) => {
+             console.error("Failed to add player to room:", err);
            });
         }
       } else {
@@ -71,6 +75,12 @@ export function useRoom(roomId: string) {
       clearTimeout(timeoutId);
     }, (error) => {
       console.error("Firestore Error:", error);
+      // Distinguish between different error types
+      if (error.code === 'permission-denied') {
+        console.error("Firestore permission denied - check your security rules");
+      } else if (error.message?.includes('offline')) {
+        console.warn("Firestore offline - attempting to reconnect");
+      }
       setError('network_blocked');
       setLoading(false);
       clearTimeout(timeoutId);

@@ -113,10 +113,10 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
     setTimeout(() => setCopied(false), 2000);
   };
 
-  // Determine the active game
-  const activeGame = gameRegistry[state.gameId] || gameRegistry['truth_or_dare'];
+  // Determine the active game (state is guaranteed non-null at this point due to early returns above)
+  const activeGame = gameRegistry[state!.gameId] || gameRegistry['truth_or_dare'];
   const prompts = activeGame.data.prompts;
-  const currentPrompt = prompts[state.currentPromptIndex];
+  const currentPrompt = prompts[state!.currentPromptIndex];
   const GameComponent = activeGame.Component;
 
   return (
@@ -208,10 +208,10 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
       {/* Dynamic Center Stage */}
       <GameComponent 
         currentPrompt={currentPrompt} 
-        isFlipped={state.isFlipped} 
+        isFlipped={state!.isFlipped} 
         onFlip={flipCard} 
         onNext={() => nextPrompt(prompts.length)}
-        answers={state.answers || {}}
+        answers={state!.answers || {}}
         userId={userId}
         partnerId={partnerId}
         onSubmitAnswer={submitAnswer}

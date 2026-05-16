@@ -36,20 +36,33 @@ export default function GameCard({ title, description, href, colorClass, iconNam
   const [isCreating, setIsCreating] = useState(false);
   const [isJoining, setIsJoining] = useState(false);
   const [joinCode, setJoinCode] = useState("");
+  const [error, setError] = useState<string>("");
+  const [showError, setShowError] = useState(false);
 
   const handleCreate = async (e: React.MouseEvent) => {
     e.stopPropagation();
     const rawGameId = href.startsWith('/') ? href.slice(1) : href;
     const gameId = rawGameId.replace(/-/g, '_');
 
-    if (gameId === '#' || gameId === '') return;
+    if (gameId === '#' || gameId === '') {
+      setError("Invalid game ID");
+      setShowError(true);
+      return;
+    }
 
     setIsCreating(true);
+    setError("");
     try {
       const roomId = await createNewRoom(gameId);
+      if (!roomId) {
+        throw new Error("Failed to generate room ID");
+      }
       router.push(`/room/${roomId}`);
     } catch (err) {
-      console.error("Failed to create room", err);
+      const errorMsg = err instanceof Error ? err.message : "Failed to create room. Check your internet connection and Firebase configuration.";
+      console.error("Failed to create room:", err);
+      setError(errorMsg);
+      setShowError(true);
       setIsCreating(false);
     }
   };
@@ -63,9 +76,28 @@ export default function GameCard({ title, description, href, colorClass, iconNam
   };
 
   return (
-    <div className={`elevated-card rounded-2xl p-6 h-full flex flex-col relative overflow-hidden group block ${isCreating ? 'opacity-50 pointer-events-none' : ''}`}>
-      {/* Subtle top border highlight for depth */}
-      <div className={`absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r ${colorClass} opacity-50 group-hover:opacity-100 transition-opacity`} />
+    <>
+      {/* Error Modal */}
+      {showError && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center backdrop-blur-sm bg-black/50">
+          <div className="bg-[#0a0a0a] border border-red-500/30 rounded-2xl p-6 max-w-md w-full mx-4 shadow-xl">
+            <div className="flex items-center gap-3 mb-4">
+              <AlertTriangle className="w-5 h-5 text-red-500" />
+              <h3 className="font-bold text-white">Error Creating Room</h3>
+            </div>
+            <p className="text-white/70 text-sm mb-6">{error}</p>
+            <button
+              onClick={() => setShowError(false)}
+              className="w-full py-2 rounded-lg bg-red-500/10 text-red-400 hover:bg-red-500/20 transition-colors font-bold text-sm"
+            >
+              Dismiss
+            </button>
+          </div>
+        </div>
+      )}
+      <div className={`elevated-card rounded-2xl p-6 h-full flex flex-col relative overflow-hidden group block ${isCreating ? 'opacity-50 pointer-events-none' : ''}`}>
+        {/* Subtle top border highlight for depth */}
+        <div className={`absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r ${colorClass} opacity-50 group-hover:opacity-100 transition-opacity`} />
       
       <div className={`w-12 h-12 rounded-xl bg-[#1a1a1e] border border-white/5 shadow-inner mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
         {isCreating ? (
@@ -133,5 +165,7 @@ export default function GameCard({ title, description, href, colorClass, iconNam
         )}
       </div>
     </div>
+    </>
   );
 }
+
