@@ -80,18 +80,28 @@ export default function GameCard({ title, description, href, colorClass, iconNam
       {/* Error Modal */}
       {showError && (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center backdrop-blur-sm bg-black/50">
-          <div className="bg-[#0a0a0a] border border-red-500/30 rounded-2xl p-6 max-w-md w-full mx-4 shadow-xl">
-            <div className="flex items-center gap-3 mb-4">
-              <AlertTriangle className="w-5 h-5 text-red-500" />
-              <h3 className="font-bold text-white">Error Creating Room</h3>
+          <div className="bg-[#0a0a0a] border border-red-500/30 rounded-2xl p-6 max-w-md w-full mx-4 shadow-xl max-h-[80vh] overflow-y-auto">
+            <div className="flex items-start gap-3 mb-4">
+              <AlertTriangle className="w-5 h-5 text-red-500 flex-shrink-0 mt-1" />
+              <h3 className="font-bold text-white text-lg">Error Creating Room</h3>
             </div>
-            <p className="text-white/70 text-sm mb-6">{error}</p>
-            <button
-              onClick={() => setShowError(false)}
-              className="w-full py-2 rounded-lg bg-red-500/10 text-red-400 hover:bg-red-500/20 transition-colors font-bold text-sm"
-            >
-              Dismiss
-            </button>
+            <p className="text-white/70 text-sm mb-6 whitespace-pre-wrap font-mono text-xs leading-relaxed">
+              {error}
+            </p>
+            <div className="flex gap-2">
+              <button
+                onClick={() => setShowError(false)}
+                className="flex-1 py-2 rounded-lg bg-red-500/10 text-red-400 hover:bg-red-500/20 transition-colors font-bold text-sm"
+              >
+                Dismiss
+              </button>
+              <button
+                onClick={() => window.location.reload()}
+                className="flex-1 py-2 rounded-lg bg-amber-500/20 text-amber-300 hover:bg-amber-500/30 transition-colors font-bold text-sm"
+              >
+                Refresh
+              </button>
+            </div>
           </div>
         </div>
       )}

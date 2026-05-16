@@ -85,14 +85,37 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
         <div className="w-20 h-20 rounded-full bg-red-500/10 flex items-center justify-center mb-6 border border-red-500/20">
           <WifiOff className="w-10 h-10 text-red-500" />
         </div>
-        <h1 className="text-3xl font-bold mb-4 text-white">Connection Blocked</h1>
-        <p className="text-white/60 mb-8 max-w-md">Your internet network or browser is blocking the connection to our database (ERR_BLOCKED_BY_CLIENT). Try turning off your VPN, disabling Adblockers, or switching off a school/work Wi-Fi network.</p>
-        <div className="flex flex-col gap-3">
+        <h1 className="text-3xl font-bold mb-4 text-white">🔒 Connection Blocked</h1>
+        <div className="text-white/60 mb-8 max-w-md text-left space-y-3 bg-white/5 p-6 rounded-xl border border-white/10">
+          <p className="font-semibold text-white text-center">Your browser or network is blocking Firebase</p>
+          <p className="text-sm text-center mb-4">This is usually caused by:</p>
+          <ul className="text-sm space-y-2 ml-4 text-left">
+            <li className="flex items-start gap-2"><span>✓</span> <span>Adblocker (uBlock Origin, Adblock Plus, etc.)</span></li>
+            <li className="flex items-start gap-2"><span>✓</span> <span>VPN or Proxy Service</span></li>
+            <li className="flex items-start gap-2"><span>✓</span> <span>School/Work Network Firewall</span></li>
+            <li className="flex items-start gap-2"><span>✓</span> <span>Browser Privacy Settings (Firefox Enhanced Tracking)</span></li>
+          </ul>
+          <div className="pt-4 border-t border-white/10">
+            <p className="font-semibold text-amber-300 text-center mb-3">Quick Fix:</p>
+            <ol className="text-sm space-y-2 ml-4 text-left">
+              <li className="flex items-start gap-2"><span>1.</span> <span>Disable your adblocker/VPN</span></li>
+              <li className="flex items-start gap-2"><span>2.</span> <span>Refresh this page (F5 or Cmd+R)</span></li>
+              <li className="flex items-start gap-2"><span>3.</span> <span>Try creating the room again</span></li>
+            </ol>
+          </div>
+        </div>
+        <div className="flex flex-col gap-3 w-full max-w-md">
+          <button 
+            onClick={() => window.location.reload()}
+            className="bg-amber-500 text-white px-8 py-3 rounded-xl font-bold hover:bg-amber-600 transition-colors"
+          >
+            🔄 Refresh Page
+          </button>
           <button 
             onClick={() => enableOfflineMode('truth_or_dare')}
             className="bg-indigo-500 text-white px-8 py-3 rounded-xl font-bold hover:bg-indigo-600 transition-colors"
           >
-            Play in Offline Demo Mode
+            Or Play in Demo Mode (Offline)
           </button>
           <Link href="/games" className="bg-white/10 text-white px-8 py-3 rounded-xl font-bold hover:bg-white/20 transition-colors">
             Back to Lobby

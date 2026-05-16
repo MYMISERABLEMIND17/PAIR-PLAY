@@ -66,19 +66,45 @@ npm run lint     # Run ESLint
 
 ## 🔧 Troubleshooting
 
-**"Connection Blocked" error?**
-- Disable VPN/Adblocker
-- Check `.env.local` has correct Firebase keys
+### 🔒 "Connection Blocked" Error (ERR_BLOCKED_BY_CLIENT)
+
+**This is the #1 issue!** Your browser or network is blocking Firebase.
+
+**Causes:**
+- Adblocker extension enabled (uBlock Origin, Adblock Plus, etc.)
+- VPN active
+- School/Work network firewall
+- Firefox Enhanced Tracking Protection
+
+**Fix:**
+1. **Disable your adblocker** - Whitelist `pairplay.app` or disable it temporarily
+2. **Disable VPN** if you're using one
+3. **Refresh the page** (F5 or Cmd+R)
+4. Try creating the room again
+
+If you can't disable your adblocker, use the **Demo Mode** button to play offline locally.
+
+### ⏱️ "Connection Timeout" Error
+
+Your internet is too slow or Firebase is still blocked.
+
+**Fix:**
+1. Check your internet connection
+2. Disable VPN/Adblocker
+3. Ask your network admin to allow `firestore.googleapis.com`
+4. Try again in 30 seconds
+
+### "Room Not Found"?
+- Double-check the room code is correct
+- Both users need an active internet connection
 - Verify Firestore Rules allow anonymous access
 
-**"Room Not Found"?**
-- Check room code is correct
-- Verify both users have internet access
-- Firestore may need time to sync
-
-**"Room is Full"?**
+### "Room is Full"?
 - Rooms are limited to 2 players for privacy
-- Create a new room to play again
+- Create a new room or refresh the page
+
+### Demo Mode (Offline)
+If you can't get Firebase working, click **"Play in Demo Mode"** to play locally with a simulated partner.
 
 ## Learn More
 

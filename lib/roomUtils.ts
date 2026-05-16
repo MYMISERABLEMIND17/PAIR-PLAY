@@ -47,19 +47,39 @@ export async function createNewRoom(gameId: string): Promise<string> {
     return roomId;
   } catch (error) {
     const err = error as Error;
+    const errorStr = err.message || '';
     console.error("Room creation error:", err);
     
-    // Provide specific error messages
-    if (err.message.includes("auth/invalid-api-key")) {
+    // Provide specific error messages for known issues
+    if (errorStr.includes("ERR_BLOCKED_BY_CLIENT")) {
+      throw new Error(
+        "🔒 Firestore is being blocked by your browser, VPN, or adblocker.\n\n" +
+        "Quick fix:\n" +
+        "1. Disable uBlock, Adblocker, or other extensions\n" +
+        "2. Disable VPN if using one\n" +
+        "3. If on school/work WiFi, ask your IT admin to allow firestore.googleapis.com\n\n" +
+        "Then refresh and try again."
+      );
+    }
+    if (errorStr.includes("auth/invalid-api-key")) {
       throw new Error("Firebase is not properly configured. Check your .env.local file.");
     }
-    if (err.message.includes("timeout")) {
-      throw new Error("Connection timeout. Firebase may be blocked. Try disabling VPN/Adblocker.");
+    if (errorStr.includes("timeout")) {
+      throw new Error(
+        "⏱️ Connection timeout. Firebase may be blocked.\n\n" +
+        "Try disabling VPN/Adblocker and ensure firestore.googleapis.com is not blocked."
+      );
     }
-    if (err.message.includes("PERMISSION_DENIED")) {
+    if (errorStr.includes("PERMISSION_DENIED")) {
       throw new Error("Database permission denied. Check Firebase Firestore rules.");
     }
+    if (errorStr.includes("Failed to get document from cache")) {
+      throw new Error(
+        "Firestore connection blocked.\n\n" +
+        "Disable adblocker, VPN, or school/work network filters, then try again."
+      );
+    }
     
-    throw new Error(err.message || "Failed to create room. Please try again.");
+    throw new Error(errorStr || "Failed to create room. Please try again.");
   }
 }
