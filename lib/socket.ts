@@ -4,6 +4,10 @@ class SocketEmulator {
   private reconnectInterval: any = null;
   private isAttemptingConnection = false;
 
+  get connected(): boolean {
+    return this.ws !== null && this.ws.readyState === WebSocket.OPEN;
+  }
+
   connect() {
     if (this.ws || this.isAttemptingConnection) return;
     this.isAttemptingConnection = true;
