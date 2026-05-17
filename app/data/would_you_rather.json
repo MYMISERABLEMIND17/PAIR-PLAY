@@ -5,24 +5,2104 @@
   "icon": "HelpCircle",
   "prompts": [
     {
-      "id": "wyr1",
-      "optionA": "Always have to say everything on your mind",
-      "optionB": "Never speak again"
+      "id": "wyr_popular_0",
+      "optionA": "Wear socks with holes in them",
+      "optionB": "Wear dirty shoes?",
+      "percentageA": 49,
+      "percentageB": 51
     },
     {
-      "id": "wyr2",
-      "optionA": "Have the ability to fly but only at 5 mph",
-      "optionB": "Be invisible but only when your eyes are closed"
+      "id": "wyr_popular_1",
+      "optionA": "Always be 10 minutes late",
+      "optionB": "20 minutes early?",
+      "percentageA": 53,
+      "percentageB": 47
     },
     {
-      "id": "wyr3",
+      "id": "wyr_popular_2",
+      "optionA": "Be able to read lips",
+      "optionB": "Know sign language?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_popular_3",
+      "optionA": "Be fluent in every language",
+      "optionB": "Able to play every musical instrument?",
+      "percentageA": 54,
+      "percentageB": 46
+    },
+    {
+      "id": "wyr_popular_4",
+      "optionA": "Always get stuck in traffic",
+      "optionB": "Always have terrible internet?",
+      "percentageA": 42,
+      "percentageB": 58
+    },
+    {
+      "id": "wyr_popular_5",
+      "optionA": "Be abducted by aliens",
+      "optionB": "Possessed by a demon?",
+      "percentageA": 78,
+      "percentageB": 22
+    },
+    {
+      "id": "wyr_popular_6",
+      "optionA": "Be able to fly",
+      "optionB": "Be able to turn invisible?",
+      "percentageA": 54,
+      "percentageB": 46
+    },
+    {
+      "id": "wyr_popular_7",
+      "optionA": "Be able to live 100 years",
+      "optionB": "100 years in the future?",
+      "percentageA": 58,
+      "percentageB": 42
+    },
+    {
+      "id": "wyr_popular_8",
+      "optionA": "Take part in a reality TV show",
+      "optionB": "Be jobless for 2 years?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_popular_9",
+      "optionA": "Live an extra 25 years",
+      "optionB": "Live a life without the need to sleep?",
+      "percentageA": 68,
+      "percentageB": 32
+    },
+    {
+      "id": "wyr_popular_10",
+      "optionA": "Save a member of your family",
+      "optionB": "Save 1000 strangers?",
+      "percentageA": 81,
+      "percentageB": 19
+    },
+    {
+      "id": "wyr_popular_11",
+      "optionA": "Own 10 puppies",
+      "optionB": "10 kittens?",
+      "percentageA": 53,
+      "percentageB": 47
+    },
+    {
+      "id": "wyr_popular_12",
+      "optionA": "Always be hot",
+      "optionB": "Always be cold?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_popular_13",
+      "optionA": "Always have a pebble in your shoe",
+      "optionB": "Always have an eyelash in your eye?",
+      "percentageA": 61,
+      "percentageB": 39
+    },
+    {
+      "id": "wyr_popular_14",
+      "optionA": "Be able to watch your dreams again in a video",
+      "optionB": "Able to fall asleep by snapping your fingers?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_popular_15",
+      "optionA": "Be stuck on a broken ski lift",
+      "optionB": "In a broken elevator?",
+      "percentageA": 45,
+      "percentageB": 55
+    },
+    {
+      "id": "wyr_popular_16",
+      "optionA": "Eat pizza every day",
+      "optionB": "Eat pasta every day?",
+      "percentageA": 71,
+      "percentageB": 29
+    },
+    {
+      "id": "wyr_popular_17",
+      "optionA": "Get paid for reading books",
+      "optionB": "Watching TV?",
+      "percentageA": 39,
+      "percentageB": 61
+    },
+    {
+      "id": "wyr_popular_18",
+      "optionA": "Get rid of all bad drivers on the road",
+      "optionB": "Never have to wait in line at the store again?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_popular_19",
+      "optionA": "Have a high salary in a job you hate",
+      "optionB": "Have a low salary in a job you love?",
+      "percentageA": 54,
+      "percentageB": 46
+    },
+    {
+      "id": "wyr_popular_20",
+      "optionA": "Never have to clean your house again",
+      "optionB": "Never have to do laundry again?",
+      "percentageA": 52,
+      "percentageB": 48
+    },
+    {
+      "id": "wyr_popular_21",
+      "optionA": "Have a personal chef",
+      "optionB": "A personal chauffeur?",
+      "percentageA": 44,
+      "percentageB": 56
+    },
+    {
+      "id": "wyr_popular_22",
+      "optionA": "Know the date of your death",
+      "optionB": "The cause of your death?",
+      "percentageA": 57,
+      "percentageB": 43
+    },
+    {
+      "id": "wyr_popular_23",
+      "optionA": "Live without music",
+      "optionB": "Live without movies?",
+      "percentageA": 49,
+      "percentageB": 51
+    },
+    {
+      "id": "wyr_popular_24",
+      "optionA": "Have free Wi-Fi everywhere you go",
+      "optionB": "Free coffee everywhere you go?",
+      "percentageA": 43,
+      "percentageB": 57
+    },
+    {
+      "id": "wyr_popular_25",
+      "optionA": "Be able to talk to animals",
+      "optionB": "Speak every human language?",
+      "percentageA": 56,
+      "percentageB": 44
+    },
+    {
+      "id": "wyr_popular_26",
+      "optionA": "Have unlimited battery on your phone",
+      "optionB": "Unlimited storage?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_popular_27",
+      "optionA": "Always have to sing instead of speaking",
+      "optionB": "Always have to dance instead of walking?",
+      "percentageA": 51,
+      "percentageB": 49
+    },
+    {
+      "id": "wyr_popular_28",
+      "optionA": "Give up social media forever",
+      "optionB": "Never watch a movie or TV show again?",
+      "percentageA": 60,
+      "percentageB": 40
+    },
+    {
+      "id": "wyr_popular_29",
+      "optionA": "Have the ability to rewind time by 10 seconds",
+      "optionB": "Fast-forward time by 10 seconds?",
+      "percentageA": 45,
+      "percentageB": 55
+    },
+    {
+      "id": "wyr_popular_30",
+      "optionA": "Live in a treehouse",
+      "optionB": "In a houseboat?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_popular_31",
+      "optionA": "Never be able to use a smartphone again",
+      "optionB": "Never be able to use a laptop again?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_popular_32",
+      "optionA": "Always have to wear formal clothes",
+      "optionB": "Always have to wear pajamas in public?",
+      "percentageA": 41,
+      "percentageB": 59
+    },
+    {
+      "id": "wyr_popular_33",
+      "optionA": "Have an extra hour every day",
+      "optionB": "An extra $100 every day?",
+      "percentageA": 58,
+      "percentageB": 42
+    },
+    {
+      "id": "wyr_popular_34",
+      "optionA": "Only be able to whisper",
+      "optionB": "Only be able to shout?",
+      "percentageA": 50,
+      "percentageB": 50
+    },
+    {
+      "id": "wyr_popular_35",
+      "optionA": "Lose the ability to taste food",
+      "optionB": "Lose the ability to smell?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_popular_36",
+      "optionA": "Be famous but constantly followed by paparazzi",
+      "optionB": "Never be recognized by anyone?",
+      "percentageA": 53,
+      "percentageB": 47
+    },
+    {
+      "id": "wyr_popular_37",
+      "optionA": "Have the power to read minds",
+      "optionB": "The power to see the future?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_popular_38",
+      "optionA": "Never eat your favorite food again",
+      "optionB": "Only eat your favorite food for every meal?",
+      "percentageA": 42,
+      "percentageB": 58
+    },
+    {
+      "id": "wyr_popular_39",
+      "optionA": "Have a pause button for your life",
+      "optionB": "A rewind button?",
+      "percentageA": 56,
+      "percentageB": 44
+    },
+    {
+      "id": "wyr_popular_40",
+      "optionA": "Be the funniest person in the room",
+      "optionB": "The smartest person in the room?",
+      "percentageA": 44,
+      "percentageB": 56
+    },
+    {
+      "id": "wyr_popular_41",
+      "optionA": "Live in a world with no problems",
+      "optionB": "A world with no pain?",
+      "percentageA": 51,
+      "percentageB": 49
+    },
+    {
+      "id": "wyr_popular_42",
+      "optionA": "Never have to wait in line again",
+      "optionB": "Never be stuck in traffic again?",
+      "percentageA": 59,
+      "percentageB": 41
+    },
+    {
+      "id": "wyr_popular_43",
+      "optionA": "Always know when someone is lying",
+      "optionB": "Always get away with lying?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_popular_44",
+      "optionA": "Have a perfect memory",
+      "optionB": "Be able to forget anything you want?",
+      "percentageA": 52,
+      "percentageB": 48
+    },
+    {
+      "id": "wyr_popular_45",
+      "optionA": "Have a magic fridge that always has what you want",
+      "optionB": "A magic closet that always has the perfect outfit?",
+      "percentageA": 43,
+      "percentageB": 57
+    },
+    {
+      "id": "wyr_popular_46",
+      "optionA": "Be able to teleport anywhere",
+      "optionB": "Be able to stop time?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_popular_47",
+      "optionA": "Live in a house where every wall is a window",
+      "optionB": "A house with no windows at all?",
+      "percentageA": 49,
+      "percentageB": 51
+    },
+    {
+      "id": "wyr_popular_48",
+      "optionA": "Always have your phone on 1% battery",
+      "optionB": "Always have slow Wi-Fi?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_popular_49",
+      "optionA": "Relive one day from your past whenever you want",
+      "optionB": "Know one day of your future?",
+      "percentageA": 57,
+      "percentageB": 43
+    },
+    {
+      "id": "wyr_extreme_50",
+      "optionA": "Be alone in the forest being chased by a bear",
+      "optionB": "Have three of your teeth broken with a hammer?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_extreme_51",
+      "optionA": "Be forced to obey someone you hate",
+      "optionB": "Have to give awful orders to someone you love?",
+      "percentageA": 63,
+      "percentageB": 37
+    },
+    {
+      "id": "wyr_extreme_52",
+      "optionA": "Be sick for the rest of your life",
+      "optionB": "Kill a kitten?",
+      "percentageA": 79,
+      "percentageB": 21
+    },
+    {
+      "id": "wyr_extreme_53",
+      "optionA": "Be unable to have kids",
+      "optionB": "Only be able to conceive quintuplets?",
+      "percentageA": 62,
+      "percentageB": 38
+    },
+    {
+      "id": "wyr_extreme_54",
+      "optionA": "Have no family",
+      "optionB": "No friends?",
+      "percentageA": 44,
+      "percentageB": 56
+    },
+    {
+      "id": "wyr_extreme_55",
+      "optionA": "Lick the floor of an NYC subway station",
+      "optionB": "The bowl of a public toilet?",
+      "percentageA": 57,
+      "percentageB": 43
+    },
+    {
+      "id": "wyr_extreme_56",
+      "optionA": "Lose all of the memories you've made so far",
+      "optionB": "Forget from today on every 24 hours what happened the previous day?",
+      "percentageA": 62,
+      "percentageB": 38
+    },
+    {
+      "id": "wyr_extreme_57",
+      "optionA": "Play Russian roulette with three bullets for $5,000,000",
+      "optionB": "With one bullet for $100,000?",
+      "percentageA": 37,
+      "percentageB": 63
+    },
+    {
+      "id": "wyr_extreme_58",
+      "optionA": "Kill one innocent person",
+      "optionB": "Kill five people who committed minor crimes?",
+      "percentageA": 52,
+      "percentageB": 48
+    },
+    {
+      "id": "wyr_extreme_59",
+      "optionA": "Bump your little toe against the edge of a piece of furniture every day",
+      "optionB": "Shower only twice a week?",
+      "percentageA": 44,
+      "percentageB": 56
+    },
+    {
+      "id": "wyr_extreme_60",
+      "optionA": "Have no elbows",
+      "optionB": "No knees?",
+      "percentageA": 41,
+      "percentageB": 59
+    },
+    {
+      "id": "wyr_extreme_61",
+      "optionA": "Smell like a wet dog",
+      "optionB": "Smell like a goat?",
+      "percentageA": 59,
+      "percentageB": 41
+    },
+    {
+      "id": "wyr_extreme_62",
+      "optionA": "Always be hungry",
+      "optionB": "Always be thirsty?",
+      "percentageA": 45,
+      "percentageB": 55
+    },
+    {
+      "id": "wyr_extreme_63",
+      "optionA": "Always speak all your thoughts out loud",
+      "optionB": "Never speak again, even in sign language?",
+      "percentageA": 53,
+      "percentageB": 47
+    },
+    {
+      "id": "wyr_extreme_64",
+      "optionA": "Be buried up to the neck in full sunlight for 8 hours",
+      "optionB": "Buried up to the neck surrounded by red fire ants for 20 minutes?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_extreme_65",
+      "optionA": "Be completely insane and know that you are insane",
+      "optionB": "Completely insane and believe you are sane?",
+      "percentageA": 40,
+      "percentageB": 60
+    },
+    {
+      "id": "wyr_extreme_66",
+      "optionA": "Be locked in a room that is constantly dark for a week",
+      "optionB": "A room that is constantly bright for a week?",
+      "percentageA": 39,
+      "percentageB": 61
+    },
+    {
+      "id": "wyr_extreme_67",
+      "optionA": "Freeze to death",
+      "optionB": "Burn to death?",
+      "percentageA": 61,
+      "percentageB": 39
+    },
+    {
+      "id": "wyr_extreme_68",
+      "optionA": "Get a huge tattoo of your partner's name across your chest",
+      "optionB": "Get a tiny tattoo of their face on your arm?",
+      "percentageA": 42,
+      "percentageB": 58
+    },
+    {
+      "id": "wyr_extreme_69",
+      "optionA": "Have the animals you touch die",
+      "optionB": "The computers you touch crash?",
+      "percentageA": 41,
+      "percentageB": 59
+    },
+    {
+      "id": "wyr_extreme_70",
+      "optionA": "Eat a live spider every morning",
+      "optionB": "Sleep in a bathtub full of dead spiders every night?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_extreme_71",
+      "optionA": "Be stranded on a desert island alone",
+      "optionB": "Stranded with someone you absolutely hate?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_extreme_72",
+      "optionA": "Have your search history made public",
+      "optionB": "Have your deleted texts made public?",
+      "percentageA": 43,
+      "percentageB": 57
+    },
+    {
+      "id": "wyr_extreme_73",
+      "optionA": "Walk barefoot on broken glass for 10 feet",
+      "optionB": "Walk barefoot on burning coals for 20 feet?",
+      "percentageA": 51,
+      "percentageB": 49
+    },
+    {
+      "id": "wyr_extreme_74",
+      "optionA": "Have no thumbs",
+      "optionB": "No pinky fingers?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_extreme_75",
+      "optionA": "Be trapped in a room with 100 tarantulas for an hour",
+      "optionB": "Swim through a pool of leeches?",
+      "percentageA": 58,
+      "percentageB": 42
+    },
+    {
+      "id": "wyr_extreme_76",
+      "optionA": "Lose your ability to taste",
+      "optionB": "Lose your ability to feel pleasure?",
+      "percentageA": 42,
+      "percentageB": 58
+    },
+    {
+      "id": "wyr_extreme_77",
+      "optionA": "Be wrongly convicted of a crime for 5 years",
+      "optionB": "Let the actual criminal go free forever?",
+      "percentageA": 50,
+      "percentageB": 50
+    },
+    {
+      "id": "wyr_extreme_78",
+      "optionA": "Drink a glass of spoiled milk every day for a year",
+      "optionB": "Eat a raw onion every day for a year?",
+      "percentageA": 44,
+      "percentageB": 56
+    },
+    {
+      "id": "wyr_extreme_79",
+      "optionA": "Know how everyone you love will die",
+      "optionB": "Know when everyone you love will die?",
+      "percentageA": 56,
+      "percentageB": 44
+    },
+    {
+      "id": "wyr_extreme_80",
+      "optionA": "Never be able to lie again",
+      "optionB": "Never be able to tell the truth again?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_extreme_81",
+      "optionA": "Have a permanent itch you can never scratch",
+      "optionB": "Have a permanent ringing in your ears?",
+      "percentageA": 40,
+      "percentageB": 60
+    },
+    {
+      "id": "wyr_extreme_82",
       "optionA": "Fight one horse-sized duck",
-      "optionB": "Fight 100 duck-sized horses"
+      "optionB": "100 duck-sized horses?",
+      "percentageA": 53,
+      "percentageB": 47
     },
     {
-      "id": "wyr4",
+      "id": "wyr_extreme_83",
+      "optionA": "Spend a night in an abandoned asylum",
+      "optionB": "A night in a cemetery?",
+      "percentageA": 49,
+      "percentageB": 51
+    },
+    {
+      "id": "wyr_extreme_84",
+      "optionA": "Never feel physical pain again",
+      "optionB": "Never feel emotional pain again?",
+      "percentageA": 45,
+      "percentageB": 55
+    },
+    {
+      "id": "wyr_extreme_85",
+      "optionA": "Be stuck in an elevator for 48 hours",
+      "optionB": "Be stuck on a stalled roller coaster for 8 hours?",
+      "percentageA": 57,
+      "percentageB": 43
+    },
+    {
+      "id": "wyr_extreme_86",
+      "optionA": "Have every dream become a nightmare",
+      "optionB": "Never be able to dream again?",
+      "percentageA": 41,
+      "percentageB": 59
+    },
+    {
+      "id": "wyr_extreme_87",
+      "optionA": "Eat only baby food for a year",
+      "optionB": "Wear a diaper for a year?",
+      "percentageA": 52,
+      "percentageB": 48
+    },
+    {
+      "id": "wyr_extreme_88",
+      "optionA": "Be forced to jump into a freezing lake every morning",
+      "optionB": "Never be able to take a hot shower again?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_extreme_89",
+      "optionA": "Have your worst enemy read your diary out loud to your family",
+      "optionB": "Have your family read your diary in private?",
+      "percentageA": 43,
+      "percentageB": 57
+    },
+    {
+      "id": "wyr_extreme_90",
+      "optionA": "Age only from the neck up",
+      "optionB": "Only from the neck down?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_extreme_91",
+      "optionA": "Lose a finger",
+      "optionB": "Lose a toe?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_extreme_92",
+      "optionA": "Be famous for something embarrassing",
+      "optionB": "Never be famous for anything?",
+      "percentageA": 50,
+      "percentageB": 50
+    },
+    {
+      "id": "wyr_extreme_93",
+      "optionA": "Have to wear wet socks for the rest of your life",
+      "optionB": "Have a permanent paper cut between your fingers?",
+      "percentageA": 44,
+      "percentageB": 56
+    },
+    {
+      "id": "wyr_extreme_94",
+      "optionA": "Be bitten by a snake",
+      "optionB": "Stung by 50 bees at once?",
+      "percentageA": 51,
+      "percentageB": 49
+    },
+    {
+      "id": "wyr_extreme_95",
+      "optionA": "Only be able to eat food that's been blended",
+      "optionB": "Only eat food that's been deep-fried?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_extreme_96",
+      "optionA": "Have to hold your pee for 12 hours every day",
+      "optionB": "Have to go to the bathroom every 30 minutes?",
+      "percentageA": 54,
+      "percentageB": 46
+    },
+    {
+      "id": "wyr_extreme_97",
+      "optionA": "Live the rest of your life with a constant toothache",
+      "optionB": "A constant headache?",
+      "percentageA": 42,
+      "percentageB": 58
+    },
+    {
+      "id": "wyr_extreme_98",
+      "optionA": "Be the last person on Earth",
+      "optionB": "The first person on a new planet with no way back?",
+      "percentageA": 56,
+      "percentageB": 44
+    },
+    {
+      "id": "wyr_extreme_99",
+      "optionA": "Have your boss see your entire phone gallery",
+      "optionB": "Your parents see your entire search history?",
+      "percentageA": 49,
+      "percentageB": 51
+    },
+    {
+      "id": "wyr_couples_100",
+      "optionA": "Always have to be on top",
+      "optionB": "Always have to be on the bottom?",
+      "percentageA": 53,
+      "percentageB": 47
+    },
+    {
+      "id": "wyr_couples_101",
+      "optionA": "Be able to know when your significant other is lying",
+      "optionB": "Hear all of their thoughts?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_couples_102",
+      "optionA": "Do romantic things in bed",
+      "optionB": "Try out some kinky stuff?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_couples_103",
+      "optionA": "Have sex in the morning",
+      "optionB": "In the evening?",
+      "percentageA": 44,
+      "percentageB": 56
+    },
+    {
+      "id": "wyr_couples_104",
+      "optionA": "Have sex without kissing your partner",
+      "optionB": "Have sex without using your hands at all?",
+      "percentageA": 45,
+      "percentageB": 55
+    },
+    {
+      "id": "wyr_couples_105",
+      "optionA": "Have your partner be absolutely hairless",
+      "optionB": "Extremely hairy?",
+      "percentageA": 67,
+      "percentageB": 33
+    },
+    {
+      "id": "wyr_couples_106",
+      "optionA": "Smell fish",
+      "optionB": "Your partner's socks?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_couples_107",
+      "optionA": "Have no kids",
+      "optionB": "3 kids?",
+      "percentageA": 51,
+      "percentageB": 49
+    },
+    {
+      "id": "wyr_couples_108",
+      "optionA": "Spend more time with your partner's side of the family",
+      "optionB": "Yours?",
+      "percentageA": 41,
+      "percentageB": 59
+    },
+    {
+      "id": "wyr_couples_109",
+      "optionA": "Have a great big wedding",
+      "optionB": "A small but intimate one?",
+      "percentageA": 54,
+      "percentageB": 46
+    },
+    {
+      "id": "wyr_couples_110",
+      "optionA": "Go before your partner",
+      "optionB": "Have your partner go before you?",
+      "percentageA": 83,
+      "percentageB": 17
+    },
+    {
+      "id": "wyr_couples_111",
+      "optionA": "Do role-play with your partner",
+      "optionB": "Do really long foreplay?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_couples_112",
+      "optionA": "Be the big spoon",
+      "optionB": "Small spoon?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_couples_113",
+      "optionA": "Get an erotic massage",
+      "optionB": "Cook dinner with your partner?",
+      "percentageA": 57,
+      "percentageB": 43
+    },
+    {
+      "id": "wyr_couples_114",
+      "optionA": "Have foreplay for more than 15 minutes",
+      "optionB": "Less than 15 minutes?",
+      "percentageA": 42,
+      "percentageB": 58
+    },
+    {
+      "id": "wyr_couples_115",
+      "optionA": "Have mediocre sex regularly for the rest of your life",
+      "optionB": "Have incredibly good sex only once a year?",
+      "percentageA": 67,
+      "percentageB": 33
+    },
+    {
+      "id": "wyr_couples_116",
+      "optionA": "Make love on the beach at sunset",
+      "optionB": "On a rug by the fireside?",
+      "percentageA": 62,
+      "percentageB": 38
+    },
+    {
+      "id": "wyr_couples_117",
+      "optionA": "Masturbate together with your partner",
+      "optionB": "Alone?",
+      "percentageA": 44,
+      "percentageB": 56
+    },
+    {
+      "id": "wyr_couples_118",
+      "optionA": "Watch your partner having sex with another person",
+      "optionB": "Let your partner watch how you have sex with another person?",
+      "percentageA": 40,
+      "percentageB": 60
+    },
+    {
+      "id": "wyr_couples_119",
+      "optionA": "Your partner have short",
+      "optionB": "Long hair?",
+      "percentageA": 51,
+      "percentageB": 49
+    },
+    {
+      "id": "wyr_couples_120",
+      "optionA": "Always plan date nights",
+      "optionB": "Always have spontaneous dates?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_couples_121",
+      "optionA": "Know your partner's phone password",
+      "optionB": "Have them know yours?",
+      "percentageA": 53,
+      "percentageB": 47
+    },
+    {
+      "id": "wyr_couples_122",
+      "optionA": "Your partner cooks every meal but it's mediocre",
+      "optionB": "Cooks once a week but it's amazing?",
+      "percentageA": 49,
+      "percentageB": 51
+    },
+    {
+      "id": "wyr_couples_123",
+      "optionA": "Always be the one to apologize first",
+      "optionB": "Always be the one who was right?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_couples_124",
+      "optionA": "Go on a road trip with your partner",
+      "optionB": "A beach vacation?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_couples_125",
+      "optionA": "Have matching tattoos with your partner",
+      "optionB": "Matching piercings?",
+      "percentageA": 52,
+      "percentageB": 48
+    },
+    {
+      "id": "wyr_couples_126",
+      "optionA": "Live in a tiny apartment in a big city with your partner",
+      "optionB": "A big house in a small town?",
+      "percentageA": 58,
+      "percentageB": 42
+    },
+    {
+      "id": "wyr_couples_127",
+      "optionA": "Your partner always picks the restaurant",
+      "optionB": "You always have to decide?",
+      "percentageA": 44,
+      "percentageB": 56
+    },
+    {
+      "id": "wyr_couples_128",
+      "optionA": "Share everything with your partner including all passwords",
+      "optionB": "Keep some things totally private?",
+      "percentageA": 50,
+      "percentageB": 50
+    },
+    {
+      "id": "wyr_couples_129",
+      "optionA": "Have your partner surprise you constantly",
+      "optionB": "Always know what's coming?",
+      "percentageA": 56,
+      "percentageB": 44
+    },
+    {
+      "id": "wyr_couples_130",
+      "optionA": "Never argue with your partner",
+      "optionB": "Argue passionately and make up intensely?",
+      "percentageA": 43,
+      "percentageB": 57
+    },
+    {
+      "id": "wyr_couples_131",
+      "optionA": "Have your partner be an amazing listener but terrible at giving advice",
+      "optionB": "Great at advice but a bad listener?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_couples_132",
+      "optionA": "Have breakfast in bed every day",
+      "optionB": "A goodnight kiss every night?",
+      "percentageA": 51,
+      "percentageB": 49
+    },
+    {
+      "id": "wyr_couples_133",
+      "optionA": "Your partner always texts back instantly",
+      "optionB": "Always gives you long, thoughtful replies?",
+      "percentageA": 45,
+      "percentageB": 55
+    },
+    {
+      "id": "wyr_couples_134",
+      "optionA": "Celebrate every anniversary with a big party",
+      "optionB": "A quiet romantic evening together?",
+      "percentageA": 54,
+      "percentageB": 46
+    },
+    {
+      "id": "wyr_couples_135",
+      "optionA": "Have your partner always pick the movie",
+      "optionB": "Always choose the music?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_couples_136",
+      "optionA": "Receive love letters from your partner",
+      "optionB": "Surprise gifts?",
+      "percentageA": 52,
+      "percentageB": 48
+    },
+    {
+      "id": "wyr_couples_137",
+      "optionA": "Have a partner who is always honest but sometimes hurtful",
+      "optionB": "One who tells white lies to protect your feelings?",
+      "percentageA": 49,
+      "percentageB": 51
+    },
+    {
+      "id": "wyr_couples_138",
+      "optionA": "Have your partner be a morning person while you're a night owl",
+      "optionB": "Both be night owls who can never wake up on time?",
+      "percentageA": 56,
+      "percentageB": 44
+    },
+    {
+      "id": "wyr_couples_139",
+      "optionA": "Always agree on where to eat",
+      "optionB": "Always agree on what to watch?",
+      "percentageA": 42,
+      "percentageB": 58
+    },
+    {
+      "id": "wyr_couples_140",
+      "optionA": "Your partner remembers every detail about you",
+      "optionB": "Forgets arguments immediately?",
+      "percentageA": 50,
+      "percentageB": 50
+    },
+    {
+      "id": "wyr_couples_141",
+      "optionA": "Take a cooking class together",
+      "optionB": "A dance class together?",
+      "percentageA": 53,
+      "percentageB": 47
+    },
+    {
+      "id": "wyr_couples_142",
+      "optionA": "Your partner is great with your friends but bad with your family",
+      "optionB": "Great with your family but bad with your friends?",
+      "percentageA": 45,
+      "percentageB": 55
+    },
+    {
+      "id": "wyr_couples_143",
+      "optionA": "Spend every vacation with your partner",
+      "optionB": "Take one solo trip a year?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_couples_144",
+      "optionA": "Have a long-distance relationship for a year with the love of your life",
+      "optionB": "A convenient relationship with someone you only kind of like?",
+      "percentageA": 57,
+      "percentageB": 43
+    },
+    {
+      "id": "wyr_couples_145",
+      "optionA": "Have your partner always compliment your looks",
+      "optionB": "Always compliment your brain?",
+      "percentageA": 44,
+      "percentageB": 56
+    },
+    {
+      "id": "wyr_couples_146",
+      "optionA": "Have a partner who snores loudly",
+      "optionB": "A partner who steals all the blankets?",
+      "percentageA": 51,
+      "percentageB": 49
+    },
+    {
+      "id": "wyr_couples_147",
+      "optionA": "Always fall asleep first",
+      "optionB": "Always fall asleep last?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_couples_148",
+      "optionA": "Your partner plans the perfect proposal but you have to wait 5 years",
+      "optionB": "A casual proposal right now?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_couples_149",
+      "optionA": "Share a bathroom with your partner forever",
+      "optionB": "Share a closet?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_dirty_150",
+      "optionA": "Be the only naked person in a room full of your clothed relatives",
+      "optionB": "The only clothed person in a room full of your naked relatives?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_dirty_151",
+      "optionA": "Catch your parents having sex",
+      "optionB": "Being caught having sex by your parents?",
+      "percentageA": 56,
+      "percentageB": 44
+    },
+    {
+      "id": "wyr_dirty_152",
+      "optionA": "Date someone who likes BDSM",
+      "optionB": "Vanilla sex?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_dirty_153",
+      "optionA": "Have sex in a dirty hotel bed",
+      "optionB": "In a smelly public toilet?",
+      "percentageA": 68,
+      "percentageB": 32
+    },
+    {
+      "id": "wyr_dirty_154",
+      "optionA": "Have sex while blindfolded",
+      "optionB": "While handcuffed?",
+      "percentageA": 53,
+      "percentageB": 47
+    },
+    {
+      "id": "wyr_dirty_155",
+      "optionA": "Have sex with your best friend",
+      "optionB": "Have sex with your ex?",
+      "percentageA": 43,
+      "percentageB": 57
+    },
+    {
+      "id": "wyr_dirty_156",
+      "optionA": "Only have sex in missionary position",
+      "optionB": "Only have sex in a doggy-style position?",
+      "percentageA": 49,
+      "percentageB": 51
+    },
+    {
+      "id": "wyr_dirty_157",
+      "optionA": "Orgasm every time you sneeze",
+      "optionB": "Orgasm every time you yawn?",
+      "percentageA": 52,
+      "percentageB": 48
+    },
+    {
+      "id": "wyr_dirty_158",
+      "optionA": "Send a dirty text message to your boss",
+      "optionB": "Leave a sexy voice message to your mother?",
+      "percentageA": 76,
+      "percentageB": 24
+    },
+    {
+      "id": "wyr_dirty_159",
+      "optionA": "Send your nudes to everyone in your contacts",
+      "optionB": "Upload your sex tape to the internet?",
+      "percentageA": 38,
+      "percentageB": 62
+    },
+    {
+      "id": "wyr_dirty_160",
+      "optionA": "Use an electric toothbrush",
+      "optionB": "A shower head to masturbate?",
+      "percentageA": 36,
+      "percentageB": 64
+    },
+    {
+      "id": "wyr_dirty_161",
+      "optionA": "Watch someone have sex",
+      "optionB": "Have someone watch you do it?",
+      "percentageA": 64,
+      "percentageB": 36
+    },
+    {
+      "id": "wyr_dirty_162",
+      "optionA": "Be someone's sugar daddy/ sugar mommy",
+      "optionB": "Have a sugar daddy/ sugar mommy?",
+      "percentageA": 33,
+      "percentageB": 67
+    },
+    {
+      "id": "wyr_dirty_163",
+      "optionA": "Be without pants all the time",
+      "optionB": "Topless all the time?",
+      "percentageA": 49,
+      "percentageB": 51
+    },
+    {
+      "id": "wyr_dirty_164",
+      "optionA": "Do it in extreme cold",
+      "optionB": "Extreme heat?",
+      "percentageA": 39,
+      "percentageB": 61
+    },
+    {
+      "id": "wyr_dirty_165",
+      "optionA": "Forego porn for a month",
+      "optionB": "Sex for a month?",
+      "percentageA": 82,
+      "percentageB": 18
+    },
+    {
+      "id": "wyr_dirty_166",
+      "optionA": "Have one partner",
+      "optionB": "Multiple partners at the same time?",
+      "percentageA": 78,
+      "percentageB": 22
+    },
+    {
+      "id": "wyr_dirty_167",
+      "optionA": "Have sex with your cousin in secret",
+      "optionB": "Not have sex with your cousin, but everyone would think you did?",
+      "percentageA": 32,
+      "percentageB": 68
+    },
+    {
+      "id": "wyr_dirty_168",
+      "optionA": "Only have sex in the bedroom",
+      "optionB": "Only have sex outside of the bedroom?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_dirty_169",
+      "optionA": "Sell dirty panties on the internet",
+      "optionB": "Work on a sex hotline?",
+      "percentageA": 61,
+      "percentageB": 39
+    },
+    {
+      "id": "wyr_dirty_170",
+      "optionA": "Accidentally moan someone else's name during sex",
+      "optionB": "Have your partner moan someone else's name?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_dirty_171",
+      "optionA": "Have a one-night stand with a celebrity of your choice",
+      "optionB": "Have amazing sex with your partner every day for a month?",
+      "percentageA": 54,
+      "percentageB": 46
+    },
+    {
+      "id": "wyr_dirty_172",
+      "optionA": "Have your neighbors hear you every time",
+      "optionB": "Hear your neighbors every time?",
+      "percentageA": 42,
+      "percentageB": 58
+    },
+    {
+      "id": "wyr_dirty_173",
+      "optionA": "Only ever have quickies",
+      "optionB": "Only ever have marathon sessions?",
+      "percentageA": 50,
+      "percentageB": 50
+    },
+    {
+      "id": "wyr_dirty_174",
+      "optionA": "Always have to keep the lights on",
+      "optionB": "Always have to keep the lights off?",
+      "percentageA": 45,
+      "percentageB": 55
+    },
+    {
+      "id": "wyr_dirty_175",
+      "optionA": "Get a sensual massage from a stranger",
+      "optionB": "Give a sensual massage to a stranger?",
+      "percentageA": 57,
+      "percentageB": 43
+    },
+    {
+      "id": "wyr_dirty_176",
+      "optionA": "Walk in on your roommate",
+      "optionB": "Have your roommate walk in on you?",
+      "percentageA": 41,
+      "percentageB": 59
+    },
+    {
+      "id": "wyr_dirty_177",
+      "optionA": "Have an amazing body but terrible bedroom skills",
+      "optionB": "An average body but incredible bedroom skills?",
+      "percentageA": 53,
+      "percentageB": 47
+    },
+    {
+      "id": "wyr_dirty_178",
+      "optionA": "Have sex on a plane",
+      "optionB": "On a train?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_dirty_179",
+      "optionA": "Your ex writes a tell-all book about your sex life",
+      "optionB": "Your best friend reveals your biggest secret?",
+      "percentageA": 44,
+      "percentageB": 56
+    },
+    {
+      "id": "wyr_dirty_180",
+      "optionA": "Always have to make the first move",
+      "optionB": "Never be able to make the first move?",
+      "percentageA": 56,
+      "percentageB": 44
+    },
+    {
+      "id": "wyr_dirty_181",
+      "optionA": "Hook up with someone much older",
+      "optionB": "Someone much younger (both legal adults)?",
+      "percentageA": 49,
+      "percentageB": 51
+    },
+    {
+      "id": "wyr_dirty_182",
+      "optionA": "Only ever sext",
+      "optionB": "Only ever have phone sex?",
+      "percentageA": 51,
+      "percentageB": 49
+    },
+    {
+      "id": "wyr_dirty_183",
+      "optionA": "Wear edible underwear on a date",
+      "optionB": "Have your date wear edible underwear?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_dirty_184",
+      "optionA": "Have a wild fling on vacation that no one ever finds out about",
+      "optionB": "A slow-burn romance at home that everyone knows about?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_dirty_185",
+      "optionA": "Find out your partner watches weird porn",
+      "optionB": "Your partner finds out you watch weird porn?",
+      "percentageA": 43,
+      "percentageB": 57
+    },
+    {
+      "id": "wyr_dirty_186",
+      "optionA": "Have an embarrassing tattoo in an intimate area",
+      "optionB": "Have to explain a weird birthmark every time?",
+      "percentageA": 50,
+      "percentageB": 50
+    },
+    {
+      "id": "wyr_dirty_187",
+      "optionA": "Have a partner who talks dirty all the time",
+      "optionB": "One who never says a word?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_dirty_188",
+      "optionA": "Get caught skinny dipping by strangers",
+      "optionB": "By someone you know?",
+      "percentageA": 52,
+      "percentageB": 48
+    },
+    {
+      "id": "wyr_dirty_189",
+      "optionA": "Have your partner be an incredible kisser but bad at everything else",
+      "optionB": "Bad at kissing but amazing at everything else?",
+      "percentageA": 58,
+      "percentageB": 42
+    },
+    {
+      "id": "wyr_dirty_190",
+      "optionA": "Be known as the best kisser",
+      "optionB": "The best cuddler?",
+      "percentageA": 44,
+      "percentageB": 56
+    },
+    {
+      "id": "wyr_dirty_191",
+      "optionA": "Have a secret admirer who sends you steamy letters",
+      "optionB": "Know exactly who has a crush on you?",
+      "percentageA": 51,
+      "percentageB": 49
+    },
+    {
+      "id": "wyr_dirty_192",
+      "optionA": "Accidentally send a flirty text to your group chat",
+      "optionB": "Accidentally like your ex's photo from 3 years ago?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_dirty_193",
+      "optionA": "Have a threesome with strangers",
+      "optionB": "A threesome with people you know?",
+      "percentageA": 53,
+      "percentageB": 47
+    },
+    {
+      "id": "wyr_dirty_194",
+      "optionA": "Try every position in the Kama Sutra",
+      "optionB": "Master just three perfectly?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_dirty_195",
+      "optionA": "Get a lap dance from your coworker",
+      "optionB": "Give a lap dance to your coworker?",
+      "percentageA": 42,
+      "percentageB": 58
+    },
+    {
+      "id": "wyr_dirty_196",
+      "optionA": "Have incredible chemistry with everyone you meet",
+      "optionB": "Insane chemistry with only one person ever?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_dirty_197",
+      "optionA": "Be really loud and not be able to control it",
+      "optionB": "Not be able to make any sounds at all?",
+      "percentageA": 49,
+      "percentageB": 51
+    },
+    {
+      "id": "wyr_dirty_198",
+      "optionA": "Have a romantic encounter in an elevator",
+      "optionB": "In a swimming pool?",
+      "percentageA": 45,
+      "percentageB": 55
+    },
+    {
+      "id": "wyr_dirty_199",
+      "optionA": "Always have to wear lingerie under your clothes",
+      "optionB": "Never be able to wear underwear again?",
+      "percentageA": 52,
+      "percentageB": 48
+    },
+    {
+      "id": "wyr_fun_200",
+      "optionA": "Have a personal theme song that plays whenever you enter a room",
+      "optionB": "Have a laugh track play after everything you say?",
+      "percentageA": 53,
+      "percentageB": 47
+    },
+    {
+      "id": "wyr_fun_201",
+      "optionA": "Only be able to communicate through memes",
+      "optionB": "Only be able to communicate through song lyrics?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_fun_202",
       "optionA": "Have a rewind button for your life",
-      "optionB": "Have a pause button for your life"
+      "optionB": "A pause button?",
+      "percentageA": 51,
+      "percentageB": 49
+    },
+    {
+      "id": "wyr_fun_203",
+      "optionA": "Have spaghetti for fingers",
+      "optionB": "Marshmallows for toes?",
+      "percentageA": 44,
+      "percentageB": 56
+    },
+    {
+      "id": "wyr_fun_204",
+      "optionA": "Always smell like freshly baked cookies",
+      "optionB": "Always smell like a pine forest?",
+      "percentageA": 56,
+      "percentageB": 44
+    },
+    {
+      "id": "wyr_fun_205",
+      "optionA": "Be able to talk to your pets",
+      "optionB": "Have your pets talk to everyone about you?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_fun_206",
+      "optionA": "Have a robot butler",
+      "optionB": "A magic carpet?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_fun_207",
+      "optionA": "Only be able to walk in slow motion",
+      "optionB": "Only be able to run everywhere?",
+      "percentageA": 42,
+      "percentageB": 58
+    },
+    {
+      "id": "wyr_fun_208",
+      "optionA": "Sweat maple syrup",
+      "optionB": "Cry lemonade?",
+      "percentageA": 50,
+      "percentageB": 50
+    },
+    {
+      "id": "wyr_fun_209",
+      "optionA": "Have a tail that wags when you're happy",
+      "optionB": "Ears that perk up when you're interested?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_fun_210",
+      "optionA": "Live in a world where everything is edible",
+      "optionB": "A world where everything is bouncy?",
+      "percentageA": 57,
+      "percentageB": 43
+    },
+    {
+      "id": "wyr_fun_211",
+      "optionA": "Have a permanent confetti cannon follow you",
+      "optionB": "A permanent spotlight?",
+      "percentageA": 43,
+      "percentageB": 57
+    },
+    {
+      "id": "wyr_fun_212",
+      "optionA": "Only be able to eat with chopsticks",
+      "optionB": "Only be able to eat with your hands?",
+      "percentageA": 52,
+      "percentageB": 48
+    },
+    {
+      "id": "wyr_fun_213",
+      "optionA": "Everything you draw comes to life",
+      "optionB": "Everything you write comes true?",
+      "percentageA": 49,
+      "percentageB": 51
+    },
+    {
+      "id": "wyr_fun_214",
+      "optionA": "Hiccup glitter",
+      "optionB": "Sneeze confetti?",
+      "percentageA": 45,
+      "percentageB": 55
+    },
+    {
+      "id": "wyr_fun_215",
+      "optionA": "Be an amazing dancer but terrible singer",
+      "optionB": "An amazing singer but terrible dancer?",
+      "percentageA": 54,
+      "percentageB": 46
+    },
+    {
+      "id": "wyr_fun_216",
+      "optionA": "Live inside your favorite movie",
+      "optionB": "Your favorite video game?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_fun_217",
+      "optionA": "Have a talking parrot that narrates your day",
+      "optionB": "A cat that texts you passive-aggressive messages?",
+      "percentageA": 51,
+      "percentageB": 49
+    },
+    {
+      "id": "wyr_fun_218",
+      "optionA": "Win a lifetime supply of pizza",
+      "optionB": "A lifetime supply of tacos?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_fun_219",
+      "optionA": "Be able to change the color of your hair at will",
+      "optionB": "Change the color of your eyes at will?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_fun_220",
+      "optionA": "Have your life narrated by Morgan Freeman",
+      "optionB": "David Attenborough?",
+      "percentageA": 41,
+      "percentageB": 59
+    },
+    {
+      "id": "wyr_fun_221",
+      "optionA": "Be able to shrink to the size of an ant",
+      "optionB": "Grow to the size of a skyscraper?",
+      "percentageA": 52,
+      "percentageB": 48
+    },
+    {
+      "id": "wyr_fun_222",
+      "optionA": "Live in a giant blanket fort forever",
+      "optionB": "A giant ball pit?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_fun_223",
+      "optionA": "Have a fridge that always restocks itself",
+      "optionB": "A gas tank that never runs empty?",
+      "percentageA": 53,
+      "percentageB": 47
+    },
+    {
+      "id": "wyr_fun_224",
+      "optionA": "Burp bubbles",
+      "optionB": "Fart rainbows?",
+      "percentageA": 44,
+      "percentageB": 56
+    },
+    {
+      "id": "wyr_fun_225",
+      "optionA": "Be best friends with your favorite fictional character",
+      "optionB": "Your favorite celebrity?",
+      "percentageA": 56,
+      "percentageB": 44
+    },
+    {
+      "id": "wyr_fun_226",
+      "optionA": "Have shoes that never get dirty",
+      "optionB": "Clothes that never wrinkle?",
+      "percentageA": 49,
+      "percentageB": 51
+    },
+    {
+      "id": "wyr_fun_227",
+      "optionA": "Only be able to listen to one song for the rest of your life",
+      "optionB": "Never hear the same song twice?",
+      "percentageA": 43,
+      "percentageB": 57
+    },
+    {
+      "id": "wyr_fun_228",
+      "optionA": "Have a personal hype man who follows you everywhere",
+      "optionB": "A personal DJ who plays your mood music?",
+      "percentageA": 51,
+      "percentageB": 49
+    },
+    {
+      "id": "wyr_fun_229",
+      "optionA": "Have unlimited first class flights",
+      "optionB": "Unlimited five-star hotel stays?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_fun_230",
+      "optionA": "Wake up in a new random country every morning",
+      "optionB": "Wake up 10 years in the past every morning but keep your memories?",
+      "percentageA": 54,
+      "percentageB": 46
+    },
+    {
+      "id": "wyr_fun_231",
+      "optionA": "Have fingers that are USB sticks",
+      "optionB": "Toes that are flashlights?",
+      "percentageA": 45,
+      "percentageB": 55
+    },
+    {
+      "id": "wyr_fun_232",
+      "optionA": "Have a clone of yourself to do your chores",
+      "optionB": "A clone to go to work for you?",
+      "percentageA": 50,
+      "percentageB": 50
+    },
+    {
+      "id": "wyr_fun_233",
+      "optionA": "Be fluent in emoji only",
+      "optionB": "Only be able to speak in rhymes?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_fun_234",
+      "optionA": "Have every traffic light turn green for you",
+      "optionB": "Always find the best parking spot?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_fun_235",
+      "optionA": "Be able to summon any food you want out of thin air",
+      "optionB": "Be able to summon any outfit you want?",
+      "percentageA": 42,
+      "percentageB": 58
+    },
+    {
+      "id": "wyr_fun_236",
+      "optionA": "Your dog could play fetch with itself",
+      "optionB": "Your cat could cook you breakfast?",
+      "percentageA": 52,
+      "percentageB": 48
+    },
+    {
+      "id": "wyr_fun_237",
+      "optionA": "Have permanent karaoke subtitles floating in front of you",
+      "optionB": "A permanent background beat to your life?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_fun_238",
+      "optionA": "Be able to breathe underwater",
+      "optionB": "Survive in outer space without a suit?",
+      "percentageA": 53,
+      "percentageB": 47
+    },
+    {
+      "id": "wyr_fun_239",
+      "optionA": "Your alarm clock wakes you up with applause",
+      "optionB": "With the smell of bacon?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_fun_240",
+      "optionA": "Have a secret room in your house that leads to a tropical beach",
+      "optionB": "A secret room that leads to a cozy mountain cabin?",
+      "percentageA": 57,
+      "percentageB": 43
+    },
+    {
+      "id": "wyr_fun_241",
+      "optionA": "Ride a giant hamster to work",
+      "optionB": "Be carried by a flock of pigeons?",
+      "percentageA": 44,
+      "percentageB": 56
+    },
+    {
+      "id": "wyr_fun_242",
+      "optionA": "Always know the perfect thing to say",
+      "optionB": "Always know the perfect gift to give?",
+      "percentageA": 50,
+      "percentageB": 50
+    },
+    {
+      "id": "wyr_fun_243",
+      "optionA": "Have a magic mirror that shows you any place in the world",
+      "optionB": "A magic remote that controls time?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_fun_244",
+      "optionA": "Live in a house made entirely of chocolate",
+      "optionB": "A house made entirely of cheese?",
+      "percentageA": 52,
+      "percentageB": 48
+    },
+    {
+      "id": "wyr_fun_245",
+      "optionA": "Have a pet dragon the size of a hamster",
+      "optionB": "A pet hamster the size of a dragon?",
+      "percentageA": 49,
+      "percentageB": 51
+    },
+    {
+      "id": "wyr_fun_246",
+      "optionA": "Everything you touch turns to chocolate",
+      "optionB": "Everything you touch turns to gold?",
+      "percentageA": 54,
+      "percentageB": 46
+    },
+    {
+      "id": "wyr_fun_247",
+      "optionA": "Have an extra arm",
+      "optionB": "An extra leg?",
+      "percentageA": 43,
+      "percentageB": 57
+    },
+    {
+      "id": "wyr_fun_248",
+      "optionA": "Be able to undo any email you sent",
+      "optionB": "Unsend any text message?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_fun_249",
+      "optionA": "Have a remote control for real life with a mute button",
+      "optionB": "A skip button?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_kids_250",
+      "optionA": "Be able to fly like a bird",
+      "optionB": "Swim like a dolphin?",
+      "percentageA": 52,
+      "percentageB": 48
+    },
+    {
+      "id": "wyr_kids_251",
+      "optionA": "Have a pet dinosaur",
+      "optionB": "A pet unicorn?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_kids_252",
+      "optionA": "Live in a giant candy house",
+      "optionB": "A giant pillow fort?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_kids_253",
+      "optionA": "Be the fastest kid in school",
+      "optionB": "The strongest?",
+      "percentageA": 49,
+      "percentageB": 51
+    },
+    {
+      "id": "wyr_kids_254",
+      "optionA": "Eat ice cream for breakfast every day",
+      "optionB": "Stay up as late as you want every night?",
+      "percentageA": 53,
+      "percentageB": 47
+    },
+    {
+      "id": "wyr_kids_255",
+      "optionA": "Have a magic backpack that carries anything",
+      "optionB": "Magic shoes that let you run super fast?",
+      "percentageA": 44,
+      "percentageB": 56
+    },
+    {
+      "id": "wyr_kids_256",
+      "optionA": "Be invisible for a day",
+      "optionB": "Be able to fly for a day?",
+      "percentageA": 51,
+      "percentageB": 49
+    },
+    {
+      "id": "wyr_kids_257",
+      "optionA": "Have a robot friend",
+      "optionB": "An alien friend?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_kids_258",
+      "optionA": "Live at the zoo",
+      "optionB": "Live at an amusement park?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_kids_259",
+      "optionA": "Be a famous astronaut",
+      "optionB": "A famous deep-sea explorer?",
+      "percentageA": 54,
+      "percentageB": 46
+    },
+    {
+      "id": "wyr_kids_260",
+      "optionA": "Never have to go to school again",
+      "optionB": "Never have to do chores again?",
+      "percentageA": 50,
+      "percentageB": 50
+    },
+    {
+      "id": "wyr_kids_261",
+      "optionA": "Have a treehouse as your bedroom",
+      "optionB": "An underground secret bunker?",
+      "percentageA": 45,
+      "percentageB": 55
+    },
+    {
+      "id": "wyr_kids_262",
+      "optionA": "Have super strength",
+      "optionB": "Super speed?",
+      "percentageA": 53,
+      "percentageB": 47
+    },
+    {
+      "id": "wyr_kids_263",
+      "optionA": "Be able to breathe underwater",
+      "optionB": "Walk through walls?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_kids_264",
+      "optionA": "Meet your favorite cartoon character",
+      "optionB": "Live inside your favorite cartoon?",
+      "percentageA": 56,
+      "percentageB": 44
+    },
+    {
+      "id": "wyr_kids_265",
+      "optionA": "Have a pet baby elephant",
+      "optionB": "A pet baby panda?",
+      "percentageA": 42,
+      "percentageB": 58
+    },
+    {
+      "id": "wyr_kids_266",
+      "optionA": "Have all the Lego sets in the world",
+      "optionB": "All the video games in the world?",
+      "percentageA": 51,
+      "percentageB": 49
+    },
+    {
+      "id": "wyr_kids_267",
+      "optionA": "Slide down a rainbow",
+      "optionB": "Jump on clouds?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_kids_268",
+      "optionA": "Have a never-ending snow day",
+      "optionB": "A never-ending summer vacation?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_kids_269",
+      "optionA": "Be able to talk to animals",
+      "optionB": "Speak every language in the world?",
+      "percentageA": 43,
+      "percentageB": 57
+    },
+    {
+      "id": "wyr_kids_270",
+      "optionA": "Have a swimming pool filled with jelly",
+      "optionB": "Have a swimming pool filled with chocolate milk?",
+      "percentageA": 50,
+      "percentageB": 50
+    },
+    {
+      "id": "wyr_kids_271",
+      "optionA": "Ride a giant friendly spider",
+      "optionB": "Ride a flying turtle?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_kids_272",
+      "optionA": "Be a wizard",
+      "optionB": "A superhero?",
+      "percentageA": 52,
+      "percentageB": 48
+    },
+    {
+      "id": "wyr_kids_273",
+      "optionA": "Have glow-in-the-dark skin",
+      "optionB": "Be able to change colors like a chameleon?",
+      "percentageA": 49,
+      "percentageB": 51
+    },
+    {
+      "id": "wyr_kids_274",
+      "optionA": "Only eat pizza for the rest of your life",
+      "optionB": "Only eat mac and cheese?",
+      "percentageA": 54,
+      "percentageB": 46
+    },
+    {
+      "id": "wyr_kids_275",
+      "optionA": "Have a trampoline floor in your house",
+      "optionB": "A slide instead of stairs?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_kids_276",
+      "optionA": "Be able to jump as high as a kangaroo",
+      "optionB": "Hold your breath as long as a whale?",
+      "percentageA": 51,
+      "percentageB": 49
+    },
+    {
+      "id": "wyr_kids_277",
+      "optionA": "Find buried pirate treasure",
+      "optionB": "Discover a secret passageway in your house?",
+      "percentageA": 45,
+      "percentageB": 55
+    },
+    {
+      "id": "wyr_kids_278",
+      "optionA": "Have a time machine",
+      "optionB": "A teleportation device?",
+      "percentageA": 53,
+      "percentageB": 47
+    },
+    {
+      "id": "wyr_kids_279",
+      "optionA": "Be a famous YouTuber",
+      "optionB": "A famous scientist?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_kids_280",
+      "optionA": "Have every day be your birthday",
+      "optionB": "Every day be Christmas?",
+      "percentageA": 56,
+      "percentageB": 44
+    },
+    {
+      "id": "wyr_kids_281",
+      "optionA": "Have a monkey as a best friend",
+      "optionB": "A parrot that tells jokes?",
+      "percentageA": 44,
+      "percentageB": 56
+    },
+    {
+      "id": "wyr_kids_282",
+      "optionA": "Be really good at drawing",
+      "optionB": "Really good at sports?",
+      "percentageA": 50,
+      "percentageB": 50
+    },
+    {
+      "id": "wyr_kids_283",
+      "optionA": "Have the power to make it snow whenever you want",
+      "optionB": "Make the sun shine whenever you want?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_kids_284",
+      "optionA": "Explore a haunted house",
+      "optionB": "Explore a deep dark cave?",
+      "percentageA": 52,
+      "percentageB": 48
+    },
+    {
+      "id": "wyr_kids_285",
+      "optionA": "Have a magic wand that only works once a day",
+      "optionB": "A genie lamp with three wishes total?",
+      "percentageA": 49,
+      "percentageB": 51
+    },
+    {
+      "id": "wyr_kids_286",
+      "optionA": "Be as tiny as an ant for a day",
+      "optionB": "As big as a giant for a day?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_kids_287",
+      "optionA": "Live on a pirate ship",
+      "optionB": "In a castle?",
+      "percentageA": 43,
+      "percentageB": 57
+    },
+    {
+      "id": "wyr_kids_288",
+      "optionA": "Have a homework machine",
+      "optionB": "A chore-doing robot?",
+      "percentageA": 51,
+      "percentageB": 49
+    },
+    {
+      "id": "wyr_kids_289",
+      "optionA": "Be able to read really fast",
+      "optionB": "Remember everything you read?",
+      "percentageA": 46,
+      "percentageB": 54
+    },
+    {
+      "id": "wyr_kids_290",
+      "optionA": "Have a personal roller coaster in your backyard",
+      "optionB": "A personal movie theater?",
+      "percentageA": 53,
+      "percentageB": 47
+    },
+    {
+      "id": "wyr_kids_291",
+      "optionA": "Only eat sweet food",
+      "optionB": "Only eat salty food?",
+      "percentageA": 48,
+      "percentageB": 52
+    },
+    {
+      "id": "wyr_kids_292",
+      "optionA": "Have x-ray vision",
+      "optionB": "Laser eyes?",
+      "percentageA": 54,
+      "percentageB": 46
+    },
+    {
+      "id": "wyr_kids_293",
+      "optionA": "Ride to school on a skateboard",
+      "optionB": "In a go-kart?",
+      "percentageA": 45,
+      "percentageB": 55
+    },
+    {
+      "id": "wyr_kids_294",
+      "optionA": "Have a bedroom in space",
+      "optionB": "Have a bedroom underwater?",
+      "percentageA": 50,
+      "percentageB": 50
+    },
+    {
+      "id": "wyr_kids_295",
+      "optionA": "Always win at board games",
+      "optionB": "Always win at video games?",
+      "percentageA": 47,
+      "percentageB": 53
+    },
+    {
+      "id": "wyr_kids_296",
+      "optionA": "Have a pet that can talk",
+      "optionB": "A stuffed animal that comes alive at night?",
+      "percentageA": 52,
+      "percentageB": 48
+    },
+    {
+      "id": "wyr_kids_297",
+      "optionA": "Have endless art supplies",
+      "optionB": "Endless building blocks?",
+      "percentageA": 49,
+      "percentageB": 51
+    },
+    {
+      "id": "wyr_kids_298",
+      "optionA": "Be the captain of a spaceship",
+      "optionB": "The captain of a submarine?",
+      "percentageA": 55,
+      "percentageB": 45
+    },
+    {
+      "id": "wyr_kids_299",
+      "optionA": "Have hands that glow in the dark",
+      "optionB": "Feet that can stick to walls?",
+      "percentageA": 44,
+      "percentageB": 56
     }
   ]
 }

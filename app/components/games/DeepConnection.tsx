@@ -9,6 +9,7 @@ interface DeepConnectionProps {
   userId: string;
   partnerId?: string;
   onSubmitAnswer: (text: string) => void;
+  [key: string]: any;
 }
 
 export default function DeepConnection({ currentPrompt, answers, userId, partnerId, onSubmitAnswer }: DeepConnectionProps) {

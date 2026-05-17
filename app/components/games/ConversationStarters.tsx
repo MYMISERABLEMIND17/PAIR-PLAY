@@ -6,6 +6,7 @@ interface ConversationStartersProps {
   currentPrompt: any;
   isFlipped: boolean;
   onFlip: () => void;
+  [key: string]: any;
 }
 
 export default function ConversationStarters({ currentPrompt, isFlipped, onFlip }: ConversationStartersProps) {

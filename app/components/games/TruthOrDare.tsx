@@ -7,6 +7,7 @@ interface TruthOrDareProps {
   isFlipped: boolean;
   onFlip: () => void;
   onNext: () => void;
+  [key: string]: any;
 }
 
 export default function TruthOrDare({ currentPrompt, isFlipped, onFlip }: TruthOrDareProps) {

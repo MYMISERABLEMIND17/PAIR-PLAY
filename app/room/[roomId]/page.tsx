@@ -246,6 +246,8 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
         userId={userId}
         partnerId={partnerId}
         onSubmitAnswer={submitAnswer}
+        sendReaction={sendReaction}
+        state={state}
       />
 
       {/* Bottom Controls */}
