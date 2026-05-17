@@ -69,23 +69,15 @@ export default function ThisOrThat({
       </div>
 
       {/* Main Choice Split Arena */}
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 relative mb-8">
-        
-        {/* Glow behind center divider */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-amber-500 to-rose-500 blur-2xl opacity-40 animate-pulse" />
-          <div className="w-10 h-10 rounded-full bg-neutral-900 border border-white/10 shadow-[0_0_20px_rgba(244,63,94,0.3)] flex items-center justify-center font-bold text-xs uppercase tracking-widest text-rose-400">
-            OR
-          </div>
-        </div>
+      <div className="w-full flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-8 relative mb-8">
 
-        {/* Option A (Left) */}
+        {/* Option A (Left/Top) */}
         <motion.button
           onClick={() => handleSelect("A")}
           disabled={hasIAnswered}
           whileHover={!hasIAnswered ? { scale: 1.02, y: -2 } : {}}
           whileTap={!hasIAnswered ? { scale: 0.98 } : {}}
-          className={`relative group overflow-hidden min-h-[160px] rounded-3xl p-6 border text-left flex flex-col justify-between transition-all duration-300 ${
+          className={`relative flex-1 group overflow-hidden min-h-[160px] md:min-h-[180px] rounded-3xl p-6 border text-left flex flex-col justify-between transition-all duration-300 ${
             myAnswer === currentPrompt.optionA
               ? "bg-gradient-to-br from-amber-500/15 to-transparent border-amber-500 shadow-[0_0_30px_rgba(245,158,11,0.2)]"
               : hasIAnswered
@@ -125,13 +117,30 @@ export default function ThisOrThat({
           </div>
         </motion.button>
 
-        {/* Option B (Right) */}
+        {/* First-class flex divider preventing overlapping */}
+        <div className="flex flex-row md:flex-col items-center justify-center gap-3 py-2 md:py-0 select-none pointer-events-none">
+          {/* Line A */}
+          <div className="h-[2px] w-8 md:w-[2px] md:h-12 bg-gradient-to-r md:bg-gradient-to-b from-transparent to-rose-500/40" />
+          
+          {/* Glow OR Badge */}
+          <div className="relative flex items-center justify-center">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-500 to-rose-500 blur-md opacity-35" />
+            <div className="relative w-11 h-11 rounded-full bg-neutral-950 border border-white/10 shadow-[0_0_15px_rgba(244,63,94,0.3)] flex items-center justify-center font-bold text-xs uppercase tracking-widest text-rose-400">
+              OR
+            </div>
+          </div>
+
+          {/* Line B */}
+          <div className="h-[2px] w-8 md:w-[2px] md:h-12 bg-gradient-to-r md:bg-gradient-to-b from-rose-500/40 to-transparent" />
+        </div>
+
+        {/* Option B (Right/Bottom) */}
         <motion.button
           onClick={() => handleSelect("B")}
           disabled={hasIAnswered}
           whileHover={!hasIAnswered ? { scale: 1.02, y: -2 } : {}}
           whileTap={!hasIAnswered ? { scale: 0.98 } : {}}
-          className={`relative group overflow-hidden min-h-[160px] rounded-3xl p-6 border text-left flex flex-col justify-between transition-all duration-300 ${
+          className={`relative flex-1 group overflow-hidden min-h-[160px] md:min-h-[180px] rounded-3xl p-6 border text-left flex flex-col justify-between transition-all duration-300 ${
             myAnswer === currentPrompt.optionB
               ? "bg-gradient-to-br from-rose-500/15 to-transparent border-rose-500 shadow-[0_0_30px_rgba(244,63,94,0.2)]"
               : hasIAnswered

@@ -7,6 +7,8 @@ import conversationStartersData from "../data/conversation_starters.json";
 import deepConnectionData from "../data/deep_connection.json";
 import whoKnowsMeBestData from "../data/who_knows_me_best.json";
 import thisOrThatData from "../data/this_or_that.json";
+import questionsForBoyfriendData from "../data/questions_for_boyfriend.json";
+import speedDatingData from "../data/speed_dating.json";
 
 export default function GamesPage() {
   // We list our active games first, then placeholders for the rest of the ecosystem
@@ -52,6 +54,20 @@ export default function GamesPage() {
       href: "/this-or-that",
       colorClass: thisOrThatData.color,
       iconName: thisOrThatData.icon,
+    },
+    {
+      title: questionsForBoyfriendData.name,
+      description: questionsForBoyfriendData.description,
+      href: "/boyfriend-questions",
+      colorClass: questionsForBoyfriendData.color,
+      iconName: questionsForBoyfriendData.icon,
+    },
+    {
+      title: speedDatingData.name,
+      description: speedDatingData.description,
+      href: "/speed-dating",
+      colorClass: speedDatingData.color,
+      iconName: speedDatingData.icon,
     },
     {
       title: "Most Likely To",
