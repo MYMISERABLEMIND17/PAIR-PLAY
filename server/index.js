@@ -1,7 +1,7 @@
 const http = require('http');
 const crypto = require('crypto');
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // In-memory room storage
 // roomId -> { gameId, currentPromptIndex, isFlipped, players: [], answers: {}, lastReaction: null }
