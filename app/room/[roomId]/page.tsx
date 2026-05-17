@@ -7,17 +7,20 @@ import truthOrDareData from "../../data/truth_or_dare.json";
 import wouldYouRatherData from "../../data/would_you_rather.json";
 import conversationStartersData from "../../data/conversation_starters.json";
 import deepConnectionData from "../../data/deep_connection.json";
+import whoKnowsMeBestData from "../../data/who_knows_me_best.json";
 import { useRoom } from "../../../lib/useRoom";
 import TruthOrDare from "../../components/games/TruthOrDare";
 import WouldYouRather from "../../components/games/WouldYouRather";
 import ConversationStarters from "../../components/games/ConversationStarters";
 import DeepConnection from "../../components/games/DeepConnection";
+import WhoKnowsMeBest from "../../components/games/WhoKnowsMeBest";
 
 const gameRegistry: Record<string, { data: any, Component: any }> = {
   truth_or_dare: { data: truthOrDareData, Component: TruthOrDare },
   would_you_rather: { data: wouldYouRatherData, Component: WouldYouRather },
   conversation_starters: { data: conversationStartersData, Component: ConversationStarters },
   deep_connection: { data: deepConnectionData, Component: DeepConnection },
+  who_knows_me_best: { data: whoKnowsMeBestData, Component: WhoKnowsMeBest },
 };
 
 export default function CoupleRoom({ params }: { params: Promise<{ roomId: string }> }) {

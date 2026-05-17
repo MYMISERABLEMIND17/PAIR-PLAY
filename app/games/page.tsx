@@ -5,6 +5,7 @@ import truthOrDareData from "../data/truth_or_dare.json";
 import wouldYouRatherData from "../data/would_you_rather.json";
 import conversationStartersData from "../data/conversation_starters.json";
 import deepConnectionData from "../data/deep_connection.json";
+import whoKnowsMeBestData from "../data/who_knows_me_best.json";
 
 export default function GamesPage() {
   // We list our active games first, then placeholders for the rest of the ecosystem
@@ -36,6 +37,13 @@ export default function GamesPage() {
       href: "/deep-connection",
       colorClass: deepConnectionData.color,
       iconName: deepConnectionData.icon,
+    },
+    {
+      title: whoKnowsMeBestData.name,
+      description: whoKnowsMeBestData.description,
+      href: "/who-knows-me-best",
+      colorClass: whoKnowsMeBestData.color,
+      iconName: whoKnowsMeBestData.icon,
     },
     {
       title: "Most Likely To",

@@ -5,6 +5,7 @@ import truthOrDareData from "./data/truth_or_dare.json";
 import wouldYouRatherData from "./data/would_you_rather.json";
 import conversationStartersData from "./data/conversation_starters.json";
 import deepConnectionData from "./data/deep_connection.json";
+import whoKnowsMeBestData from "./data/who_knows_me_best.json";
 
 export default function Home() {
   const games = [
@@ -35,6 +36,13 @@ export default function Home() {
       href: "/deep-connection",
       colorClass: deepConnectionData.color,
       iconName: deepConnectionData.icon,
+    },
+    {
+      title: whoKnowsMeBestData.name,
+      description: whoKnowsMeBestData.description,
+      href: "/who-knows-me-best",
+      colorClass: whoKnowsMeBestData.color,
+      iconName: whoKnowsMeBestData.icon,
     },
   ];
 
