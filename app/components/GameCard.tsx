@@ -34,6 +34,7 @@ export default function GameCard({ title, description, href, colorClass, iconNam
   const Icon = iconMap[iconName] || Flame;
   const router = useRouter();
   const [isCreating, setIsCreating] = useState(false);
+  const [creationStatus, setCreationStatus] = useState("Create Room");
   const [isJoining, setIsJoining] = useState(false);
   const [joinCode, setJoinCode] = useState("");
   const [error, setError] = useState<string>("");
@@ -51,19 +52,28 @@ export default function GameCard({ title, description, href, colorClass, iconNam
     }
 
     setIsCreating(true);
+    setCreationStatus("Creating Room...");
     setError("");
+
+    const statusTimer = setTimeout(() => {
+      setCreationStatus("Waking up server... 🚀");
+    }, 3000);
+
     try {
       const roomId = await createNewRoom(gameId);
+      clearTimeout(statusTimer);
       if (!roomId) {
         throw new Error("Failed to generate room ID");
       }
       router.push(`/room/${roomId}`);
     } catch (err) {
+      clearTimeout(statusTimer);
       const errorMsg = err instanceof Error ? err.message : "Failed to create room. Check your internet connection and Firebase configuration.";
       console.error("Failed to create room:", err);
       setError(errorMsg);
       setShowError(true);
       setIsCreating(false);
+      setCreationStatus("Create Room");
     }
   };
 
@@ -129,10 +139,10 @@ export default function GameCard({ title, description, href, colorClass, iconNam
           <div className="flex flex-col gap-3 w-full">
             <button 
               onClick={handleCreate}
-              className={`w-full py-3 rounded-xl font-bold text-sm text-white bg-gradient-to-r ${colorClass} hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-lg`}
+              className={`w-full py-3 rounded-xl font-bold text-xs uppercase tracking-widest text-white bg-gradient-to-r ${colorClass} hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-lg`}
             >
-              <Plus className="w-4 h-4" />
-              {isCreating ? "Creating..." : "Create Room"}
+              {!isCreating && <Plus className="w-4 h-4" />}
+              <span>{creationStatus}</span>
             </button>
             <button 
               onClick={(e) => { e.stopPropagation(); setIsJoining(true); }}

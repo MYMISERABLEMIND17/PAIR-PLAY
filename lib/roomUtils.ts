@@ -2,14 +2,6 @@ import { socket } from "./socket";
 
 export async function createNewRoom(gameId: string): Promise<string> {
   return new Promise((resolve, reject) => {
-    // 5 second safety timeout
-    const timeout = setTimeout(() => {
-      socket.off("room-created", handleCreated);
-      socket.off("connect", onConnect);
-      socket.off("error", handleError);
-      reject(new Error("⏱️ Room creation timed out. Is the backend server running?"));
-    }, 5000);
-
     const handleCreated = (data: { roomId: string }) => {
       clearTimeout(timeout);
       socket.off("room-created", handleCreated);
@@ -23,7 +15,7 @@ export async function createNewRoom(gameId: string): Promise<string> {
       socket.off("room-created", handleCreated);
       socket.off("connect", onConnect);
       socket.off("error", handleError);
-      reject(new Error("❌ Connection failed. Check backend server."));
+      reject(new Error("❌ Connection failed. Check your internet connection or try again."));
     };
 
     const onConnect = () => {
@@ -31,10 +23,22 @@ export async function createNewRoom(gameId: string): Promise<string> {
       socket.emit("create-room", { gameId });
     };
 
+    // Safety timeout to allow Render free tier wakeups (defined after functions to avoid TDZ warnings)
+    const timeout = setTimeout(() => {
+      socket.off("room-created", handleCreated);
+      socket.off("connect", onConnect);
+      socket.off("error", handleError);
+      reject(new Error("⏱️ Room creation timed out. Please try again. The server takes about 30 seconds to wake up from sleep."));
+    }, 45000);
+
     socket.on("room-created", handleCreated);
     socket.on("error", handleError);
-    socket.on("connect", onConnect);
 
-    socket.connect();
+    if (socket.connected) {
+      socket.emit("create-room", { gameId });
+    } else {
+      socket.on("connect", onConnect);
+      socket.connect();
+    }
   });
 }
