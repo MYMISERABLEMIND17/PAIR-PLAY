@@ -14,6 +14,7 @@ import {
   RefreshCw,
   Plus,
   ArrowRight,
+  Sparkles,
   type LucideIcon 
 } from "lucide-react";
 import { createNewRoom } from "../../lib/roomUtils";
@@ -27,7 +28,7 @@ interface GameCardProps {
 }
 
 const iconMap: Record<string, LucideIcon> = {
-  Flame, HelpCircle, MessageCircleHeart, Users, AlertTriangle, Heart, Smile, MicOff, RefreshCw,
+  Flame, HelpCircle, MessageCircleHeart, Users, AlertTriangle, Heart, Smile, MicOff, RefreshCw, Sparkles,
 };
 
 export default function GameCard({ title, description, href, colorClass, iconName }: GameCardProps) {

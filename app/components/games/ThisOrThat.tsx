@@ -1,0 +1,250 @@
+"use client";
+
+import { motion, AnimatePresence } from "framer-motion";
+import { CheckCircle2, XCircle, Heart, Sparkles, Flame, HelpCircle } from "lucide-react";
+import { useState, useEffect } from "react";
+
+interface ThisOrThatProps {
+  currentPrompt: {
+    id: string;
+    optionA: string;
+    optionB: string;
+  };
+  isFlipped: boolean;
+  onFlip: () => void;
+  onNext: () => void;
+  answers: Record<string, string>;
+  userId: string | null;
+  partnerId: string | null;
+  onSubmitAnswer: (text: string) => void;
+  sendReaction: (type: string) => void;
+  state?: any;
+}
+
+export default function ThisOrThat({
+  currentPrompt,
+  answers,
+  userId,
+  partnerId,
+  onSubmitAnswer,
+  onNext,
+  sendReaction
+}: ThisOrThatProps) {
+  const myAnswer = userId ? answers[userId] : null;
+  const partnerAnswer = partnerId ? answers[partnerId] : null;
+  
+  const hasBothAnswered = !!myAnswer && !!partnerAnswer;
+  const hasIAnswered = !!myAnswer;
+  const hasPartnerAnswered = !!partnerAnswer;
+
+  const isMatch = hasBothAnswered && myAnswer === partnerAnswer;
+
+  // Track selection state locally for micro-animations
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Reset local selection when question changes
+    setSelectedOption(myAnswer);
+  }, [currentPrompt.id, myAnswer]);
+
+  const handleSelect = (option: "A" | "B") => {
+    if (hasIAnswered) return;
+    const value = option === "A" ? currentPrompt.optionA : currentPrompt.optionB;
+    setSelectedOption(value);
+    onSubmitAnswer(value);
+    sendReaction("heart");
+  };
+
+  return (
+    <div className="w-full max-w-2xl mx-auto px-4 py-6 flex flex-col items-center">
+      
+      {/* Title Header */}
+      <div className="text-center mb-8">
+        <span className="text-[10px] font-bold uppercase tracking-widest text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+          This or That ⚡
+        </span>
+        <h2 className="text-2xl font-extrabold mt-3 text-white/90">
+          Which one do you prefer?
+        </h2>
+      </div>
+
+      {/* Main Choice Split Arena */}
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 relative mb-8">
+        
+        {/* Glow behind center divider */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-amber-500 to-rose-500 blur-2xl opacity-40 animate-pulse" />
+          <div className="w-10 h-10 rounded-full bg-neutral-900 border border-white/10 shadow-[0_0_20px_rgba(244,63,94,0.3)] flex items-center justify-center font-bold text-xs uppercase tracking-widest text-rose-400">
+            OR
+          </div>
+        </div>
+
+        {/* Option A (Left) */}
+        <motion.button
+          onClick={() => handleSelect("A")}
+          disabled={hasIAnswered}
+          whileHover={!hasIAnswered ? { scale: 1.02, y: -2 } : {}}
+          whileTap={!hasIAnswered ? { scale: 0.98 } : {}}
+          className={`relative group overflow-hidden min-h-[160px] rounded-3xl p-6 border text-left flex flex-col justify-between transition-all duration-300 ${
+            myAnswer === currentPrompt.optionA
+              ? "bg-gradient-to-br from-amber-500/15 to-transparent border-amber-500 shadow-[0_0_30px_rgba(245,158,11,0.2)]"
+              : hasIAnswered
+              ? "bg-white/[0.01] border-white/5 opacity-50"
+              : "bg-white/[0.02] border-white/10 hover:border-amber-500/40 hover:bg-white/[0.04]"
+          }`}
+        >
+          {/* Subtle Back Glow */}
+          <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-amber-500/5 to-transparent rounded-full blur-xl group-hover:from-amber-500/10 transition-colors" />
+
+          {/* Option Label */}
+          <span className="text-[10px] font-bold uppercase tracking-widest text-amber-500/60 group-hover:text-amber-500 transition-colors">
+            Option A
+          </span>
+
+          <div className="my-auto pt-2 pb-4">
+            <span className="text-2xl md:text-3xl font-black text-white/90 group-hover:text-white leading-tight">
+              {currentPrompt.optionA}
+            </span>
+          </div>
+
+          {/* Choice status indicator */}
+          <div className="flex items-center gap-2">
+            {myAnswer === currentPrompt.optionA ? (
+              <span className="text-[10px] font-bold uppercase tracking-widest text-amber-400 flex items-center gap-1.5 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">
+                <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" /> Selected
+              </span>
+            ) : hasIAnswered ? (
+              <span className="text-[10px] font-bold uppercase tracking-widest text-white/30">
+                Not chosen
+              </span>
+            ) : (
+              <span className="text-[10px] font-bold uppercase tracking-widest text-white/40 group-hover:text-white/80 transition-colors">
+                Tap to Select
+              </span>
+            )}
+          </div>
+        </motion.button>
+
+        {/* Option B (Right) */}
+        <motion.button
+          onClick={() => handleSelect("B")}
+          disabled={hasIAnswered}
+          whileHover={!hasIAnswered ? { scale: 1.02, y: -2 } : {}}
+          whileTap={!hasIAnswered ? { scale: 0.98 } : {}}
+          className={`relative group overflow-hidden min-h-[160px] rounded-3xl p-6 border text-left flex flex-col justify-between transition-all duration-300 ${
+            myAnswer === currentPrompt.optionB
+              ? "bg-gradient-to-br from-rose-500/15 to-transparent border-rose-500 shadow-[0_0_30px_rgba(244,63,94,0.2)]"
+              : hasIAnswered
+              ? "bg-white/[0.01] border-white/5 opacity-50"
+              : "bg-white/[0.02] border-white/10 hover:border-rose-500/40 hover:bg-white/[0.04]"
+          }`}
+        >
+          {/* Subtle Back Glow */}
+          <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-rose-500/5 to-transparent rounded-full blur-xl group-hover:from-rose-500/10 transition-colors" />
+
+          {/* Option Label */}
+          <span className="text-[10px] font-bold uppercase tracking-widest text-rose-500/60 group-hover:text-rose-500 transition-colors">
+            Option B
+          </span>
+
+          <div className="my-auto pt-2 pb-4">
+            <span className="text-2xl md:text-3xl font-black text-white/90 group-hover:text-white leading-tight">
+              {currentPrompt.optionB}
+            </span>
+          </div>
+
+          {/* Choice status indicator */}
+          <div className="flex items-center gap-2">
+            {myAnswer === currentPrompt.optionB ? (
+              <span className="text-[10px] font-bold uppercase tracking-widest text-rose-400 flex items-center gap-1.5 bg-rose-500/10 px-2.5 py-1 rounded-full border border-rose-500/20">
+                <CheckCircle2 className="w-3.5 h-3.5 text-rose-400" /> Selected
+              </span>
+            ) : hasIAnswered ? (
+              <span className="text-[10px] font-bold uppercase tracking-widest text-white/30">
+                Not chosen
+              </span>
+            ) : (
+              <span className="text-[10px] font-bold uppercase tracking-widest text-white/40 group-hover:text-white/80 transition-colors">
+                Tap to Select
+              </span>
+            )}
+          </div>
+        </motion.button>
+
+      </div>
+
+      {/* Synchronized Feedback Overlay */}
+      <div className="w-full min-h-[90px] flex items-center justify-center">
+        <AnimatePresence mode="wait">
+          {!hasIAnswered ? (
+            <motion.div
+              key="waiting-self"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="flex flex-col items-center"
+            >
+              <HelpCircle className="w-8 h-8 text-white/30 animate-bounce mb-2" />
+              <p className="text-sm font-medium text-white/40">Select your preference above to sync!</p>
+            </motion.div>
+          ) : !hasPartnerAnswered ? (
+            <motion.div
+              key="waiting-partner"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="flex flex-col items-center bg-white/[0.02] border border-white/5 px-6 py-4 rounded-2xl"
+            >
+              <div className="w-5 h-5 rounded-full border-2 border-amber-400 border-t-transparent animate-spin mb-3" />
+              <p className="text-xs font-semibold uppercase tracking-widest text-amber-400/80">Waiting for Partner...</p>
+              <p className="text-[10px] text-white/40 mt-1">Once they vote, compatibility is revealed!</p>
+            </motion.div>
+          ) : (
+            <motion.div
+              key="revealed"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              className="w-full flex flex-col items-center gap-4"
+            >
+              
+              {/* Compatibility Result Banner */}
+              {isMatch ? (
+                <div className="relative w-full max-w-md rounded-2xl py-3 px-6 bg-gradient-to-r from-emerald-500/10 via-teal-500/15 to-emerald-500/10 border border-emerald-500/30 text-center shadow-[0_0_30px_rgba(16,185,129,0.15)] flex flex-col items-center">
+                  <div className="absolute -top-3.5 bg-emerald-500 text-black text-[9px] font-black uppercase tracking-widest px-2.5 py-0.5 rounded-full shadow-lg">
+                    Perfect Match! ❤️
+                  </div>
+                  <p className="text-sm font-bold text-emerald-400 mt-1 flex items-center gap-1.5">
+                    <Sparkles className="w-4 h-4 text-emerald-400 animate-spin" />
+                    You both chose <strong className="underline decoration-wavy decoration-emerald-400/40">{myAnswer}</strong>!
+                  </p>
+                  <p className="text-[10px] text-white/50 mt-0.5">You're in absolute sync on this preference!</p>
+                </div>
+              ) : (
+                <div className="relative w-full max-w-md rounded-2xl py-3 px-6 bg-gradient-to-r from-rose-500/10 via-purple-500/15 to-rose-500/10 border border-rose-500/30 text-center shadow-[0_0_30px_rgba(244,63,94,0.15)] flex flex-col items-center">
+                  <div className="absolute -top-3.5 bg-rose-500 text-white text-[9px] font-black uppercase tracking-widest px-2.5 py-0.5 rounded-full shadow-lg">
+                    Opposites Attract! ☯️
+                  </div>
+                  <p className="text-sm font-bold text-rose-400 mt-1">
+                    You chose <strong className="text-amber-400">{myAnswer}</strong>, they chose <strong className="text-rose-400">{partnerAnswer}</strong>!
+                  </p>
+                  <p className="text-[10px] text-white/50 mt-0.5">Opposing choices make for the best debates! Share why you chose yours.</p>
+                </div>
+              )}
+
+              {/* Dynamic Next Button */}
+              <button
+                onClick={onNext}
+                className="px-8 py-3 rounded-xl font-black text-xs uppercase tracking-widest text-black bg-white hover:bg-white/90 hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+              >
+                Next Preference →
+              </button>
+
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+
+    </div>
+  );
+}

@@ -9,12 +9,14 @@ import wouldYouRatherData from "../../data/would_you_rather.json";
 import conversationStartersData from "../../data/conversation_starters.json";
 import deepConnectionData from "../../data/deep_connection.json";
 import whoKnowsMeBestData from "../../data/who_knows_me_best.json";
+import thisOrThatData from "../../data/this_or_that.json";
 import { useRoom } from "../../../lib/useRoom";
 import TruthOrDare from "../../components/games/TruthOrDare";
 import WouldYouRather from "../../components/games/WouldYouRather";
 import ConversationStarters from "../../components/games/ConversationStarters";
 import DeepConnection from "../../components/games/DeepConnection";
 import WhoKnowsMeBest from "../../components/games/WhoKnowsMeBest";
+import ThisOrThat from "../../components/games/ThisOrThat";
 
 const gameRegistry: Record<string, { data: any, Component: any }> = {
   truth_or_dare: { data: truthOrDareData, Component: TruthOrDare },
@@ -22,6 +24,7 @@ const gameRegistry: Record<string, { data: any, Component: any }> = {
   conversation_starters: { data: conversationStartersData, Component: ConversationStarters },
   deep_connection: { data: deepConnectionData, Component: DeepConnection },
   who_knows_me_best: { data: whoKnowsMeBestData, Component: WhoKnowsMeBest },
+  this_or_that: { data: thisOrThatData, Component: ThisOrThat },
 };
 
 const LOADING_TIPS = [
