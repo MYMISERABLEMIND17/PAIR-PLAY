@@ -41,7 +41,7 @@ export function useRoom(roomId: string) {
         setError('network_blocked');
         setLoading(false);
       }
-    }, 8000);
+    }, 45000);
 
     const onConnect = () => {
       console.log("Socket connected, joining room:", roomId);
@@ -64,10 +64,7 @@ export function useRoom(roomId: string) {
     };
 
     const onError = () => {
-      console.error("WebSocket server connection error.");
-      setError('network_blocked');
-      setLoading(false);
-      clearTimeout(timeoutId);
+      console.error("WebSocket server connection error. Retrying in background...");
     };
 
     // Register listeners

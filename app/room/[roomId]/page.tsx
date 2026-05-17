@@ -23,6 +23,15 @@ const gameRegistry: Record<string, { data: any, Component: any }> = {
   who_knows_me_best: { data: whoKnowsMeBestData, Component: WhoKnowsMeBest },
 };
 
+const LOADING_TIPS = [
+  "Render's free tier takes about 30 seconds to wake up after a period of inactivity.",
+  "Once the server is awake, your gameplay actions will sync in real-time instantly!",
+  "PairPlay utilizes direct WebSocket streams to ensure ultra-low latency.",
+  "We do not store your private game answers on the cloud; your privacy is fully protected.",
+  "If the countdown finishes and network blocks it, you can transition to offline play!",
+  "Tip: Tap reactions during gameplay to signal your emotions instantly to your partner."
+];
+
 export default function CoupleRoom({ params }: { params: Promise<{ roomId: string }> }) {
   const { roomId } = use(params);
   const { 
@@ -32,6 +41,26 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
   } = useRoom(roomId);
   const [reactions, setReactions] = useState<{ id: number; left: number }[]>([]);
   const [copied, setCopied] = useState(false);
+  const [countdown, setCountdown] = useState(45);
+  const [tipIndex, setTipIndex] = useState(0);
+
+  // Countdown timer effect
+  useEffect(() => {
+    if (!loading) return;
+    const interval = setInterval(() => {
+      setCountdown((prev) => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [loading]);
+
+  // Rotating tips effect
+  useEffect(() => {
+    if (!loading) return;
+    const interval = setInterval(() => {
+      setTipIndex((prev) => (prev + 1) % LOADING_TIPS.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, [loading]);
 
   // Listen for new reactions from Firebase
   useEffect(() => {
@@ -53,9 +82,75 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
   }, [roomId]);
 
   if (loading || (!state && !error) || !userId) {
+    const progressWidth = `${(countdown / 45) * 100}%`;
     return (
-      <div className="min-h-[calc(100vh-64px)] flex items-center justify-center">
-        <div className="w-12 h-12 rounded-full border-4 border-pink-500 border-t-transparent animate-spin" />
+      <div className="min-h-[calc(100vh-64px)] flex items-center justify-center p-4 bg-[#050508]">
+        <div className="relative w-full max-w-md rounded-3xl p-8 bg-[#0d0d12]/60 border border-white/10 backdrop-blur-2xl shadow-[0_0_50px_rgba(0,0,0,0.6)] text-center flex flex-col items-center overflow-hidden">
+          
+          {/* Top Border Glow */}
+          <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-amber-500 via-pink-500 to-indigo-500" />
+          
+          {/* Circular Countdown Loader */}
+          <div className="relative w-24 h-24 mb-6 flex items-center justify-center">
+            {/* Pulsing visual outer rings */}
+            <div className="absolute inset-0 rounded-full border border-pink-500/20 animate-ping" />
+            <div className="absolute inset-2 rounded-full border border-indigo-500/30 animate-pulse" />
+            
+            {/* Spinning Indicator */}
+            <div className="absolute inset-0 rounded-full border-4 border-white/5 border-t-pink-500 animate-spin" />
+            
+            {/* Counter display */}
+            <span className="text-2xl font-black text-white font-mono">{countdown}s</span>
+          </div>
+
+          <h2 className="text-xl font-bold bg-gradient-to-r from-amber-400 via-pink-500 to-indigo-400 bg-clip-text text-transparent mb-2">
+            Waking up server... 🚀
+          </h2>
+          <p className="text-white/60 text-xs leading-normal max-w-sm mb-6">
+            Render's free tier goes to sleep after inactivity. We are spinning it up now, which takes about 30 seconds!
+          </p>
+
+          {/* Shrinking/Growing Progress Bar */}
+          <div className="relative w-full h-1.5 bg-white/5 rounded-full overflow-hidden mb-8 border border-white/5">
+            <div
+              style={{ width: progressWidth }}
+              className="absolute top-0 left-0 h-full bg-gradient-to-r from-amber-500 via-pink-500 to-indigo-500 shadow-[0_0_10px_rgba(236,72,153,0.5)] transition-all duration-1000"
+            />
+          </div>
+
+          {/* Rotating Tips Box */}
+          <div className="w-full bg-white/[0.02] border border-white/5 rounded-2xl p-4 min-h-[90px] flex items-center justify-center mb-6">
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={tipIndex}
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -5 }}
+                transition={{ duration: 0.4 }}
+                className="text-[11px] font-medium leading-relaxed text-white/50"
+              >
+                💡 {LOADING_TIPS[tipIndex]}
+              </motion.p>
+            </AnimatePresence>
+          </div>
+
+          {/* Instantly play offline option */}
+          <div className="flex flex-col gap-2.5 w-full">
+            <button
+              onClick={() => enableOfflineMode('truth_or_dare')}
+              className="w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-widest bg-white/10 hover:bg-white/20 text-white transition-all cursor-pointer border border-white/5"
+            >
+              Skip to Offline Play
+            </button>
+            <Link
+              href="/games"
+              className="text-[10px] font-bold uppercase tracking-widest text-white/40 hover:text-white/80 transition-colors"
+            >
+              Cancel & Back to Lobby
+            </Link>
+          </div>
+
+        </div>
       </div>
     );
   }
