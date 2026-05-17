@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import { doc, onSnapshot, setDoc, updateDoc } from "firebase/firestore";
-import { signInAnonymously } from "firebase/auth";
-import { db, auth } from "./firebase";
+import { socket } from "./socket";
 
 export interface RoomState {
   gameId: string;
@@ -10,8 +8,8 @@ export interface RoomState {
   players: string[];
   lastReaction?: { type: string; timestamp: number; by: string };
   answers?: Record<string, string>;
+  hasSubmitted?: Record<string, boolean>;
 }
-
 
 export function useRoom(roomId: string) {
   const [state, setState] = useState<RoomState | null>(null);
@@ -20,84 +18,83 @@ export function useRoom(roomId: string) {
   const [error, setError] = useState<'not_found' | 'full' | 'network_blocked' | null>(null);
   const [isOfflineMode, setIsOfflineMode] = useState(false);
 
+  // Initialize unique local user identity (cached in localStorage)
   useEffect(() => {
-    // 1. Authenticate the user anonymously
-    signInAnonymously(auth)
-      .then((userCredential) => {
-        setUserId(userCredential.user.uid);
-      })
-      .catch((error) => {
-        console.error("Auth failed:", error);
-      });
+    if (typeof window !== "undefined") {
+      let cachedId = localStorage.getItem("pairplay_userid");
+      if (!cachedId) {
+        cachedId = `user_${Math.random().toString(36).substring(2, 12)}`;
+        localStorage.setItem("pairplay_userid", cachedId);
+      }
+      setUserId(cachedId);
+    }
   }, []);
 
+  // WebSockets Real-Time Sync Listener Lifecycle
   useEffect(() => {
     if (!userId || isOfflineMode) return;
 
-    // Set a timeout to detect if Firebase is blocked by the network/adblocker
+    // Safety timeout to flag network blocks if server doesn't respond
     const timeoutId = setTimeout(() => {
       if (loading) {
-        console.warn("Firebase connection timeout after 8 seconds - possible network block");
+        console.warn("WebSocket connection timeout: server is unreachable");
         setError('network_blocked');
         setLoading(false);
       }
     }, 8000);
 
-    const roomRef = doc(db, "rooms", roomId);
+    const onConnect = () => {
+      console.log("Socket connected, joining room:", roomId);
+      socket.emit("join-room", { roomId, userId });
+    };
 
-    // 2. Listen to Firestore changes
-    const unsubscribe = onSnapshot(roomRef, (snapshot) => {
-      if (snapshot.exists()) {
-        const data = snapshot.data() as RoomState;
-
-        // Check if the room is full and we are not already in it
-        if (data.players.length >= 2 && !data.players.includes(userId)) {
-          setError('full');
-          setLoading(false);
-          clearTimeout(timeoutId);
-          return;
-        }
-
-        setState(data);
-        
-        // If we are not in the players array, join the room
-        if (!data.players.includes(userId)) {
-           updateDoc(roomRef, {
-             players: [...data.players, userId]
-           }).catch((err) => {
-             console.error("Failed to add player to room:", err);
-           });
-        }
-      } else {
-        setError('not_found');
-      }
+    const onStateUpdate = (newState: RoomState) => {
+      console.log("Sync game-state received:", newState);
+      setState(newState);
       setLoading(false);
       clearTimeout(timeoutId);
-    }, (error) => {
-      console.error("Firestore Error:", error);
-      // Distinguish between different error types
-      if (error.code === 'permission-denied') {
-        console.error("Firestore permission denied - check your security rules");
-      } else if (error.message?.includes('offline')) {
-        console.warn("Firestore offline - attempting to reconnect");
-      }
+      setError(null);
+    };
+
+    const onRoomError = (err: { code: 'not_found' | 'full' }) => {
+      console.error("Room error received:", err.code);
+      setError(err.code);
+      setLoading(false);
+      clearTimeout(timeoutId);
+    };
+
+    const onError = () => {
+      console.error("WebSocket server connection error.");
       setError('network_blocked');
       setLoading(false);
       clearTimeout(timeoutId);
-    });
+    };
+
+    // Register listeners
+    socket.on("connect", onConnect);
+    socket.on("game-state-update", onStateUpdate);
+    socket.on("room-error", onRoomError);
+    socket.on("error", onError);
+
+    // Initial connection or join trigger if already connected
+    socket.connect();
+    socket.emit("join-room", { roomId, userId });
 
     return () => {
-      unsubscribe();
+      socket.off("connect", onConnect);
+      socket.off("game-state-update", onStateUpdate);
+      socket.off("room-error", onRoomError);
+      socket.off("error", onError);
       clearTimeout(timeoutId);
     };
-  }, [roomId, userId, loading]);
+  }, [roomId, userId, loading, isOfflineMode]);
 
   // Actions
   const enableOfflineMode = (gameId: string) => {
     setIsOfflineMode(true);
     setError(null);
     setLoading(false);
-    // Setup local dummy state
+    
     const localId = userId || "offline_user_1";
     setUserId(localId);
     setState({
@@ -123,7 +120,7 @@ export function useRoom(roomId: string) {
       setState({ ...state, isFlipped: true });
       return;
     }
-    updateDoc(doc(db, "rooms", roomId), { isFlipped: true });
+    socket.emit("flip-card", { roomId });
   };
 
   const nextPrompt = (totalPrompts: number) => {
@@ -137,11 +134,7 @@ export function useRoom(roomId: string) {
       });
       return;
     }
-    updateDoc(doc(db, "rooms", roomId), {
-      isFlipped: false,
-      answers: {},
-      currentPromptIndex: (state.currentPromptIndex + 1) % totalPrompts
-    });
+    socket.emit("next-prompt", { roomId, totalPrompts });
   };
 
   const submitAnswer = (text: string) => {
@@ -153,9 +146,7 @@ export function useRoom(roomId: string) {
       });
       return;
     }
-    updateDoc(doc(db, "rooms", roomId), {
-      [`answers.${userId}`]: text
-    });
+    socket.emit("submit-answer", { roomId, userId, text });
   };
 
   const sendReaction = (type: string) => {
@@ -167,9 +158,7 @@ export function useRoom(roomId: string) {
       });
       return;
     }
-    updateDoc(doc(db, "rooms", roomId), {
-      lastReaction: { type, timestamp: Date.now(), by: userId }
-    });
+    socket.emit("reaction", { roomId, userId, type });
   };
 
   return { 

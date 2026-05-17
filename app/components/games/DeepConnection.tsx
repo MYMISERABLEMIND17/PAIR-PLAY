@@ -17,8 +17,8 @@ export default function DeepConnection({ currentPrompt, answers, userId, partner
   const myAnswer = answers?.[userId];
   const partnerAnswer = partnerId ? answers?.[partnerId] : undefined;
 
-  const bothAnswered = myAnswer && partnerAnswer;
-  const iAnswered = !!myAnswer;
+  const bothAnswered = myAnswer && partnerAnswer && myAnswer !== "SUBMITTED_PLACEHOLDER" && partnerAnswer !== "SUBMITTED_PLACEHOLDER";
+  const iAnswered = !!myAnswer && myAnswer !== "SUBMITTED_PLACEHOLDER";
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

@@ -23,9 +23,6 @@ const db = initializeFirestore(app, {
   experimentalForceLongPolling: true,
 });
 
-const auth = getAuth(auth ? undefined : app);
-// Note: We use a ternary above just to ensure we don't re-init auth if it exists, 
-// though getAuth(app) is already a singleton.
-const finalAuth = getAuth(app);
+const auth = getAuth(app);
 
-export { app, db, auth: finalAuth };
+export { app, db, auth };
