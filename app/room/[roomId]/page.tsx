@@ -33,6 +33,29 @@ const LOADING_TIPS = [
   "Tip: Tap reactions during gameplay to signal your emotions instantly to your partner."
 ];
 
+// Mulberry32 deterministic pseudo-random number generator
+function mulberry32(seed: number) {
+  return function() {
+    let t = seed += 0x6D2B79F5;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  }
+}
+
+// Deterministic seed-based shuffle to keep questions in identical order for both players
+function deterministicShuffle<T>(array: T[], seed: number): T[] {
+  const shuffled = [...array];
+  const random = mulberry32(seed);
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1));
+    const temp = shuffled[i];
+    shuffled[i] = shuffled[j];
+    shuffled[j] = temp;
+  }
+  return shuffled;
+}
+
 export default function CoupleRoom({ params }: { params: Promise<{ roomId: string }> }) {
   const { roomId } = use(params);
   const { 
@@ -245,7 +268,11 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
 
   // Determine the active game (state is guaranteed non-null at this point due to early returns above)
   const activeGame = gameRegistry[state!.gameId] || gameRegistry['truth_or_dare'];
-  const prompts = activeGame.data.prompts;
+  
+  // Deterministically shuffle prompts using the room's unique sync seed
+  const rawPrompts = activeGame.data.prompts;
+  const prompts = state!.seed ? deterministicShuffle(rawPrompts, state!.seed) : rawPrompts;
+  
   const currentPrompt = prompts[state!.currentPromptIndex];
   const GameComponent = activeGame.Component;
 

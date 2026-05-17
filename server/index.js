@@ -121,7 +121,8 @@ function broadcastState(roomId) {
       players: room.players,
       answers: tailoredAnswers,
       hasSubmitted: hasSubmitted,
-      lastReaction: room.lastReaction
+      lastReaction: room.lastReaction,
+      seed: room.seed
     };
 
     // Distribute tailored state to the specific player's open sockets
@@ -150,7 +151,8 @@ function handleEvent(socketId, event, data) {
         isFlipped: false,
         players: [],
         answers: {},
-        lastReaction: null
+        lastReaction: null,
+        seed: Math.floor(Math.random() * 1000000) + 1
       };
       
       console.log(`Room ${roomId} created for game ${data.gameId}`);

@@ -9,6 +9,7 @@ export interface RoomState {
   lastReaction?: { type: string; timestamp: number; by: string };
   answers?: Record<string, string>;
   hasSubmitted?: Record<string, boolean>;
+  seed?: number;
 }
 
 export function useRoom(roomId: string) {
