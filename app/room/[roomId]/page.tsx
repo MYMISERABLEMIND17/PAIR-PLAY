@@ -3,6 +3,7 @@
 import { useState, useEffect, use } from "react";
 import Link from "next/link";
 import { Heart, MessageCircle, Copy, Check, AlertTriangle, XCircle, WifiOff, Activity } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import truthOrDareData from "../../data/truth_or_dare.json";
 import wouldYouRatherData from "../../data/would_you_rather.json";
 import conversationStartersData from "../../data/conversation_starters.json";
