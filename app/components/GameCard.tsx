@@ -137,19 +137,29 @@ export default function GameCard({ title, description, href, colorClass, iconNam
       <div className="absolute inset-0 bg-[#0a0a0a]/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center p-6 translate-y-4 group-hover:translate-y-0">
         
         {!isJoining ? (
-          <div className="flex flex-col gap-3 w-full">
+          <div className="flex flex-col gap-2 w-full">
             <button 
               onClick={handleCreate}
-              className={`w-full py-3 rounded-xl font-bold text-xs uppercase tracking-widest text-white bg-gradient-to-r ${colorClass} hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-lg`}
+              className={`w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-widest text-white bg-gradient-to-r ${colorClass} hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-lg`}
             >
               {!isCreating && <Plus className="w-4 h-4" />}
               <span>{creationStatus}</span>
             </button>
             <button 
               onClick={(e) => { e.stopPropagation(); setIsJoining(true); }}
-              className="w-full py-3 rounded-xl font-bold text-sm text-white/80 bg-[#1a1a1e] border border-white/10 hover:bg-[#2a2a2e] hover:text-white transition-all flex items-center justify-center gap-2"
+              className="w-full py-2.5 rounded-xl font-bold text-sm text-white/80 bg-[#1a1a1e] border border-white/10 hover:bg-[#2a2a2e] hover:text-white transition-all flex items-center justify-center gap-2"
             >
               Join Room
+            </button>
+            <button 
+              onClick={(e) => { 
+                e.stopPropagation(); 
+                router.push(`/room/offline-demo-${href.replace('/', '').replace(/-/g, '_')}`); 
+              }}
+              className="w-full py-2 rounded-xl font-bold text-xs uppercase tracking-wider text-indigo-400 bg-[#101014] border border-indigo-500/20 hover:bg-indigo-500/10 hover:border-indigo-500/40 hover:text-indigo-300 transition-all flex items-center justify-center gap-1.5"
+            >
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Solo Play / Explore</span>
             </button>
           </div>
         ) : (
