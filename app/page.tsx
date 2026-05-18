@@ -9,6 +9,7 @@ import whoKnowsMeBestData from "./data/who_knows_me_best.json";
 import thisOrThatData from "./data/this_or_that.json";
 import questionsForBoyfriendData from "./data/questions_for_boyfriend.json";
 import speedDatingData from "./data/speed_dating.json";
+import charadesData from "./data/charades.json";
 
 export default function Home() {
   const games = [
@@ -67,6 +68,13 @@ export default function Home() {
       href: "/speed-dating",
       colorClass: speedDatingData.color,
       iconName: speedDatingData.icon,
+    },
+    {
+      title: charadesData.name,
+      description: charadesData.description,
+      href: "/charades",
+      colorClass: charadesData.color,
+      iconName: charadesData.icon,
     },
   ];
 

@@ -1,0 +1,1508 @@
+{
+  "name": "Charades",
+  "description": "Act out words and phrases without speaking while your partner guesses!",
+  "color": "from-indigo-500 to-cyan-500",
+  "icon": "Smile",
+  "prompts": [
+    {
+      "id": "charades_easy_1",
+      "category": "Easy",
+      "text": "Cat"
+    },
+    {
+      "id": "charades_easy_2",
+      "category": "Easy",
+      "text": "Dog"
+    },
+    {
+      "id": "charades_easy_3",
+      "category": "Easy",
+      "text": "Tree"
+    },
+    {
+      "id": "charades_easy_4",
+      "category": "Easy",
+      "text": "Rollercoaster"
+    },
+    {
+      "id": "charades_easy_5",
+      "category": "Easy",
+      "text": "Car"
+    },
+    {
+      "id": "charades_easy_6",
+      "category": "Easy",
+      "text": "Bike"
+    },
+    {
+      "id": "charades_easy_7",
+      "category": "Easy",
+      "text": "Apple"
+    },
+    {
+      "id": "charades_easy_8",
+      "category": "Easy",
+      "text": "Chair"
+    },
+    {
+      "id": "charades_easy_9",
+      "category": "Easy",
+      "text": "Texting"
+    },
+    {
+      "id": "charades_easy_10",
+      "category": "Easy",
+      "text": "Book"
+    },
+    {
+      "id": "charades_easy_11",
+      "category": "Easy",
+      "text": "Limbo"
+    },
+    {
+      "id": "charades_easy_12",
+      "category": "Easy",
+      "text": "Selfie"
+    },
+    {
+      "id": "charades_easy_13",
+      "category": "Easy",
+      "text": "Pancakes"
+    },
+    {
+      "id": "charades_easy_14",
+      "category": "Easy",
+      "text": "Painting"
+    },
+    {
+      "id": "charades_easy_15",
+      "category": "Easy",
+      "text": "Dancing"
+    },
+    {
+      "id": "charades_easy_16",
+      "category": "Easy",
+      "text": "Singing in the shower"
+    },
+    {
+      "id": "charades_easy_17",
+      "category": "Easy",
+      "text": "Whistling"
+    },
+    {
+      "id": "charades_easy_18",
+      "category": "Easy",
+      "text": "Starfish"
+    },
+    {
+      "id": "charades_easy_19",
+      "category": "Easy",
+      "text": "Phone"
+    },
+    {
+      "id": "charades_easy_20",
+      "category": "Easy",
+      "text": "Rainbow"
+    },
+    {
+      "id": "charades_easy_21",
+      "category": "Easy",
+      "text": "Frisbee"
+    },
+    {
+      "id": "charades_easy_22",
+      "category": "Easy",
+      "text": "Karaoke"
+    },
+    {
+      "id": "charades_easy_23",
+      "category": "Easy",
+      "text": "Popcorn"
+    },
+    {
+      "id": "charades_easy_24",
+      "category": "Easy",
+      "text": "Hula hoop"
+    },
+    {
+      "id": "charades_easy_25",
+      "category": "Easy",
+      "text": "Unicorn"
+    },
+    {
+      "id": "charades_easy_26",
+      "category": "Easy",
+      "text": "Superhero"
+    },
+    {
+      "id": "charades_easy_27",
+      "category": "Easy",
+      "text": "Gardening"
+    },
+    {
+      "id": "charades_easy_28",
+      "category": "Easy",
+      "text": "Magic trick"
+    },
+    {
+      "id": "charades_easy_29",
+      "category": "Easy",
+      "text": "Juggling"
+    },
+    {
+      "id": "charades_easy_30",
+      "category": "Easy",
+      "text": "Snowman"
+    },
+    {
+      "id": "charades_easy_31",
+      "category": "Easy",
+      "text": "Movie night"
+    },
+    {
+      "id": "charades_easy_32",
+      "category": "Easy",
+      "text": "Couch potato"
+    },
+    {
+      "id": "charades_easy_33",
+      "category": "Easy",
+      "text": "Firefighter"
+    },
+    {
+      "id": "charades_easy_34",
+      "category": "Easy",
+      "text": "Slide"
+    },
+    {
+      "id": "charades_easy_35",
+      "category": "Easy",
+      "text": "Queen"
+    },
+    {
+      "id": "charades_easy_36",
+      "category": "Easy",
+      "text": "Soup"
+    },
+    {
+      "id": "charades_easy_37",
+      "category": "Easy",
+      "text": "Garbage"
+    },
+    {
+      "id": "charades_easy_38",
+      "category": "Easy",
+      "text": "Gym"
+    },
+    {
+      "id": "charades_easy_39",
+      "category": "Easy",
+      "text": "Music"
+    },
+    {
+      "id": "charades_easy_40",
+      "category": "Easy",
+      "text": "Heart"
+    },
+    {
+      "id": "charades_easy_41",
+      "category": "Easy",
+      "text": "Shovel"
+    },
+    {
+      "id": "charades_easy_42",
+      "category": "Easy",
+      "text": "Key"
+    },
+    {
+      "id": "charades_easy_43",
+      "category": "Easy",
+      "text": "Fear"
+    },
+    {
+      "id": "charades_easy_44",
+      "category": "Easy",
+      "text": "Guitar"
+    },
+    {
+      "id": "charades_easy_45",
+      "category": "Easy",
+      "text": "Gift"
+    },
+    {
+      "id": "charades_easy_46",
+      "category": "Easy",
+      "text": "Paparazzi"
+    },
+    {
+      "id": "charades_easy_47",
+      "category": "Easy",
+      "text": "Piano"
+    },
+    {
+      "id": "charades_easy_48",
+      "category": "Easy",
+      "text": "Basement"
+    },
+    {
+      "id": "charades_easy_49",
+      "category": "Easy",
+      "text": "Mailbox"
+    },
+    {
+      "id": "charades_easy_50",
+      "category": "Easy",
+      "text": "Antarctica"
+    },
+    {
+      "id": "charades_normal_1",
+      "category": "Normal",
+      "text": "Typewriter"
+    },
+    {
+      "id": "charades_normal_2",
+      "category": "Normal",
+      "text": "Blender"
+    },
+    {
+      "id": "charades_normal_3",
+      "category": "Normal",
+      "text": "TikTok dance"
+    },
+    {
+      "id": "charades_normal_4",
+      "category": "Normal",
+      "text": "Microscope"
+    },
+    {
+      "id": "charades_normal_5",
+      "category": "Normal",
+      "text": "Skateboard"
+    },
+    {
+      "id": "charades_normal_6",
+      "category": "Normal",
+      "text": "Emoji"
+    },
+    {
+      "id": "charades_normal_7",
+      "category": "Normal",
+      "text": "Escalator"
+    },
+    {
+      "id": "charades_normal_8",
+      "category": "Normal",
+      "text": "Stargazing"
+    },
+    {
+      "id": "charades_normal_9",
+      "category": "Normal",
+      "text": "Archery"
+    },
+    {
+      "id": "charades_normal_10",
+      "category": "Normal",
+      "text": "Daydreaming"
+    },
+    {
+      "id": "charades_normal_11",
+      "category": "Normal",
+      "text": "Yoga"
+    },
+    {
+      "id": "charades_normal_12",
+      "category": "Normal",
+      "text": "Pottery"
+    },
+    {
+      "id": "charades_normal_13",
+      "category": "Normal",
+      "text": "Gardening"
+    },
+    {
+      "id": "charades_normal_14",
+      "category": "Normal",
+      "text": "Dinosaur"
+    },
+    {
+      "id": "charades_normal_15",
+      "category": "Normal",
+      "text": "Knitting"
+    },
+    {
+      "id": "charades_normal_16",
+      "category": "Normal",
+      "text": "Barbecue"
+    },
+    {
+      "id": "charades_normal_17",
+      "category": "Normal",
+      "text": "Camping"
+    },
+    {
+      "id": "charades_normal_18",
+      "category": "Normal",
+      "text": "Snorkeling"
+    },
+    {
+      "id": "charades_normal_19",
+      "category": "Normal",
+      "text": "Karate"
+    },
+    {
+      "id": "charades_normal_20",
+      "category": "Normal",
+      "text": "Washing machine"
+    },
+    {
+      "id": "charades_normal_21",
+      "category": "Normal",
+      "text": "Magic trick"
+    },
+    {
+      "id": "charades_normal_22",
+      "category": "Normal",
+      "text": "Origami"
+    },
+    {
+      "id": "charades_normal_23",
+      "category": "Normal",
+      "text": "Chess"
+    },
+    {
+      "id": "charades_normal_24",
+      "category": "Normal",
+      "text": "Puzzle"
+    },
+    {
+      "id": "charades_normal_25",
+      "category": "Normal",
+      "text": "Triathlon"
+    },
+    {
+      "id": "charades_normal_26",
+      "category": "Normal",
+      "text": "Gymnastics"
+    },
+    {
+      "id": "charades_normal_27",
+      "category": "Normal",
+      "text": "Zombie"
+    },
+    {
+      "id": "charades_normal_28",
+      "category": "Normal",
+      "text": "Scooter"
+    },
+    {
+      "id": "charades_normal_29",
+      "category": "Normal",
+      "text": "Photobombing"
+    },
+    {
+      "id": "charades_normal_30",
+      "category": "Normal",
+      "text": "Surprise party"
+    },
+    {
+      "id": "charades_normal_31",
+      "category": "Normal",
+      "text": "Musical"
+    },
+    {
+      "id": "charades_normal_32",
+      "category": "Normal",
+      "text": "Hot potato"
+    },
+    {
+      "id": "charades_normal_33",
+      "category": "Normal",
+      "text": "Facepalm"
+    },
+    {
+      "id": "charades_normal_34",
+      "category": "Normal",
+      "text": "Accordion"
+    },
+    {
+      "id": "charades_normal_35",
+      "category": "Normal",
+      "text": "Puppet show"
+    },
+    {
+      "id": "charades_normal_36",
+      "category": "Normal",
+      "text": "Sandcastle"
+    },
+    {
+      "id": "charades_normal_37",
+      "category": "Normal",
+      "text": "Disco"
+    },
+    {
+      "id": "charades_normal_38",
+      "category": "Normal",
+      "text": "Slippery"
+    },
+    {
+      "id": "charades_normal_39",
+      "category": "Normal",
+      "text": "Changing a tire"
+    },
+    {
+      "id": "charades_normal_40",
+      "category": "Normal",
+      "text": "Ladder"
+    },
+    {
+      "id": "charades_normal_41",
+      "category": "Normal",
+      "text": "Pirate"
+    },
+    {
+      "id": "charades_normal_42",
+      "category": "Normal",
+      "text": "Electric fence"
+    },
+    {
+      "id": "charades_normal_43",
+      "category": "Normal",
+      "text": "Sloth"
+    },
+    {
+      "id": "charades_normal_44",
+      "category": "Normal",
+      "text": "Ice skating"
+    },
+    {
+      "id": "charades_normal_45",
+      "category": "Normal",
+      "text": "Sunbathing"
+    },
+    {
+      "id": "charades_normal_46",
+      "category": "Normal",
+      "text": "Walking a dog"
+    },
+    {
+      "id": "charades_normal_47",
+      "category": "Normal",
+      "text": "Stamps"
+    },
+    {
+      "id": "charades_normal_48",
+      "category": "Normal",
+      "text": "Skipping stones"
+    },
+    {
+      "id": "charades_normal_49",
+      "category": "Normal",
+      "text": "Mirror"
+    },
+    {
+      "id": "charades_normal_50",
+      "category": "Normal",
+      "text": "Crystal Ball"
+    },
+    {
+      "id": "charades_hard_1",
+      "category": "Hard",
+      "text": "Virtual Reality"
+    },
+    {
+      "id": "charades_hard_2",
+      "category": "Hard",
+      "text": "Vegan"
+    },
+    {
+      "id": "charades_hard_3",
+      "category": "Hard",
+      "text": "Influencer"
+    },
+    {
+      "id": "charades_hard_4",
+      "category": "Hard",
+      "text": "Cosplay"
+    },
+    {
+      "id": "charades_hard_5",
+      "category": "Hard",
+      "text": "Bubble tea"
+    },
+    {
+      "id": "charades_hard_6",
+      "category": "Hard",
+      "text": "Cryptocurrency"
+    },
+    {
+      "id": "charades_hard_7",
+      "category": "Hard",
+      "text": "Earthquake"
+    },
+    {
+      "id": "charades_hard_8",
+      "category": "Hard",
+      "text": "Nonsense"
+    },
+    {
+      "id": "charades_hard_9",
+      "category": "Hard",
+      "text": "Mummy"
+    },
+    {
+      "id": "charades_hard_10",
+      "category": "Hard",
+      "text": "Time travel"
+    },
+    {
+      "id": "charades_hard_11",
+      "category": "Hard",
+      "text": "Black hole"
+    },
+    {
+      "id": "charades_hard_12",
+      "category": "Hard",
+      "text": "Vincent van Gogh"
+    },
+    {
+      "id": "charades_hard_13",
+      "category": "Hard",
+      "text": "Pyramid scheme"
+    },
+    {
+      "id": "charades_hard_14",
+      "category": "Hard",
+      "text": "Lighthouse"
+    },
+    {
+      "id": "charades_hard_15",
+      "category": "Hard",
+      "text": "Volcano"
+    },
+    {
+      "id": "charades_hard_16",
+      "category": "Hard",
+      "text": "Scuba diving"
+    },
+    {
+      "id": "charades_hard_17",
+      "category": "Hard",
+      "text": "Bungee jumping"
+    },
+    {
+      "id": "charades_hard_18",
+      "category": "Hard",
+      "text": "Walking on the moon"
+    },
+    {
+      "id": "charades_hard_19",
+      "category": "Hard",
+      "text": "Safari"
+    },
+    {
+      "id": "charades_hard_20",
+      "category": "Hard",
+      "text": "Programming"
+    },
+    {
+      "id": "charades_hard_21",
+      "category": "Hard",
+      "text": "Wine tasting"
+    },
+    {
+      "id": "charades_hard_22",
+      "category": "Hard",
+      "text": "Cat litter"
+    },
+    {
+      "id": "charades_hard_23",
+      "category": "Hard",
+      "text": "Space station"
+    },
+    {
+      "id": "charades_hard_24",
+      "category": "Hard",
+      "text": "Circus"
+    },
+    {
+      "id": "charades_hard_25",
+      "category": "Hard",
+      "text": "Fireworks"
+    },
+    {
+      "id": "charades_hard_26",
+      "category": "Hard",
+      "text": "Meteor shower"
+    },
+    {
+      "id": "charades_hard_27",
+      "category": "Hard",
+      "text": "Astronaut"
+    },
+    {
+      "id": "charades_hard_28",
+      "category": "Hard",
+      "text": "Alien abduction"
+    },
+    {
+      "id": "charades_hard_29",
+      "category": "Hard",
+      "text": "Haunted house"
+    },
+    {
+      "id": "charades_hard_30",
+      "category": "Hard",
+      "text": "Zombie Apocalypse"
+    },
+    {
+      "id": "charades_hard_31",
+      "category": "Hard",
+      "text": "Escape room"
+    },
+    {
+      "id": "charades_hard_32",
+      "category": "Hard",
+      "text": "Spa day"
+    },
+    {
+      "id": "charades_hard_33",
+      "category": "Hard",
+      "text": "Poker night"
+    },
+    {
+      "id": "charades_hard_34",
+      "category": "Hard",
+      "text": "Karaoke party"
+    },
+    {
+      "id": "charades_hard_35",
+      "category": "Hard",
+      "text": "Amusement park"
+    },
+    {
+      "id": "charades_hard_36",
+      "category": "Hard",
+      "text": "Binge watching"
+    },
+    {
+      "id": "charades_hard_37",
+      "category": "Hard",
+      "text": "Sudoku"
+    },
+    {
+      "id": "charades_hard_38",
+      "category": "Hard",
+      "text": "Running errands"
+    },
+    {
+      "id": "charades_hard_39",
+      "category": "Hard",
+      "text": "Board games"
+    },
+    {
+      "id": "charades_hard_40",
+      "category": "Hard",
+      "text": "Mermaid"
+    },
+    {
+      "id": "charades_hard_41",
+      "category": "Hard",
+      "text": "Telepathy"
+    },
+    {
+      "id": "charades_hard_42",
+      "category": "Hard",
+      "text": "Dancing in the rain"
+    },
+    {
+      "id": "charades_hard_43",
+      "category": "Hard",
+      "text": "Secret"
+    },
+    {
+      "id": "charades_hard_44",
+      "category": "Hard",
+      "text": "Dad Jokes"
+    },
+    {
+      "id": "charades_hard_45",
+      "category": "Hard",
+      "text": "Love at first sight"
+    },
+    {
+      "id": "charades_hard_46",
+      "category": "Hard",
+      "text": "Winning the lottery"
+    },
+    {
+      "id": "charades_hard_47",
+      "category": "Hard",
+      "text": "The Roman Empire"
+    },
+    {
+      "id": "charades_hard_48",
+      "category": "Hard",
+      "text": "Dating show"
+    },
+    {
+      "id": "charades_hard_49",
+      "category": "Hard",
+      "text": "Bird watching"
+    },
+    {
+      "id": "charades_hard_50",
+      "category": "Hard",
+      "text": "Midlife crisis"
+    },
+    {
+      "id": "charades_kids_1",
+      "category": "Kids",
+      "text": "Elephant"
+    },
+    {
+      "id": "charades_kids_2",
+      "category": "Kids",
+      "text": "Butterfly"
+    },
+    {
+      "id": "charades_kids_3",
+      "category": "Kids",
+      "text": "Swimming"
+    },
+    {
+      "id": "charades_kids_4",
+      "category": "Kids",
+      "text": "Pizza"
+    },
+    {
+      "id": "charades_kids_5",
+      "category": "Kids",
+      "text": "Monkey"
+    },
+    {
+      "id": "charades_kids_6",
+      "category": "Kids",
+      "text": "Airplane"
+    },
+    {
+      "id": "charades_kids_7",
+      "category": "Kids",
+      "text": "Robot"
+    },
+    {
+      "id": "charades_kids_8",
+      "category": "Kids",
+      "text": "Ice cream"
+    },
+    {
+      "id": "charades_kids_9",
+      "category": "Kids",
+      "text": "Spider"
+    },
+    {
+      "id": "charades_kids_10",
+      "category": "Kids",
+      "text": "Sleeping"
+    },
+    {
+      "id": "charades_kids_11",
+      "category": "Kids",
+      "text": "Brushing teeth"
+    },
+    {
+      "id": "charades_kids_12",
+      "category": "Kids",
+      "text": "Penguin"
+    },
+    {
+      "id": "charades_kids_13",
+      "category": "Kids",
+      "text": "Jumping rope"
+    },
+    {
+      "id": "charades_kids_14",
+      "category": "Kids",
+      "text": "Balloon"
+    },
+    {
+      "id": "charades_kids_15",
+      "category": "Kids",
+      "text": "Dinosaur"
+    },
+    {
+      "id": "charades_kids_16",
+      "category": "Kids",
+      "text": "Fishing"
+    },
+    {
+      "id": "charades_kids_17",
+      "category": "Kids",
+      "text": "Snowball fight"
+    },
+    {
+      "id": "charades_kids_18",
+      "category": "Kids",
+      "text": "Train"
+    },
+    {
+      "id": "charades_kids_19",
+      "category": "Kids",
+      "text": "Bunny rabbit"
+    },
+    {
+      "id": "charades_kids_20",
+      "category": "Kids",
+      "text": "Baby"
+    },
+    {
+      "id": "charades_kids_21",
+      "category": "Kids",
+      "text": "Cowboy"
+    },
+    {
+      "id": "charades_kids_22",
+      "category": "Kids",
+      "text": "Pirate"
+    },
+    {
+      "id": "charades_kids_23",
+      "category": "Kids",
+      "text": "Princess"
+    },
+    {
+      "id": "charades_kids_24",
+      "category": "Kids",
+      "text": "Lion"
+    },
+    {
+      "id": "charades_kids_25",
+      "category": "Kids",
+      "text": "Rocket ship"
+    },
+    {
+      "id": "charades_kids_26",
+      "category": "Kids",
+      "text": "Blowing bubbles"
+    },
+    {
+      "id": "charades_kids_27",
+      "category": "Kids",
+      "text": "Running"
+    },
+    {
+      "id": "charades_kids_28",
+      "category": "Kids",
+      "text": "Frog"
+    },
+    {
+      "id": "charades_kids_29",
+      "category": "Kids",
+      "text": "Kangaroo"
+    },
+    {
+      "id": "charades_kids_30",
+      "category": "Kids",
+      "text": "Eating spaghetti"
+    },
+    {
+      "id": "charades_kids_31",
+      "category": "Kids",
+      "text": "Crying"
+    },
+    {
+      "id": "charades_kids_32",
+      "category": "Kids",
+      "text": "Laughing"
+    },
+    {
+      "id": "charades_kids_33",
+      "category": "Kids",
+      "text": "Chicken"
+    },
+    {
+      "id": "charades_kids_34",
+      "category": "Kids",
+      "text": "Riding a horse"
+    },
+    {
+      "id": "charades_kids_35",
+      "category": "Kids",
+      "text": "Clown"
+    },
+    {
+      "id": "charades_kids_36",
+      "category": "Kids",
+      "text": "Kite"
+    },
+    {
+      "id": "charades_kids_37",
+      "category": "Kids",
+      "text": "Puppy"
+    },
+    {
+      "id": "charades_kids_38",
+      "category": "Kids",
+      "text": "Birthday cake"
+    },
+    {
+      "id": "charades_kids_39",
+      "category": "Kids",
+      "text": "Washing hands"
+    },
+    {
+      "id": "charades_kids_40",
+      "category": "Kids",
+      "text": "Turtle"
+    },
+    {
+      "id": "charades_kids_41",
+      "category": "Kids",
+      "text": "Owl"
+    },
+    {
+      "id": "charades_kids_42",
+      "category": "Kids",
+      "text": "Playing drums"
+    },
+    {
+      "id": "charades_kids_43",
+      "category": "Kids",
+      "text": "Climbing a tree"
+    },
+    {
+      "id": "charades_kids_44",
+      "category": "Kids",
+      "text": "Waving goodbye"
+    },
+    {
+      "id": "charades_kids_45",
+      "category": "Kids",
+      "text": "Sneezing"
+    },
+    {
+      "id": "charades_kids_46",
+      "category": "Kids",
+      "text": "Cat nap"
+    },
+    {
+      "id": "charades_kids_47",
+      "category": "Kids",
+      "text": "Pogo stick"
+    },
+    {
+      "id": "charades_kids_48",
+      "category": "Kids",
+      "text": "Trampoline"
+    },
+    {
+      "id": "charades_kids_49",
+      "category": "Kids",
+      "text": "Flamingo"
+    },
+    {
+      "id": "charades_kids_50",
+      "category": "Kids",
+      "text": "Teddy bear"
+    },
+    {
+      "id": "charades_movies_1",
+      "category": "Movies",
+      "text": "Titanic"
+    },
+    {
+      "id": "charades_movies_2",
+      "category": "Movies",
+      "text": "Star Wars"
+    },
+    {
+      "id": "charades_movies_3",
+      "category": "Movies",
+      "text": "Harry Potter"
+    },
+    {
+      "id": "charades_movies_4",
+      "category": "Movies",
+      "text": "Jurassic Park"
+    },
+    {
+      "id": "charades_movies_5",
+      "category": "Movies",
+      "text": "The Lion King"
+    },
+    {
+      "id": "charades_movies_6",
+      "category": "Movies",
+      "text": "Frozen"
+    },
+    {
+      "id": "charades_movies_7",
+      "category": "Movies",
+      "text": "Spider-Man"
+    },
+    {
+      "id": "charades_movies_8",
+      "category": "Movies",
+      "text": "Finding Nemo"
+    },
+    {
+      "id": "charades_movies_9",
+      "category": "Movies",
+      "text": "The Avengers"
+    },
+    {
+      "id": "charades_movies_10",
+      "category": "Movies",
+      "text": "Forrest Gump"
+    },
+    {
+      "id": "charades_movies_11",
+      "category": "Movies",
+      "text": "Jaws"
+    },
+    {
+      "id": "charades_movies_12",
+      "category": "Movies",
+      "text": "E.T."
+    },
+    {
+      "id": "charades_movies_13",
+      "category": "Movies",
+      "text": "Ghostbusters"
+    },
+    {
+      "id": "charades_movies_14",
+      "category": "Movies",
+      "text": "Indiana Jones"
+    },
+    {
+      "id": "charades_movies_15",
+      "category": "Movies",
+      "text": "The Matrix"
+    },
+    {
+      "id": "charades_movies_16",
+      "category": "Movies",
+      "text": "Toy Story"
+    },
+    {
+      "id": "charades_movies_17",
+      "category": "Movies",
+      "text": "Shrek"
+    },
+    {
+      "id": "charades_movies_18",
+      "category": "Movies",
+      "text": "Batman"
+    },
+    {
+      "id": "charades_movies_19",
+      "category": "Movies",
+      "text": "Rocky"
+    },
+    {
+      "id": "charades_movies_20",
+      "category": "Movies",
+      "text": "Gladiator"
+    },
+    {
+      "id": "charades_movies_21",
+      "category": "Movies",
+      "text": "Top Gun"
+    },
+    {
+      "id": "charades_movies_22",
+      "category": "Movies",
+      "text": "The Wizard of Oz"
+    },
+    {
+      "id": "charades_movies_23",
+      "category": "Movies",
+      "text": "Grease"
+    },
+    {
+      "id": "charades_movies_24",
+      "category": "Movies",
+      "text": "Willy Wonka"
+    },
+    {
+      "id": "charades_movies_25",
+      "category": "Movies",
+      "text": "The Little Mermaid"
+    },
+    {
+      "id": "charades_movies_26",
+      "category": "Movies",
+      "text": "Home Alone"
+    },
+    {
+      "id": "charades_movies_27",
+      "category": "Movies",
+      "text": "Back to the Future"
+    },
+    {
+      "id": "charades_movies_28",
+      "category": "Movies",
+      "text": "Pirates of the Caribbean"
+    },
+    {
+      "id": "charades_movies_29",
+      "category": "Movies",
+      "text": "The Hunger Games"
+    },
+    {
+      "id": "charades_movies_30",
+      "category": "Movies",
+      "text": "Mission Impossible"
+    },
+    {
+      "id": "charades_movies_31",
+      "category": "Movies",
+      "text": "Transformers"
+    },
+    {
+      "id": "charades_movies_32",
+      "category": "Movies",
+      "text": "King Kong"
+    },
+    {
+      "id": "charades_movies_33",
+      "category": "Movies",
+      "text": "The Karate Kid"
+    },
+    {
+      "id": "charades_movies_34",
+      "category": "Movies",
+      "text": "Twilight"
+    },
+    {
+      "id": "charades_movies_35",
+      "category": "Movies",
+      "text": "Mean Girls"
+    },
+    {
+      "id": "charades_movies_36",
+      "category": "Movies",
+      "text": "The Notebook"
+    },
+    {
+      "id": "charades_movies_37",
+      "category": "Movies",
+      "text": "IT"
+    },
+    {
+      "id": "charades_movies_38",
+      "category": "Movies",
+      "text": "Inception"
+    },
+    {
+      "id": "charades_movies_39",
+      "category": "Movies",
+      "text": "Avatar"
+    },
+    {
+      "id": "charades_movies_40",
+      "category": "Movies",
+      "text": "Moana"
+    },
+    {
+      "id": "charades_movies_41",
+      "category": "Movies",
+      "text": "The Terminator"
+    },
+    {
+      "id": "charades_movies_42",
+      "category": "Movies",
+      "text": "Aladdin"
+    },
+    {
+      "id": "charades_movies_43",
+      "category": "Movies",
+      "text": "John Wick"
+    },
+    {
+      "id": "charades_movies_44",
+      "category": "Movies",
+      "text": "Barbie"
+    },
+    {
+      "id": "charades_movies_45",
+      "category": "Movies",
+      "text": "The Godfather"
+    },
+    {
+      "id": "charades_movies_46",
+      "category": "Movies",
+      "text": "Ratatouille"
+    },
+    {
+      "id": "charades_movies_47",
+      "category": "Movies",
+      "text": "Cast Away"
+    },
+    {
+      "id": "charades_movies_48",
+      "category": "Movies",
+      "text": "The Exorcist"
+    },
+    {
+      "id": "charades_movies_49",
+      "category": "Movies",
+      "text": "Scream"
+    },
+    {
+      "id": "charades_movies_50",
+      "category": "Movies",
+      "text": "Minions"
+    },
+    {
+      "id": "charades_party_1",
+      "category": "Party",
+      "text": "Beer pong"
+    },
+    {
+      "id": "charades_party_2",
+      "category": "Party",
+      "text": "DJ"
+    },
+    {
+      "id": "charades_party_3",
+      "category": "Party",
+      "text": "Twerking"
+    },
+    {
+      "id": "charades_party_4",
+      "category": "Party",
+      "text": "Skinny dipping"
+    },
+    {
+      "id": "charades_party_5",
+      "category": "Party",
+      "text": "Walk of shame"
+    },
+    {
+      "id": "charades_party_6",
+      "category": "Party",
+      "text": "Body shot"
+    },
+    {
+      "id": "charades_party_7",
+      "category": "Party",
+      "text": "Strip poker"
+    },
+    {
+      "id": "charades_party_8",
+      "category": "Party",
+      "text": "Hangover"
+    },
+    {
+      "id": "charades_party_9",
+      "category": "Party",
+      "text": "Chugging a beer"
+    },
+    {
+      "id": "charades_party_10",
+      "category": "Party",
+      "text": "Crowd surfing"
+    },
+    {
+      "id": "charades_party_11",
+      "category": "Party",
+      "text": "Belly flop"
+    },
+    {
+      "id": "charades_party_12",
+      "category": "Party",
+      "text": "Drunk texting"
+    },
+    {
+      "id": "charades_party_13",
+      "category": "Party",
+      "text": "Keg stand"
+    },
+    {
+      "id": "charades_party_14",
+      "category": "Party",
+      "text": "Making out"
+    },
+    {
+      "id": "charades_party_15",
+      "category": "Party",
+      "text": "Shotgunning a beer"
+    },
+    {
+      "id": "charades_party_16",
+      "category": "Party",
+      "text": "Flirting"
+    },
+    {
+      "id": "charades_party_17",
+      "category": "Party",
+      "text": "Arm wrestling"
+    },
+    {
+      "id": "charades_party_18",
+      "category": "Party",
+      "text": "Karaoke fail"
+    },
+    {
+      "id": "charades_party_19",
+      "category": "Party",
+      "text": "Lap dance"
+    },
+    {
+      "id": "charades_party_20",
+      "category": "Party",
+      "text": "Bouncer"
+    },
+    {
+      "id": "charades_party_21",
+      "category": "Party",
+      "text": "Photo booth"
+    },
+    {
+      "id": "charades_party_22",
+      "category": "Party",
+      "text": "Doing shots"
+    },
+    {
+      "id": "charades_party_23",
+      "category": "Party",
+      "text": "Dare"
+    },
+    {
+      "id": "charades_party_24",
+      "category": "Party",
+      "text": "Limousine"
+    },
+    {
+      "id": "charades_party_25",
+      "category": "Party",
+      "text": "Confetti cannon"
+    },
+    {
+      "id": "charades_party_26",
+      "category": "Party",
+      "text": "Spin the bottle"
+    },
+    {
+      "id": "charades_party_27",
+      "category": "Party",
+      "text": "Truth or dare"
+    },
+    {
+      "id": "charades_party_28",
+      "category": "Party",
+      "text": "Dance-off"
+    },
+    {
+      "id": "charades_party_29",
+      "category": "Party",
+      "text": "Pool party"
+    },
+    {
+      "id": "charades_party_30",
+      "category": "Party",
+      "text": "VIP section"
+    },
+    {
+      "id": "charades_party_31",
+      "category": "Party",
+      "text": "Foam party"
+    },
+    {
+      "id": "charades_party_32",
+      "category": "Party",
+      "text": "Conga line"
+    },
+    {
+      "id": "charades_party_33",
+      "category": "Party",
+      "text": "Toga party"
+    },
+    {
+      "id": "charades_party_34",
+      "category": "Party",
+      "text": "Bartender"
+    },
+    {
+      "id": "charades_party_35",
+      "category": "Party",
+      "text": "Bottle service"
+    },
+    {
+      "id": "charades_party_36",
+      "category": "Party",
+      "text": "Drunk karaoke"
+    },
+    {
+      "id": "charades_party_37",
+      "category": "Party",
+      "text": "After party"
+    },
+    {
+      "id": "charades_party_38",
+      "category": "Party",
+      "text": "Red cup"
+    },
+    {
+      "id": "charades_party_39",
+      "category": "Party",
+      "text": "Pregaming"
+    },
+    {
+      "id": "charades_party_40",
+      "category": "Party",
+      "text": "Night out"
+    },
+    {
+      "id": "charades_party_41",
+      "category": "Party",
+      "text": "Taxi ride home"
+    },
+    {
+      "id": "charades_party_42",
+      "category": "Party",
+      "text": "Lost phone"
+    },
+    {
+      "id": "charades_party_43",
+      "category": "Party",
+      "text": "Dance floor"
+    },
+    {
+      "id": "charades_party_44",
+      "category": "Party",
+      "text": "Glow sticks"
+    },
+    {
+      "id": "charades_party_45",
+      "category": "Party",
+      "text": "Party bus"
+    },
+    {
+      "id": "charades_party_46",
+      "category": "Party",
+      "text": "Costume party"
+    },
+    {
+      "id": "charades_party_47",
+      "category": "Party",
+      "text": "Rooftop party"
+    },
+    {
+      "id": "charades_party_48",
+      "category": "Party",
+      "text": "Mixologist"
+    },
+    {
+      "id": "charades_party_49",
+      "category": "Party",
+      "text": "Last call"
+    },
+    {
+      "id": "charades_party_50",
+      "category": "Party",
+      "text": "Designated driver"
+    }
+  ]
+}

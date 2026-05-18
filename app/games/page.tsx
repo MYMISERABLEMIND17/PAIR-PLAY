@@ -9,6 +9,7 @@ import whoKnowsMeBestData from "../data/who_knows_me_best.json";
 import thisOrThatData from "../data/this_or_that.json";
 import questionsForBoyfriendData from "../data/questions_for_boyfriend.json";
 import speedDatingData from "../data/speed_dating.json";
+import charadesData from "../data/charades.json";
 
 export default function GamesPage() {
   // We list our active games first, then placeholders for the rest of the ecosystem
@@ -70,6 +71,13 @@ export default function GamesPage() {
       iconName: speedDatingData.icon,
     },
     {
+      title: charadesData.name,
+      description: charadesData.description,
+      href: "/charades",
+      colorClass: charadesData.color,
+      iconName: charadesData.icon,
+    },
+    {
       title: "Most Likely To",
       description: "Find out what your friends really think of you in this hilarious voting game.",
       href: "#",
@@ -89,13 +97,6 @@ export default function GamesPage() {
       href: "#",
       colorClass: "from-pink-400 to-red-400",
       iconName: "Heart",
-    },
-    {
-      title: "Charades",
-      description: "Act out words and phrases without speaking while your team guesses.",
-      href: "#",
-      colorClass: "from-indigo-400 to-cyan-400",
-      iconName: "Smile",
     },
     {
       title: "Taboo",

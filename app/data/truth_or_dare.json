@@ -5,34 +5,3064 @@
   "icon": "Flame",
   "prompts": [
     {
-      "id": "t1",
+      "id": "t_classic_1",
       "type": "truth",
-      "text": "What is your most embarrassing childhood memory?"
+      "category": "Popular",
+      "text": "Who is your secret crush?"
     },
     {
-      "id": "t2",
+      "id": "t_classic_2",
       "type": "truth",
-      "text": "Have you ever lied to get out of a bad date?"
+      "category": "Popular",
+      "text": "What is the most disgusting thing you've ever done?"
     },
     {
-      "id": "t3",
+      "id": "t_classic_3",
       "type": "truth",
-      "text": "What is the most childish thing you still do?"
+      "category": "Popular",
+      "text": "What was your childhood nickname?"
     },
     {
-      "id": "d1",
-      "type": "dare",
-      "text": "Do your best impression of someone else in the room."
+      "id": "t_classic_4",
+      "type": "truth",
+      "category": "Popular",
+      "text": "What is your biggest turn-off in a partner?"
     },
     {
-      "id": "d2",
-      "type": "dare",
-      "text": "Let another player text anyone from your phone."
+      "id": "t_classic_5",
+      "type": "truth",
+      "category": "Popular",
+      "text": "What is your weirdest habit?"
     },
     {
-      "id": "d3",
+      "id": "t_classic_6",
+      "type": "truth",
+      "category": "Popular",
+      "text": "How many kids would you like to have?"
+    },
+    {
+      "id": "t_classic_7",
+      "type": "truth",
+      "category": "Popular",
+      "text": "What is one embarrassing fact about you?"
+    },
+    {
+      "id": "t_classic_8",
+      "type": "truth",
+      "category": "Popular",
+      "text": "What was your worst date ever?"
+    },
+    {
+      "id": "t_classic_9",
+      "type": "truth",
+      "category": "Popular",
+      "text": "If there was no such thing as money, what would you do with your life?"
+    },
+    {
+      "id": "t_classic_10",
+      "type": "truth",
+      "category": "Popular",
+      "text": "If you could switch lives with anyone for a day, who would it be and why?"
+    },
+    {
+      "id": "t_classic_11",
+      "type": "truth",
+      "category": "Popular",
+      "text": "What is your dream job?"
+    },
+    {
+      "id": "t_classic_12",
+      "type": "truth",
+      "category": "Popular",
+      "text": "What are your three favorite colors and why?"
+    },
+    {
+      "id": "t_classic_13",
+      "type": "truth",
+      "category": "Popular",
+      "text": "If you were trapped on an island for 3 days, what would you take with you?"
+    },
+    {
+      "id": "t_classic_14",
+      "type": "truth",
+      "category": "Popular",
+      "text": "If you could live anywhere in the world, where would it be and why?"
+    },
+    {
+      "id": "t_classic_15",
+      "type": "truth",
+      "category": "Popular",
+      "text": "Who is your favorite person, and why?"
+    },
+    {
+      "id": "t_classic_16",
+      "type": "truth",
+      "category": "Popular",
+      "text": "Do you prefer iOS or Android?"
+    },
+    {
+      "id": "t_classic_17",
+      "type": "truth",
+      "category": "Popular",
+      "text": "If you could go back in time, what age would you choose to relive and why?"
+    },
+    {
+      "id": "t_classic_18",
+      "type": "truth",
+      "category": "Popular",
+      "text": "What is your best talent?"
+    },
+    {
+      "id": "t_classic_19",
+      "type": "truth",
+      "category": "Popular",
+      "text": "Do you believe in love at first sight?"
+    },
+    {
+      "id": "t_classic_20",
+      "type": "truth",
+      "category": "Popular",
+      "text": "What is the most rebellious thing you've ever done?"
+    },
+    {
+      "id": "t_classic_21",
+      "type": "truth",
+      "category": "Popular",
+      "text": "Who was your first kiss and how did it happen?"
+    },
+    {
+      "id": "t_classic_22",
+      "type": "truth",
+      "category": "Popular",
+      "text": "How do you feel about the end pieces of a loaf of bread?"
+    },
+    {
+      "id": "t_classic_23",
+      "type": "truth",
+      "category": "Popular",
+      "text": "Can you touch your tongue to your nose?"
+    },
+    {
+      "id": "t_classic_24",
+      "type": "truth",
+      "category": "Popular",
+      "text": "If you could take away one bad thing in the world, what would it be?"
+    },
+    {
+      "id": "t_classic_25",
+      "type": "truth",
+      "category": "Popular",
+      "text": "What is your guilty pleasure?"
+    },
+    {
+      "id": "t_classic_26",
+      "type": "truth",
+      "category": "Popular",
+      "text": "Have you ever had someone write a paper for you?"
+    },
+    {
+      "id": "t_classic_27",
+      "type": "truth",
+      "category": "Popular",
+      "text": "Do you believe in ghosts or aliens?"
+    },
+    {
+      "id": "t_classic_28",
+      "type": "truth",
+      "category": "Popular",
+      "text": "If you could change one thing on your body, what would it be?"
+    },
+    {
+      "id": "t_classic_29",
+      "type": "truth",
+      "category": "Popular",
+      "text": "What do you daydream about the most?"
+    },
+    {
+      "id": "t_classic_30",
+      "type": "truth",
+      "category": "Popular",
+      "text": "Describe the weirdest dream you've ever had?"
+    },
+    {
+      "id": "t_classic_31",
+      "type": "truth",
+      "category": "Popular",
+      "text": "Can you lick your elbow?"
+    },
+    {
+      "id": "t_classic_32",
+      "type": "truth",
+      "category": "Popular",
+      "text": "What is your favorite season of the year?"
+    },
+    {
+      "id": "t_classic_33",
+      "type": "truth",
+      "category": "Popular",
+      "text": "Could you go a week without junk food?"
+    },
+    {
+      "id": "t_classic_34",
+      "type": "truth",
+      "category": "Popular",
+      "text": "How was your first kiss?"
+    },
+    {
+      "id": "t_classic_35",
+      "type": "truth",
+      "category": "Popular",
+      "text": "Describe your worst kiss ever."
+    },
+    {
+      "id": "t_classic_36",
+      "type": "truth",
+      "category": "Popular",
+      "text": "What is your favorite thing to do on the weekends?"
+    },
+    {
+      "id": "t_classic_37",
+      "type": "truth",
+      "category": "Popular",
+      "text": "How flexible are you?"
+    },
+    {
+      "id": "t_classic_38",
+      "type": "truth",
+      "category": "Popular",
+      "text": "Do you believe in any conspiracy theories?"
+    },
+    {
+      "id": "t_classic_39",
+      "type": "truth",
+      "category": "Popular",
+      "text": "What is your favorite animal?"
+    },
+    {
+      "id": "t_classic_40",
+      "type": "truth",
+      "category": "Popular",
+      "text": "What is your favorite food?"
+    },
+    {
+      "id": "t_classic_41",
+      "type": "truth",
+      "category": "Popular",
+      "text": "If you had a million dollars, what would you do with all of your money?"
+    },
+    {
+      "id": "t_classic_42",
+      "type": "truth",
+      "category": "Popular",
+      "text": "If you could dye your hair any color, what color would you pick?"
+    },
+    {
+      "id": "t_classic_43",
+      "type": "truth",
+      "category": "Popular",
+      "text": "What is your favorite song?"
+    },
+    {
+      "id": "t_classic_44",
+      "type": "truth",
+      "category": "Popular",
+      "text": "Who is your favorite Disney character?"
+    },
+    {
+      "id": "t_classic_45",
+      "type": "truth",
+      "category": "Popular",
+      "text": "What is your favorite TV show?"
+    },
+    {
+      "id": "t_classic_46",
+      "type": "truth",
+      "category": "Popular",
+      "text": "If you could be any animal, which one would you be?"
+    },
+    {
+      "id": "t_classic_47",
+      "type": "truth",
+      "category": "Popular",
+      "text": "Have you ever shoplifted?"
+    },
+    {
+      "id": "t_classic_48",
+      "type": "truth",
+      "category": "Popular",
+      "text": "What is your biggest pet peeve?"
+    },
+    {
+      "id": "t_classic_49",
+      "type": "truth",
+      "category": "Popular",
+      "text": "Do you have any phobias? If so what are they?"
+    },
+    {
+      "id": "t_classic_50",
+      "type": "truth",
+      "category": "Popular",
+      "text": "What is the worst advice you've ever received?"
+    },
+    {
+      "id": "d_classic_1",
       "type": "dare",
-      "text": "Speak in an accent for the next 3 rounds."
+      "category": "Popular",
+      "text": "Get on all fours and act like a dog until your next turn."
+    },
+    {
+      "id": "d_classic_2",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Sing Happy Birthday in a Marilyn Monroe voice."
+    },
+    {
+      "id": "d_classic_3",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Say 'badam-tam-tss' at the end of each one of your sentences for two rounds."
+    },
+    {
+      "id": "d_classic_4",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Make a freestyle rap song about each person in the group."
+    },
+    {
+      "id": "d_classic_5",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Make up a rap about the person to your right."
+    },
+    {
+      "id": "d_classic_6",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Pound on your chest and act like a gorilla for the next minute."
+    },
+    {
+      "id": "d_classic_7",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Sing us a Michael Jackson song."
+    },
+    {
+      "id": "d_classic_8",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Sing instead of speaking for the next two rounds of the game."
+    },
+    {
+      "id": "d_classic_9",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Jump up and down until it's your turn again."
+    },
+    {
+      "id": "d_classic_10",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Sing the alphabet without moving your mouth."
+    },
+    {
+      "id": "d_classic_11",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Act like an old lady or an old man until your next turn. "
+    },
+    {
+      "id": "d_classic_12",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Put on red lipstick and give the person to your right a kiss on the cheek."
+    },
+    {
+      "id": "d_classic_13",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Dance like a robot."
+    },
+    {
+      "id": "d_classic_14",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Sing your favorite song."
+    },
+    {
+      "id": "d_classic_15",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Imitate your favorite Pokémon."
+    },
+    {
+      "id": "d_classic_16",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Create a dance within 15 seconds and upload it on TikTok."
+    },
+    {
+      "id": "d_classic_17",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Act like a statue until it is your turn again (no talking or moving)."
+    },
+    {
+      "id": "d_classic_18",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Act like a chicken for 1 minute."
+    },
+    {
+      "id": "d_classic_19",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Imitate a celebrity and imagine yourself on a red carpet in front of the players."
+    },
+    {
+      "id": "d_classic_20",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Tickle the person to your right."
+    },
+    {
+      "id": "d_classic_21",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Tie your shoestrings together and walk across the room."
+    },
+    {
+      "id": "d_classic_22",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Touch your forehead with your toe."
+    },
+    {
+      "id": "d_classic_23",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Run around the room, imitating a monkey."
+    },
+    {
+      "id": "d_classic_24",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Sing us a Taylor Swift song."
+    },
+    {
+      "id": "d_classic_25",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Call a random person and sing Happy Birthday to them."
+    },
+    {
+      "id": "d_classic_26",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Massage the shoulders of the player in front of you."
+    },
+    {
+      "id": "d_classic_27",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Make up a poem about the color blue."
+    },
+    {
+      "id": "d_classic_28",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Make a round of the house barefoot."
+    },
+    {
+      "id": "d_classic_29",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Make out with your hand."
+    },
+    {
+      "id": "d_classic_30",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Make people guess a song by humming the tune."
+    },
+    {
+      "id": "d_classic_31",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Make a funny face."
+    },
+    {
+      "id": "d_classic_32",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Lick someone's foot."
+    },
+    {
+      "id": "d_classic_33",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Kiss your own toe."
+    },
+    {
+      "id": "d_classic_34",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Kiss the cheek of the person on your right."
+    },
+    {
+      "id": "d_classic_35",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Give someone in the group a piggyback ride around the room."
+    },
+    {
+      "id": "d_classic_36",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Stand on one leg for 5 minutes."
+    },
+    {
+      "id": "d_classic_37",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Wear all your clothes inside out."
+    },
+    {
+      "id": "d_classic_38",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Put on a blindfold and guess who each person is just by touching their face"
+    },
+    {
+      "id": "d_classic_39",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Dance to a random song chosen by the group."
+    },
+    {
+      "id": "d_classic_40",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Do a dramatic reading of grocery list or a shampoo bottle."
+    },
+    {
+      "id": "d_classic_41",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Have a staring contest with the person in front of you."
+    },
+    {
+      "id": "d_classic_42",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Give a hug to a stranger walking by (ask for permission first!)."
+    },
+    {
+      "id": "d_classic_43",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Hug the tallest person in the group from behind. "
+    },
+    {
+      "id": "d_classic_44",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Kiss the person to your right on the cheek. "
+    },
+    {
+      "id": "d_classic_45",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Hold a plank for one minute. "
+    },
+    {
+      "id": "d_classic_46",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Act like a cat licking its butt. "
+    },
+    {
+      "id": "d_classic_47",
+      "type": "dare",
+      "category": "Popular",
+      "text": "The person to your right decides who you must give a foot massage. "
+    },
+    {
+      "id": "d_classic_48",
+      "type": "dare",
+      "category": "Popular",
+      "text": "The person to your left decides who you must challenge to a dance-off. "
+    },
+    {
+      "id": "d_classic_49",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Imitate an animal chosen by the group."
+    },
+    {
+      "id": "d_classic_50",
+      "type": "dare",
+      "category": "Popular",
+      "text": "Show us your best runway walk."
+    },
+    {
+      "id": "t_crazy_1",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever danced in front of a mirror pretending to be a pop star?"
+    },
+    {
+      "id": "t_crazy_2",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the weirdest dream you've ever had?"
+    },
+    {
+      "id": "t_crazy_3",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever eaten something off the floor?"
+    },
+    {
+      "id": "t_crazy_4",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the most embarrassing thing your parents have caught you doing?"
+    },
+    {
+      "id": "t_crazy_5",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever talked to yourself in the mirror?"
+    },
+    {
+      "id": "t_crazy_6",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the silliest fear you have?"
+    },
+    {
+      "id": "t_crazy_7",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever laughed so hard that you snorted?"
+    },
+    {
+      "id": "t_crazy_8",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever worn your clothes inside out without realizing it?"
+    },
+    {
+      "id": "t_crazy_9",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the craziest thing you've ever done in public?"
+    },
+    {
+      "id": "t_crazy_10",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever sung in the shower using a shampoo bottle as a microphone?"
+    },
+    {
+      "id": "t_crazy_11",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the most embarrassing thing you've said to your crush?"
+    },
+    {
+      "id": "t_crazy_12",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever pretended to be a superhero when no one was watching?"
+    },
+    {
+      "id": "t_crazy_13",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the oddest talent you possess?"
+    },
+    {
+      "id": "t_crazy_14",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever talked to animals as if they could understand you?"
+    },
+    {
+      "id": "t_crazy_15",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the most ridiculous excuse you've used to get out of trouble?"
+    },
+    {
+      "id": "t_crazy_16",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever tried to communicate with aliens?"
+    },
+    {
+      "id": "t_crazy_17",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the strangest place you've fallen asleep?"
+    },
+    {
+      "id": "t_crazy_18",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever laughed at something serious?"
+    },
+    {
+      "id": "t_crazy_19",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the weirdest thing you've ever Googled?"
+    },
+    {
+      "id": "t_crazy_20",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever tried to read someone's mind?"
+    },
+    {
+      "id": "t_crazy_21",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the most bizarre thing you've seen someone do in public?"
+    },
+    {
+      "id": "t_crazy_22",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Would you rather go skydiving or bungee jumping?"
+    },
+    {
+      "id": "t_crazy_23",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the funniest sound you can make?"
+    },
+    {
+      "id": "t_crazy_24",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever talked to an inanimate object?"
+    },
+    {
+      "id": "t_crazy_25",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the weirdest pet you've ever wanted?"
+    },
+    {
+      "id": "t_crazy_26",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever tried to lick your elbow?"
+    },
+    {
+      "id": "t_crazy_27",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the silliest way you've injured yourself?"
+    },
+    {
+      "id": "t_crazy_28",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "If you could switch lives with your pet for a day, what would you do?"
+    },
+    {
+      "id": "t_crazy_29",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the weirdest nickname someone has given you?"
+    },
+    {
+      "id": "t_crazy_30",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever tried to fit your whole fist in your mouth?"
+    },
+    {
+      "id": "t_crazy_31",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the strangest thing you've found under your bed?"
+    },
+    {
+      "id": "t_crazy_32",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever talked to plants?"
+    },
+    {
+      "id": "t_crazy_33",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the most unusual thing you've ever eaten for breakfast?"
+    },
+    {
+      "id": "t_crazy_34",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever talked in your sleep?"
+    },
+    {
+      "id": "t_crazy_35",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the weirdest thing you've done when you thought no one was watching?"
+    },
+    {
+      "id": "t_crazy_36",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever tried to eat a crayon?"
+    },
+    {
+      "id": "t_crazy_37",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the oddest thing you've ever collected?"
+    },
+    {
+      "id": "t_crazy_38",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever tried to talk underwater?"
+    },
+    {
+      "id": "t_crazy_39",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "If you could only speak one word for the rest of your life, what would it be?"
+    },
+    {
+      "id": "t_crazy_40",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever tried to make a weird noise with your armpit?"
+    },
+    {
+      "id": "t_crazy_41",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Would you rather have the ability to fly or to breathe underwater?"
+    },
+    {
+      "id": "t_crazy_42",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "If you had to give up one sense (touch, taste, smell, sight, hearing), which would it be?"
+    },
+    {
+      "id": "t_crazy_43",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the silliest thing you've ever done on a dare?"
+    },
+    {
+      "id": "t_crazy_44",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever tried to communicate with ghosts?"
+    },
+    {
+      "id": "t_crazy_45",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "If you could change your name to anything, what would it be and why?"
+    },
+    {
+      "id": "t_crazy_46",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "If you could be any Disney villain, who would it be and why?"
+    },
+    {
+      "id": "t_crazy_47",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the weirdest thing you've ever done when you were alone?"
+    },
+    {
+      "id": "t_crazy_48",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the most absurd thing you've ever believed as a child?"
+    },
+    {
+      "id": "t_crazy_49",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the oddest thing you've ever done to entertain yourself?"
+    },
+    {
+      "id": "t_crazy_50",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the craziest thing you've ever done with your hair?"
+    },
+    {
+      "id": "t_crazy_51",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "Have you ever peed in the ocean?"
+    },
+    {
+      "id": "t_crazy_52",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "If you could live in any fictional world, which one would it be?"
+    },
+    {
+      "id": "t_crazy_53",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "If time travel was possible, where and when would you go first?"
+    },
+    {
+      "id": "t_crazy_54",
+      "type": "truth",
+      "category": "Crazy",
+      "text": "What's the weirdest dream job you can think of?"
+    },
+    {
+      "id": "d_crazy_1",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Pretend you're a chicken and cluck non-stop for two minutes."
+    },
+    {
+      "id": "d_crazy_2",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Try to do a headstand with someone else supporting your legs."
+    },
+    {
+      "id": "d_crazy_3",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Speak in an accent of your choice for the next 10 minutes."
+    },
+    {
+      "id": "d_crazy_4",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Do a cartwheel in the middle of the room."
+    },
+    {
+      "id": "d_crazy_5",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Wear underwear on your head for the next three rounds."
+    },
+    {
+      "id": "d_crazy_6",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Sing everything you say for the next 5 minutes."
+    },
+    {
+      "id": "d_crazy_7",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Put an ice cube down your shirt and leave it there until it melts."
+    },
+    {
+      "id": "d_crazy_8",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Try to lick your elbow."
+    },
+    {
+      "id": "d_crazy_9",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Act like a monkey until your next turn."
+    },
+    {
+      "id": "d_crazy_10",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Text your crush something embarrassing."
+    },
+    {
+      "id": "d_crazy_11",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Put on lipstick without using your hands."
+    },
+    {
+      "id": "d_crazy_12",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Wear your clothes backward for the rest of the game."
+    },
+    {
+      "id": "d_crazy_13",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Do your best impression of a celebrity."
+    },
+    {
+      "id": "d_crazy_14",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Call a friend and sing 'Happy Birthday' to them, even if it's not their birthday."
+    },
+    {
+      "id": "d_crazy_15",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Talk in slow motion until your next turn."
+    },
+    {
+      "id": "d_crazy_16",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Pretend to be a waiter/waitress and take snack orders from everyone in the room."
+    },
+    {
+      "id": "d_crazy_17",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Wear socks on your hands for the next three rounds."
+    },
+    {
+      "id": "d_crazy_18",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Do a handstand for as long as you can."
+    },
+    {
+      "id": "d_crazy_19",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Lick the floor."
+    },
+    {
+      "id": "d_crazy_20",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Let someone draw on your face with a permanent marker."
+    },
+    {
+      "id": "d_crazy_21",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Wear a sock puppet on one hand for the next three rounds."
+    },
+    {
+      "id": "d_crazy_22",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Dance like nobody's watching for one minute."
+    },
+    {
+      "id": "d_crazy_23",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Do the worm dance across the room."
+    },
+    {
+      "id": "d_crazy_24",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Put an ice cube in your pants and leave it there until it melts."
+    },
+    {
+      "id": "d_crazy_25",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Hop on one foot until your next turn."
+    },
+    {
+      "id": "d_crazy_26",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Speak in a British accent for the next 10 minutes."
+    },
+    {
+      "id": "d_crazy_27",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Act like a robot until your next turn."
+    },
+    {
+      "id": "d_crazy_28",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Wear a hat made out of toilet paper for the next three rounds."
+    },
+    {
+      "id": "d_crazy_29",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Try to do a split and hold it for 30 seconds."
+    },
+    {
+      "id": "d_crazy_30",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Text your parents saying you're dropping out of school/quitting your job."
+    },
+    {
+      "id": "d_crazy_31",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Put your leg behind your head."
+    },
+    {
+      "id": "d_crazy_32",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Try to balance a spoon on your nose for one minute."
+    },
+    {
+      "id": "d_crazy_33",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Do your best impression of a baby crying."
+    },
+    {
+      "id": "d_crazy_34",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Pretend to be a news anchor and report on a made-up story."
+    },
+    {
+      "id": "d_crazy_35",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Try to do the moonwalk across the room."
+    },
+    {
+      "id": "d_crazy_36",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Pretend to swim across the floor."
+    },
+    {
+      "id": "d_crazy_37",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Put on a blindfold and try to draw a cat."
+    },
+    {
+      "id": "d_crazy_38",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Try to juggle three objects of your choice."
+    },
+    {
+      "id": "d_crazy_39",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Act like a cowboy/cowgirl until your next turn."
+    },
+    {
+      "id": "d_crazy_40",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Put a lemon slice in your mouth and keep it there for 5 minutes."
+    },
+    {
+      "id": "d_crazy_41",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Speak in a high-pitched voice until your next turn."
+    },
+    {
+      "id": "d_crazy_42",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Wear sunglasses indoors for the next three rounds."
+    },
+    {
+      "id": "d_crazy_43",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Try to touch your nose with your tongue."
+    },
+    {
+      "id": "d_crazy_44",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Do the Macarena dance."
+    },
+    {
+      "id": "d_crazy_45",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Fill your mouth with water and try to whistle."
+    },
+    {
+      "id": "d_crazy_46",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Act like a mime until your next turn."
+    },
+    {
+      "id": "d_crazy_47",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Pretend you're a news reporter and give a weather forecast."
+    },
+    {
+      "id": "d_crazy_48",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Make a prank call to a friend, pretending to be a telemarketer."
+    },
+    {
+      "id": "d_crazy_49",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Put on a blindfold and let someone feed you a mystery food."
+    },
+    {
+      "id": "d_crazy_50",
+      "type": "dare",
+      "category": "Crazy",
+      "text": "Give someone a piggyback ride around the room."
+    },
+    {
+      "id": "t_party_1",
+      "type": "truth",
+      "category": "Party",
+      "text": "Are you in love with somebody?"
+    },
+    {
+      "id": "t_party_2",
+      "type": "truth",
+      "category": "Party",
+      "text": "What is the highest number of shots that you have taken in one night?"
+    },
+    {
+      "id": "t_party_3",
+      "type": "truth",
+      "category": "Party",
+      "text": "What is the longest you have gone without sleep?"
+    },
+    {
+      "id": "t_party_4",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's the closest you've ever come to cheating?"
+    },
+    {
+      "id": "t_party_5",
+      "type": "truth",
+      "category": "Party",
+      "text": "What is the best party that you've ever been to?"
+    },
+    {
+      "id": "t_party_6",
+      "type": "truth",
+      "category": "Party",
+      "text": "How many people in this room would you have sex with?"
+    },
+    {
+      "id": "t_party_7",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's the biggest age difference you've had between yourself and a sexual partner?"
+    },
+    {
+      "id": "t_party_8",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's the biggest drunk embarrassing thing you've done?"
+    },
+    {
+      "id": "t_party_9",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's the silliest thing you've done to impress someone?"
+    },
+    {
+      "id": "t_party_10",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's the most embarrassing thing you've ever been caught doing?"
+    },
+    {
+      "id": "t_party_11",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's the strangest food combination you've ever tried?"
+    },
+    {
+      "id": "t_party_12",
+      "type": "truth",
+      "category": "Party",
+      "text": "What was the biggest joke you've ever played on someone?"
+    },
+    {
+      "id": "t_party_13",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's the furthest you've gone sexually with a member of the same/opposite sex?"
+    },
+    {
+      "id": "t_party_14",
+      "type": "truth",
+      "category": "Party",
+      "text": "What is the most shameful thing you've done in your life?"
+    },
+    {
+      "id": "t_party_15",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's the craziest thing that you have ever done while drunk?"
+    },
+    {
+      "id": "t_party_16",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's the dirtiest thing a partner ever asked you to do?"
+    },
+    {
+      "id": "t_party_17",
+      "type": "truth",
+      "category": "Party",
+      "text": "Do you wipe your butt standing up or sitting down?"
+    },
+    {
+      "id": "t_party_18",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's the craziest thing you've ever done for love?"
+    },
+    {
+      "id": "t_party_19",
+      "type": "truth",
+      "category": "Party",
+      "text": "Have you ever lied to your best friend? If so, what was it about?"
+    },
+    {
+      "id": "t_party_20",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's the most embarrassing thing that has happened to you in public?"
+    },
+    {
+      "id": "t_party_21",
+      "type": "truth",
+      "category": "Party",
+      "text": "Have you ever peed in a swimming pool?"
+    },
+    {
+      "id": "t_party_22",
+      "type": "truth",
+      "category": "Party",
+      "text": "Have you ever cheated on a significant other?"
+    },
+    {
+      "id": "t_party_23",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's the most ridiculous thing that has made you cry?"
+    },
+    {
+      "id": "t_party_24",
+      "type": "truth",
+      "category": "Party",
+      "text": "Have you ever had a crush on someone your friend has dated?"
+    },
+    {
+      "id": "t_party_25",
+      "type": "truth",
+      "category": "Party",
+      "text": "Have you ever broken something and blamed someone else for it?"
+    },
+    {
+      "id": "t_party_26",
+      "type": "truth",
+      "category": "Party",
+      "text": "Have you ever ghosted someone after a date? Why?"
+    },
+    {
+      "id": "t_party_27",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's your most awkward online dating experience?"
+    },
+    {
+      "id": "t_party_28",
+      "type": "truth",
+      "category": "Party",
+      "text": "Who in this room would you swipe right for on Tinder?"
+    },
+    {
+      "id": "t_party_29",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's the most embarrassing thing you've posted on social media?"
+    },
+    {
+      "id": "t_party_30",
+      "type": "truth",
+      "category": "Party",
+      "text": "Have you ever had a crush on a character from an animated series?"
+    },
+    {
+      "id": "t_party_31",
+      "type": "truth",
+      "category": "Party",
+      "text": "Have you ever lied about your age to get into a club?"
+    },
+    {
+      "id": "t_party_32",
+      "type": "truth",
+      "category": "Party",
+      "text": "Have you ever had a roommate from hell? What did they do?"
+    },
+    {
+      "id": "t_party_33",
+      "type": "truth",
+      "category": "Party",
+      "text": "Have you ever accidentally sent a screenshot to the person you were talking about?"
+    },
+    {
+      "id": "t_party_34",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's your go-to karaoke song?"
+    },
+    {
+      "id": "t_party_35",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's your guilty pleasure TV show or movie?"
+    },
+    {
+      "id": "t_party_36",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's the most childish thing you still enjoy?"
+    },
+    {
+      "id": "t_party_37",
+      "type": "truth",
+      "category": "Party",
+      "text": "Have you ever been thrown out of a bar or club? What happened?"
+    },
+    {
+      "id": "t_party_38",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's the biggest lie you've ever told without getting caught?"
+    },
+    {
+      "id": "t_party_39",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's the biggest misconception people have about you?"
+    },
+    {
+      "id": "t_party_40",
+      "type": "truth",
+      "category": "Party",
+      "text": "Have you ever pretended to like a gift you hated? What was it?"
+    },
+    {
+      "id": "t_party_41",
+      "type": "truth",
+      "category": "Party",
+      "text": "Have you ever been so drunk you forgot parts of the night?"
+    },
+    {
+      "id": "t_party_42",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's the weirdest place you've ever slept?"
+    },
+    {
+      "id": "t_party_43",
+      "type": "truth",
+      "category": "Party",
+      "text": "What's the most trouble you've ever been in?"
+    },
+    {
+      "id": "t_party_44",
+      "type": "truth",
+      "category": "Party",
+      "text": "Have you ever had a friend with benefits?"
+    },
+    {
+      "id": "t_party_45",
+      "type": "truth",
+      "category": "Party",
+      "text": "Have you ever been nude in public?"
+    },
+    {
+      "id": "t_party_46",
+      "type": "truth",
+      "category": "Party",
+      "text": "What celebrity do you think is overrated?"
+    },
+    {
+      "id": "t_party_47",
+      "type": "truth",
+      "category": "Party",
+      "text": "Which person do you find most attractive in this room?"
+    },
+    {
+      "id": "t_party_48",
+      "type": "truth",
+      "category": "Party",
+      "text": "Who would you hate to see naked?"
+    },
+    {
+      "id": "t_party_49",
+      "type": "truth",
+      "category": "Party",
+      "text": "Have you ever stolen something from work?"
+    },
+    {
+      "id": "t_party_50",
+      "type": "truth",
+      "category": "Party",
+      "text": "When was the last time you made someone else cry?"
+    },
+    {
+      "id": "d_party_1",
+      "type": "dare",
+      "category": "Party",
+      "text": "If you had to choose, who in this room would you list as your emergency contact?"
+    },
+    {
+      "id": "d_party_2",
+      "type": "dare",
+      "category": "Party",
+      "text": "What do you want on your tombstone?"
+    },
+    {
+      "id": "d_party_3",
+      "type": "dare",
+      "category": "Party",
+      "text": "What's the last movie that made you cry?"
+    },
+    {
+      "id": "d_party_4",
+      "type": "dare",
+      "category": "Party",
+      "text": "Do you believe in any superstitions? If so, which ones?"
+    },
+    {
+      "id": "d_party_5",
+      "type": "dare",
+      "category": "Party",
+      "text": "Are you superstitious?"
+    },
+    {
+      "id": "d_party_6",
+      "type": "dare",
+      "category": "Party",
+      "text": "What's the longest you've gone without drinking alcohol?"
+    },
+    {
+      "id": "d_party_7",
+      "type": "dare",
+      "category": "Party",
+      "text": "Have you sent sexy selfies to someone?"
+    },
+    {
+      "id": "d_party_8",
+      "type": "dare",
+      "category": "Party",
+      "text": "Take 5 sips of your drink."
+    },
+    {
+      "id": "d_party_9",
+      "type": "dare",
+      "category": "Party",
+      "text": "Put your clothes backward."
+    },
+    {
+      "id": "d_party_10",
+      "type": "dare",
+      "category": "Party",
+      "text": "Sing a song of your choice in a funny accent."
+    },
+    {
+      "id": "d_party_11",
+      "type": "dare",
+      "category": "Party",
+      "text": "Do your best celebrity impression. The others have to guess who it is."
+    },
+    {
+      "id": "d_party_12",
+      "type": "dare",
+      "category": "Party",
+      "text": "Act like a cat for the next 3 minutes."
+    },
+    {
+      "id": "d_party_13",
+      "type": "dare",
+      "category": "Party",
+      "text": "Imitate someone in the room and see if others can guess who it is."
+    },
+    {
+      "id": "d_party_14",
+      "type": "dare",
+      "category": "Party",
+      "text": "Post on your TikTok account: I will give $1,000 to whoever comments first."
+    },
+    {
+      "id": "d_party_15",
+      "type": "dare",
+      "category": "Party",
+      "text": "Take off a piece of clothes."
+    },
+    {
+      "id": "d_party_16",
+      "type": "dare",
+      "category": "Party",
+      "text": "Do an air guitar solo."
+    },
+    {
+      "id": "d_party_17",
+      "type": "dare",
+      "category": "Party",
+      "text": "Tell a joke."
+    },
+    {
+      "id": "d_party_18",
+      "type": "dare",
+      "category": "Party",
+      "text": "Chug your drink."
+    },
+    {
+      "id": "d_party_19",
+      "type": "dare",
+      "category": "Party",
+      "text": "Take 3 big sips."
+    },
+    {
+      "id": "d_party_20",
+      "type": "dare",
+      "category": "Party",
+      "text": "Make out with someone on camera."
+    },
+    {
+      "id": "d_party_21",
+      "type": "dare",
+      "category": "Party",
+      "text": "Make up a rap about the person on your right."
+    },
+    {
+      "id": "d_party_22",
+      "type": "dare",
+      "category": "Party",
+      "text": "Make a president's inauguration speech."
+    },
+    {
+      "id": "d_party_23",
+      "type": "dare",
+      "category": "Party",
+      "text": "Imitate an animal sound."
+    },
+    {
+      "id": "d_party_24",
+      "type": "dare",
+      "category": "Party",
+      "text": "Fake sex noises."
+    },
+    {
+      "id": "d_party_25",
+      "type": "dare",
+      "category": "Party",
+      "text": "Call a random phone number and talk to that person for as long as you can."
+    },
+    {
+      "id": "d_party_26",
+      "type": "dare",
+      "category": "Party",
+      "text": "Do 10 push-ups."
+    },
+    {
+      "id": "d_party_27",
+      "type": "dare",
+      "category": "Party",
+      "text": "Take a selfie with a stranger."
+    },
+    {
+      "id": "d_party_28",
+      "type": "dare",
+      "category": "Party",
+      "text": "Share an embarrassing story on social media."
+    },
+    {
+      "id": "d_party_29",
+      "type": "dare",
+      "category": "Party",
+      "text": "Do an impression of a famous politician."
+    },
+    {
+      "id": "d_party_30",
+      "type": "dare",
+      "category": "Party",
+      "text": "Tell everybody a shameful story about yourself."
+    },
+    {
+      "id": "d_party_31",
+      "type": "dare",
+      "category": "Party",
+      "text": "Take a sip of every drink at the table."
+    },
+    {
+      "id": "d_party_32",
+      "type": "dare",
+      "category": "Party",
+      "text": "Take a body shot of the person to your left."
+    },
+    {
+      "id": "d_party_33",
+      "type": "dare",
+      "category": "Party",
+      "text": "Sing a song as if you were sick."
+    },
+    {
+      "id": "d_party_34",
+      "type": "dare",
+      "category": "Party",
+      "text": "Take a shot without using your hands."
+    },
+    {
+      "id": "d_party_35",
+      "type": "dare",
+      "category": "Party",
+      "text": "Text the last person you talked to and say \"I love you\" without explanation."
+    },
+    {
+      "id": "d_party_36",
+      "type": "dare",
+      "category": "Party",
+      "text": "Wear your clothes inside out for the rest of the game."
+    },
+    {
+      "id": "d_party_37",
+      "type": "dare",
+      "category": "Party",
+      "text": "Repeat each of your sentences twice for the next two rounds."
+    },
+    {
+      "id": "d_party_38",
+      "type": "dare",
+      "category": "Party",
+      "text": "Take 2 shots in a row."
+    },
+    {
+      "id": "d_party_39",
+      "type": "dare",
+      "category": "Party",
+      "text": "Do a handstand against the wall for 1 minute."
+    },
+    {
+      "id": "d_party_40",
+      "type": "dare",
+      "category": "Party",
+      "text": "Take a shot of vodka."
+    },
+    {
+      "id": "d_party_41",
+      "type": "dare",
+      "category": "Party",
+      "text": "Take 7 sips of your drink."
+    },
+    {
+      "id": "d_party_42",
+      "type": "dare",
+      "category": "Party",
+      "text": "Pretend to be a news anchor reporting on what's happening in the room."
+    },
+    {
+      "id": "d_party_43",
+      "type": "dare",
+      "category": "Party",
+      "text": "Tweet from your X account: I love Donald Trump."
+    },
+    {
+      "id": "d_party_44",
+      "type": "dare",
+      "category": "Party",
+      "text": "Tell everybody an embarrassing story about yourself."
+    },
+    {
+      "id": "d_party_45",
+      "type": "dare",
+      "category": "Party",
+      "text": "Sing a song with water in your mouth."
+    },
+    {
+      "id": "d_party_46",
+      "type": "dare",
+      "category": "Party",
+      "text": "Sing 'cock-a-doodle-do' every 2 turns."
+    },
+    {
+      "id": "d_party_47",
+      "type": "dare",
+      "category": "Party",
+      "text": "Take a shot of strong alcohol."
+    },
+    {
+      "id": "d_party_48",
+      "type": "dare",
+      "category": "Party",
+      "text": "Let the youngest person slap you in the face."
+    },
+    {
+      "id": "d_party_49",
+      "type": "dare",
+      "category": "Party",
+      "text": "Take a sneaky pic of all the players without them knowing."
+    },
+    {
+      "id": "d_party_50",
+      "type": "dare",
+      "category": "Party",
+      "text": "Do an interpretive dance of a famous historical event."
+    },
+    {
+      "id": "d_party_51",
+      "type": "dare",
+      "category": "Party",
+      "text": "Sing the national anthem."
+    },
+    {
+      "id": "d_party_52",
+      "type": "dare",
+      "category": "Party",
+      "text": "Make up a story about the person on your left."
+    },
+    {
+      "id": "d_party_53",
+      "type": "dare",
+      "category": "Party",
+      "text": "Act out your favorite movie scene in 30 seconds or less."
+    },
+    {
+      "id": "d_party_54",
+      "type": "dare",
+      "category": "Party",
+      "text": "Speak only in rhyme for the next 5 minutes."
+    },
+    {
+      "id": "d_party_55",
+      "type": "dare",
+      "category": "Party",
+      "text": "Switch clothes with someone else for the rest of the game."
+    },
+    {
+      "id": "d_party_56",
+      "type": "dare",
+      "category": "Party",
+      "text": "Do an interpretive dance of your favorite song."
+    },
+    {
+      "id": "d_party_57",
+      "type": "dare",
+      "category": "Party",
+      "text": "Call your crush and confess your feelings to them."
+    },
+    {
+      "id": "t_hot_1",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Who in this room would you like to date?"
+    },
+    {
+      "id": "t_hot_2",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "What's the most adventurous place you've ever had sex?"
+    },
+    {
+      "id": "t_hot_3",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Have you ever had a one-night stand? If so, how many?"
+    },
+    {
+      "id": "t_hot_4",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "What's the most unusual place where you had sex?"
+    },
+    {
+      "id": "t_hot_5",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Would you ever consider being a nudist?"
+    },
+    {
+      "id": "t_hot_6",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Who was your first partner?"
+    },
+    {
+      "id": "t_hot_7",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Who was your first crush?"
+    },
+    {
+      "id": "t_hot_8",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Where do you like to be touched?"
+    },
+    {
+      "id": "t_hot_9",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Do you have a secret fetish?"
+    },
+    {
+      "id": "t_hot_10",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "What's the wildest thing you've ever done in bed?"
+    },
+    {
+      "id": "t_hot_11",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Have you ever made a booty call?"
+    },
+    {
+      "id": "t_hot_12",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Who do you most want to sleep with out of everyone here?"
+    },
+    {
+      "id": "t_hot_13",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Who in this room would you like to kiss?"
+    },
+    {
+      "id": "t_hot_14",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "What's your favorite body part on yourself? On your partner?"
+    },
+    {
+      "id": "t_hot_15",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Would you prefer to date someone younger or older than you?"
+    },
+    {
+      "id": "t_hot_16",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Have you ever had a threesome? Would you?"
+    },
+    {
+      "id": "t_hot_17",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "What's something kinky you've always wanted to try but haven't yet?"
+    },
+    {
+      "id": "t_hot_18",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Have you ever had sex in a forbidden place? Where?"
+    },
+    {
+      "id": "t_hot_19",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "What's your favorite type of foreplay?"
+    },
+    {
+      "id": "t_hot_20",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Who's the hottest person at work?"
+    },
+    {
+      "id": "t_hot_21",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Have you ever had sex in a car? If so, how did it go?"
+    },
+    {
+      "id": "t_hot_22",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Do you enjoy rough or slow sex?"
+    },
+    {
+      "id": "t_hot_23",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "What's your biggest turn-off?"
+    },
+    {
+      "id": "t_hot_24",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Where are you on the straight/queer spectrum? Be honest!"
+    },
+    {
+      "id": "t_hot_25",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Have you ever had a crush on someone else's partner?"
+    },
+    {
+      "id": "t_hot_26",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Have you ever received a compliment on your sexual performance? If so, what was it?"
+    },
+    {
+      "id": "t_hot_27",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "What's the most awkward sexual experience you've had?"
+    },
+    {
+      "id": "t_hot_28",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Do you enjoy rough or slow sex?"
+    },
+    {
+      "id": "t_hot_29",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "What's your biggest turn-on?"
+    },
+    {
+      "id": "t_hot_30",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Have you ever had sex in a car? If so, how did it go?"
+    },
+    {
+      "id": "t_hot_31",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Do you like male strip teases? Have you ever seen one before?"
+    },
+    {
+      "id": "t_hot_32",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "What's your favorite position?"
+    },
+    {
+      "id": "t_hot_33",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Who is your favorite porn star?"
+    },
+    {
+      "id": "t_hot_34",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "What was your sexiest first date ever?"
+    },
+    {
+      "id": "t_hot_35",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "What's your favorite type of porn?"
+    },
+    {
+      "id": "t_hot_36",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "What's the most NSFW thing you've searched for online?"
+    },
+    {
+      "id": "t_hot_37",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "What was the worst sexual experience you've ever had?"
+    },
+    {
+      "id": "t_hot_38",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Would you marry your current partner?"
+    },
+    {
+      "id": "t_hot_39",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Do you have an \"I'm getting laid tonight\" outfit? What is it?"
+    },
+    {
+      "id": "t_hot_40",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Have you ever watched porn with someone else?"
+    },
+    {
+      "id": "t_hot_41",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Would you ever watch your partner have sex with someone else?"
+    },
+    {
+      "id": "t_hot_42",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Have you ever thought about being a stripper?"
+    },
+    {
+      "id": "t_hot_43",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Do you expect to finish this Valentine's Day with sex?"
+    },
+    {
+      "id": "t_hot_44",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Are you more of a dominant or a submissive?"
+    },
+    {
+      "id": "t_hot_45",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Have you ever lied about your sexual experience to impress someone?"
+    },
+    {
+      "id": "t_hot_46",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Have you ever used a sex toy with a partner?"
+    },
+    {
+      "id": "t_hot_47",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Are you more of a thong, briefs, or grandma underpants person?"
+    },
+    {
+      "id": "t_hot_48",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Have you ever had a sexy photoshoot?"
+    },
+    {
+      "id": "t_hot_49",
+      "type": "truth",
+      "category": "Spicy",
+      "text": "Would you ever have sex for money?"
+    },
+    {
+      "id": "d_hot_1",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Do your best fake orgasm while looking the person to your left in the eyes."
+    },
+    {
+      "id": "d_hot_2",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "With your eyes closed and the other person or people standing across from you in the room, walk with your hands out. You have to kiss the first person you touch, where you touch them."
+    },
+    {
+      "id": "d_hot_3",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "You have to leave a sexy voicemail for an ex."
+    },
+    {
+      "id": "d_hot_4",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "The person to your left has to lick peanut butter, chocolate sauce, or whipped cream off your finger or cheek."
+    },
+    {
+      "id": "d_hot_5",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "The person to your right feeds you M&Ms or other small chocolate candy, and you have to say, “Thank you, Daddy/Mommy,” after each one."
+    },
+    {
+      "id": "d_hot_6",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "If there’s a pool, you have to go skinny dipping, and you have to choose one person to go with you."
+    },
+    {
+      "id": "d_hot_7",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "You’re in school, and you’ve been a bad student. For the next round, you’re in time out on someone’s lap."
+    },
+    {
+      "id": "d_hot_8",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Someone goes into your Amazon account and buys a special toy for you that’s $20 or less."
+    },
+    {
+      "id": "d_hot_9",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "You leave the room. Everyone pours a shot. You come back into the room and take one of the shots that were poured. Whoever poured the drink, you have to sit on their lap for the rest of the round."
+    },
+    {
+      "id": "d_hot_10",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "You have to undress down to your accessories and skivvies. If you want to keep any clothes on, you have to take a shot for every piece of clothing you want to keep."
+    },
+    {
+      "id": "d_hot_11",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Lightly trace your hands over someone else’s lips and whisper, “I’m coming, I’m coming,” five times."
+    },
+    {
+      "id": "d_hot_12",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Change your Instagram status to “I’m coming... I’m coming...” Then, one minute later, change it to “I just came“."
+    },
+    {
+      "id": "d_hot_13",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Someone gives you a back massage for one minute while you’re blindfolded. If you like their style, you can choose to kiss them afterward, but without knowing their identity."
+    },
+    {
+      "id": "d_hot_14",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "You have to keep your hand on the very inner thigh of the person next to you for the next round."
+    },
+    {
+      "id": "d_hot_15",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "You decide who the person to your right has to kiss on the mouth."
+    },
+    {
+      "id": "d_hot_16",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Kiss the neck of the person to your left."
+    },
+    {
+      "id": "d_hot_17",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Massage the inner thighs of the person to your right."
+    },
+    {
+      "id": "d_hot_18",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Take off your shirt and leave it off for one round."
+    },
+    {
+      "id": "d_hot_19",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Blindfold yourself, spin around for ten seconds, and whoever you are pointing to at the end, you go with them to the next room and enjoy 7 minutes of heaven."
+    },
+    {
+      "id": "d_hot_20",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Watch a porn movie for 3 minutes with the sound muted; you have to dub the voices."
+    },
+    {
+      "id": "d_hot_21",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Pour some liquid somewhere on the body of the person in front of you and lick it off."
+    },
+    {
+      "id": "d_hot_22",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "The person with the highest screen time must massage your back, shoulders and neck for 3 minutes. (All players, except you, must check their average screen time on their phone.)"
+    },
+    {
+      "id": "d_hot_23",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Remove 2 pieces of clothing."
+    },
+    {
+      "id": "d_hot_24",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Give the person with the highest number of Instagram followers a hickey."
+    },
+    {
+      "id": "d_hot_25",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Take a sexy selfie and send it to your partner or crush."
+    },
+    {
+      "id": "d_hot_26",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Blindfolded, let someone tie you to a chair and give you a lap dance."
+    },
+    {
+      "id": "d_hot_27",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Text one of your friends right now and ask them to join you for a threesome."
+    },
+    {
+      "id": "d_hot_28",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Pull your pants down and show everybody your underwear."
+    },
+    {
+      "id": "d_hot_29",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Act out your favorite sex position with a pillow."
+    },
+    {
+      "id": "d_hot_30",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Talk dirty to another player for 3 minutes."
+    },
+    {
+      "id": "d_hot_31",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Show your friends your ‘sex noises’."
+    },
+    {
+      "id": "d_hot_32",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Send a topless selfie to one of your contacts for 2 seconds via Snapchat."
+    },
+    {
+      "id": "d_hot_33",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Rest your hand on the crotch of the person to your left until the next round."
+    },
+    {
+      "id": "d_hot_34",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Put on some music and twerk for 1 minute."
+    },
+    {
+      "id": "d_hot_35",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Spin the bottle; whoever it lands on, you must take their shirt off, only using your teeth."
+    },
+    {
+      "id": "d_hot_36",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Spank another player whilst saying, ‘You’ve been a very bad girl/boy’."
+    },
+    {
+      "id": "d_hot_37",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Lick the earlobe of the person to your left."
+    },
+    {
+      "id": "d_hot_38",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Serenade the person in front of you."
+    },
+    {
+      "id": "d_hot_39",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Tell each player what you find sexy about them."
+    },
+    {
+      "id": "d_hot_40",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Spin the bottle; whoever it lands on, you must French kiss."
+    },
+    {
+      "id": "d_hot_41",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Spin the bottle; whoever it lands on, you must kiss on the forehead."
+    },
+    {
+      "id": "d_hot_42",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Spin the bottle; whoever it lands on, you must gently stroke their head and cheeks."
+    },
+    {
+      "id": "d_hot_43",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Do a sexy catwalk across the room."
+    },
+    {
+      "id": "d_hot_44",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Let the youngest person slap you on the butt."
+    },
+    {
+      "id": "d_hot_45",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Bite a piece of fruit (or any other food) seductively."
+    },
+    {
+      "id": "d_hot_46",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Use your best pickup line on the person to your right."
+    },
+    {
+      "id": "d_hot_47",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Swap shirts with the tallest person in the group."
+    },
+    {
+      "id": "d_hot_48",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Strike three sexy poses for the group. They can take pictures if they want."
+    },
+    {
+      "id": "d_hot_49",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Spin the bottle; whoever it lands on, you must give a big hug."
+    },
+    {
+      "id": "d_hot_50",
+      "type": "dare",
+      "category": "Spicy",
+      "text": "Choose someone to gently bite you on your neck."
+    },
+    {
+      "id": "t_kids_1",
+      "type": "truth",
+      "category": "Kids",
+      "text": "What is your favorite subject in school?"
+    },
+    {
+      "id": "t_kids_2",
+      "type": "truth",
+      "category": "Kids",
+      "text": "If you could have any superpower, what would it be?"
+    },
+    {
+      "id": "t_kids_3",
+      "type": "truth",
+      "category": "Kids",
+      "text": "What is the funniest thing that ever happened to you?"
+    },
+    {
+      "id": "t_kids_4",
+      "type": "truth",
+      "category": "Kids",
+      "text": "Who is your best friend and why?"
+    },
+    {
+      "id": "t_kids_5",
+      "type": "truth",
+      "category": "Kids",
+      "text": "What is the silliest thing you're afraid of?"
+    },
+    {
+      "id": "t_kids_6",
+      "type": "truth",
+      "category": "Kids",
+      "text": "If you could be any animal, which one would you be?"
+    },
+    {
+      "id": "t_kids_7",
+      "type": "truth",
+      "category": "Kids",
+      "text": "What is the best dream you've ever had?"
+    },
+    {
+      "id": "t_kids_8",
+      "type": "truth",
+      "category": "Kids",
+      "text": "What is your favorite thing to do after school?"
+    },
+    {
+      "id": "t_kids_9",
+      "type": "truth",
+      "category": "Kids",
+      "text": "If you could eat only one food forever, what would it be?"
+    },
+    {
+      "id": "t_kids_10",
+      "type": "truth",
+      "category": "Kids",
+      "text": "What is the nicest thing someone has done for you?"
+    },
+    {
+      "id": "t_kids_11",
+      "type": "truth",
+      "category": "Kids",
+      "text": "What is your most embarrassing moment at school?"
+    },
+    {
+      "id": "t_kids_12",
+      "type": "truth",
+      "category": "Kids",
+      "text": "If you found a million dollars, what would you do with it?"
+    },
+    {
+      "id": "t_kids_13",
+      "type": "truth",
+      "category": "Kids",
+      "text": "What is the weirdest food you've ever tried?"
+    },
+    {
+      "id": "t_kids_14",
+      "type": "truth",
+      "category": "Kids",
+      "text": "Who is your favorite cartoon or movie character?"
+    },
+    {
+      "id": "t_kids_15",
+      "type": "truth",
+      "category": "Kids",
+      "text": "What is something you're really good at?"
+    },
+    {
+      "id": "t_kids_16",
+      "type": "truth",
+      "category": "Kids",
+      "text": "What do you want to be when you grow up?"
+    },
+    {
+      "id": "t_kids_17",
+      "type": "truth",
+      "category": "Kids",
+      "text": "What is the funniest joke you know?"
+    },
+    {
+      "id": "t_kids_18",
+      "type": "truth",
+      "category": "Kids",
+      "text": "If you could visit any place in the world, where would you go?"
+    },
+    {
+      "id": "t_kids_19",
+      "type": "truth",
+      "category": "Kids",
+      "text": "What is a talent you wish you had?"
+    },
+    {
+      "id": "t_kids_20",
+      "type": "truth",
+      "category": "Kids",
+      "text": "What is the best gift you've ever received?"
+    },
+    {
+      "id": "t_kids_21",
+      "type": "truth",
+      "category": "Kids",
+      "text": "What is something that always makes you laugh?"
+    },
+    {
+      "id": "t_kids_22",
+      "type": "truth",
+      "category": "Kids",
+      "text": "If you could have any pet, what would it be?"
+    },
+    {
+      "id": "t_kids_23",
+      "type": "truth",
+      "category": "Kids",
+      "text": "What song do you secretly love singing?"
+    },
+    {
+      "id": "t_kids_24",
+      "type": "truth",
+      "category": "Kids",
+      "text": "What is the bravest thing you've ever done?"
+    },
+    {
+      "id": "t_kids_25",
+      "type": "truth",
+      "category": "Kids",
+      "text": "If you could switch lives with someone for a day, who would it be?"
+    },
+    {
+      "id": "d_kids_1",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Do your best impression of a robot for 30 seconds."
+    },
+    {
+      "id": "d_kids_2",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Sing the chorus of your favorite song out loud."
+    },
+    {
+      "id": "d_kids_3",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Try to juggle three random objects."
+    },
+    {
+      "id": "d_kids_4",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Do a silly dance for 20 seconds."
+    },
+    {
+      "id": "d_kids_5",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Talk in a funny accent until your next turn."
+    },
+    {
+      "id": "d_kids_6",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Make a funny face and hold it for 10 seconds."
+    },
+    {
+      "id": "d_kids_7",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Try to balance a book on your head and walk across the room."
+    },
+    {
+      "id": "d_kids_8",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Do 10 jumping jacks right now."
+    },
+    {
+      "id": "d_kids_9",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Act like your favorite animal for 30 seconds."
+    },
+    {
+      "id": "d_kids_10",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Try to make everyone laugh in under 15 seconds."
+    },
+    {
+      "id": "d_kids_11",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Speak in slow motion for the next minute."
+    },
+    {
+      "id": "d_kids_12",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Do your best superhero pose."
+    },
+    {
+      "id": "d_kids_13",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Pretend to be a news reporter and report on what's happening right now."
+    },
+    {
+      "id": "d_kids_14",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Close your eyes and draw a cat. Show everyone."
+    },
+    {
+      "id": "d_kids_15",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Do the chicken dance."
+    },
+    {
+      "id": "d_kids_16",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Talk like a pirate until your next turn."
+    },
+    {
+      "id": "d_kids_17",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Spin around 5 times and then try to walk in a straight line."
+    },
+    {
+      "id": "d_kids_18",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Make up a rap about the person to your left."
+    },
+    {
+      "id": "d_kids_19",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Hold your breath for as long as you can."
+    },
+    {
+      "id": "d_kids_20",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Stack as many things on your head as possible."
+    },
+    {
+      "id": "d_kids_21",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Walk like a penguin for the next two minutes."
+    },
+    {
+      "id": "d_kids_22",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Let someone draw a mustache on your face with a marker."
+    },
+    {
+      "id": "d_kids_23",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Do your best impression of a teacher or parent."
+    },
+    {
+      "id": "d_kids_24",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Try to lick your elbow."
+    },
+    {
+      "id": "d_kids_25",
+      "type": "dare",
+      "category": "Kids",
+      "text": "Hop on one foot for 30 seconds while singing a nursery rhyme."
+    },
+    {
+      "id": "t_relationships_1",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "What do you value most in a relationship?"
+    },
+    {
+      "id": "t_relationships_2",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "Have you ever been heartbroken? What happened?"
+    },
+    {
+      "id": "t_relationships_3",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "What's the most romantic thing you've ever done for someone?"
+    },
+    {
+      "id": "t_relationships_4",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "What's a dealbreaker you discovered the hard way?"
+    },
+    {
+      "id": "t_relationships_5",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "Have you ever stayed in a relationship out of guilt?"
+    },
+    {
+      "id": "t_relationships_6",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "What's the most embarrassing thing you've done to impress a crush?"
+    },
+    {
+      "id": "t_relationships_7",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "What's the biggest lie you've told a partner?"
+    },
+    {
+      "id": "t_relationships_8",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "Do you believe in soulmates?"
+    },
+    {
+      "id": "t_relationships_9",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "What's the worst dating advice you've ever followed?"
+    },
+    {
+      "id": "t_relationships_10",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "Have you ever had a secret crush on a friend's partner?"
+    },
+    {
+      "id": "t_relationships_11",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "What's the longest you've waited to text someone back on purpose?"
+    },
+    {
+      "id": "t_relationships_12",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "Have you ever written a love letter?"
+    },
+    {
+      "id": "t_relationships_13",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "What's the most jealous you've ever been?"
+    },
+    {
+      "id": "t_relationships_14",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "What habit of a partner's has driven you the most crazy?"
+    },
+    {
+      "id": "t_relationships_15",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "Have you ever been on a date so bad you made an excuse to leave?"
+    },
+    {
+      "id": "t_relationships_16",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "What's the quickest you've ever fallen for someone?"
+    },
+    {
+      "id": "t_relationships_17",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "Have you ever dated someone your friends disapproved of?"
+    },
+    {
+      "id": "t_relationships_18",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "What's your biggest relationship regret?"
+    },
+    {
+      "id": "t_relationships_19",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "What's the most awkward first date you've been on?"
+    },
+    {
+      "id": "t_relationships_20",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "Have you ever been the one to say 'I love you' first?"
+    },
+    {
+      "id": "t_relationships_21",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "What's the pettiest fight you've had with a partner?"
+    },
+    {
+      "id": "t_relationships_22",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "Have you ever cyberstalked an ex?"
+    },
+    {
+      "id": "t_relationships_23",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "What's your love language and does your partner know it?"
+    },
+    {
+      "id": "t_relationships_24",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "Have you ever gone back to an ex you swore you were over?"
+    },
+    {
+      "id": "t_relationships_25",
+      "type": "truth",
+      "category": "Relationships",
+      "text": "What's the most important lesson a relationship taught you?"
+    },
+    {
+      "id": "d_relationships_1",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Send a flirty text to your crush or partner right now. Show everyone."
+    },
+    {
+      "id": "d_relationships_2",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Call your partner or crush and sing them a love song."
+    },
+    {
+      "id": "d_relationships_3",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Write a love poem in 30 seconds and read it out loud."
+    },
+    {
+      "id": "d_relationships_4",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Give the person to your right a sincere compliment about their personality."
+    },
+    {
+      "id": "d_relationships_5",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Recreate a famous romantic movie scene with someone in the group."
+    },
+    {
+      "id": "d_relationships_6",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Let the group go through your dating app for 30 seconds."
+    },
+    {
+      "id": "d_relationships_7",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Send a 'thinking of you' message to someone you haven't talked to in months."
+    },
+    {
+      "id": "d_relationships_8",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Share the last photo you sent to your partner or crush."
+    },
+    {
+      "id": "d_relationships_9",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Describe your ideal date in embarrassing detail."
+    },
+    {
+      "id": "d_relationships_10",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Give someone in the group a slow-dance for 20 seconds (with imaginary music)."
+    },
+    {
+      "id": "d_relationships_11",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Record a voice message confessing a crush and send it (or play it for the group)."
+    },
+    {
+      "id": "d_relationships_12",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Let the group compose a dating profile bio for you."
+    },
+    {
+      "id": "d_relationships_13",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Text your ex something nice. Show the group."
+    },
+    {
+      "id": "d_relationships_14",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Act out how you met your partner or your most recent crush."
+    },
+    {
+      "id": "d_relationships_15",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Tell the group the corniest pickup line you've ever used or received."
+    },
+    {
+      "id": "d_relationships_16",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Give a 30-second TED talk on why you're a great partner."
+    },
+    {
+      "id": "d_relationships_17",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Let someone read the last 5 messages between you and your crush or partner."
+    },
+    {
+      "id": "d_relationships_18",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Serenade the person across from you for 15 seconds."
+    },
+    {
+      "id": "d_relationships_19",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Write a breakup text (don't send it) and read it to the group."
+    },
+    {
+      "id": "d_relationships_20",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Demonstrate your go-to flirting technique on someone in the group."
+    },
+    {
+      "id": "d_relationships_21",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Post a story or status saying 'I'm looking for love' and leave it up for 5 minutes."
+    },
+    {
+      "id": "d_relationships_22",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Tell the group your most embarrassing relationship story in detail."
+    },
+    {
+      "id": "d_relationships_23",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Give relationship advice to the person on your left as if you're a therapist."
+    },
+    {
+      "id": "d_relationships_24",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Hold hands with the person next to you until your next turn."
+    },
+    {
+      "id": "d_relationships_25",
+      "type": "dare",
+      "category": "Relationships",
+      "text": "Call a friend and ask them for honest feedback about you as a partner."
     }
   ]
 }

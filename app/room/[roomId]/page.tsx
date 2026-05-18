@@ -12,6 +12,7 @@ import whoKnowsMeBestData from "../../data/who_knows_me_best.json";
 import thisOrThatData from "../../data/this_or_that.json";
 import questionsForBoyfriendData from "../../data/questions_for_boyfriend.json";
 import speedDatingData from "../../data/speed_dating.json";
+import charadesData from "../../data/charades.json";
 import { useRoom } from "../../../lib/useRoom";
 import TruthOrDare from "../../components/games/TruthOrDare";
 import WouldYouRather from "../../components/games/WouldYouRather";
@@ -21,6 +22,7 @@ import WhoKnowsMeBest from "../../components/games/WhoKnowsMeBest";
 import ThisOrThat from "../../components/games/ThisOrThat";
 import QuestionsToAskYourBoyfriend from "../../components/games/QuestionsToAskYourBoyfriend";
 import SpeedDating from "../../components/games/SpeedDating";
+import Charades from "../../components/games/Charades";
 
 const gameRegistry: Record<string, { data: any, Component: any }> = {
   truth_or_dare: { data: truthOrDareData, Component: TruthOrDare },
@@ -31,6 +33,7 @@ const gameRegistry: Record<string, { data: any, Component: any }> = {
   this_or_that: { data: thisOrThatData, Component: ThisOrThat },
   boyfriend_questions: { data: questionsForBoyfriendData, Component: QuestionsToAskYourBoyfriend },
   speed_dating: { data: speedDatingData, Component: SpeedDating },
+  charades: { data: charadesData, Component: Charades },
 };
 
 const LOADING_TIPS = [

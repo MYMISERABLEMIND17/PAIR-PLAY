@@ -9,6 +9,7 @@ interface ThisOrThatProps {
     id: string;
     optionA: string;
     optionB: string;
+    category?: string;
   };
   isFlipped: boolean;
   onFlip: () => void;
@@ -20,6 +21,76 @@ interface ThisOrThatProps {
   sendReaction: (type: string) => void;
   state?: any;
 }
+
+const categoryIcons: Record<string, string> = {
+  Popular: "👑",
+  Food: "🍔",
+  Travel: "✈️",
+  Movies: "🎬",
+  Music: "🎵",
+  Relationships: "💏",
+  Hypothetical: "🔮",
+  Party: "🥳"
+};
+
+const categoryGradients: Record<string, { theme: string; border: string; bg: string; text: string; glow: string }> = {
+  Popular: {
+    theme: "from-amber-500 to-yellow-500",
+    border: "border-amber-500/20",
+    bg: "bg-amber-500/10",
+    text: "text-amber-400",
+    glow: "shadow-[0_0_30px_rgba(245,158,11,0.2)]"
+  },
+  Food: {
+    theme: "from-orange-500 to-amber-500",
+    border: "border-orange-500/20",
+    bg: "bg-orange-500/10",
+    text: "text-orange-400",
+    glow: "shadow-[0_0_30px_rgba(249,115,22,0.2)]"
+  },
+  Travel: {
+    theme: "from-emerald-500 to-teal-500",
+    border: "border-emerald-500/20",
+    bg: "bg-emerald-500/10",
+    text: "text-emerald-400",
+    glow: "shadow-[0_0_30px_rgba(16,185,129,0.2)]"
+  },
+  Movies: {
+    theme: "from-sky-500 to-blue-500",
+    border: "border-sky-500/20",
+    bg: "bg-sky-500/10",
+    text: "text-sky-400",
+    glow: "shadow-[0_0_30px_rgba(14,165,233,0.2)]"
+  },
+  Music: {
+    theme: "from-purple-500 to-indigo-500",
+    border: "border-purple-500/20",
+    bg: "bg-purple-500/10",
+    text: "text-purple-400",
+    glow: "shadow-[0_0_30px_rgba(168,85,247,0.2)]"
+  },
+  Relationships: {
+    theme: "from-pink-500 to-rose-500",
+    border: "border-pink-500/20",
+    bg: "bg-pink-500/10",
+    text: "text-pink-400",
+    glow: "shadow-[0_0_30px_rgba(236,72,153,0.2)]"
+  },
+  Hypothetical: {
+    theme: "from-indigo-500 to-violet-500",
+    border: "border-indigo-500/20",
+    bg: "bg-indigo-500/10",
+    text: "text-indigo-400",
+    glow: "shadow-[0_0_30px_rgba(99,102,241,0.2)]"
+  },
+  Party: {
+    theme: "from-red-500 to-rose-500",
+    border: "border-red-500/20",
+    bg: "bg-red-500/10",
+    text: "text-red-400",
+    glow: "shadow-[0_0_30px_rgba(239,68,68,0.2)]"
+  }
+};
 
 export default function ThisOrThat({
   currentPrompt,
@@ -55,15 +126,19 @@ export default function ThisOrThat({
     sendReaction("heart");
   };
 
+  const category = currentPrompt.category || "Popular";
+  const catIcon = categoryIcons[category] || "⚡";
+  const themeConfig = categoryGradients[category] || categoryGradients.Popular;
+
   return (
     <div className="w-full max-w-2xl mx-auto px-4 py-6 flex flex-col items-center">
       
       {/* Title Header */}
       <div className="text-center mb-8">
-        <span className="text-[10px] font-bold uppercase tracking-widest text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
-          This or That ⚡
+        <span className={`text-[10px] font-black uppercase tracking-widest px-3.5 py-1.5 rounded-full border bg-black/40 ${themeConfig.border} ${themeConfig.text}`}>
+          {catIcon} {category} Deck
         </span>
-        <h2 className="text-2xl font-extrabold mt-3 text-white/90">
+        <h2 className="text-2xl font-extrabold mt-4 text-white/90">
           Which one do you prefer?
         </h2>
       </div>
@@ -79,7 +154,7 @@ export default function ThisOrThat({
           whileTap={!hasIAnswered ? { scale: 0.98 } : {}}
           className={`relative flex-1 group overflow-hidden min-h-[160px] md:min-h-[180px] rounded-3xl p-6 border text-left flex flex-col justify-between transition-all duration-300 ${
             myAnswer === currentPrompt.optionA
-              ? "bg-gradient-to-br from-amber-500/15 to-transparent border-amber-500 shadow-[0_0_30px_rgba(245,158,11,0.2)]"
+              ? `bg-gradient-to-br from-amber-500/15 to-transparent border-amber-500 shadow-[0_0_30px_rgba(245,158,11,0.2)]`
               : hasIAnswered
               ? "bg-white/[0.01] border-white/5 opacity-50"
               : "bg-white/[0.02] border-white/10 hover:border-amber-500/40 hover:bg-white/[0.04]"
@@ -142,7 +217,7 @@ export default function ThisOrThat({
           whileTap={!hasIAnswered ? { scale: 0.98 } : {}}
           className={`relative flex-1 group overflow-hidden min-h-[160px] md:min-h-[180px] rounded-3xl p-6 border text-left flex flex-col justify-between transition-all duration-300 ${
             myAnswer === currentPrompt.optionB
-              ? "bg-gradient-to-br from-rose-500/15 to-transparent border-rose-500 shadow-[0_0_30px_rgba(244,63,94,0.2)]"
+              ? `bg-gradient-to-br from-rose-500/15 to-transparent border-rose-500 shadow-[0_0_30px_rgba(244,63,94,0.2)]`
               : hasIAnswered
               ? "bg-white/[0.01] border-white/5 opacity-50"
               : "bg-white/[0.02] border-white/10 hover:border-rose-500/40 hover:bg-white/[0.04]"
