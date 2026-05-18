@@ -122,7 +122,17 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
     }
   }, [roomId]);
 
-  if (loading || (!state && !error) || !userId) {
+  const isOfflineDemo = roomId.startsWith('offline-demo-');
+
+  if (isOfflineDemo && (loading || !state || !userId)) {
+    return (
+      <div className="min-h-[calc(100vh-64px)] flex items-center justify-center bg-[#050508]">
+        <div className="w-10 h-10 rounded-full border-4 border-white/5 border-t-indigo-500 animate-spin" />
+      </div>
+    );
+  }
+
+  if (!isOfflineDemo && (loading || (!state && !error) || !userId)) {
     const progressWidth = `${(countdown / 45) * 100}%`;
     return (
       <div className="min-h-[calc(100vh-64px)] flex items-center justify-center p-4 bg-[#050508]">
@@ -297,7 +307,7 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
     <div className="relative flex flex-col items-center justify-between min-h-[calc(100vh-64px)] py-8 max-w-4xl mx-auto w-full">
       
       {/* Waiting Overlay */}
-      {!isPartnerOnline && (
+      {!isPartnerOnline && !isOfflineMode && (
         <div className="absolute inset-0 z-50 flex items-center justify-center backdrop-blur-md bg-black/40 rounded-3xl m-4">
           <div className="elevated-card p-10 max-w-md w-full text-center flex flex-col items-center border border-pink-500/30 shadow-[0_0_50px_rgba(236,72,153,0.15)]">
             <div className="w-20 h-20 mb-6 rounded-full border-4 border-pink-500 border-t-transparent animate-spin flex items-center justify-center">
