@@ -1,0 +1,4008 @@
+{
+  "name": "Confession",
+  "description": "Unlock deep secrets, hilarious truths, and intimate desires. Perfect for dates, couples, and close friends.",
+  "color": "from-violet-600 via-indigo-600 to-purple-700",
+  "icon": "Sparkles",
+  "prompts": [
+    {
+      "id": "cf_embarrassing_1",
+      "text": "Confess if you've ever waved back at someone who wasn't waving at you.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_2",
+      "text": "Confess if you've ever walked into a glass door in public.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_3",
+      "text": "Confess if you've ever sent a text to the wrong person and it was awkward.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_4",
+      "text": "Confess if you've ever tripped over nothing and pretended to jog.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_5",
+      "text": "Confess if you've ever called a teacher 'mom' or 'dad' by accident.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_6",
+      "text": "Confess if you've ever been caught talking to yourself.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_7",
+      "text": "Confess if you've ever laughed at a joke you didn't understand.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_8",
+      "text": "Confess if you've ever walked in the wrong direction and had to awkwardly turn around.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_9",
+      "text": "Confess if you've ever forgotten someone's name right after they told you.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_10",
+      "text": "Confess if you've ever accidentally liked an old photo while stalking someone.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_11",
+      "text": "Confess if you've ever worn something inside out without realizing it all day.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_12",
+      "text": "Confess if you've ever said 'you too' when a waiter said 'enjoy your meal.'",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_13",
+      "text": "Confess if you've ever pulled a push door in front of people.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_14",
+      "text": "Confess if you've ever been caught singing alone and it wasn't pretty.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_15",
+      "text": "Confess if you've ever completely blanked during a presentation or speech.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_16",
+      "text": "Confess if you've ever snorted while laughing at the worst possible moment.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_17",
+      "text": "Confess if you've ever accidentally spit on someone while talking.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_18",
+      "text": "Confess if you've ever woken up and replied to a text with total nonsense.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_19",
+      "text": "Confess if you've ever had food stuck in your teeth during an entire conversation.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_20",
+      "text": "Confess if you've ever confidently given wrong directions to a stranger.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_21",
+      "text": "Confess if you've ever accidentally liked an old photo on social media while stalking someone.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_22",
+      "text": "Confess if you've ever worn two different socks all day without realizing it.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_23",
+      "text": "Confess if you've ever accidentally called someone by the wrong name repeatedly.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_24",
+      "text": "Confess if you've ever tried to open a door that was clearly marked 'pull' by pushing it.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_25",
+      "text": "Confess if you've ever had your phone autocorrect something hilariously inappropriate.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_26",
+      "text": "Confess if you've ever gotten caught singing loudly to yourself when you thought you were alone.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_27",
+      "text": "Confess if you've ever introduced two people and immediately forgotten one of their names.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_28",
+      "text": "Confess if you've ever sneezed so hard you snorted in public.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_29",
+      "text": "Confess if you've ever walked into a lamppost or sign while looking at your phone.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_30",
+      "text": "Confess if you've ever had your stomach growl so loudly everyone around you heard it.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_31",
+      "text": "Confess if you've ever accidentally sent a voice note that was meant for someone else.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_32",
+      "text": "Confess if you've ever tried to pay for something with a loyalty card instead of a credit card.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_33",
+      "text": "Confess if you've ever worn an item of clothing inside out all day.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_34",
+      "text": "Confess if you've ever given a high-five or fist bump that was completely missed.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_35",
+      "text": "Confess if you've ever forgotten someone's name right after they introduced themselves.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_36",
+      "text": "Confess if you've ever accidentally worn a tag sticking out of your clothes all day.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_37",
+      "text": "Confess if you've ever had your pants rip in an inopportune moment.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_38",
+      "text": "Confess if you've ever thought someone was talking to you and started responding, but they weren't.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_39",
+      "text": "Confess if you've ever stumbled while walking and nearly face-planted in front of people.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_40",
+      "text": "Confess if you've ever accidentally walked into the wrong restroom.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_41",
+      "text": "Confess if you've ever answered a question directed at someone else.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_42",
+      "text": "Confess if you've ever tried to discreetly smell your armpit in public.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_43",
+      "text": "Confess if you've ever had food stuck in your teeth all day without knowing.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_44",
+      "text": "Confess if you've ever accidentally sworn loudly in front of children.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_45",
+      "text": "Confess if you've ever waved goodbye to someone who was just walking past you.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_46",
+      "text": "Confess if you've ever tried to catch something that was falling and made it worse.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_47",
+      "text": "Confess if you've ever accidentally worn your shirt backwards.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_48",
+      "text": "Confess if you've ever sent a super enthusiastic message that was met with a very dry response.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_49",
+      "text": "Confess if you've ever had your fly open for an extended period of time in public.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_50",
+      "text": "Confess if you've ever walked out of a store without paying for something by accident.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_51",
+      "text": "Confess if you've ever made a joke that completely bombed and no one laughed.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_52",
+      "text": "Confess if you've ever spilled a drink all over yourself in a public place.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_53",
+      "text": "Confess if you've ever called a pet by a human name or vice versa.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_54",
+      "text": "Confess if you've ever mistaken a stranger for someone you know and greeted them warmly.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_55",
+      "text": "Confess if you've ever had your phone ring a very embarrassing ringtone in a quiet place.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_56",
+      "text": "Confess if you've ever tried to whisper something and it came out much louder than intended.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_57",
+      "text": "Confess if you've ever had your chair break or tip over while you were sitting on it.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_58",
+      "text": "Confess if you've ever accidentally walked in on someone in the bathroom.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_59",
+      "text": "Confess if you've ever given a thumbs up or other hand gesture that was misinterpreted.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_60",
+      "text": "Confess if you've ever tried to hold in a laugh and snorted or made a strange noise.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_61",
+      "text": "Confess if you've ever had your voice crack mid-sentence during an important conversation.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_62",
+      "text": "Confess if you've ever accidentally eaten something that wasn't yours.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_63",
+      "text": "Confess if you've ever made intense eye contact with a stranger for too long.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_64",
+      "text": "Confess if you've ever forgotten your wallet or purse when trying to pay.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_65",
+      "text": "Confess if you've ever tried to act cool and failed spectacularly.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_66",
+      "text": "Confess if you've ever accidentally farted loudly in a quiet room.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_67",
+      "text": "Confess if you've ever given a compliment that came out sounding like an insult.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_68",
+      "text": "Confess if you've ever tried to open a car door with the wrong key fob.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_69",
+      "text": "Confess if you've ever tripped up stairs or down stairs in front of people.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_70",
+      "text": "Confess if you've ever gotten caught staring at someone.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_71",
+      "text": "Confess if you've ever tried to dance and looked completely awkward.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_72",
+      "text": "Confess if you've ever worn a shirt with a stain on it all day without noticing.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_73",
+      "text": "Confess if you've ever had a public meltdown over something trivial.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_74",
+      "text": "Confess if you've ever accidentally sent a text meant for your partner to your boss.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_75",
+      "text": "Confess if you've ever had your contact lens pop out in public.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_76",
+      "text": "Confess if you've ever tried to discreetly pick your nose and gotten caught.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_77",
+      "text": "Confess if you've ever walked into a spiderweb face-first in public.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_78",
+      "text": "Confess if you've ever said 'you too' when a server says 'enjoy your meal'.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_79",
+      "text": "Confess if you've ever accidentally hit reply-all on an embarrassing email.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_80",
+      "text": "Confess if you've ever tried to walk through a closed door.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_81",
+      "text": "Confess if you've ever had your pants fall down accidentally (even a little).",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_82",
+      "text": "Confess if you've ever called someone 'sir' or 'ma'am' and they were much younger.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_83",
+      "text": "Confess if you've ever completely forgotten what you were going to say mid-sentence.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_84",
+      "text": "Confess if you've ever worn slippers outside without realizing it until much later.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_85",
+      "text": "Confess if you've ever had your earbuds fall out at an inappropriate moment.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_86",
+      "text": "Confess if you've ever tried to high-five someone and they left you hanging.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_87",
+      "text": "Confess if you've ever accidentally elbowed someone in the face.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_88",
+      "text": "Confess if you've ever had your social media post get zero likes or comments.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_89",
+      "text": "Confess if you've ever tried to discreetly fix your underwear in public.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_90",
+      "text": "Confess if you've ever forgotten your lines in a play or presentation.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_91",
+      "text": "Confess if you've ever accidentally complimented someone's pregnancy when they weren't pregnant.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_92",
+      "text": "Confess if you've ever walked out of a store with the security alarm blaring (by accident).",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_93",
+      "text": "Confess if you've ever tried to open a door by pushing when it was a motion sensor.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_94",
+      "text": "Confess if you've ever mistaken a mannequin for a real person and talked to it.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_95",
+      "text": "Confess if you've ever accidentally clicked on a very embarrassing ad in public.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_96",
+      "text": "Confess if you've ever had your hair get caught in something in public.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_97",
+      "text": "Confess if you've ever accidentally worn your shirt inside out AND backwards.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_98",
+      "text": "Confess if you've ever tried to do a cool trick and immediately failed.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_99",
+      "text": "Confess if you've ever had your shoe come off while walking.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_100",
+      "text": "Confess if you've ever accidentally called someone by your ex's name.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_embarrassing_101",
+      "text": "Confess if you've ever tried to pay with a coupon that had expired weeks ago.",
+      "category": "Embarrassing"
+    },
+    {
+      "id": "cf_relationships_1",
+      "text": "Confess if you've ever stalked an ex's social media way too deep.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_2",
+      "text": "Confess if you've ever pretended to like a gift from your partner.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_3",
+      "text": "Confess if you've ever had a crush on a friend's sibling.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_4",
+      "text": "Confess if you've ever sent a risky text and immediately regretted it.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_5",
+      "text": "Confess if you've ever lied about your relationship status.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_6",
+      "text": "Confess if you've ever gone on a date just for the free food.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_7",
+      "text": "Confess if you've ever pretended not to see your ex in public.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_8",
+      "text": "Confess if you've ever had a crush on someone completely inappropriate.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_9",
+      "text": "Confess if you've ever written a love letter or message you never sent.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_10",
+      "text": "Confess if you've ever faked being busy to avoid a date.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_11",
+      "text": "Confess if you've ever said 'I love you' too early and panicked.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_12",
+      "text": "Confess if you've ever practiced a breakup speech in the mirror.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_13",
+      "text": "Confess if you've ever gone back to someone you swore you were done with.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_14",
+      "text": "Confess if you've ever cried over a fictional couple more than a real breakup.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_15",
+      "text": "Confess if you've ever had a dating profile with a very misleading photo.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_16",
+      "text": "Confess if you've ever pretended to be interested in a hobby because of a crush.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_17",
+      "text": "Confess if you've ever screenshot a conversation to send to your friends.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_18",
+      "text": "Confess if you've ever had two people interested in you and handled it terribly.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_19",
+      "text": "Confess if you've ever agreed to a date and then tried to find a way out.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_20",
+      "text": "Confess if you've ever kept texting someone you knew was bad for you.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_21",
+      "text": "Confess if you've ever ghosted someone you were dating.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_22",
+      "text": "Confess if you've ever been ghosted by someone you were dating.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_23",
+      "text": "Confess if you've ever secretly judged your friend's partner.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_24",
+      "text": "Confess if you've ever gone on a date solely for the free meal.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_25",
+      "text": "Confess if you've ever used a pick-up line you found online.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_26",
+      "text": "Confess if you've ever re-read old texts from an ex.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_27",
+      "text": "Confess if you've ever pretended to be busy to avoid a date.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_28",
+      "text": "Confess if you've ever had a secret crush on a co-worker.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_29",
+      "text": "Confess if you've ever dated someone just to make an ex jealous.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_30",
+      "text": "Confess if you've ever lied about your age on a dating app.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_31",
+      "text": "Confess if you've ever forgotten a significant anniversary/birthday.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_32",
+      "text": "Confess if you've ever snooped through a partner's phone.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_33",
+      "text": "Confess if you've ever given a fake number to someone.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_34",
+      "text": "Confess if you've ever gone on a blind date.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_35",
+      "text": "Confess if you've ever been set up on a bad blind date.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_36",
+      "text": "Confess if you've ever dated someone much older or younger than you.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_37",
+      "text": "Confess if you've ever faked an orgasm.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_38",
+      "text": "Confess if you've ever had a 'friends with benefits' arrangement.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_39",
+      "text": "Confess if you've ever questioned if your partner was \"the one.\"",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_40",
+      "text": "Confess if you've ever broken up with someone via text message.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_41",
+      "text": "Confess if you've ever gotten back together with an ex.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_42",
+      "text": "Confess if you've ever had a crush on a celebrity.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_43",
+      "text": "Confess if you've ever used a dating app.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_44",
+      "text": "Confess if you've ever lied about your hobbies to impress someone.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_45",
+      "text": "Confess if you've ever considered breaking up with someone over a small pet peeve.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_46",
+      "text": "Confess if you've ever had your heart broken.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_47",
+      "text": "Confess if you've ever broken someone's heart.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_48",
+      "text": "Confess if you've ever had a rebound relationship.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_49",
+      "text": "Confess if you've ever had a public argument with a partner.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_50",
+      "text": "Confess if you've ever accidentally called a partner by an ex's name.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_51",
+      "text": "Confess if you've ever pretended to be someone you're not on a first date.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_52",
+      "text": "Confess if you've ever gone on a double date.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_53",
+      "text": "Confess if you've ever dated two people at once.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_54",
+      "text": "Confess if you've ever been caught dating two people at once.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_55",
+      "text": "Confess if you've ever made up an excuse to get out of a date.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_56",
+      "text": "Confess if you've ever stalked a crush's social media.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_57",
+      "text": "Confess if you've ever sent a drunk text to an ex.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_58",
+      "text": "Confess if you've ever tried to set up two of your friends.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_59",
+      "text": "Confess if you've ever been set up by your friends.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_60",
+      "text": "Confess if you've ever had a crush on a teacher/professor.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_61",
+      "text": "Confess if you've ever gotten back together with someone you previously broke up with.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_62",
+      "text": "Confess if you've ever pretended to be single when you weren't.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_63",
+      "text": "Confess if you've ever considered proposing/being proposed to.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_64",
+      "text": "Confess if you've ever had a crush on your best friend.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_65",
+      "text": "Confess if you've ever had a fight with a partner over something trivial.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_66",
+      "text": "Confess if you've ever given someone a fake compliment.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_67",
+      "text": "Confess if you've ever pretended to understand something your partner was passionate about.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_68",
+      "text": "Confess if you've ever reconnected with an ex after years.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_69",
+      "text": "Confess if you've ever had your parents try to set you up.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_70",
+      "text": "Confess if you've ever lied about going on a date.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_71",
+      "text": "Confess if you've ever fallen for someone too quickly.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_72",
+      "text": "Confess if you've ever been in a long-distance relationship.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_73",
+      "text": "Confess if you've ever broken up with someone over text/email.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_74",
+      "text": "Confess if you've ever used a dating app just to browse.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_75",
+      "text": "Confess if you've ever been caught looking at someone else on a date.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_76",
+      "text": "Confess if you've ever lied about liking a partner's family.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_77",
+      "text": "Confess if you've ever had a crush on a fictional character.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_78",
+      "text": "Confess if you've ever given a relationship advice you don't follow yourself.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_79",
+      "text": "Confess if you've ever had a secret admirer.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_80",
+      "text": "Confess if you've ever been the secret admirer.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_81",
+      "text": "Confess if you've ever tried to change someone you were dating.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_82",
+      "text": "Confess if you've ever been stood up on a date.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_83",
+      "text": "Confess if you've ever stood someone up on a date.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_84",
+      "text": "Confess if you've ever borrowed money from a partner.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_85",
+      "text": "Confess if you've ever lied about your job to impress someone.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_86",
+      "text": "Confess if you've ever gone on a date purely for networking.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_87",
+      "text": "Confess if you've ever had a crush on a friend's parent.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_88",
+      "text": "Confess if you've ever been in a love triangle.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_89",
+      "text": "Confess if you've ever gotten a tattoo related to a past relationship.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_90",
+      "text": "Confess if you've ever kept a secret from a partner.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_91",
+      "text": "Confess if you've ever been involved in a dramatic relationship breakup.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_92",
+      "text": "Confess if you've ever made a grand romantic gesture.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_93",
+      "text": "Confess if you've ever received a grand romantic gesture.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_94",
+      "text": "Confess if you've ever used a pet name you secretly hated.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_95",
+      "text": "Confess if you've ever had a dream about an ex.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_96",
+      "text": "Confess if you've ever considered marrying someone for their money.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_97",
+      "text": "Confess if you've ever pretended to laugh at a bad joke from a date.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_98",
+      "text": "Confess if you've ever had a crush on a fictional character from a book.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_99",
+      "text": "Confess if you've ever had a secret relationship.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_relationships_100",
+      "text": "Confess if you've ever pretended to be on the phone to avoid someone.",
+      "category": "Relationships"
+    },
+    {
+      "id": "cf_friends_1",
+      "text": "Confess if you've ever talked behind a friend's back.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_2",
+      "text": "Confess if you've ever borrowed something and never returned it.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_3",
+      "text": "Confess if you've ever lied to a friend to get out of plans.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_4",
+      "text": "Confess if you've ever been jealous of a friend's success.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_5",
+      "text": "Confess if you've ever pretended to like a friend's partner.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_6",
+      "text": "Confess if you've ever read a friend's private messages without permission.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_7",
+      "text": "Confess if you've ever told someone else a secret a friend trusted you with.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_8",
+      "text": "Confess if you've ever ghosted a friend for no real reason.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_9",
+      "text": "Confess if you've ever taken credit for something a friend did.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_10",
+      "text": "Confess if you've ever been fake nice to someone your friend group added.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_11",
+      "text": "Confess if you've ever secretly judged a friend's life choices.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_12",
+      "text": "Confess if you've ever pretended to be happy for a friend when you weren't.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_13",
+      "text": "Confess if you've ever let a friend leave the house looking terrible without saying anything.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_14",
+      "text": "Confess if you've ever eaten a friend's food without asking.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_15",
+      "text": "Confess if you've ever made up an excuse to leave a friend's party early.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_16",
+      "text": "Confess if you've ever had a friendship breakup that hurt more than a romantic one.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_17",
+      "text": "Confess if you've ever said 'we should hang out soon' with zero intention of following through.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_18",
+      "text": "Confess if you've ever been the toxic one in a friendship without realizing it.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_19",
+      "text": "Confess if you've ever pretended to remember a story a friend was telling you.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_20",
+      "text": "Confess if you've ever unfollowed a friend on social media and hoped they wouldn't notice.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_21",
+      "text": "Confess if you've ever secretly judged a friend's fashion choice.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_22",
+      "text": "Confess if you've ever given a friend bad advice on purpose (even if small).",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_23",
+      "text": "Confess if you've ever ghosted a friend's call or text.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_24",
+      "text": "Confess if you've ever used a friend for a ride or a favor.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_25",
+      "text": "Confess if you've ever been annoyed by a friend's recurring habit.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_26",
+      "text": "Confess if you've ever faked enthusiasm for a friend's hobby.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_27",
+      "text": "Confess if you've ever accidentally revealed a friend's secret.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_28",
+      "text": "Confess if you've ever compared yourself to a friend.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_29",
+      "text": "Confess if you've ever felt like the 'therapist' friend.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_30",
+      "text": "Confess if you've ever wished a friend would get a new haircut.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_31",
+      "text": "Confess if you've ever had a crush on a friend's sibling or ex.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_32",
+      "text": "Confess if you've ever 'forgotten' to invite a friend to something.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_33",
+      "text": "Confess if you've ever gotten into a petty argument with a friend.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_34",
+      "text": "Confess if you've ever borrowed money from a friend and paid it back late.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_35",
+      "text": "Confess if you've ever felt a friend was talking down to you.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_36",
+      "text": "Confess if you've ever had to mediate a fight between two friends.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_37",
+      "text": "Confess if you've ever unfollowed a friend on social media (even temporarily).",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_38",
+      "text": "Confess if you've ever thought a friend was being unreasonable.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_39",
+      "text": "Confess if you've ever been secretly relieved when a friend cancelled plans.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_40",
+      "text": "Confess if you've ever given a friend a backhanded compliment.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_41",
+      "text": "Confess if you've ever had a falling out with a friend and never reconciled.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_42",
+      "text": "Confess if you've ever felt like a friend was trying to one-up you.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_43",
+      "text": "Confess if you've ever been jealous of a friend's vacation.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_44",
+      "text": "Confess if you've ever kept a secret from a close friend.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_45",
+      "text": "Confess if you've ever had to pretend to enjoy a friend's terrible cooking.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_46",
+      "text": "Confess if you've ever secretly rolled your eyes at a friend's story.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_47",
+      "text": "Confess if you've ever been the last to know something important about a friend.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_48",
+      "text": "Confess if you've ever tried to set up two friends who you knew wouldn't work out.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_49",
+      "text": "Confess if you've ever felt like a friend was using you for connections.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_50",
+      "text": "Confess if you've ever given a friend a gift you secretly wanted for yourself.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_51",
+      "text": "Confess if you've ever had a dream about fighting with a friend.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_52",
+      "text": "Confess if you've ever accidentally called a friend by the wrong name.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_53",
+      "text": "Confess if you've ever pretended to be busy to avoid a friend.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_54",
+      "text": "Confess if you've ever felt obligated to go to a friend's event.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_55",
+      "text": "Confess if you've ever thought a friend's social media posts were annoying.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_56",
+      "text": "Confess if you've ever lent a friend clothes and never got them back.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_57",
+      "text": "Confess if you've ever felt overshadowed by a friend.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_58",
+      "text": "Confess if you've ever had to cover for a friend's mistake.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_59",
+      "text": "Confess if you've ever secretly thought you're smarter than a friend.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_60",
+      "text": "Confess if you've ever been confused by a friend's sudden mood change.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_61",
+      "text": "Confess if you've ever gone along with a friend's bad idea.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_62",
+      "text": "Confess if you've ever felt a friend was being passive-aggressive.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_63",
+      "text": "Confess if you've ever thought about ending a friendship.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_64",
+      "text": "Confess if you've ever felt like you're always initiating plans with a friend.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_65",
+      "text": "Confess if you've ever had to explain something obvious to a friend.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_66",
+      "text": "Confess if you've ever been annoyed by a friend's lack of punctuality.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_67",
+      "text": "Confess if you've ever felt like a friend was trying to control you.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_68",
+      "text": "Confess if you've ever had to lie to a friend to protect someone else.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_69",
+      "text": "Confess if you've ever re-gifted a present from a friend.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_70",
+      "text": "Confess if you've ever felt a friend was taking advantage of your kindness.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_71",
+      "text": "Confess if you've ever secretly wished a friend would move further away.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_72",
+      "text": "Confess if you've ever had to pretend to be interested in a friend's date.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_73",
+      "text": "Confess if you've ever been annoyed by a friend's constant complaining.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_74",
+      "text": "Confess if you've ever felt a friend was being manipulative.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_75",
+      "text": "Confess if you've ever accidentally sent a private message about a friend to them.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_76",
+      "text": "Confess if you've ever felt like a friend was trying to steal your ideas.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_77",
+      "text": "Confess if you've ever exaggerated a story to impress a friend.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_78",
+      "text": "Confess if you've ever had to bite your tongue to avoid offending a friend.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_79",
+      "text": "Confess if you've ever forgotten a friend's birthday.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_80",
+      "text": "Confess if you've ever felt like a friend was being overly dramatic.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_81",
+      "text": "Confess if you've ever pretended to know what a friend was talking about.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_82",
+      "text": "Confess if you've ever given a friend an insincere compliment.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_83",
+      "text": "Confess if you've ever had to console a friend over something trivial.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_84",
+      "text": "Confess if you've ever felt like a friend was being flaky.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_85",
+      "text": "Confess if you've ever been secretly happy when a friend failed at something small.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_86",
+      "text": "Confess if you've ever thought a friend's pet was annoying.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_87",
+      "text": "Confess if you've ever felt pressured by a friend to do something.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_88",
+      "text": "Confess if you've ever pretended to be sick to avoid a friend's party.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_89",
+      "text": "Confess if you've ever had to hold back laughter at a friend's expense.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_90",
+      "text": "Confess if you've ever felt a friend was being unsupportive.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_91",
+      "text": "Confess if you've ever unfriended or blocked a friend on social media.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_92",
+      "text": "Confess if you've ever secretly thought a friend's partner was a bad match.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_93",
+      "text": "Confess if you've ever had to remind a friend about something they promised.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_94",
+      "text": "Confess if you've ever felt like a friend was trying to compete with you.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_95",
+      "text": "Confess if you've ever ignored a friend's text because you didn't want to reply.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_96",
+      "text": "Confess if you've ever felt a friend was being hypocritical.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_97",
+      "text": "Confess if you've ever had to cancel plans on a friend last minute.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_98",
+      "text": "Confess if you've ever had a secret nickname for a friend.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_99",
+      "text": "Confess if you've ever felt like a friend was talking over you.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_100",
+      "text": "Confess if you've ever secretly hoped a friend wouldn't get a job opportunity.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_friends_101",
+      "text": "Confess if you've ever had to pretend to listen to a friend's long story.",
+      "category": "Friends"
+    },
+    {
+      "id": "cf_party_1",
+      "text": "Confess if you've ever shown up to a party you weren't invited to.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_2",
+      "text": "Confess if you've ever left a party without saying goodbye to anyone.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_3",
+      "text": "Confess if you've ever danced on a table or bar.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_4",
+      "text": "Confess if you've ever pretended to be drunker than you actually were.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_5",
+      "text": "Confess if you've ever lost something important at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_6",
+      "text": "Confess if you've ever thrown up at a party and tried to hide it.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_7",
+      "text": "Confess if you've ever started drama at a party and blamed someone else.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_8",
+      "text": "Confess if you've ever hooked up with someone at a party you barely knew.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_9",
+      "text": "Confess if you've ever broken something at someone's house during a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_10",
+      "text": "Confess if you've ever hidden in a bathroom to avoid someone at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_11",
+      "text": "Confess if you've ever said you were 'on your way' while still in bed.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_12",
+      "text": "Confess if you've ever been the last person to leave a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_13",
+      "text": "Confess if you've ever pregamed so hard you peaked before arriving.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_14",
+      "text": "Confess if you've ever pretended to know the host at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_15",
+      "text": "Confess if you've ever taken someone else's drink at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_16",
+      "text": "Confess if you've ever fallen asleep at a party and got drawn on.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_17",
+      "text": "Confess if you've ever made a terrible toast or speech at a gathering.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_18",
+      "text": "Confess if you've ever cried at a party for a ridiculous reason.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_19",
+      "text": "Confess if you've ever convinced everyone to do something dumb at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_20",
+      "text": "Confess if you've ever had to be carried out of somewhere.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_21",
+      "text": "Confess if you've ever secretly judged someone's party outfit.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_22",
+      "text": "Confess if you've ever used a party as an excuse to avoid something else.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_23",
+      "text": "Confess if you've ever regretted bringing a specific gift to a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_24",
+      "text": "Confess if you've ever accidentally broken something at a party and blamed someone else.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_25",
+      "text": "Confess if you've ever tried to set two people up at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_26",
+      "text": "Confess if you've ever faked a phone call to escape a dull conversation at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_27",
+      "text": "Confess if you've ever eaten all the best snacks before others had a chance.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_28",
+      "text": "Confess if you've ever pretended to know the lyrics to a song you didn't.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_29",
+      "text": "Confess if you've ever snuck into a 'private' area at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_30",
+      "text": "Confess if you've ever re-gifted something you received at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_31",
+      "text": "Confess if you've ever eavesdropped on a dramatic conversation at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_32",
+      "text": "Confess if you've ever had a crush on the host of a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_33",
+      "text": "Confess if you've ever spilled a drink on someone at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_34",
+      "text": "Confess if you've ever been caught doing something embarrassing at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_35",
+      "text": "Confess if you've ever worn ill-fitting shoes to a party and regretted it.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_36",
+      "text": "Confess if you've ever tried to convince someone to leave a party with you.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_37",
+      "text": "Confess if you've ever had to help a friend who had too much to drink at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_38",
+      "text": "Confess if you've ever taken home party favors that weren't meant for you.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_39",
+      "text": "Confess if you've ever pretended to be someone else's plus-one to get in.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_40",
+      "text": "Confess if you've ever had a deep, philosophical conversation at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_41",
+      "text": "Confess if you've ever been the last one to leave a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_42",
+      "text": "Confess if you've ever played a prank on someone at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_43",
+      "text": "Confess if you've ever gotten lost trying to find the bathroom at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_44",
+      "text": "Confess if you've ever helped clean up after a party, even if it wasn't yours.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_45",
+      "text": "Confess if you've ever tried to impress someone with a party trick.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_46",
+      "text": "Confess if you've ever been mistaken for someone else at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_47",
+      "text": "Confess if you've ever overstayed your welcome at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_48",
+      "text": "Confess if you've ever gotten into a political debate at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_49",
+      "text": "Confess if you've ever secretly hoped a party would end early.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_50",
+      "text": "Confess if you've ever had to borrow clothes after a party mishap.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_51",
+      "text": "Confess if you've ever used a party as a networking opportunity.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_52",
+      "text": "Confess if you've ever brought a pet to a party without permission.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_53",
+      "text": "Confess if you've ever witnessed a public breakup at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_54",
+      "text": "Confess if you've ever helped someone hide something at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_55",
+      "text": "Confess if you've ever gotten caught sneaking food out of a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_56",
+      "text": "Confess if you've ever pretended to be busy on your phone to avoid talking to someone at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_57",
+      "text": "Confess if you've ever worn a costume to a non-costume party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_58",
+      "text": "Confess if you've ever lost track of your belongings at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_59",
+      "text": "Confess if you've ever tried to avoid a specific person at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_60",
+      "text": "Confess if you've ever been forced to dance at a party against your will.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_61",
+      "text": "Confess if you've ever made a new best friend at a party, only to never see them again.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_62",
+      "text": "Confess if you've ever been the designated driver for a wild party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_63",
+      "text": "Confess if you've ever had a wardrobe malfunction at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_64",
+      "text": "Confess if you've ever tried to sneak in your own alcohol to a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_65",
+      "text": "Confess if you've ever had to make an excuse to leave a party early.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_66",
+      "text": "Confess if you've ever complimented someone's outfit while secretly disliking it.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_67",
+      "text": "Confess if you've ever felt completely out of place at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_68",
+      "text": "Confess if you've ever forgotten the host's name at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_69",
+      "text": "Confess if you've ever had a dance-off at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_70",
+      "text": "Confess if you've ever stayed up all night after a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_71",
+      "text": "Confess if you've ever tried to convince a DJ to play a specific song.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_72",
+      "text": "Confess if you've ever been asked to leave a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_73",
+      "text": "Confess if you've ever taken a photo with a celebrity at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_74",
+      "text": "Confess if you've ever used a party to scout for new friends.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_75",
+      "text": "Confess if you've ever worn the same outfit as someone else to a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_76",
+      "text": "Confess if you've ever felt peer pressured into doing something at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_77",
+      "text": "Confess if you've ever started a trend at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_78",
+      "text": "Confess if you've ever had to explain a complex inside joke at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_79",
+      "text": "Confess if you've ever left a party with a stranger.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_80",
+      "text": "Confess if you've ever had an awkward encounter with an ex at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_81",
+      "text": "Confess if you've ever brought a homemade dish to a party that no one ate.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_82",
+      "text": "Confess if you've ever pretended to enjoy a genre of music because others did at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_83",
+      "text": "Confess if you've ever been given a ridiculous dares at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_84",
+      "text": "Confess if you've ever wished you were at a different party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_85",
+      "text": "Confess if you've ever had a philosophical debate with a lamp at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_86",
+      "text": "Confess if you've ever lost your phone at a party and found it in a weird place.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_87",
+      "text": "Confess if you've ever helped organize a surprise party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_88",
+      "text": "Confess if you've ever had a heart-to-heart with someone you just met at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_89",
+      "text": "Confess if you've ever played a drinking game you didn't understand.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_90",
+      "text": "Confess if you've ever tried to sneak a fire alarm or smoke detector at a party (accidentally or on purpose).",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_91",
+      "text": "Confess if you've ever woken up in an unfamiliar place after a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_92",
+      "text": "Confess if you've ever had a 'moment' with someone significant at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_93",
+      "text": "Confess if you've ever been the subject of gossip at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_94",
+      "text": "Confess if you've ever had to carry someone home from a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_95",
+      "text": "Confess if you've ever made a grand entrance at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_96",
+      "text": "Confess if you've ever been completely ignored at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_97",
+      "text": "Confess if you've ever tried to sneak a friend into a VIP section at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_98",
+      "text": "Confess if you've ever had an embarrassing photo taken of you at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_99",
+      "text": "Confess if you've ever spent more time on your phone than interacting at a party.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_party_100",
+      "text": "Confess if you've ever left a party feeling like a completely different person.",
+      "category": "Party"
+    },
+    {
+      "id": "cf_school_1",
+      "text": "Confess if you've ever copied someone's homework last minute.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_2",
+      "text": "Confess if you've ever cheated on a test, even a little.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_3",
+      "text": "Confess if you've ever pretended to be sick to skip school.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_4",
+      "text": "Confess if you've ever had a crush on a teacher.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_5",
+      "text": "Confess if you've ever lied about why your homework wasn't done.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_6",
+      "text": "Confess if you've ever fallen asleep in class and got called out.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_7",
+      "text": "Confess if you've ever passed a note that got intercepted.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_8",
+      "text": "Confess if you've ever thrown something across the classroom when the teacher wasn't looking.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_9",
+      "text": "Confess if you've ever taken credit for a group project you barely contributed to.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_10",
+      "text": "Confess if you've ever faked a parent's signature.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_11",
+      "text": "Confess if you've ever cried because of a grade.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_12",
+      "text": "Confess if you've ever had a bathroom break that lasted way too long on purpose.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_13",
+      "text": "Confess if you've ever been sent to the principal's office.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_14",
+      "text": "Confess if you've ever cheated in a school sport or PE game.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_15",
+      "text": "Confess if you've ever pretended to understand something in class when you were completely lost.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_16",
+      "text": "Confess if you've ever eaten in class and tried to hide it.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_17",
+      "text": "Confess if you've ever written something mean on a desk or bathroom wall.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_18",
+      "text": "Confess if you've ever had your phone taken away by a teacher.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_19",
+      "text": "Confess if you've ever made fun of a classmate and felt terrible about it later.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_20",
+      "text": "Confess if you've ever skipped a class and almost got caught.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_21",
+      "text": "Confess if you've ever fallen asleep in class.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_22",
+      "text": "Confess if you've ever gotten sent to the principal's office.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_23",
+      "text": "Confess if you've ever forgotten your lunch and had to beg for food.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_24",
+      "text": "Confess if you've ever pulled a prank on a teacher.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_25",
+      "text": "Confess if you've ever skipped class without getting caught.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_26",
+      "text": "Confess if you've ever forged a parent's signature.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_27",
+      "text": "Confess if you've ever late to school more than five times in a month.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_28",
+      "text": "Confess if you've ever worn pajamas to school.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_29",
+      "text": "Confess if you've ever eaten a whole bag of chips during class.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_30",
+      "text": "Confess if you've ever written on a desk.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_31",
+      "text": "Confess if you've ever passed a note in class.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_32",
+      "text": "Confess if you've ever gotten detention.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_33",
+      "text": "Confess if you've ever faked an injury to get out of gym class.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_34",
+      "text": "Confess if you've ever been caught talking during a silent test.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_35",
+      "text": "Confess if you've ever had a secret hideout at school.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_36",
+      "text": "Confess if you've ever snuck a pet into school.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_37",
+      "text": "Confess if you've ever had a crush on a classmate's older sibling.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_38",
+      "text": "Confess if you've ever gotten a perfect score on a test you didn't study for.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_39",
+      "text": "Confess if you've ever accidentally called your teacher \"Mom\" or \"Dad.\"",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_40",
+      "text": "Confess if you've ever cried at school because of a bad grade.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_41",
+      "text": "Confess if you've ever gotten lost in your school building.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_42",
+      "text": "Confess if you've ever been in a school play or musical.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_43",
+      "text": "Confess if you've ever accidentally set off the fire alarm.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_44",
+      "text": "Confess if you've ever had to give a presentation you weren't prepared for.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_45",
+      "text": "Confess if you've ever gotten in trouble for chewing gum.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_46",
+      "text": "Confess if you've ever been the teacher's pet.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_47",
+      "text": "Confess if you've ever spilled something embarrassing on yourself at school.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_48",
+      "text": "Confess if you've ever had a food fight in the cafeteria.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_49",
+      "text": "Confess if you've ever been suspended from school.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_50",
+      "text": "Confess if you've ever faked a stomach ache to avoid a pop quiz.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_51",
+      "text": "Confess if you've ever written a poem or song about school.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_52",
+      "text": "Confess if you've ever had a locker malfunction.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_53",
+      "text": "Confess if you've ever traded lunches with a friend.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_54",
+      "text": "Confess if you've ever gotten in trouble for using your phone in class.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_55",
+      "text": "Confess if you've ever stayed up all night to finish a project.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_56",
+      "text": "Confess if you've ever walked into the wrong classroom.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_57",
+      "text": "Confess if you've ever had a bizarre dream about school.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_58",
+      "text": "Confess if you've ever left your backpack at home.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_59",
+      "text": "Confess if you've ever gotten in trouble for talking back to a teacher.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_60",
+      "text": "Confess if you've ever borrowed money from a friend to buy school lunch.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_61",
+      "text": "Confess if you've ever given a teacher an apple (or other gift).",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_62",
+      "text": "Confess if you've ever accidentally broken something at school.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_63",
+      "text": "Confess if you've ever had to wear a silly costume for a school event.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_64",
+      "text": "Confess if you've ever gotten a perfect attendance award.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_65",
+      "text": "Confess if you've ever helped a friend cheat on a test.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_66",
+      "text": "Confess if you've ever had a secret handshake with a friend at school.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_67",
+      "text": "Confess if you've ever been picked last for a team in gym class.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_68",
+      "text": "Confess if you've ever been recognized for an academic achievement.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_69",
+      "text": "Confess if you've ever wished you could homeschool.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_70",
+      "text": "Confess if you've ever had a crush on the school janitor.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_71",
+      "text": "Confess if you've ever gotten detention for laughing too loudly.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_72",
+      "text": "Confess if you've ever drawn on your textbooks.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_73",
+      "text": "Confess if you've ever been a mascot for a school team.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_74",
+      "text": "Confess if you've ever gotten in trouble for running in the halls.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_75",
+      "text": "Confess if you've ever forgotten it was a holiday and gone to school.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_76",
+      "text": "Confess if you've ever had a secret admirer at school.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_77",
+      "text": "Confess if you've ever had to stay after school for extra help.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_78",
+      "text": "Confess if you've ever made up an excuse for not having your homework.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_79",
+      "text": "Confess if you've ever worn mismatched socks to school on purpose.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_80",
+      "text": "Confess if you've ever gotten an award for something non-academic.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_81",
+      "text": "Confess if you've ever had a school-wide assembly you found boring.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_82",
+      "text": "Confess if you've ever been given a nickname by a teacher.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_83",
+      "text": "Confess if you've ever gone to school without brushing your teeth.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_84",
+      "text": "Confess if you've ever gotten extra credit for something silly.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_85",
+      "text": "Confess if you've ever tried to skip school picture day.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_86",
+      "text": "Confess if you've ever had a secret crush on a school principal.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_87",
+      "text": "Confess if you've ever gotten in trouble for doodling in class.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_88",
+      "text": "Confess if you've ever pretended to read a book during silent reading.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_89",
+      "text": "Confess if you've ever snuck candy into the classroom.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_90",
+      "text": "Confess if you've ever helped a friend sneak out of class.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_91",
+      "text": "Confess if you've ever been part of a school club.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_92",
+      "text": "Confess if you've ever had to perform in front of the whole school.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_93",
+      "text": "Confess if you've ever secretly recorded a teacher.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_94",
+      "text": "Confess if you've ever gotten a bad grade on a subject you thought you were good at.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_95",
+      "text": "Confess if you've ever had a school uniform you hated.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_96",
+      "text": "Confess if you've ever been in a school talent show.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_97",
+      "text": "Confess if you've ever had to write lines as punishment.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_98",
+      "text": "Confess if you've ever wished school was year-round.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_99",
+      "text": "Confess if you've ever had a class pet.",
+      "category": "School"
+    },
+    {
+      "id": "cf_school_100",
+      "text": "Confess if you've ever gotten in trouble for passing gas in class.",
+      "category": "School"
+    },
+    {
+      "id": "cf_work_1",
+      "text": "Confess if you've ever called in sick when you were perfectly fine.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_2",
+      "text": "Confess if you've ever taken office supplies home.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_3",
+      "text": "Confess if you've ever pretended to work while doing absolutely nothing.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_4",
+      "text": "Confess if you've ever blamed a coworker for something you did.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_5",
+      "text": "Confess if you've ever lied on your resume.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_6",
+      "text": "Confess if you've ever fallen asleep at work.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_7",
+      "text": "Confess if you've ever said 'sorry I was on mute' when you weren't paying attention.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_8",
+      "text": "Confess if you've ever had a work crush you never told anyone about.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_9",
+      "text": "Confess if you've ever eaten someone else's lunch from the office fridge.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_10",
+      "text": "Confess if you've ever cried in a work bathroom.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_11",
+      "text": "Confess if you've ever badmouthed your boss to a coworker.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_12",
+      "text": "Confess if you've ever spent an entire workday on your phone.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_13",
+      "text": "Confess if you've ever pretended to be on a call to avoid a conversation.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_14",
+      "text": "Confess if you've ever shown up to work in yesterday's clothes.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_15",
+      "text": "Confess if you've ever completely forgotten about a meeting you were supposed to lead.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_16",
+      "text": "Confess if you've ever job searched during work hours on a work computer.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_17",
+      "text": "Confess if you've ever taken a two-hour lunch and hoped nobody noticed.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_18",
+      "text": "Confess if you've ever replied-all to an email by accident.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_19",
+      "text": "Confess if you've ever thrown a coworker under the bus in a meeting.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_20",
+      "text": "Confess if you've ever exaggerated your skills in a job interview.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_21",
+      "text": "Confess if you've ever fallen asleep during a meeting.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_22",
+      "text": "Confess if you've ever eaten a coworker's food without asking.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_23",
+      "text": "Confess if you've ever secretly judged a coworker's outfit.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_24",
+      "text": "Confess if you've ever used your work computer for personal shopping.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_25",
+      "text": "Confess if you've ever taken a longer lunch break than allowed.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_26",
+      "text": "Confess if you've ever faked a technical issue to avoid a task.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_27",
+      "text": "Confess if you've ever gossiped about your boss.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_28",
+      "text": "Confess if you've ever forgotten a coworker's name.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_29",
+      "text": "Confess if you've ever pretended to be busy when you weren't.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_30",
+      "text": "Confess if you've ever used work time to plan a vacation.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_31",
+      "text": "Confess if you've ever spilled a drink on your desk and tried to hide it.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_32",
+      "text": "Confess if you've ever accidentally replied all to an email.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_33",
+      "text": "Confess if you've ever gotten caught looking at non-work related websites.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_34",
+      "text": "Confess if you've ever used work equipment for a personal project.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_35",
+      "text": "Confess if you've ever stolen someone's parking spot.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_36",
+      "text": "Confess if you've ever left work early without telling anyone.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_37",
+      "text": "Confess if you've ever taken credit for someone else's idea.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_38",
+      "text": "Confess if you've ever complained about work to a customer by accident.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_39",
+      "text": "Confess if you've ever re-gifted a work present.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_40",
+      "text": "Confess if you've ever ignored an email on purpose.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_41",
+      "text": "Confess if you've ever had a crush on a coworker.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_42",
+      "text": "Confess if you've ever gotten drunk at a company party.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_43",
+      "text": "Confess if you've ever accidentally sent a personal message to a work chat.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_44",
+      "text": "Confess if you've ever sabotaged a coworker (even slightly).",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_45",
+      "text": "Confess if you've ever used a work excuse to get out of a social event.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_46",
+      "text": "Confess if you've ever taken a very long bathroom break to avoid work.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_47",
+      "text": "Confess if you've ever pretended to be interested in a coworker's story.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_48",
+      "text": "Confess if you've ever secretly updated your resume at work.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_49",
+      "text": "Confess if you've ever borrowed money from a coworker and not paid it back promptly.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_50",
+      "text": "Confess if you've ever used a work phone for excessive personal calls.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_51",
+      "text": "Confess if you've ever intentionally avoided a coworker.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_52",
+      "text": "Confess if you've ever been hungover at work.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_53",
+      "text": "Confess if you've ever accidentally revealed confidential information.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_54",
+      "text": "Confess if you've ever wished a coworker would quit.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_55",
+      "text": "Confess if you've ever brought your pet to work without permission.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_56",
+      "text": "Confess if you've ever used your boss's name to get something done.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_57",
+      "text": "Confess if you've ever eaten someone else's lunch from the fridge.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_58",
+      "text": "Confess if you've ever flirted to get out of a task.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_59",
+      "text": "Confess if you've ever forgotten to clock in or out.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_60",
+      "text": "Confess if you've ever pretended to understand something you didn't.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_61",
+      "text": "Confess if you've ever taken a ridiculously long coffee break.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_62",
+      "text": "Confess if you've ever listened to music too loudly at work.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_63",
+      "text": "Confess if you've ever used a work credit card for a personal expense.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_64",
+      "text": "Confess if you've ever snooped through a coworker's desk.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_65",
+      "text": "Confess if you've ever lied about how long a task took you.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_66",
+      "text": "Confess if you've ever left a mess for someone else to clean up.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_67",
+      "text": "Confess if you've ever used work time to watch a TV show or movie.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_68",
+      "text": "Confess if you've ever given a fake excuse for being late.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_69",
+      "text": "Confess if you've ever drawn a caricature of a coworker or boss.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_70",
+      "text": "Confess if you've ever pretended to be sick to avoid a work trip.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_71",
+      "text": "Confess if you've ever secretly disliked a client.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_72",
+      "text": "Confess if you've ever complained about work on social media.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_73",
+      "text": "Confess if you've ever made a personal call on a speakerphone at work.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_74",
+      "text": "Confess if you've ever had a secret snack stash at your desk.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_75",
+      "text": "Confess if you've ever gotten away with a major mistake.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_76",
+      "text": "Confess if you've ever used a work email address for personal sign-ups.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_77",
+      "text": "Confess if you've ever secretly judged a coworker's work ethic.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_78",
+      "text": "Confess if you've ever ignored a call from your boss after hours.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_79",
+      "text": "Confess if you've ever faked enthusiasm for a new company initiative.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_80",
+      "text": "Confess if you've ever stolen someone's stapler.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_81",
+      "text": "Confess if you've ever used work time to apply for other jobs.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_82",
+      "text": "Confess if you've ever lied about your qualifications in an interview.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_83",
+      "text": "Confess if you've ever had a secret office romance.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_84",
+      "text": "Confess if you've ever broken something at work and not reported it.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_85",
+      "text": "Confess if you've ever deliberately left a meeting early.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_86",
+      "text": "Confess if you've ever used a work printer for personal documents.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_87",
+      "text": "Confess if you've ever made up an excuse to avoid a team-building exercise.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_88",
+      "text": "Confess if you've ever given a coworker bad advice on purpose.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_89",
+      "text": "Confess if you've ever worn sweatpants to a 'business casual' office.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_90",
+      "text": "Confess if you've ever used a sick day because you were bored.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_91",
+      "text": "Confess if you've ever complained about your salary to a coworker.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_92",
+      "text": "Confess if you've ever left your dirty dishes in the office sink.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_93",
+      "text": "Confess if you've ever taken a free sample from a client's office.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_94",
+      "text": "Confess if you've ever faked an emergency to leave work early.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_95",
+      "text": "Confess if you've ever pretended to be busy to avoid helping a coworker.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_96",
+      "text": "Confess if you've ever used a work printer to print photos.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_97",
+      "text": "Confess if you've ever accidentally sent a work email to the wrong person.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_98",
+      "text": "Confess if you've ever taken something from the 'free' bin but it wasn't actually free.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_99",
+      "text": "Confess if you've ever secretly wished for a snow day to avoid work.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_100",
+      "text": "Confess if you've ever used a work excuse to avoid a family gathering.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_work_101",
+      "text": "Confess if you've ever told a white lie to your boss.",
+      "category": "Work"
+    },
+    {
+      "id": "cf_social-media_1",
+      "text": "Confess if you've ever deleted a post because it didn't get enough likes.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_2",
+      "text": "Confess if you've ever stalked someone's profile for over thirty minutes.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_3",
+      "text": "Confess if you've ever made a fake account.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_4",
+      "text": "Confess if you've ever posted something just to make an ex jealous.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_5",
+      "text": "Confess if you've ever lied about your life on social media.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_6",
+      "text": "Confess if you've ever spent an hour taking the perfect selfie.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_7",
+      "text": "Confess if you've ever unfollowed someone out of pure pettiness.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_8",
+      "text": "Confess if you've ever posted a thirst trap and then pretended it was casual.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_9",
+      "text": "Confess if you've ever checked how many likes your post got within five minutes of posting.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_10",
+      "text": "Confess if you've ever pretended not to have seen someone's story when you definitely did.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_11",
+      "text": "Confess if you've ever gone through someone's entire following list.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_12",
+      "text": "Confess if you've ever screenshot a DM to show your friends.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_13",
+      "text": "Confess if you've ever edited a photo so much it barely looked like you.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_14",
+      "text": "Confess if you've ever subtweeted or vague-posted about someone.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_15",
+      "text": "Confess if you've ever used a filter that changed your face shape.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_16",
+      "text": "Confess if you've ever looked up an old classmate just to see how they turned out.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_17",
+      "text": "Confess if you've ever spent more time picking a caption than taking the photo.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_18",
+      "text": "Confess if you've ever pretended your life was more exciting than it is online.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_19",
+      "text": "Confess if you've ever accidentally viewed someone's story you were trying to avoid.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_20",
+      "text": "Confess if you've ever had screen time numbers that genuinely scared you.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_21",
+      "text": "Confess if you've ever unfollowed someone in real life but stayed friends on social media.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_22",
+      "text": "Confess if you've ever taken a screenshot of someone's story to send to a friend.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_23",
+      "text": "Confess if you've ever used a filter to drastically change your appearance.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_24",
+      "text": "Confess if you've ever regretted a comment you left on someone's post.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_25",
+      "text": "Confess if you've ever scrolled through your own old posts out of nostalgia (or cringe).",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_26",
+      "text": "Confess if you've ever pretended not to see a DM you've read.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_27",
+      "text": "Confess if you've ever used a trending sound or meme incorrectly.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_28",
+      "text": "Confess if you've ever posted a 'candid' photo that took multiple tries.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_29",
+      "text": "Confess if you've ever participated in a social media challenge.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_30",
+      "text": "Confess if you've ever gotten into an argument in the comments section.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_31",
+      "text": "Confess if you've ever deleted an app to 'detox' but reinstalled it within 24 hours.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_32",
+      "text": "Confess if you've ever checked to see who viewed your profile.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_33",
+      "text": "Confess if you've ever posted a picture of food you didn't actually eat.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_34",
+      "text": "Confess if you've ever muted someone in real life but still follow them on social media.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_35",
+      "text": "Confess if you've ever tried to go viral.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_36",
+      "text": "Confess if you've ever unfriended someone for their political posts.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_37",
+      "text": "Confess if you've ever spent more than an hour editing a single photo to post.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_38",
+      "text": "Confess if you've ever used a hashtag ironically.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_39",
+      "text": "Confess if you've ever gotten caught looking at someone's profile in person.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_40",
+      "text": "Confess if you've ever had a 'spam' or 'finsta' account.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_41",
+      "text": "Confess if you've ever overshared something deeply personal online.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_42",
+      "text": "Confess if you've ever bought something because you saw an influencer promote it.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_43",
+      "text": "Confess if you've ever used a social media app while on the toilet.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_44",
+      "text": "Confess if you've ever followed a celebrity you secretly dislike.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_45",
+      "text": "Confess if you've ever posted a generic image with a good morning text.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_46",
+      "text": "Confess if you've ever been blocked by someone you know.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_47",
+      "text": "Confess if you've ever sent a DM you immediately regretted.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_48",
+      "text": "Confess if you've ever liked your own post.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_49",
+      "text": "Confess if you've ever used a 'story viewer' app.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_50",
+      "text": "Confess if you've ever posted a photo with a caption that had nothing to do with the photo.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_51",
+      "text": "Confess if you've ever pretended to be busy to avoid responding to a DM.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_52",
+      "text": "Confess if you've ever gotten into a 'like war' with someone.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_53",
+      "text": "Confess if you've ever posted a cryptic message hoping someone specific would see it.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_54",
+      "text": "Confess if you've ever spent more time scrolling than interacting on social media.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_55",
+      "text": "Confess if you've ever used a location tag for a place you weren't actually at.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_56",
+      "text": "Confess if you've ever tried to slide into someone's DMs.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_57",
+      "text": "Confess if you've ever deleted a photo because someone else in it looked better than you.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_58",
+      "text": "Confess if you've ever felt FOMO from social media.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_59",
+      "text": "Confess if you've ever made a post just to complain about something.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_60",
+      "text": "Confess if you've ever accidentally liked an old post while stalking.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_61",
+      "text": "Confess if you've ever used a social media app for dating.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_62",
+      "text": "Confess if you've ever had a post removed for violating community guidelines.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_63",
+      "text": "Confess if you've ever ignored a message request.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_64",
+      "text": "Confess if you've ever posted a screenshot of a text conversation.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_65",
+      "text": "Confess if you've ever participated in a mass unfollow trend.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_66",
+      "text": "Confess if you've ever used a photo from years ago and pretended it's current.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_67",
+      "text": "Confess if you've ever turned off read receipts to avoid responding.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_68",
+      "text": "Confess if you've ever used social media to research someone before meeting them.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_69",
+      "text": "Confess if you've ever posted a 'mood' or 'vibe' picture.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_70",
+      "text": "Confess if you've ever spent money on in-app purchases for social media.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_71",
+      "text": "Confess if you've ever created a poll on social media just for fun.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_72",
+      "text": "Confess if you've ever shared a chain letter type of post.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_73",
+      "text": "Confess if you've ever used a social media platform solely for memes.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_74",
+      "text": "Confess if you've ever reported someone's account.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_75",
+      "text": "Confess if you've ever spent hours falling down a social media rabbit hole.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_76",
+      "text": "Confess if you've ever updated your profile picture multiple times in one day.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_77",
+      "text": "Confess if you've ever used a social media template for a holiday or event.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_78",
+      "text": "Confess if you've ever received a message from a complete stranger on social media.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_79",
+      "text": "Confess if you've ever tried to decipher someone's cryptic post.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_80",
+      "text": "Confess if you've ever posted a photo of your pet with a funny caption.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_81",
+      "text": "Confess if you've ever used a social media platform to promote your own small business or hobby.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_82",
+      "text": "Confess if you've ever gotten into trouble because of something you posted online.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_83",
+      "text": "Confess if you've ever used a duet feature on a video.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_84",
+      "text": "Confess if you've ever taken a screenshot of someone's profile picture.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_85",
+      "text": "Confess if you've ever used an emoji to express something you couldn't say with words.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_86",
+      "text": "Confess if you've ever been in a social media group chat that got too chaotic.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_87",
+      "text": "Confess if you've ever posted a throwback photo that was less than a year old.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_88",
+      "text": "Confess if you've ever tried to out-aesthetic someone with your posts.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_89",
+      "text": "Confess if you've ever accidentally sent a private message to a group chat.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_90",
+      "text": "Confess if you've ever used a social media app to pass the time while waiting.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_91",
+      "text": "Confess if you've ever muted someone's story because they post too much.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_92",
+      "text": "Confess if you've ever compared your life to others based on their social media posts.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_93",
+      "text": "Confess if you've ever used a countdown sticker for an event.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_94",
+      "text": "Confess if you've ever received an unsolicited DM from a brand or business.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_95",
+      "text": "Confess if you've ever posted a photo or video of yourself doing something embarrassing.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_social-media_96",
+      "text": "Confess if you've ever muting someone's story because they post too much.",
+      "category": "Social Media"
+    },
+    {
+      "id": "cf_food_1",
+      "text": "Confess if you've ever eaten something off the floor.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_2",
+      "text": "Confess if you've ever finished someone else's plate without asking.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_3",
+      "text": "Confess if you've ever lied about liking someone's cooking.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_4",
+      "text": "Confess if you've ever eaten an entire meal meant for multiple people.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_5",
+      "text": "Confess if you've ever put ketchup on something that should never have ketchup.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_6",
+      "text": "Confess if you've ever eaten cereal for dinner more than three days in a row.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_7",
+      "text": "Confess if you've ever pretended to know what a fancy menu item was.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_8",
+      "text": "Confess if you've ever hidden snacks so you wouldn't have to share.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_9",
+      "text": "Confess if you've ever burned something in the kitchen and served it anyway.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_10",
+      "text": "Confess if you've ever eaten raw cookie dough or cake batter straight from the bowl.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_11",
+      "text": "Confess if you've ever dipped something weird into Nutella.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_12",
+      "text": "Confess if you've ever ordered delivery because you were too lazy to microwave leftovers.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_13",
+      "text": "Confess if you've ever said you were full and then eaten dessert immediately.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_14",
+      "text": "Confess if you've ever eaten something past its expiration date on purpose.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_15",
+      "text": "Confess if you've ever pretended to have a food allergy to avoid eating something.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_16",
+      "text": "Confess if you've ever eaten in bed and slept in the crumbs.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_17",
+      "text": "Confess if you've ever ruined a recipe by completely ignoring the instructions.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_18",
+      "text": "Confess if you've ever judged someone hard for their food choices.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_19",
+      "text": "Confess if you've ever licked a plate clean when nobody was watching.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_20",
+      "text": "Confess if you've ever eaten fast food in your car so no one would know.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_21",
+      "text": "Confess if you've ever secretly added more salt to someone else's food.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_22",
+      "text": "Confess if you've ever pretended to be full to avoid eating something you disliked.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_23",
+      "text": "Confess if you've ever snuck food into a movie theater.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_24",
+      "text": "Confess if you've ever eaten cereal for dinner more than once in a week.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_25",
+      "text": "Confess if you've ever tried a food combination that sounded weird but was surprisingly good.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_26",
+      "text": "Confess if you've ever eaten directly from the pot/pan.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_27",
+      "text": "Confess if you've ever stolen a bite of someone's food when they weren't looking.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_28",
+      "text": "Confess if you've ever re-gifted food you received as a present.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_29",
+      "text": "Confess if you've ever eaten a whole pizza by yourself.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_30",
+      "text": "Confess if you've ever lied about having food allergies to get a special meal.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_31",
+      "text": "Confess if you've ever licked a plate clean in public.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_32",
+      "text": "Confess if you've ever eaten expired food and hoped for the best.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_33",
+      "text": "Confess if you've ever dipped fries in a milkshake.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_34",
+      "text": "Confess if you've ever secretly replaced a food item you ate with a new one.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_35",
+      "text": "Confess if you've ever eaten breakfast for dinner.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_36",
+      "text": "Confess if you've ever picked out the 'good' parts of a shared dish before others.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_37",
+      "text": "Confess if you've ever eaten food that fell on the ground and then quickly said 'five-second rule'.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_38",
+      "text": "Confess if you've ever ordered takeout when you had a fridge full of food.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_39",
+      "text": "Confess if you've ever eaten dessert before dinner.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_40",
+      "text": "Confess if you've ever pretended to cook something when you actually bought it pre-made.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_41",
+      "text": "Confess if you've ever eaten raw cookie dough or cake batter.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_42",
+      "text": "Confess if you've ever judged someone based on their food choices.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_43",
+      "text": "Confess if you've ever eaten a meal standing over the sink.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_44",
+      "text": "Confess if you've ever used your fingers to eat something that required a fork.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_45",
+      "text": "Confess if you've ever eaten cold leftover pizza for breakfast.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_46",
+      "text": "Confess if you've ever bought a snack and eaten it all before getting home.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_47",
+      "text": "Confess if you've ever made up an excuse to avoid bringing a dish to a potluck.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_48",
+      "text": "Confess if you've ever eaten food directly out of the container with a spoon.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_49",
+      "text": "Confess if you've ever eaten a food item you found in the back of the fridge, unsure of its age.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_50",
+      "text": "Confess if you've ever tried to sneak a pet human food at the dinner table.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_51",
+      "text": "Confess if you've ever eaten a meal entirely composed of appetizers.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_52",
+      "text": "Confess if you've ever eaten a strange combination of foods because you were high.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_53",
+      "text": "Confess if you've ever eaten a whole bag of chips in one sitting.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_54",
+      "text": "Confess if you've ever gone back for seconds (or thirds) when you were already full.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_55",
+      "text": "Confess if you've ever eaten food directly from the freezer.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_56",
+      "text": "Confess if you've ever peeled the cheese off a pizza and eaten it separately.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_57",
+      "text": "Confess if you've ever used a non-traditional utensil to eat something.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_58",
+      "text": "Confess if you've ever eaten a substantial amount of food right before going to bed.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_59",
+      "text": "Confess if you've ever pretended to not like a food so you wouldn't have to share.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_60",
+      "text": "Confess if you've ever secretly taken more than your share of a shared dish.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_61",
+      "text": "Confess if you've ever eaten a meal while walking around your house.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_62",
+      "text": "Confess if you've ever eaten something you found in the couch cushions.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_63",
+      "text": "Confess if you've ever used your teeth to open a food package.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_64",
+      "text": "Confess if you've ever eaten a sandwich with no crusts (as an adult).",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_65",
+      "text": "Confess if you've ever eaten a meal in silence while listening to something.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_66",
+      "text": "Confess if you've ever eaten a whole pint of ice cream in one sitting.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_67",
+      "text": "Confess if you've ever chosen a restaurant purely based on its dessert menu.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_68",
+      "text": "Confess if you've ever eaten fruit that wasn't washed.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_69",
+      "text": "Confess if you've ever eaten a meal with your hands when cutlery was available.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_70",
+      "text": "Confess if you've ever eaten food that was still partially frozen.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_71",
+      "text": "Confess if you've ever taken food from someone's plate without asking, then denied it.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_72",
+      "text": "Confess if you've ever eaten something purely because it was free.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_73",
+      "text": "Confess if you've ever eaten a meal in bed.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_74",
+      "text": "Confess if you've ever gotten food stuck in your teeth and tried to discreetly remove it.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_75",
+      "text": "Confess if you've ever eaten a whole loaf of bread by yourself.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_76",
+      "text": "Confess if you've ever used your sleeve as a napkin.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_77",
+      "text": "Confess if you've ever eaten food that fell on your clothes.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_78",
+      "text": "Confess if you've ever eaten a meal while driving.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_79",
+      "text": "Confess if you've ever eaten food that someone else had already bitten into.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_80",
+      "text": "Confess if you've ever eaten a sandwich for every meal in one day.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_81",
+      "text": "Confess if you've ever intentionally burnt food to avoid eating it.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_82",
+      "text": "Confess if you've ever eaten a meal that was clearly past its prime but still 'looked okay'.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_83",
+      "text": "Confess if you've ever eaten food in the dark.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_84",
+      "text": "Confess if you've ever eaten a whole box of cookies in one sitting.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_85",
+      "text": "Confess if you've ever eaten directly from a jar of peanut butter.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_86",
+      "text": "Confess if you've ever pretended to like a food just to impress someone.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_87",
+      "text": "Confess if you've ever eaten a meal that was way too spicy for you.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_88",
+      "text": "Confess if you've ever eaten food that was meant for someone else.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_89",
+      "text": "Confess if you've ever eaten a meal while standing in front of the open fridge.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_90",
+      "text": "Confess if you've ever eaten a food item that you know you're allergic to.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_91",
+      "text": "Confess if you've ever licked the lid of a yogurt container.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_92",
+      "text": "Confess if you've ever eaten a meal with only one ingredient.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_93",
+      "text": "Confess if you've ever eaten food that was given to you by a stranger.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_94",
+      "text": "Confess if you've ever eaten a meal using only your hands, even when cutlery was present.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_95",
+      "text": "Confess if you've ever eaten a food item that was still in its packaging.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_96",
+      "text": "Confess if you've ever eaten a meal that was clearly undercooked.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_97",
+      "text": "Confess if you've ever eaten food that accidentally fell into your drink.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_98",
+      "text": "Confess if you've ever made an entire meal out of snacks.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_99",
+      "text": "Confess if you've ever eaten food in a place you weren't supposed to.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_100",
+      "text": "Confess if you've ever eaten a strange food combination because you were out of other options.",
+      "category": "Food"
+    },
+    {
+      "id": "cf_food_101",
+      "text": "Confess if you've ever eaten a whole tube of Pringles in one sitting.",
+      "category": "Food"
+    }
+  ]
+}
