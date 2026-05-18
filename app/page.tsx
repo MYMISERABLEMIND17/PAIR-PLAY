@@ -10,6 +10,7 @@ import thisOrThatData from "./data/this_or_that.json";
 import questionsForBoyfriendData from "./data/questions_for_boyfriend.json";
 import speedDatingData from "./data/speed_dating.json";
 import charadesData from "./data/charades.json";
+import truthAndDareCouplesData from "./data/truth_and_dare_couples.json";
 
 export default function Home() {
   const games = [
@@ -19,6 +20,13 @@ export default function Home() {
       href: "/truth-or-dare",
       colorClass: truthOrDareData.color,
       iconName: truthOrDareData.icon,
+    },
+    {
+      title: truthAndDareCouplesData.name,
+      description: truthAndDareCouplesData.description,
+      href: "/truth-and-dare-couples",
+      colorClass: truthAndDareCouplesData.color,
+      iconName: truthAndDareCouplesData.icon,
     },
     {
       title: wouldYouRatherData.name,

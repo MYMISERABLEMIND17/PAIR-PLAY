@@ -13,6 +13,7 @@ import thisOrThatData from "../../data/this_or_that.json";
 import questionsForBoyfriendData from "../../data/questions_for_boyfriend.json";
 import speedDatingData from "../../data/speed_dating.json";
 import charadesData from "../../data/charades.json";
+import truthAndDareCouplesData from "../../data/truth_and_dare_couples.json";
 import { useRoom } from "../../../lib/useRoom";
 import TruthOrDare from "../../components/games/TruthOrDare";
 import WouldYouRather from "../../components/games/WouldYouRather";
@@ -34,6 +35,7 @@ const gameRegistry: Record<string, { data: any, Component: any }> = {
   boyfriend_questions: { data: questionsForBoyfriendData, Component: QuestionsToAskYourBoyfriend },
   speed_dating: { data: speedDatingData, Component: SpeedDating },
   charades: { data: charadesData, Component: Charades },
+  truth_and_dare_couples: { data: truthAndDareCouplesData, Component: TruthOrDare },
 };
 
 const LOADING_TIPS = [
