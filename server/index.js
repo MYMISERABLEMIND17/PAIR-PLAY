@@ -14,7 +14,7 @@ const socketToRoom = {};  // socketId -> roomId
 
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain', 'Access-Control-Allow-Origin': '*' });
-  res.end('PairPlay Native Realtime Server');
+  res.end('Winkd Native Realtime Server');
 });
 
 // WebSocket Protocol Helper Functions
@@ -307,5 +307,5 @@ server.on('upgrade', (req, socket) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`🚀 PairPlay native WebSocket server started on ws://localhost:${PORT}`);
+  console.log(`🚀 Winkd native WebSocket server started on ws://localhost:${PORT}`);
 });

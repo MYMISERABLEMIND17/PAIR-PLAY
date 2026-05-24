@@ -3,8 +3,8 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 
 export const metadata: Metadata = {
-  title: "PairPlay | Interactive Entertainment Platform",
-  description: "A premium platform for social games, conversation starters, and interactive experiences.",
+  title: "Winkd | Interactive Social Games for Couples & Friends",
+  description: "A premium, real-time social gaming platform for couples, friends, and parties. Play Truth or Dare, Would You Rather, and more in private rooms.",
 };
 
 export default function RootLayout({

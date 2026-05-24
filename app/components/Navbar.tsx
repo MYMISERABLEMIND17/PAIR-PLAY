@@ -38,7 +38,7 @@ export default function Navbar() {
         {/* Glowing Logo */}
         <Link href="/">
           <div className="font-black text-2xl tracking-tighter bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 bg-clip-text text-transparent cursor-pointer hover:opacity-95 active:scale-98 transition-all flex items-center gap-1.5">
-            PairPlay <span className="text-xs font-bold text-pink-500 bg-pink-500/10 px-2 py-0.5 rounded-full border border-pink-500/20">v2</span>
+            Winkd <span className="text-xs font-bold text-pink-500 bg-pink-500/10 px-2 py-0.5 rounded-full border border-pink-500/20">v2</span>
           </div>
         </Link>
 

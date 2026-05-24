@@ -22,10 +22,10 @@ export function useRoom(roomId: string) {
   // Initialize unique local user identity (cached in localStorage)
   useEffect(() => {
     if (typeof window !== "undefined") {
-      let cachedId = localStorage.getItem("pairplay_userid");
+      let cachedId = localStorage.getItem("winkd_userid");
       if (!cachedId) {
         cachedId = `user_${Math.random().toString(36).substring(2, 12)}`;
-        localStorage.setItem("pairplay_userid", cachedId);
+        localStorage.setItem("winkd_userid", cachedId);
       }
       setUserId(cachedId);
     }

@@ -44,7 +44,7 @@ const gameRegistry: Record<string, { data: any, Component: any }> = {
 const LOADING_TIPS = [
   "Render's free tier takes about 30 seconds to wake up after a period of inactivity.",
   "Once the server is awake, your gameplay actions will sync in real-time instantly!",
-  "PairPlay utilizes direct WebSocket streams to ensure ultra-low latency.",
+  "Winkd utilizes direct WebSocket streams to ensure ultra-low latency.",
   "We do not store your private game answers on the cloud; your privacy is fully protected.",
   "If the countdown finishes and network blocks it, you can transition to offline play!",
   "Tip: Tap reactions during gameplay to signal your emotions instantly to your partner."
@@ -228,7 +228,7 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
           <XCircle className="w-10 h-10 text-yellow-500" />
         </div>
         <h1 className="text-3xl font-bold mb-4 text-white">Room is Full</h1>
-        <p className="text-white/60 mb-8 max-w-md">This room already has two players in it! PairPlay rooms are strictly private for two people.</p>
+        <p className="text-white/60 mb-8 max-w-md">This room already has two players in it! Winkd rooms are strictly private for two people.</p>
         <Link href="/games" className="bg-white text-black px-8 py-3 rounded-xl font-bold hover:bg-gray-200 transition-colors">
           Create Your Own Room
         </Link>
@@ -320,7 +320,7 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
               <input 
                 type="text" 
                 readOnly 
-                value={`pairplay.app/room/${roomId}`} 
+                value={`winkd.app/room/${roomId}`} 
                 className="bg-transparent flex-grow text-center text-sm font-mono text-white/50 outline-none"
               />
               <button 

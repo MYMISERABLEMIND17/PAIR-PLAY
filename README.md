@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-# PAIR-PLAY
+# WINKD
 
 Interactive social games platform for couples, friends, and parties. Play Truth or Dare, Would You Rather, Conversation Starters, and more in real-time rooms!
 
@@ -77,7 +77,7 @@ npm run lint     # Run ESLint
 - Firefox Enhanced Tracking Protection
 
 **Fix:**
-1. **Disable your adblocker** - Whitelist `pairplay.app` or disable it temporarily
+1. **Disable your adblocker** - Whitelist `winkd.app` or disable it temporarily
 2. **Disable VPN** if you're using one
 3. **Refresh the page** (F5 or Cmd+R)
 4. Try creating the room again
@@ -146,4 +146,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# PAIR-PLAY
+# WINKD
