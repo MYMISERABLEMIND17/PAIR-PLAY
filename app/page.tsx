@@ -96,44 +96,88 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center">
-      {/* Hero Section */}
-      <section className="w-full py-24 md:py-32 flex flex-col items-center text-center relative mt-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#501fda]/10 to-transparent blur-3xl -z-10 rounded-full w-[80%] mx-auto" />
+      {/* Editorial Hero Section */}
+      <section className="w-full pt-32 pb-24 relative overflow-hidden flex flex-col lg:flex-row items-center gap-16 lg:gap-12 max-w-7xl mx-auto z-10 px-4 md:px-0">
         
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel text-white/80 text-sm font-medium mb-8 border border-[#f185d3]/30">
-          <span className="w-2 h-2 rounded-full bg-[#f185d3] animate-pulse shadow-[0_0_8px_rgba(241,133,211,0.8)]"></span>
-          Now introducing AI-guided Experiences
-        </div>
-        
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 text-white leading-[1.1] max-w-5xl">
-          Deepen your <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f185d3] via-[#c4a7b4] to-[#f185d3] text-glow bg-[length:200%_auto] animate-gradient">
-            Connection.
-          </span>
-        </h1>
-        
-        <p className="text-lg md:text-xl text-white/70 max-w-2xl mb-12 leading-relaxed font-medium">
-          A premium social gaming platform designed for couples. 
-          Discover a curated collection of truth or dare, deep conversation games, and intimate challenges.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row items-center gap-6">
-          <button className="px-8 py-4 rounded-full bg-white text-[#38304c] font-semibold text-lg hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] transition-all duration-300 transform hover:-translate-y-1">
-            Start Playing Free
-          </button>
-          <button className="px-8 py-4 rounded-full glass-panel text-white font-semibold text-lg hover:bg-white/10 transition-all duration-300">
-            View Games
-          </button>
-        </div>
-        
-        {/* Social Proof Mini */}
-        <div className="mt-16 flex items-center gap-4 text-sm text-white/60 font-medium">
-          <div className="flex -space-x-3">
-             <div className="w-8 h-8 rounded-full border-2 border-[#38304c] bg-gradient-to-br from-[#501fda] to-[#f185d3]" />
-             <div className="w-8 h-8 rounded-full border-2 border-[#38304c] bg-gradient-to-br from-[#682c58] to-[#c4a7b4]" />
-             <div className="w-8 h-8 rounded-full border-2 border-[#38304c] bg-gradient-to-br from-[#8c6c5c] to-[#38304c]" />
+        {/* Left Column: Emotion & Typographic Hierarchy */}
+        <div className="flex-1 flex flex-col items-start text-left max-w-2xl relative z-20">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[#c4a7b4] text-[10px] font-bold uppercase tracking-widest mb-10 backdrop-blur-md">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#ff6be2] animate-pulse shadow-[0_0_8px_rgba(255,107,226,0.8)]"></span>
+            Now Live: Deep Connection Mode
           </div>
-          <p>Loved by 50,000+ couples worldwide.</p>
+          
+          <h1 className="font-serif text-6xl md:text-8xl lg:text-[7.5rem] font-bold tracking-tight text-white leading-[1.05] mb-6">
+            Play <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff6be2] to-[#c4a7b4] text-glow">closer.</span>
+          </h1>
+          
+          <p className="text-lg md:text-xl text-white/60 font-medium leading-relaxed max-w-lg mb-12">
+            A premium digital lounge for modern relationships. Discover intimate challenges, deep conversation starters, and shared moments designed exclusively for two.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto mb-16">
+            <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-[#7a3fff] to-[#682c58] text-white font-semibold text-sm tracking-wide shadow-[0_10px_30px_rgba(122,63,255,0.3)] hover:shadow-[0_15px_40px_rgba(122,63,255,0.5)] transition-all duration-500 transform hover:-translate-y-0.5">
+              Start Your Night
+            </button>
+            <button className="w-full sm:w-auto px-8 py-4 rounded-full glass-panel text-white/80 font-semibold text-sm tracking-wide hover:bg-white/10 transition-all duration-500">
+              Explore Experiences
+            </button>
+          </div>
+
+          {/* Integrated Social Proof */}
+          <div className="flex items-center gap-5">
+             <div className="flex -space-x-3">
+               <img src="https://i.pravatar.cc/100?img=47" alt="User" className="w-10 h-10 rounded-full border-2 border-[#090514] grayscale opacity-80" />
+               <img src="https://i.pravatar.cc/100?img=33" alt="User" className="w-10 h-10 rounded-full border-2 border-[#090514] grayscale opacity-80" />
+               <img src="https://i.pravatar.cc/100?img=12" alt="User" className="w-10 h-10 rounded-full border-2 border-[#090514] grayscale opacity-80" />
+             </div>
+             <div className="text-xs font-semibold text-white/40 uppercase tracking-widest leading-tight">
+               Loved by 50,000+ <br/> <span className="text-white/70">couples worldwide</span>
+             </div>
+          </div>
+        </div>
+
+        {/* Right Column: Cinematic Imagery & Floating Widgets */}
+        <div className="flex-1 relative w-full lg:w-auto mt-12 lg:mt-0 flex justify-center lg:justify-end">
+           <div className="relative w-full max-w-[500px] aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-white/5 cinematic-shadow group">
+             {/* The Image */}
+             <img 
+                src="https://images.unsplash.com/photo-1511556820780-d912e42b4980?q=80&w=1200&auto=format&fit=crop" 
+                alt="Couple playing game on couch" 
+                className="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-[10s] ease-out opacity-80 mix-blend-luminosity group-hover:mix-blend-normal group-hover:opacity-100" 
+             />
+             <div className="absolute inset-0 bg-gradient-to-t from-[#090514] via-[#090514]/40 to-transparent" />
+             <div className="absolute inset-0 bg-gradient-to-tr from-[#7a3fff]/30 to-transparent opacity-60 mix-blend-screen" />
+             
+             {/* Floating Widget */}
+             <div className="absolute bottom-10 left-8 right-8 glass-panel rounded-3xl p-5 border border-white/10 shadow-2xl transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 ease-out delay-100">
+               <div className="flex items-center justify-between mb-4">
+                 <div className="flex items-center gap-3">
+                   <div className="w-10 h-10 rounded-xl bg-[#682c58]/40 border border-[#ff6be2]/30 flex items-center justify-center text-[#ff6be2] text-lg">
+                     🔥
+                   </div>
+                   <div>
+                     <h4 className="text-white font-bold text-sm">Truth or Dare</h4>
+                     <p className="text-white/50 text-xs font-medium">Deep Connection Pack</p>
+                   </div>
+                 </div>
+                 <div className="px-3 py-1 rounded-full bg-white/10 text-white/80 text-[10px] font-bold uppercase tracking-wider">
+                   Tonight
+                 </div>
+               </div>
+               <div className="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+                 <div className="bg-gradient-to-r from-[#7a3fff] to-[#ff6be2] w-[65%] h-full rounded-full" />
+               </div>
+               <div className="mt-2 text-right text-[10px] text-white/40 font-bold uppercase tracking-widest">
+                 In Progress
+               </div>
+             </div>
+           </div>
+           
+           {/* Secondary floating element */}
+           <div className="absolute top-10 -right-4 lg:-left-12 glass-panel rounded-2xl px-5 py-3 border border-white/10 shadow-2xl flex items-center gap-3 animate-pulse">
+             <div className="w-2 h-2 rounded-full bg-[#ff6be2]" />
+             <span className="text-xs font-bold text-white/80 uppercase tracking-widest">Sarah & Mike just joined</span>
+           </div>
         </div>
       </section>
 

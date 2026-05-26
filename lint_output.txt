@@ -1,0 +1,398 @@
+
+> winkd@0.1.0 lint
+> eslint
+
+
+/home/tomar_parakram/Desktop/winkd/app/about/page.tsx
+  21:67   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  32:217  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/Charades.tsx
+    7:18  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               @typescript-eslint/no-explicit-any
+   11:18  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               @typescript-eslint/no-explicit-any
+   54:5   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/Charades.tsx:54:5
+  52 |   // Reset timer on card flip or new prompt
+  53 |   useEffect(() => {
+> 54 |     setTimeLeft(60);
+     |     ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  55 |     setIsTimerActive(false);
+  56 |     if (timerRef.current) {
+  57 |       clearInterval(timerRef.current);  react-hooks/set-state-in-effect
+  207:25  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        react/no-unescaped-entities
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/Confession.tsx
+   15:18  error  Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  146:17  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  146:38  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/ConversationStarters.tsx
+   6:18  error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+   9:18  error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  12:63  warning  'isFlipped' is defined but never used                            @typescript-eslint/no-unused-vars
+  21:11  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  21:32  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/DeepConnection.tsx
+   7:18  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  12:18  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/QuestionsToAskYourBoyfriend.tsx
+   15:18  error  Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  146:17  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  146:38  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/SpeedDating.tsx
+   15:18  error  Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  111:17  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  111:38  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/ThisOrThat.tsx
+   22:11  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-explicit-any
+  114:10  warning  'selectedOption' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           @typescript-eslint/no-unused-vars
+  118:5   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/ThisOrThat.tsx:118:5
+  116 |   useEffect(() => {
+  117 |     // Reset local selection when question changes
+> 118 |     setSelectedOption(myAnswer);
+      |     ^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  119 |   }, [currentPrompt.id, myAnswer]);
+  120 |
+  121 |   const handleSelect = (option: "A" | "B") => {  react-hooks/set-state-in-effect
+  305:92  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               react/no-unescaped-entities
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/TruthOrDare.tsx
+    9:18  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     @typescript-eslint/no-explicit-any
+   13:18  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     @typescript-eslint/no-explicit-any
+   55:7   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/TruthOrDare.tsx:55:7
+  53 |     if (state?.lastReaction?.type?.startsWith("choice_")) {
+  54 |       const type = state.lastReaction.type.replace("choice_", "") as "truth" | "dare" | "random";
+> 55 |       setChoice(type);
+     |       ^^^^^^^^^ Avoid calling setState() directly within an effect
+  56 |     }
+  57 |   }, [state?.lastReaction]);
+  58 |  react-hooks/set-state-in-effect
+   62:7   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/TruthOrDare.tsx:62:7
+  60 |   useEffect(() => {
+  61 |     if (!isFlipped) {
+> 62 |       setChoice(null);
+     |       ^^^^^^^^^ Avoid calling setState() directly within an effect
+  63 |     }
+  64 |   }, [isFlipped]);
+  65 |                                                                                                                                react-hooks/set-state-in-effect
+  191:17  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              react/no-unescaped-entities
+  191:39  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              react/no-unescaped-entities
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/WhoKnowsMeBest.tsx
+    8:18  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           @typescript-eslint/no-explicit-any
+   15:11  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           @typescript-eslint/no-explicit-any
+   16:18  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           @typescript-eslint/no-explicit-any
+   41:5   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/WhoKnowsMeBest.tsx:41:5
+  39 |   // Reset input field when moving to the next prompt
+  40 |   useEffect(() => {
+> 41 |     setInputText("");
+     |     ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  42 |   }, [currentPrompt.id]);
+  43 |
+  44 |   // Handle local floating reactions synchronized through the WS state                                                           react-hooks/set-state-in-effect
+   53:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/WhoKnowsMeBest.tsx:53:7
+  51 |         left: Math.random() * 60 + 20
+  52 |       };
+> 53 |       setLocalReactions((prev) => [...prev, newReaction]);
+     |       ^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  54 |       const timer = setTimeout(() => {
+  55 |         setLocalReactions((prev) => prev.filter((r) => r.id !== newReaction.id));
+  56 |       }, 2500);  react-hooks/set-state-in-effect
+   59:6   warning  React Hook useEffect has a missing dependency: 'state.lastReaction'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              react-hooks/exhaustive-deps
+  109:33  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/WhoKnowsMeBest.tsx:109:33
+  107 |               animate={{ 
+  108 |                 y: -300, 
+> 109 |                 x: `${r.left + (Math.random() * 20 - 10)}%`, 
+      |                                 ^^^^^^^^^^^^^ Cannot call impure function
+  110 |                 scale: [0.8, 1.4, 1.4, 1.0], 
+  111 |                 opacity: [0, 1, 1, 0] 
+  112 |               }}                                                                                                                                                                                                                                                                                                                                                                                                      react-hooks/purity
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/WouldYouRather.tsx
+    5:22  warning  'Users' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+    8:18  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @typescript-eslint/no-explicit-any
+   17:11  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @typescript-eslint/no-explicit-any
+   42:5   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/WouldYouRather.tsx:42:5
+  40 |   // Clear local choice when question shifts
+  41 |   useEffect(() => {
+> 42 |     setLocalChoice(null);
+     |     ^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  43 |   }, [currentPrompt.id]);
+  44 |
+  45 |   // Sync state reactions to display floating emojis locally                                                                                                             react-hooks/set-state-in-effect
+   54:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/WouldYouRather.tsx:54:7
+  52 |         left: Math.random() * 60 + 20 // center area horizontal dispersion
+  53 |       };
+> 54 |       setLocalReactions((prev) => [...prev, newReaction]);
+     |       ^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  55 |       const timer = setTimeout(() => {
+  56 |         setLocalReactions((prev) => prev.filter((r) => r.id !== newReaction.id));
+  57 |       }, 2500);  react-hooks/set-state-in-effect
+   60:6   warning  React Hook useEffect has a missing dependency: 'state.lastReaction'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   react-hooks/exhaustive-deps
+  105:33  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+/home/tomar_parakram/Desktop/winkd/app/components/games/WouldYouRather.tsx:105:33
+  103 |               animate={{ 
+  104 |                 y: -300, 
+> 105 |                 x: `${r.left + (Math.random() * 20 - 10)}%`, 
+      |                                 ^^^^^^^^^^^^^ Cannot call impure function
+  106 |                 scale: [0.8, 1.4, 1.4, 1.0], 
+  107 |                 opacity: [0, 1, 1, 0] 
+  108 |               }}                                                                                                                                                                                                                                                                                                                                                                                                                                           react-hooks/purity
+
+/home/tomar_parakram/Desktop/winkd/app/dashboard/page.tsx
+   30:15   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  102:106  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  116:94   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  118:128  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  118:138  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  130:77   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  138:15   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  138:15   warning  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                                                                                                                                                                                jsx-a11y/alt-text
+  179:68   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  197:17   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  197:17   warning  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                                                                                                                                                                                jsx-a11y/alt-text
+
+/home/tomar_parakram/Desktop/winkd/app/data/convert.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+/home/tomar_parakram/Desktop/winkd/app/design-system/page.tsx
+    3:10  warning  'Flame' is defined but never used                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+    3:27  warning  'Heart' is defined but never used                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+    3:69  warning  'User' is defined but never used                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  144:19  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  144:19  warning  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                                                                                                                                                                                jsx-a11y/alt-text
+
+/home/tomar_parakram/Desktop/winkd/app/explore/page.tsx
+    7:8    warning  'conversationStartersData' is defined but never used                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+  123:20   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  123:20   warning  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                                                                                                                                                                                jsx-a11y/alt-text
+  130:88   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  130:98   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  131:113  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  166:74   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  207:76   error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  207:81   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  207:136  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+/home/tomar_parakram/Desktop/winkd/app/games/page.tsx
+  206:96   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  206:108  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  208:81   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/home/tomar_parakram/Desktop/winkd/app/journey/page.tsx
+   22:9   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  108:20  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  108:20  warning  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                                                                                                                                                                                jsx-a11y/alt-text
+  186:20  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  186:55  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  186:73  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+/home/tomar_parakram/Desktop/winkd/app/layout.tsx
+  20:9  warning  Custom fonts not added in `pages/_document.js` will only load for a single page. This is discouraged. See: https://nextjs.org/docs/messages/no-page-custom-font  @next/next/no-page-custom-font
+
+/home/tomar_parakram/Desktop/winkd/app/login/page.tsx
+  87:18  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/home/tomar_parakram/Desktop/winkd/app/mobile/page.tsx
+   77:18  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+   77:18  warning  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                                                                                                                                                                                jsx-a11y/alt-text
+  120:20  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  120:20  warning  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                                                                                                                                                                                jsx-a11y/alt-text
+  136:73  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+/home/tomar_parakram/Desktop/winkd/app/page.tsx
+  129:16   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  130:16   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  131:16   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  143:14   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  212:135  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+/home/tomar_parakram/Desktop/winkd/app/room/[roomId]/page.tsx
+   30:44  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-explicit-any
+   30:60  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-explicit-any
+  115:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/home/tomar_parakram/Desktop/winkd/app/room/[roomId]/page.tsx:115:7
+  113 |         type: state.lastReaction.type
+  114 |       };
+> 115 |       setReactions((prev) => [...prev, newReaction]);
+      |       ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  116 |       setTimeout(() => {
+  117 |         setReactions((prev) => prev.filter((r) => r.id !== newReaction.id));
+  118 |       }, 3000);  react-hooks/set-state-in-effect
+  120:6   warning  React Hook useEffect has a missing dependency: 'state.lastReaction'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            react-hooks/exhaustive-deps
+  127:6   warning  React Hook useEffect has a missing dependency: 'enableOfflineMode'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             react-hooks/exhaustive-deps
+  280:14  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @next/next/no-img-element
+  308:16  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @next/next/no-img-element
+
+/home/tomar_parakram/Desktop/winkd/lib/roomUtils.ts
+  13:26  warning  'err' is defined but never used           @typescript-eslint/no-unused-vars
+  13:31  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/tomar_parakram/Desktop/winkd/lib/socket.ts
+   3:37  error  The `Function` type accepts any function-like value.
+Prefer explicitly defining any function parameters and return type  @typescript-eslint/no-unsafe-function-type
+   4:30  error  Unexpected any. Specify a different type                                                                                 @typescript-eslint/no-explicit-any
+  60:31  error  Unexpected any. Specify a different type                                                                                 @typescript-eslint/no-explicit-any
+  79:40  error  Unexpected any. Specify a different type                                                                                 @typescript-eslint/no-explicit-any
+  85:31  error  The `Function` type accepts any function-like value.
+Prefer explicitly defining any function parameters and return type  @typescript-eslint/no-unsafe-function-type
+  92:32  error  The `Function` type accepts any function-like value.
+Prefer explicitly defining any function parameters and return type  @typescript-eslint/no-unsafe-function-type
+  98:29  error  Unexpected any. Specify a different type                                                                                 @typescript-eslint/no-explicit-any
+
+/home/tomar_parakram/Desktop/winkd/lib/useRoom.ts
+  30:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/home/tomar_parakram/Desktop/winkd/lib/useRoom.ts:30:7
+  28 |         localStorage.setItem("winkd_userid", cachedId);
+  29 |       }
+> 30 |       setUserId(cachedId);
+     |       ^^^^^^^^^ Avoid calling setState() directly within an effect
+  31 |     }
+  32 |   }, []);
+  33 |  react-hooks/set-state-in-effect
+
+/home/tomar_parakram/Desktop/winkd/server/ai/embeddings.ts
+  31:78  warning  'limit' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/home/tomar_parakram/Desktop/winkd/server/ai/recommendations.ts
+  2:35  warning  'games' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/tomar_parakram/Desktop/winkd/server/events/index.ts
+  18:57  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  39:42  warning  'payload' is defined but never used       @typescript-eslint/no-unused-vars
+
+/home/tomar_parakram/Desktop/winkd/server/events/processor.ts
+   1:10  warning  'dispatchEvent' is defined but never used  @typescript-eslint/no-unused-vars
+  12:49  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+
+/home/tomar_parakram/Desktop/winkd/server/index.js
+  1:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:16  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+/home/tomar_parakram/Desktop/winkd/server/infra/analytics.ts
+  9:103  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/tomar_parakram/Desktop/winkd/server/infra/billing.ts
+  33:50  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/tomar_parakram/Desktop/winkd/server/infra/logger.ts
+   4:6    warning  'LogLevel' is defined but never used      @typescript-eslint/no-unused-vars
+  13:51   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  17:51   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  21:67   error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  40:131  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/tomar_parakram/Desktop/winkd/server/jobs/index.ts
+   5:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  60:17  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/tomar_parakram/Desktop/winkd/server/realtime/channels.ts
+  18:24   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  31:106  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/tomar_parakram/Desktop/winkd/server/realtime/index.ts
+  22:83  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/tomar_parakram/Desktop/winkd/server/realtime/sync.ts
+  12:119  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/tomar_parakram/Desktop/winkd/server/services/activities.ts
+  12:43  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  39:11  warning  'user' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/home/tomar_parakram/Desktop/winkd/server/services/streaks.ts
+  4:10  warning  'getActiveCouple' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/tomar_parakram/Desktop/winkd/server/services/users.ts
+  29:47  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+✖ 136 problems (94 errors, 42 warnings)
+

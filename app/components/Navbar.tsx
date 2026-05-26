@@ -67,12 +67,12 @@ export default function Navbar() {
         </div>
 
         {/* Auth Buttons */}
-        <div className="hidden md:flex items-center gap-6">
-          <Link href="/login" className="text-sm font-medium text-white/80 hover:text-white transition-colors">
-            Sign In
+        <div className="hidden md:flex items-center gap-8">
+          <Link href="/login" className="text-xs font-bold uppercase tracking-widest text-white/60 hover:text-white transition-colors">
+            Log In
           </Link>
-          <Link href="/signup" className="text-sm font-semibold text-white bg-white/10 border border-white/20 px-6 py-2.5 rounded-full hover:bg-white hover:text-[#38304c] hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-300">
-            Get Started
+          <Link href="/signup" className="text-xs font-bold uppercase tracking-widest text-white bg-gradient-to-r from-[#7a3fff] to-[#682c58] px-6 py-2.5 rounded-full hover:shadow-[0_5px_20px_rgba(122,63,255,0.4)] transition-all duration-300 border border-white/10">
+            Sign Up
           </Link>
         </div>
 

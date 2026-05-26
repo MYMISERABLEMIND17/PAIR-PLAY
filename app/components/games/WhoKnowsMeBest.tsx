@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { HelpCircle, Users, CheckCircle2, Sparkles, ChevronRight, Lock, HelpCircle as HelpIcon, ArrowRightLeft } from "lucide-react";
+import { Users, CheckCircle2, Sparkles, ChevronRight, ArrowRightLeft } from "lucide-react";
 
 interface WhoKnowsMeBestProps {
   currentPrompt: any;
@@ -59,8 +59,6 @@ export default function WhoKnowsMeBest({
   }, [state?.lastReaction?.timestamp, state?.lastReaction?.type]);
 
   const players = state?.players || [];
-  const isPlayer1 = players[0] === userId;
-
   // Determine who the current question is about (odd prompts about P1, even about P2)
   const currentPromptIndex = state?.currentPromptIndex || 0;
   const isSubjectPlayer1 = currentPromptIndex % 2 === 0;

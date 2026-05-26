@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Sparkles, Flame, HelpCircle } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import truthOrDareData from "../../data/truth_or_dare.json";
 import truthAndDareCouplesData from "../../data/truth_and_dare_couples.json";
 

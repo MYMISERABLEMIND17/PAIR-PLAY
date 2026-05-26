@@ -31,7 +31,7 @@ const iconMap: Record<string, LucideIcon> = {
   Flame, HelpCircle, MessageCircleHeart, Users, AlertTriangle, Heart, Smile, MicOff, RefreshCw, Sparkles,
 };
 
-export default function GameCard({ title, description, href, colorClass, iconName }: GameCardProps) {
+export default function GameCard({ title, description, href, iconName }: GameCardProps) {
   const Icon = iconMap[iconName] || Flame;
   const router = useRouter();
   const [isCreating, setIsCreating] = useState(false);
@@ -69,7 +69,7 @@ export default function GameCard({ title, description, href, colorClass, iconNam
       router.push(`/room/${roomId}`);
     } catch (err) {
       clearTimeout(statusTimer);
-      const errorMsg = err instanceof Error ? err.message : "Failed to create room. Check your internet connection and Firebase configuration.";
+      const errorMsg = err instanceof Error ? err.message : "Failed to create room. Check your internet connection.";
       console.error("Failed to create room:", err);
       setError(errorMsg);
       setShowError(true);

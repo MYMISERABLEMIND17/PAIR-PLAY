@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle2, XCircle, Heart, Sparkles, Flame, HelpCircle } from "lucide-react";
+import { CheckCircle2, Sparkles, HelpCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 
 interface ThisOrThatProps {

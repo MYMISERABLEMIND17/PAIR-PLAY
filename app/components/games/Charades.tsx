@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Smile, Sparkles, Play, RotateCcw, AlertTriangle, CheckCircle, Timer } from "lucide-react";
+import { Smile, Sparkles, RotateCcw, Timer } from "lucide-react";
 
 interface CharadesProps {
   currentPrompt: any;

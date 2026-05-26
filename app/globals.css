@@ -1,16 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --background: #38304c;
-  --background-dark: #272136;
+  --background: #090514;
+  --background-dark: #05020a;
   --foreground: #ffffff;
   
-  --primary-purple: #501fda;
-  --romantic-pink: #f185d3;
+  --primary-purple: #7a3fff;
+  --romantic-pink: #ff6be2;
   --deep-wine: #682c58;
   --muted-brown: #8c6c5c;
   --soft-rose: #c4a7b4;
-  --dark-base: #38304c;
+  --dark-base: #110b1c;
+
+  /* Cinematic Motion System */
+  --ease-cinematic: cubic-bezier(0.2, 0.9, 0.1, 1);
+  --duration-cinematic: 800ms;
+  --ease-tactile: cubic-bezier(0.3, 1, 0.2, 1);
+  --duration-tactile: 300ms;
+  --ease-ambient: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-ambient: 4000ms;
+  --ease-fluid: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 @theme inline {
@@ -30,21 +39,21 @@ body {
 
 @layer utilities {
   .text-glow {
-    text-shadow: 0 0 30px rgba(241, 133, 211, 0.4);
+    text-shadow: 0 0 40px rgba(255, 107, 226, 0.5);
   }
   .glass-panel {
-    @apply bg-[#272136]/50 backdrop-blur-2xl border border-white/5;
+    @apply bg-[#110b1c]/50 backdrop-blur-3xl border border-white/[0.03];
   }
   .elevated-nav {
-    @apply bg-[#38304c]/70 backdrop-blur-xl border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.1)];
+    @apply bg-[#090514]/80 backdrop-blur-2xl border-b border-white/[0.03] shadow-[0_4px_30px_rgba(0,0,0,0.8)];
   }
   .elevated-card {
-    @apply bg-[#272136] border border-white/5 rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-500 relative overflow-hidden;
+    @apply bg-[#110b1c] border border-white/[0.04] rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-all duration-500 relative overflow-hidden;
   }
   .elevated-card:hover {
-    @apply shadow-[0_20px_60px_rgba(80,31,218,0.15)] border-white/10 -translate-y-1;
+    @apply shadow-[0_20px_60px_rgba(122,63,255,0.25)] border-white/10 -translate-y-1;
   }
   .cinematic-shadow {
-    box-shadow: 0 30px 60px -10px rgba(0,0,0,0.5), 0 0 40px rgba(80,31,218,0.2);
+    box-shadow: 0 40px 80px -10px rgba(0,0,0,0.8), 0 0 50px rgba(122,63,255,0.15);
   }
 }
