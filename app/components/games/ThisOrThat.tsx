@@ -138,7 +138,7 @@ export default function ThisOrThat({
         <span className={`text-[10px] font-black uppercase tracking-widest px-3.5 py-1.5 rounded-full border bg-black/40 ${themeConfig.border} ${themeConfig.text}`}>
           {catIcon} {category} Deck
         </span>
-        <h2 className="text-2xl font-extrabold mt-4 text-white/90">
+        <h2 className="text-2xl font-extrabold mt-4 text-white font-extrabold">
           Which one do you prefer?
         </h2>
       </div>
@@ -169,7 +169,7 @@ export default function ThisOrThat({
           </span>
 
           <div className="my-auto pt-2 pb-4">
-            <span className="text-2xl md:text-3xl font-black text-white/90 group-hover:text-white leading-tight">
+            <span className="text-2xl md:text-3xl font-black text-white font-extrabold group-hover:text-white leading-tight">
               {currentPrompt.optionA}
             </span>
           </div>
@@ -181,11 +181,11 @@ export default function ThisOrThat({
                 <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" /> Selected
               </span>
             ) : hasIAnswered ? (
-              <span className="text-[10px] font-bold uppercase tracking-widest text-white/30">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-white/70 font-semibold">
                 Not chosen
               </span>
             ) : (
-              <span className="text-[10px] font-bold uppercase tracking-widest text-white/40 group-hover:text-white/80 transition-colors">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-white/80 font-bold group-hover:text-white/80 transition-colors">
                 Tap to Select
               </span>
             )}
@@ -232,7 +232,7 @@ export default function ThisOrThat({
           </span>
 
           <div className="my-auto pt-2 pb-4">
-            <span className="text-2xl md:text-3xl font-black text-white/90 group-hover:text-white leading-tight">
+            <span className="text-2xl md:text-3xl font-black text-white font-extrabold group-hover:text-white leading-tight">
               {currentPrompt.optionB}
             </span>
           </div>
@@ -244,11 +244,11 @@ export default function ThisOrThat({
                 <CheckCircle2 className="w-3.5 h-3.5 text-rose-400" /> Selected
               </span>
             ) : hasIAnswered ? (
-              <span className="text-[10px] font-bold uppercase tracking-widest text-white/30">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-white/70 font-semibold">
                 Not chosen
               </span>
             ) : (
-              <span className="text-[10px] font-bold uppercase tracking-widest text-white/40 group-hover:text-white/80 transition-colors">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-white/80 font-bold group-hover:text-white/80 transition-colors">
                 Tap to Select
               </span>
             )}
@@ -268,8 +268,8 @@ export default function ThisOrThat({
               exit={{ opacity: 0, y: -10 }}
               className="flex flex-col items-center"
             >
-              <HelpCircle className="w-8 h-8 text-white/30 animate-bounce mb-2" />
-              <p className="text-sm font-medium text-white/40">Select your preference above to sync!</p>
+              <HelpCircle className="w-8 h-8 text-white/70 font-semibold animate-bounce mb-2" />
+              <p className="text-sm font-medium text-white/80 font-bold">Select your preference above to sync!</p>
             </motion.div>
           ) : !hasPartnerAnswered ? (
             <motion.div
@@ -281,7 +281,7 @@ export default function ThisOrThat({
             >
               <div className="w-5 h-5 rounded-full border-2 border-amber-400 border-t-transparent animate-spin mb-3" />
               <p className="text-xs font-semibold uppercase tracking-widest text-amber-400/80">Waiting for Partner...</p>
-              <p className="text-[10px] text-white/40 mt-1">Once they vote, compatibility is revealed!</p>
+              <p className="text-[10px] text-white/80 font-bold mt-1">Once they vote, compatibility is revealed!</p>
             </motion.div>
           ) : (
             <motion.div
@@ -302,7 +302,7 @@ export default function ThisOrThat({
                     <Sparkles className="w-4 h-4 text-emerald-400 animate-spin" />
                     You both chose <strong className="underline decoration-wavy decoration-emerald-400/40">{myAnswer}</strong>!
                   </p>
-                  <p className="text-[10px] text-white/50 mt-0.5">You're in absolute sync on this preference!</p>
+                  <p className="text-[10px] text-white font-extrabold font-bold mt-0.5">You're in absolute sync on this preference!</p>
                 </div>
               ) : (
                 <div className="relative w-full max-w-md rounded-2xl py-3 px-6 bg-gradient-to-r from-rose-500/10 via-purple-500/15 to-rose-500/10 border border-rose-500/30 text-center shadow-[0_0_30px_rgba(244,63,94,0.15)] flex flex-col items-center">
@@ -312,7 +312,7 @@ export default function ThisOrThat({
                   <p className="text-sm font-bold text-rose-400 mt-1">
                     You chose <strong className="text-amber-400">{myAnswer}</strong>, they chose <strong className="text-rose-400">{partnerAnswer}</strong>!
                   </p>
-                  <p className="text-[10px] text-white/50 mt-0.5">Opposing choices make for the best debates! Share why you chose yours.</p>
+                  <p className="text-[10px] text-white font-extrabold font-bold mt-0.5">Opposing choices make for the best debates! Share why you chose yours.</p>
                 </div>
               )}
 

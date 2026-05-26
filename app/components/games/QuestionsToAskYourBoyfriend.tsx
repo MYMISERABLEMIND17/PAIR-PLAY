@@ -118,7 +118,7 @@ export default function QuestionsToAskYourBoyfriend({
               <p className="text-sm font-bold text-white/80 tracking-widest uppercase mt-3">Boyfriend Question Card</p>
             </div>
 
-            <span className="text-[10px] font-black uppercase tracking-widest text-white/50 bg-black/20 px-3 py-1 rounded-full border border-white/5 mb-4 backdrop-blur-sm">
+            <span className="text-[10px] font-black uppercase tracking-widest text-white font-extrabold font-bold bg-black/20 px-3 py-1 rounded-full border border-white/5 mb-4 backdrop-blur-sm">
               Tap to Reveal
             </span>
           </div>
@@ -135,22 +135,22 @@ export default function QuestionsToAskYourBoyfriend({
             <div className={`absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r ${config.gradient} rounded-t-3xl`} />
 
             <div className="w-full flex justify-between items-center mt-2">
-              <span className="text-[9px] font-black uppercase tracking-widest text-white/30 font-mono">
+              <span className="text-[9px] font-black uppercase tracking-widest text-white/70 font-semibold font-mono">
                 ID: {currentPrompt.id}
               </span>
               <Sparkles className={`w-4 h-4 ${config.textClass}`} />
             </div>
 
             <div className="my-auto py-4">
-              <p className="text-xl md:text-2xl font-bold leading-relaxed text-white/95 text-center px-2">
+              <p className="text-xl md:text-2xl font-bold leading-relaxed text-white font-extrabold drop-shadow-sm text-center px-2">
                 "{currentPrompt.text}"
               </p>
             </div>
 
             <div className="flex flex-col items-center gap-2 mb-2 w-full">
               <div className="h-[1px] w-12 bg-white/10 mb-2" />
-              <span className="text-[10px] font-semibold text-white/40 uppercase tracking-widest flex items-center gap-1.5">
-                <HelpCircle className="w-3.5 h-3.5 text-white/30" /> Alternate Answering Together
+              <span className="text-[10px] font-semibold text-white/80 font-bold uppercase tracking-widest flex items-center gap-1.5">
+                <HelpCircle className="w-3.5 h-3.5 text-white/70 font-semibold" /> Alternate Answering Together
               </span>
             </div>
           </div>

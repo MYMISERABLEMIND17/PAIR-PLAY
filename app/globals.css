@@ -1,14 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a;
+  --background: #38304c;
+  --background-dark: #272136;
   --foreground: #ffffff;
+  
+  --primary-purple: #501fda;
+  --romantic-pink: #f185d3;
+  --deep-wine: #682c58;
+  --muted-brown: #8c6c5c;
+  --soft-rose: #c4a7b4;
+  --dark-base: #38304c;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Playfair Display', ui-serif, Georgia, serif;
 }
 
 body {
@@ -20,13 +29,22 @@ body {
 }
 
 @layer utilities {
+  .text-glow {
+    text-shadow: 0 0 30px rgba(241, 133, 211, 0.4);
+  }
+  .glass-panel {
+    @apply bg-[#272136]/50 backdrop-blur-2xl border border-white/5;
+  }
   .elevated-nav {
-    @apply bg-[#0f0f11] border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.5)];
+    @apply bg-[#38304c]/70 backdrop-blur-xl border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.1)];
   }
   .elevated-card {
-    @apply bg-[#141417] border border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.4)] transition-all duration-300;
+    @apply bg-[#272136] border border-white/5 rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-500 relative overflow-hidden;
   }
   .elevated-card:hover {
-    @apply bg-[#1a1a1e] border-white/10 shadow-[0_20px_40px_rgb(0,0,0,0.6)] translate-y-[-4px];
+    @apply shadow-[0_20px_60px_rgba(80,31,218,0.15)] border-white/10 -translate-y-1;
+  }
+  .cinematic-shadow {
+    box-shadow: 0 30px 60px -10px rgba(0,0,0,0.5), 0 0 40px rgba(80,31,218,0.2);
   }
 }

@@ -114,7 +114,7 @@ export default function Charades({ currentPrompt, isFlipped, onFlip }: CharadesP
           {/* Card Front */}
           <div className="absolute inset-0 backface-hidden elevated-card rounded-3xl p-8 flex flex-col items-center justify-between text-center group border border-white/5 bg-[#0c0c10]">
             <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 mt-2">
-              <Sparkles className="w-4 h-4 text-white/40 group-hover:text-indigo-400 transition-colors" />
+              <Sparkles className="w-4 h-4 text-white/80 font-bold group-hover:text-indigo-400 transition-colors" />
             </div>
 
             <div className="flex flex-col items-center gap-3">
@@ -124,7 +124,7 @@ export default function Charades({ currentPrompt, isFlipped, onFlip }: CharadesP
               </h2>
             </div>
 
-            <span className="text-[10px] font-black uppercase tracking-widest text-white/40 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full mb-2">
+            <span className="text-[10px] font-black uppercase tracking-widest text-white/80 font-bold bg-white/5 border border-white/10 px-4 py-1.5 rounded-full mb-2">
               Tap to Reveal Word
             </span>
           </div>
@@ -139,7 +139,7 @@ export default function Charades({ currentPrompt, isFlipped, onFlip }: CharadesP
               <span className={`text-[9px] font-black uppercase tracking-widest font-mono text-indigo-400`}>
                 Act It Out 🎭
               </span>
-              <span className="text-[9px] font-black uppercase tracking-widest text-white/30 font-mono">
+              <span className="text-[9px] font-black uppercase tracking-widest text-white/70 font-semibold font-mono">
                 ID: {currentPrompt.id}
               </span>
             </div>
@@ -157,7 +157,7 @@ export default function Charades({ currentPrompt, isFlipped, onFlip }: CharadesP
               className="w-full bg-white/[0.02] border border-white/5 rounded-2xl p-4 flex flex-col items-center gap-3 relative overflow-hidden"
             >
               <div className="flex items-center justify-between w-full">
-                <span className="text-[9px] font-bold uppercase tracking-widest text-white/40 flex items-center gap-1">
+                <span className="text-[9px] font-bold uppercase tracking-widest text-white/80 font-bold flex items-center gap-1">
                   <Timer className="w-3.5 h-3.5" /> Built-in Timer
                 </span>
                 
@@ -212,7 +212,7 @@ export default function Charades({ currentPrompt, isFlipped, onFlip }: CharadesP
 
             <div className="flex flex-col items-center gap-2 mb-2 w-full mt-4">
               <div className="h-[1px] w-12 bg-white/10 mb-2" />
-              <span className="text-[10px] font-semibold text-white/40 uppercase tracking-widest">
+              <span className="text-[10px] font-semibold text-white/80 font-bold uppercase tracking-widest">
                 No talking or sounds allowed!
               </span>
             </div>

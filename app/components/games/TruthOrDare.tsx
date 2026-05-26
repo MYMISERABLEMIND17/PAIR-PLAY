@@ -166,7 +166,7 @@ export default function TruthOrDare({
               </div>
             </div>
 
-            <span className="text-[9px] font-black uppercase tracking-widest text-white/30 mb-1">
+            <span className="text-[10px] font-black uppercase tracking-widest text-white/80 mb-1">
               Select one to flip
             </span>
           </div>
@@ -181,20 +181,20 @@ export default function TruthOrDare({
               <span className={`text-[9px] font-black uppercase tracking-widest font-mono ${isTruth ? "text-purple-400" : "text-pink-400"}`}>
                 {selectedPrompt.type}
               </span>
-              <span className="text-[9px] font-black uppercase tracking-widest text-white/30 font-mono">
+              <span className="text-[10px] font-black uppercase tracking-widest text-white/80 font-mono">
                 ID: {selectedPrompt.id}
               </span>
             </div>
 
             <div className="my-auto py-4">
-              <p className="text-2xl font-bold leading-relaxed text-white/95 px-2">
+              <p className="text-3xl font-extrabold leading-relaxed text-white px-2 drop-shadow-md">
                 "{selectedPrompt.text}"
               </p>
             </div>
 
             <div className="flex flex-col items-center gap-2 mb-2 w-full">
               <div className="h-[1px] w-12 bg-white/10 mb-2" />
-              <span className="text-[10px] font-semibold text-white/40 uppercase tracking-widest">
+              <span className="text-xs font-bold text-white/80 uppercase tracking-widest">
                 Take turns answering together
               </span>
             </div>

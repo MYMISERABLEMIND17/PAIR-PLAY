@@ -123,7 +123,7 @@ export default function WhoKnowsMeBest({
       </div>
 
       {/* Header status indicators */}
-      <div className="w-full flex flex-wrap justify-between items-center gap-2 px-2 text-xs font-semibold tracking-wider uppercase text-white/50">
+      <div className="w-full flex flex-wrap justify-between items-center gap-2 px-2 text-xs font-semibold tracking-wider uppercase text-white font-extrabold font-bold">
         <div className="flex items-center gap-2">
           <ArrowRightLeft className="w-4 h-4 text-rose-400 animate-pulse" />
           <span>Role: {isMeSubject ? "📝 You are the Subject" : "🤔 You are the Guesser"}</span>
@@ -162,7 +162,7 @@ export default function WhoKnowsMeBest({
               value={inputText}
               onChange={(e) => setInputText(e.target.value)}
               placeholder={isMeSubject ? "Write your honest answer about yourself..." : "What do you think their answer is? Guess it!"}
-              className="w-full bg-[#16161c]/80 border border-white/10 rounded-2xl p-5 text-base text-white/90 focus:outline-none focus:border-rose-500/50 focus:ring-1 focus:ring-rose-500/50 resize-none min-h-[120px] shadow-inner transition-all placeholder:text-white/20 leading-relaxed"
+              className="w-full bg-[#16161c]/80 border border-white/10 rounded-2xl p-5 text-base text-white font-extrabold focus:outline-none focus:border-rose-500/50 focus:ring-1 focus:ring-rose-500/50 resize-none min-h-[120px] shadow-inner transition-all placeholder:text-white/20 leading-relaxed"
               autoFocus
             />
             <button 
@@ -186,7 +186,7 @@ export default function WhoKnowsMeBest({
               <div className="w-8 h-8 rounded-full bg-rose-500/10" />
             </div>
             <h3 className="text-xl font-bold text-white bg-gradient-to-r from-amber-400 to-rose-500 bg-clip-text text-transparent">Choice Securely Locked!</h3>
-            <p className="text-white/50 mt-2 text-sm max-w-xs">Waiting for your partner to submit their answer to reveal side-by-side.</p>
+            <p className="text-white font-extrabold font-bold mt-2 text-sm max-w-xs">Waiting for your partner to submit their answer to reveal side-by-side.</p>
           </motion.div>
         )}
 
@@ -207,7 +207,7 @@ export default function WhoKnowsMeBest({
                   </span>
                   <CheckCircle2 className="w-4 h-4 text-rose-400" />
                 </div>
-                <p className="text-base md:text-lg text-white/90 leading-relaxed font-medium bg-white/[0.01] p-4 rounded-xl border border-white/5">
+                <p className="text-base md:text-lg text-white font-extrabold leading-relaxed font-medium bg-white/[0.01] p-4 rounded-xl border border-white/5">
                   {subjectAnswer}
                 </p>
               </div>
@@ -220,7 +220,7 @@ export default function WhoKnowsMeBest({
                   </span>
                   <Users className="w-4 h-4 text-indigo-400" />
                 </div>
-                <p className="text-base md:text-lg text-white/90 leading-relaxed font-medium bg-white/[0.01] p-4 rounded-xl border border-white/5">
+                <p className="text-base md:text-lg text-white font-extrabold leading-relaxed font-medium bg-white/[0.01] p-4 rounded-xl border border-white/5">
                   {guesserAnswer}
                 </p>
               </div>
@@ -239,7 +239,7 @@ export default function WhoKnowsMeBest({
               {/* Reaction Pill selectors */}
               {sendReaction && (
                 <div className="flex flex-col items-center gap-2 bg-white/[0.02] border border-white/5 rounded-2xl px-6 py-3 shadow-inner">
-                  <span className="text-[9px] font-bold text-white/30 uppercase tracking-widest">Tap to React</span>
+                  <span className="text-[9px] font-bold text-white/70 font-semibold uppercase tracking-widest">Tap to React</span>
                   <div className="flex items-center gap-3">
                     {Object.entries(EMOJI_MAP).map(([type, emoji]) => (
                       <motion.button

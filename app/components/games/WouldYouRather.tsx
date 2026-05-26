@@ -117,7 +117,7 @@ export default function WouldYouRather({
       </div>
 
       {/* Header status indicators */}
-      <div className="w-full flex flex-wrap justify-between items-center gap-2 px-2 text-xs font-semibold tracking-wider uppercase text-white/50">
+      <div className="w-full flex flex-wrap justify-between items-center gap-2 px-2 text-xs font-semibold tracking-wider uppercase text-white font-extrabold font-bold">
         <div className="flex items-center gap-2">
           <HelpCircle className="w-4 h-4 text-blue-400 animate-pulse" />
           <span>Cinematic Choice</span>
@@ -155,7 +155,7 @@ export default function WouldYouRather({
           </div>
 
           {/* Option Text */}
-          <p className="my-6 text-xl md:text-2xl font-medium leading-relaxed text-white/90 group-hover:text-white drop-shadow-md">
+          <p className="my-6 text-xl md:text-2xl font-medium leading-relaxed text-white font-extrabold group-hover:text-white drop-shadow-md">
             {currentPrompt.optionA}
           </p>
 
@@ -209,7 +209,7 @@ export default function WouldYouRather({
             className={`w-12 h-12 rounded-full border flex items-center justify-center font-black text-xs z-10 bg-[#0d0d12]/90 backdrop-blur-xl transition-all duration-500 ${
               bothVoted 
                 ? "border-amber-400/50 shadow-[0_0_20px_rgba(251,191,36,0.3)] text-amber-400"
-                : "border-white/10 text-white/40 shadow-lg"
+                : "border-white/10 text-white/80 font-bold shadow-lg"
             }`}
           >
             {bothVoted ? "VS" : "OR"}
@@ -240,7 +240,7 @@ export default function WouldYouRather({
           </div>
 
           {/* Option Text */}
-          <p className="my-6 text-xl md:text-2xl font-medium leading-relaxed text-white/90 group-hover:text-white drop-shadow-md">
+          <p className="my-6 text-xl md:text-2xl font-medium leading-relaxed text-white font-extrabold group-hover:text-white drop-shadow-md">
             {currentPrompt.optionB}
           </p>
 
@@ -299,7 +299,7 @@ export default function WouldYouRather({
             <span className="inline-block w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping mr-1" />
             Waiting for partner...
           </div>
-          <p className="text-[11px] text-white/40 leading-normal">Your choice has been securely locked. The results will automatically synchronize and reveal once your partner submits.</p>
+          <p className="text-[11px] text-white/80 font-bold leading-normal">Your choice has been securely locked. The results will automatically synchronize and reveal once your partner submits.</p>
         </motion.div>
       )}
 
@@ -327,7 +327,7 @@ export default function WouldYouRather({
           {/* Social Reaction Dock inside the card */}
           {sendReaction && (
             <div className="flex flex-col items-center gap-2 bg-white/[0.02] border border-white/5 rounded-2xl px-6 py-3 shadow-inner">
-              <span className="text-[9px] font-bold text-white/30 uppercase tracking-widest">Send Live Reaction</span>
+              <span className="text-[9px] font-bold text-white/70 font-semibold uppercase tracking-widest">Send Live Reaction</span>
               <div className="flex items-center gap-3">
                 {Object.entries(EMOJI_MAP).map(([type, emoji]) => (
                   <motion.button

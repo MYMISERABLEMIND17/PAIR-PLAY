@@ -90,8 +90,8 @@ export default function GameCard({ title, description, href, colorClass, iconNam
     <>
       {/* Error Modal */}
       {showError && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center backdrop-blur-sm bg-black/50">
-          <div className="bg-[#0a0a0a] border border-red-500/30 rounded-2xl p-6 max-w-md w-full mx-4 shadow-xl max-h-[80vh] overflow-y-auto">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center backdrop-blur-md bg-black/60">
+          <div className="bg-[#272136] border border-red-500/30 rounded-3xl p-6 max-w-md w-full mx-4 shadow-2xl max-h-[80vh] overflow-y-auto">
             <div className="flex items-start gap-3 mb-4">
               <AlertTriangle className="w-5 h-5 text-red-500 flex-shrink-0 mt-1" />
               <h3 className="font-bold text-white text-lg">Error Creating Room</h3>
@@ -99,16 +99,16 @@ export default function GameCard({ title, description, href, colorClass, iconNam
             <p className="text-white/70 text-sm mb-6 whitespace-pre-wrap font-mono text-xs leading-relaxed">
               {error}
             </p>
-            <div className="flex gap-2">
+            <div className="flex gap-3">
               <button
                 onClick={() => setShowError(false)}
-                className="flex-1 py-2 rounded-lg bg-red-500/10 text-red-400 hover:bg-red-500/20 transition-colors font-bold text-sm"
+                className="flex-1 py-3 rounded-2xl bg-white/5 text-white/80 hover:bg-white/10 transition-colors font-medium text-sm"
               >
                 Dismiss
               </button>
               <button
                 onClick={() => router.push(`/room/offline-demo-${href.replace('/', '').replace(/-/g, '_')}`)}
-                className="flex-1 py-2 rounded-lg bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 transition-colors font-bold text-sm"
+                className="flex-1 py-3 rounded-2xl bg-red-500/20 text-red-400 hover:bg-red-500/30 transition-colors font-semibold text-sm"
               >
                 Play Offline
               </button>
@@ -116,86 +116,87 @@ export default function GameCard({ title, description, href, colorClass, iconNam
           </div>
         </div>
       )}
-      <div className={`elevated-card rounded-2xl p-6 h-full flex flex-col relative overflow-hidden group block ${isCreating ? 'opacity-50 pointer-events-none' : ''}`}>
-        {/* Subtle top border highlight for depth */}
-        <div className={`absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r ${colorClass} opacity-50 group-hover:opacity-100 transition-opacity`} />
-      
-      <div className={`w-12 h-12 rounded-xl bg-[#1a1a1e] border border-white/5 shadow-inner mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-        {isCreating ? (
-          <div className="w-5 h-5 rounded-full border-2 border-white/50 border-t-transparent animate-spin" />
-        ) : (
-          <Icon className="w-6 h-6 text-white/80 group-hover:text-white transition-colors" />
-        )}
-      </div>
 
-      <h3 className="text-xl font-bold mb-2 text-white/90 group-hover:text-white transition-colors">{title}</h3>
-      <p className="text-white/50 text-sm leading-relaxed flex-grow">
-        {description}
-      </p>
+      <div className={`elevated-card rounded-3xl p-8 h-full flex flex-col relative group block ${isCreating ? 'opacity-50 pointer-events-none' : ''}`}>
+        {/* Subtle top border highlight for depth */}
+        <div className={`absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#f185d3]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
       
-      {/* Hover Actions Overlay */}
-      <div className="absolute inset-0 bg-[#0a0a0a]/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center p-6 translate-y-4 group-hover:translate-y-0">
-        
-        {!isJoining ? (
-          <div className="flex flex-col gap-2 w-full">
-            <button 
-              onClick={handleCreate}
-              className={`w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-widest text-white bg-gradient-to-r ${colorClass} hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-lg`}
-            >
-              {!isCreating && <Plus className="w-4 h-4" />}
-              <span>{creationStatus}</span>
-            </button>
-            <button 
-              onClick={(e) => { e.stopPropagation(); setIsJoining(true); }}
-              className="w-full py-2.5 rounded-xl font-bold text-sm text-white/80 bg-[#1a1a1e] border border-white/10 hover:bg-[#2a2a2e] hover:text-white transition-all flex items-center justify-center gap-2"
-            >
-              Join Room
-            </button>
-            <button 
-              onClick={(e) => { 
-                e.stopPropagation(); 
-                router.push(`/room/offline-demo-${href.replace('/', '').replace(/-/g, '_')}`); 
-              }}
-              className="w-full py-2 rounded-xl font-bold text-xs uppercase tracking-wider text-indigo-400 bg-[#101014] border border-indigo-500/20 hover:bg-indigo-500/10 hover:border-indigo-500/40 hover:text-indigo-300 transition-all flex items-center justify-center gap-1.5"
-            >
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Solo Play / Explore</span>
-            </button>
-          </div>
-        ) : (
-          <form onSubmit={handleJoinSubmit} className="flex flex-col gap-3 w-full animate-in fade-in zoom-in duration-200">
-            <p className="text-xs font-bold text-white/50 uppercase tracking-widest text-center mb-1">Enter Room Code</p>
-            <div className="flex items-center bg-[#1a1a1e] border border-white/20 rounded-xl overflow-hidden focus-within:border-white/50 transition-colors">
-              <input 
-                type="text" 
-                autoFocus
-                value={joinCode}
-                onChange={(e) => setJoinCode(e.target.value.toUpperCase())}
-                placeholder="e.g. XJ9P2"
-                className="w-full bg-transparent p-3 text-center font-mono text-white outline-none placeholder:text-white/20"
-                maxLength={6}
-              />
-            </div>
-            <div className="flex gap-2">
+        <div className={`w-14 h-14 rounded-2xl glass-panel shadow-inner mb-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-500`}>
+          {isCreating ? (
+            <div className="w-6 h-6 rounded-full border-2 border-white/20 border-t-white animate-spin" />
+          ) : (
+            <Icon className="w-7 h-7 text-[#f185d3] drop-shadow-[0_0_10px_rgba(241,133,211,0.5)] transition-colors" />
+          )}
+        </div>
+
+        <h3 className="font-serif text-2xl font-bold mb-3 text-white transition-colors">{title}</h3>
+        <p className="text-white/60 text-sm leading-relaxed flex-grow font-medium">
+          {description}
+        </p>
+      
+        {/* Hover Actions Overlay */}
+        <div className="absolute inset-0 bg-[#272136]/95 backdrop-blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center justify-center p-8 translate-y-4 group-hover:translate-y-0 rounded-3xl z-10">
+          
+          {!isJoining ? (
+            <div className="flex flex-col gap-3 w-full">
               <button 
-                type="button"
-                onClick={(e) => { e.stopPropagation(); setIsJoining(false); }}
-                className="flex-1 py-2 rounded-xl text-xs font-bold text-white/50 hover:text-white hover:bg-white/5 transition-colors"
+                onClick={handleCreate}
+                className={`w-full py-3.5 rounded-full font-bold text-sm text-white bg-[#501fda] hover:bg-[#501fda]/90 hover:shadow-[0_0_20px_rgba(80,31,218,0.4)] transition-all flex items-center justify-center gap-2`}
               >
-                Cancel
+                {!isCreating && <Plus className="w-4 h-4" />}
+                <span>{creationStatus}</span>
               </button>
               <button 
-                type="submit"
-                disabled={!joinCode.trim()}
-                className={`flex-1 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r ${colorClass} hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center gap-1`}
+                onClick={(e) => { e.stopPropagation(); setIsJoining(true); }}
+                className="w-full py-3.5 rounded-full font-semibold text-sm text-white glass-panel hover:bg-white/10 transition-all flex items-center justify-center gap-2"
               >
-                Join <ArrowRight className="w-3 h-3" />
+                Join Room
+              </button>
+              <button 
+                onClick={(e) => { 
+                  e.stopPropagation(); 
+                  router.push(`/room/offline-demo-${href.replace('/', '').replace(/-/g, '_')}`); 
+                }}
+                className="w-full py-3 rounded-full font-medium text-xs text-[#c4a7b4] hover:text-white transition-all flex items-center justify-center gap-1.5 mt-2"
+              >
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Play Offline / Explore</span>
               </button>
             </div>
-          </form>
-        )}
+          ) : (
+            <form onSubmit={handleJoinSubmit} className="flex flex-col gap-4 w-full animate-in fade-in zoom-in duration-300">
+              <p className="text-xs font-semibold text-white/80 uppercase tracking-widest text-center mb-1">Enter Room Code</p>
+              <div className="flex items-center glass-panel rounded-full overflow-hidden focus-within:border-[#f185d3]/50 transition-colors">
+                <input 
+                  type="text" 
+                  autoFocus
+                  value={joinCode}
+                  onChange={(e) => setJoinCode(e.target.value.toUpperCase())}
+                  placeholder="e.g. XJ9P2"
+                  className="w-full bg-transparent p-4 text-center font-mono text-white outline-none placeholder:text-white/30 font-bold"
+                  maxLength={6}
+                />
+              </div>
+              <div className="flex gap-3 mt-2">
+                <button 
+                  type="button"
+                  onClick={(e) => { e.stopPropagation(); setIsJoining(false); }}
+                  className="flex-1 py-3.5 rounded-full text-xs font-semibold text-white/60 hover:text-white hover:bg-white/5 transition-colors"
+                >
+                  Cancel
+                </button>
+                <button 
+                  type="submit"
+                  disabled={!joinCode.trim()}
+                  className={`flex-1 py-3.5 rounded-full text-xs font-bold text-white bg-[#501fda] hover:shadow-[0_0_15px_rgba(80,31,218,0.4)] transition-all disabled:opacity-50 flex items-center justify-center gap-2`}
+                >
+                  Join <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            </form>
+          )}
+        </div>
       </div>
-    </div>
     </>
   );
 }
