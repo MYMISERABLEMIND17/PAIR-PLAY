@@ -1,137 +1,30 @@
 const http = require('http');
 const crypto = require('crypto');
 
+// Import modular managers
+const connectionManager = require('./managers/connectionManager');
+const heartbeatManager = require('./managers/heartbeatManager');
+const roomManager = require('./managers/roomManager');
+const presenceManager = require('./managers/presenceManager');
+const recoveryManager = require('./managers/recoveryManager');
+const cleanupManager = require('./managers/cleanupManager');
+const logManager = require('./managers/logManager');
+
 const PORT = process.env.PORT || 3001;
 
-// In-memory room storage
-// roomId -> { gameId, currentPromptIndex, isFlipped, players: [], answers: {}, lastReaction: null }
-const rooms = {};
-
-// Sockets and mapping tracking
-const sockets = {};       // socketId -> TCP socket
+// Centralized Realtime State Repositories
+const sockets = {};      // socketId -> net.Socket
 const socketToUser = {};  // socketId -> userId
 const socketToRoom = {};  // socketId -> roomId
+const rooms = {};         // roomId -> RoomState
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain', 'Access-Control-Allow-Origin': '*' });
-  res.end('Winkd Native Realtime Server');
-});
-
-// WebSocket Protocol Helper Functions
-function decodeFrame(buffer) {
-  if (buffer.length < 2) return null;
-  const firstByte = buffer[0];
-  const opcode = firstByte & 0x0f;
-  
-  if (opcode === 8) return { type: 'close' }; // Client closed connection
-  
-  const secondByte = buffer[1];
-  const isMasked = (secondByte & 0x80) !== 0;
-  let payloadLen = secondByte & 0x7f;
-  
-  let offset = 2;
-  if (payloadLen === 126) {
-    if (buffer.length < 4) return null;
-    payloadLen = buffer.readUInt16BE(2);
-    offset = 4;
-  } else if (payloadLen === 127) {
-    return null; // Extremely large payload, not supported/needed
-  }
-  
-  if (buffer.length < offset + (isMasked ? 4 : 0) + payloadLen) return null;
-  
-  let maskKey;
-  if (isMasked) {
-    maskKey = buffer.slice(offset, offset + 4);
-    offset += 4;
-  }
-  
-  const payload = Buffer.alloc(payloadLen);
-  for (let i = 0; i < payloadLen; i++) {
-    payload[i] = isMasked 
-      ? buffer[offset + i] ^ maskKey[i % 4] 
-      : buffer[offset + i];
-  }
-  
-  return { type: 'text', data: payload.toString('utf8') };
-}
-
-function encodeFrame(text) {
-  const payload = Buffer.from(text, 'utf8');
-  const len = payload.length;
-  let header;
-  
-  if (len <= 125) {
-    header = Buffer.alloc(2);
-    header[0] = 0x81;
-    header[1] = len;
-  } else if (len <= 65535) {
-    header = Buffer.alloc(4);
-    header[0] = 0x81;
-    header[1] = 126;
-    header.writeUInt16BE(len, 2);
-  } else {
-    header = Buffer.alloc(10);
-    header[0] = 0x81;
-    header[1] = 127;
-    header.writeBigUInt64BE(BigInt(len), 2);
-  }
-  
-  return Buffer.concat([header, payload]);
-}
-
+// Helper delegation triggers
 function sendTo(socketId, event, data) {
-  const sock = sockets[socketId];
-  if (sock && !sock.destroyed) {
-    const frame = encodeFrame(JSON.stringify({ event, data }));
-    if (frame) sock.write(frame);
-  }
+  connectionManager.sendTo(sockets, socketId, event, data);
 }
 
-// Custom Synced State Broadcaster
 function broadcastState(roomId) {
-  const room = rooms[roomId];
-  if (!room) return;
-  
-  room.players.forEach(p => {
-    // Secure Blind-Answer Reveal Implementation
-    // We mask the text content of the partner's answer completely 
-    // until BOTH players have clicked submit.
-    const tailoredAnswers = {};
-    const hasSubmitted = {};
-    
-    room.players.forEach(uid => {
-      hasSubmitted[uid] = !!room.answers[uid];
-    });
-
-    Object.keys(room.answers).forEach(uid => {
-      if (Object.keys(room.answers).length >= 2) {
-        // Both players have submitted answers, fully reveal texts
-        tailoredAnswers[uid] = room.answers[uid];
-      } else {
-        // Only one submitted: show the raw text only to its author, and hide partner's
-        tailoredAnswers[uid] = uid === p ? room.answers[uid] : "SUBMITTED_PLACEHOLDER";
-      }
-    });
-
-    const tailoredState = {
-      gameId: room.gameId,
-      currentPromptIndex: room.currentPromptIndex,
-      isFlipped: room.isFlipped,
-      players: room.players,
-      answers: tailoredAnswers,
-      hasSubmitted: hasSubmitted,
-      lastReaction: room.lastReaction,
-      seed: room.seed
-    };
-
-    // Distribute tailored state to the specific player's open sockets
-    Object.keys(socketToUser).forEach(socketId => {
-      if (socketToUser[socketId] === p && socketToRoom[socketId] === roomId) {
-        sendTo(socketId, 'game-state-update', tailoredState);
-      }
-    });
-  });
+  roomManager.broadcastState(rooms, sockets, socketToUser, socketToRoom, roomId, sendTo);
 }
 
 function handleEvent(socketId, event, data) {
@@ -145,23 +38,13 @@ function handleEvent(socketId, event, data) {
         roomId += chars.charAt(Math.floor(Math.random() * chars.length));
       }
       
-      rooms[roomId] = {
-        gameId: data.gameId,
-        currentPromptIndex: 0,
-        isFlipped: false,
-        players: [],
-        answers: {},
-        lastReaction: null,
-        seed: Math.floor(Math.random() * 1000000) + 1
-      };
-      
-      console.log(`Room ${roomId} created for game ${data.gameId}`);
+      roomManager.createRoom(rooms, roomId, data.gameId);
       sendTo(socketId, 'room-created', { roomId });
       break;
     }
     
     case 'join-room': {
-      const { roomId, userId } = data;
+      const { roomId, userId, reconnectToken } = data;
       const room = rooms[roomId];
       
       if (!room) {
@@ -170,19 +53,69 @@ function handleEvent(socketId, event, data) {
       }
       
       const isAlreadyIn = room.players.includes(userId);
+      const isReconnecting = !!reconnectToken;
+      
+      if (isReconnecting) {
+        if (!recoveryManager.validateToken(room, userId, reconnectToken)) {
+          logManager.log('RECONNECT_FAILURE', { socketId, userId, roomId, reason: 'invalid_token' });
+          sendTo(socketId, 'room-error', { code: 'invalid_token' });
+          return;
+        }
+        
+        logManager.log('RECONNECT_SUCCESS', { socketId, userId, roomId });
+        
+        const presence = room.presences[userId];
+        
+        // Handle Socket Replacement
+        recoveryManager.replaceSocket(sockets, socketToUser, socketToRoom, presence.socketId, socketId, userId, sendTo);
+        
+        // Restore player presence and active mappings
+        presenceManager.transitionToConnected(presence, socketId);
+        
+        socketToUser[socketId] = userId;
+        socketToRoom[socketId] = roomId;
+        
+        broadcastState(roomId);
+        break;
+      }
+      
+      // Standard join path (fresh tab/new window)
       if (!isAlreadyIn && room.players.length >= 2) {
         sendTo(socketId, 'room-error', { code: 'full' });
         return;
+      }
+      
+      // Handle socket replacement on duplicate sessions
+      if (isAlreadyIn) {
+        const presence = room.presences ? room.presences[userId] : null;
+        if (presence) {
+          recoveryManager.replaceSocket(sockets, socketToUser, socketToRoom, presence.socketId, socketId, userId, sendTo);
+        }
       }
       
       if (!isAlreadyIn) {
         room.players.push(userId);
       }
       
+      if (!room.presences) {
+        room.presences = {};
+      }
+      
+      const existingToken = room.presences[userId]?.reconnectToken;
+      const reconnectTokenNew = existingToken || recoveryManager.generateToken();
+      
+      room.presences[userId] = {
+        userId,
+        socketId,
+        state: 'connected',
+        lastSeen: Date.now(),
+        reconnectToken: reconnectTokenNew
+      };
+      
       socketToUser[socketId] = userId;
       socketToRoom[socketId] = roomId;
       
-      console.log(`Player ${userId} joined room ${roomId}`);
+      console.log(`Player ${userId} joined room ${roomId} (Presence: connected)`);
       broadcastState(roomId);
       break;
     }
@@ -191,7 +124,7 @@ function handleEvent(socketId, event, data) {
       const { roomId } = data;
       const room = rooms[roomId];
       if (room) {
-        room.isFlipped = true;
+        roomManager.flipCard(room);
         broadcastState(roomId);
       }
       break;
@@ -201,9 +134,7 @@ function handleEvent(socketId, event, data) {
       const { roomId, totalPrompts } = data;
       const room = rooms[roomId];
       if (room) {
-        room.isFlipped = false;
-        room.answers = {};
-        room.currentPromptIndex = (room.currentPromptIndex + 1) % totalPrompts;
+        roomManager.nextPrompt(room, totalPrompts);
         broadcastState(roomId);
       }
       break;
@@ -213,7 +144,7 @@ function handleEvent(socketId, event, data) {
       const { roomId, userId, text } = data;
       const room = rooms[roomId];
       if (room) {
-        room.answers[userId] = text;
+        roomManager.submitAnswer(room, userId, text);
         broadcastState(roomId);
       }
       break;
@@ -223,8 +154,16 @@ function handleEvent(socketId, event, data) {
       const { roomId, userId, type } = data;
       const room = rooms[roomId];
       if (room) {
-        room.lastReaction = { type, timestamp: Date.now(), by: userId };
+        roomManager.addReaction(room, userId, type);
         broadcastState(roomId);
+      }
+      break;
+    }
+    
+    case 'pong': {
+      const socket = sockets[socketId];
+      if (socket) {
+        heartbeatManager.registerPong(socket);
       }
       break;
     }
@@ -232,6 +171,7 @@ function handleEvent(socketId, event, data) {
 }
 
 function handleDisconnect(socketId) {
+  if (!sockets[socketId]) return;
   const roomId = socketToRoom[socketId];
   const userId = socketToUser[socketId];
   
@@ -239,25 +179,61 @@ function handleDisconnect(socketId) {
   delete socketToUser[socketId];
   delete socketToRoom[socketId];
   
+  logManager.log('SOCKET_DISCONNECT', { socketId, userId, roomId });
+  
   if (roomId && rooms[roomId]) {
     const room = rooms[roomId];
-    room.players = room.players.filter(p => p !== userId);
     
-    console.log(`Player ${userId} disconnected from room ${roomId}`);
-    
-    if (room.players.length === 0) {
-      // Keep room in-memory for 1 minute before deletion
-      setTimeout(() => {
-        if (rooms[roomId] && rooms[roomId].players.length === 0) {
-          delete rooms[roomId];
-          console.log(`Deleted inactive room: ${roomId}`);
-        }
-      }, 60000);
-    } else {
-      broadcastState(roomId);
+    if (!room.presences) {
+      room.presences = {};
     }
+    
+    if (room.presences[userId]) {
+      const presence = room.presences[userId];
+      
+      if (presence.state === 'connected') {
+        presenceManager.transitionToReconnecting(presence);
+      }
+    }
+    
+    broadcastState(roomId); // Notify partner
+    
+    // Start a 90 seconds grace period for reconnect recovery
+    cleanupManager.scheduleGracePeriod(rooms, roomId, userId, (expiredRoomId, expiredUserId) => {
+      const expiredRoom = rooms[expiredRoomId];
+      if (expiredRoom) {
+        logManager.log('STALE_SOCKET_CLEANUP', { userId: expiredUserId, roomId: expiredRoomId });
+        if (expiredRoom.presences && expiredRoom.presences[expiredUserId]) {
+          presenceManager.transitionToDisconnected(expiredRoom.presences[expiredUserId]);
+        }
+        
+        expiredRoom.players = expiredRoom.players.filter(p => p !== expiredUserId);
+        if (expiredRoom.presences) {
+          delete expiredRoom.presences[expiredUserId];
+        }
+        
+        if (expiredRoom.answers) {
+          delete expiredRoom.answers[expiredUserId];
+        }
+        
+        if (expiredRoom.players.length === 0) {
+          // Keep room in-memory for 5 minutes (300000ms) before deletion
+          cleanupManager.scheduleRoomCleanup(rooms, expiredRoomId, (cleanupRoomId) => {
+            delete rooms[cleanupRoomId];
+            logManager.log('ROOM_DELETION', { roomId: cleanupRoomId });
+          }, 300000);
+        } else {
+          broadcastState(expiredRoomId);
+        }
+      }
+    }, 90000);
   }
 }
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Winkd native WebSocket server active.\n');
+});
 
 server.on('upgrade', (req, socket) => {
   if (req.headers['upgrade'] !== 'websocket') {
@@ -278,20 +254,24 @@ server.on('upgrade', (req, socket) => {
   );
   
   const socketId = Math.random().toString(36).substring(2, 15);
+  socket.isAlive = true;
+  socket.lastHeartbeat = Date.now();
   sockets[socketId] = socket;
   
+  logManager.log('SOCKET_CONNECT', { socketId });
+  
   socket.on('data', (buffer) => {
-    const frame = decodeFrame(buffer);
+    const frame = connectionManager.decodeFrame(buffer);
     if (!frame) return;
     
     if (frame.type === 'close') {
       handleDisconnect(socketId);
-    } else if (frame.type === 'text') {
+    } else if (frame.type === 'message') {
       try {
         const { event, data } = JSON.parse(frame.data);
         handleEvent(socketId, event, data);
       } catch (err) {
-        console.error("Frame text parsing failed", err);
+        console.warn('Failed to parse frame message as JSON', err);
       }
     }
   });
@@ -305,6 +285,19 @@ server.on('upgrade', (req, socket) => {
     handleDisconnect(socketId);
   });
 });
+
+// Keep-Alive Heartbeat Sweep (Every 15 seconds)
+setInterval(() => {
+  heartbeatManager.sweepSockets(
+    sockets, 
+    socketToRoom, 
+    socketToUser, 
+    rooms, 
+    handleDisconnect, 
+    sendTo, 
+    presenceManager.transitionToStale
+  );
+}, 15000);
 
 server.listen(PORT, () => {
   console.log(`🚀 Winkd native WebSocket server started on ws://localhost:${PORT}`);

@@ -227,7 +227,9 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
   }
 
   const partnerId = state!.players.find(id => id !== userId);
-  const isPartnerOnline = !!partnerId; 
+  const partnerPresence = partnerId ? state!.presences?.[partnerId] : null;
+  const isPartnerOnline = !!partnerId && partnerPresence?.state === 'connected';
+  const isPartnerReconnecting = partnerPresence?.state === 'reconnecting' || partnerPresence?.state === 'stale'; 
 
   const handleCopyLink = () => {
     const url = window.location.href;
@@ -295,7 +297,7 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
           </div>
           {!isPartnerOnline && !isOfflineMode && (
             <span className="text-[10px] text-white/40 font-bold uppercase tracking-widest mt-4 animate-pulse">
-              Waiting for partner to connect...
+              {isPartnerReconnecting ? 'Partner is reconnecting...' : 'Waiting for partner to connect...'}
             </span>
           )}
         </div>

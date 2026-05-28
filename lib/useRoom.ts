@@ -10,6 +10,13 @@ export interface RoomState {
   answers?: Record<string, string>;
   hasSubmitted?: Record<string, boolean>;
   seed?: number;
+  presences?: Record<string, {
+    userId: string;
+    socketId: string;
+    state: 'connected' | 'reconnecting' | 'disconnected' | 'stale';
+    lastSeen: number;
+    reconnectToken?: string;
+  }>;
 }
 
 export function useRoom(roomId: string) {
@@ -46,19 +53,33 @@ export function useRoom(roomId: string) {
 
     const onConnect = () => {
       console.log("Socket connected, joining room:", roomId);
-      socket.emit("join-room", { roomId, userId });
+      const reconnectToken = localStorage.getItem(`winkd_recovery_${roomId}`);
+      socket.emit("join-room", { roomId, userId, reconnectToken });
     };
 
     const onStateUpdate = (newState: RoomState) => {
       console.log("Sync game-state received:", newState);
+      
+      // Auto cache the reconnect token from state presences
+      if (newState.presences && userId && newState.presences[userId]?.reconnectToken) {
+        const token = newState.presences[userId].reconnectToken;
+        localStorage.setItem(`winkd_recovery_${roomId}`, token);
+      }
+      
       setState(newState);
       setLoading(false);
       clearTimeout(timeoutId);
       setError(null);
     };
 
-    const onRoomError = (err: { code: 'not_found' | 'full' }) => {
+    const onRoomError = (err: { code: 'not_found' | 'full' | 'invalid_token' }) => {
       console.error("Room error received:", err.code);
+      if (err.code === 'invalid_token') {
+        console.warn("Invalid recovery token. Clearing and retrying fresh join...");
+        localStorage.removeItem(`winkd_recovery_${roomId}`);
+        socket.emit("join-room", { roomId, userId });
+        return;
+      }
       setError(err.code);
       setLoading(false);
       clearTimeout(timeoutId);
@@ -76,7 +97,8 @@ export function useRoom(roomId: string) {
 
     // Initial connection or join trigger if already connected
     socket.connect();
-    socket.emit("join-room", { roomId, userId });
+    const reconnectToken = localStorage.getItem(`winkd_recovery_${roomId}`);
+    socket.emit("join-room", { roomId, userId, reconnectToken });
 
     return () => {
       socket.off("connect", onConnect);
