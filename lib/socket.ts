@@ -26,7 +26,7 @@ class SocketEmulator {
         return `ws://${host}:3001`;
       }
       const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
-      return `${protocol}//winkd-backend.up.railway.app`; // Production fallback or similar
+      return `${protocol}//pair-play-piaa.onrender.com`; // Production fallback to new Render backend
     };
 
     const url = getSocketUrl();
