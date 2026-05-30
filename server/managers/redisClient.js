@@ -234,6 +234,15 @@ try {
   const url = process.env.REDIS_URL || 'redis://127.0.0.1:6379';
   clientInstance = new ioredis(url);
   subClientInstance = new ioredis(url);
+
+  // Register graceful connection error handlers to prevent unhandled 'error' crash events
+  clientInstance.on('error', (err) => {
+    console.error('[Redis Client] Connection error:', err.message);
+  });
+  subClientInstance.on('error', (err) => {
+    console.error('[Redis SubClient] Connection error:', err.message);
+  });
+
   console.log('[Redis] Loaded production ioredis client & subClient successfully.');
 } catch (e) {
   console.warn('[Redis] ioredis package not found offline. Falling back to native RESP TCP Clients...');
