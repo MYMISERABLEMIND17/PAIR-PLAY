@@ -26,13 +26,13 @@ export function useRoom(roomId: string) {
   const [error, setError] = useState<'not_found' | 'full' | 'network_blocked' | null>(null);
   const [isOfflineMode, setIsOfflineMode] = useState(false);
 
-  // Initialize unique local user identity (cached in localStorage)
+  // Initialize unique local user identity (cached in sessionStorage to allow multi-tab play)
   useEffect(() => {
     if (typeof window !== "undefined") {
-      let cachedId = localStorage.getItem("winkd_userid");
+      let cachedId = sessionStorage.getItem("winkd_userid");
       if (!cachedId) {
         cachedId = `user_${Math.random().toString(36).substring(2, 12)}`;
-        localStorage.setItem("winkd_userid", cachedId);
+        sessionStorage.setItem("winkd_userid", cachedId);
       }
       setUserId(cachedId);
     }

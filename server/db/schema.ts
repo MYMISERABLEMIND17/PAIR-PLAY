@@ -1,4 +1,4 @@
-import { pgTable, text, timestamp, uuid, jsonb, boolean, integer, primaryKey } from "drizzle-orm/pg-core";
+import { pgTable, text, timestamp, uuid, jsonb, boolean, integer, primaryKey, unique } from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
 
 // 1. USERS
@@ -273,6 +273,7 @@ export const couplesRelations = relations(couples, ({ many }) => ({
   sessions: many(gameSessions),
   memories: many(memories),
   challenges: many(coupleChallenges),
+  savedMoments: many(savedMoments),
 }));
 
 export const coupleMembersRelations = relations(coupleMembers, ({ one }) => ({
@@ -314,6 +315,27 @@ export const activitiesRelations = relations(activities, ({ one }) => ({
 
 export const notificationsRelations = relations(notifications, ({ one }) => ({
   user: one(users, { fields: [notifications.userId], references: [users.id] }),
+}));
+
+export const savedMoments = pgTable("saved_moments", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  relationshipId: uuid("relationship_id").references(() => couples.id, { onDelete: "cascade" }).notNull(),
+  sessionId: uuid("session_id").references(() => gameSessions.id, { onDelete: "set null" }),
+  roomId: text("room_id").notNull(),
+  gameId: text("game_id").notNull(),
+  promptText: text("prompt_text").notNull(),
+  answerA: text("answer_a").notNull(),
+  answerB: text("answer_b").notNull(),
+  savedBy: uuid("saved_by").references(() => users.id, { onDelete: "cascade" }).notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+}, (t) => ({
+  unq: unique().on(t.relationshipId, t.sessionId, t.promptText),
+}));
+
+export const savedMomentsRelations = relations(savedMoments, ({ one }) => ({
+  relationship: one(couples, { fields: [savedMoments.relationshipId], references: [couples.id] }),
+  session: one(gameSessions, { fields: [savedMoments.sessionId], references: [gameSessions.id] }),
+  savedByUser: one(users, { fields: [savedMoments.savedBy], references: [users.id] }),
 }));
 
 

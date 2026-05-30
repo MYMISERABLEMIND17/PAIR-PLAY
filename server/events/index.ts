@@ -10,7 +10,7 @@ import { broadcastToCouple } from "../realtime";
 class BackendEventBus extends EventEmitter {}
 const eventBus = new BackendEventBus();
 
-export type AppEvent = "game_started" | "game_finished" | "milestone_unlocked" | "partner_joined";
+export type AppEvent = "game_started" | "game_finished" | "milestone_unlocked" | "partner_joined" | "moment_saved";
 
 /**
  * Type-safe dispatcher for backend events.

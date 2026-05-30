@@ -5,7 +5,7 @@ function registerPong(socket) {
   }
 }
 
-function sweepSockets(sockets, socketToRoom, socketToUser, rooms, handleDisconnectFn, sendToFn, transitionToStaleFn) {
+function sweepSockets(sockets, handleDisconnectFn, sendToFn) {
   Object.keys(sockets).forEach((socketId) => {
     const socket = sockets[socketId];
     if (!socket || socket.destroyed) {
@@ -18,14 +18,7 @@ function sweepSockets(sockets, socketToRoom, socketToUser, rooms, handleDisconne
       const logManager = require('./logManager');
       logManager.log('HEARTBEAT_TIMEOUT', { socketId, elapsedMs: timeSinceLastHeartbeat });
       
-      const roomId = socketToRoom[socketId];
-      const userId = socketToUser[socketId];
-      if (roomId && rooms[roomId] && rooms[roomId].presences && rooms[roomId].presences[userId]) {
-        transitionToStaleFn(rooms[roomId].presences[userId]);
-      }
-      
       socket.destroy();
-      handleDisconnectFn(socketId);
       return;
     }
 

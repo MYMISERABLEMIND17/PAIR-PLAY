@@ -1,0 +1,1 @@
+ALTER TABLE "saved_moments" ADD CONSTRAINT "saved_moments_relationship_id_session_id_prompt_text_unique" UNIQUE("relationship_id","session_id","prompt_text");

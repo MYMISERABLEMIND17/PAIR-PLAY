@@ -12,8 +12,7 @@ function createRoom(rooms, roomId, gameId) {
   console.log(`[RoomManager] Room ${roomId} created for game ${gameId}`);
 }
 
-function broadcastState(rooms, sockets, socketToUser, socketToRoom, roomId, sendToFn) {
-  const room = rooms[roomId];
+function broadcastState(room, roomId, sockets, socketToUser, socketToRoom, sendToFn) {
   if (!room) return;
   
   if (!room.presences) {
@@ -51,6 +50,7 @@ function broadcastState(rooms, sockets, socketToUser, socketToRoom, roomId, send
 
     const tailoredState = {
       gameId: room.gameId,
+      sessionId: room.sessionId || null,
       currentPromptIndex: room.currentPromptIndex,
       isFlipped: room.isFlipped,
       players: room.players,
@@ -58,7 +58,8 @@ function broadcastState(rooms, sockets, socketToUser, socketToRoom, roomId, send
       hasSubmitted: hasSubmitted,
       lastReaction: room.lastReaction,
       seed: room.seed,
-      presences: tailoredPresences
+      presences: tailoredPresences,
+      events: room.events || []
     };
 
     Object.keys(socketToUser).forEach(socketId => {
