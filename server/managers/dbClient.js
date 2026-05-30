@@ -1,4 +1,9 @@
-const postgres = require('postgres');
+let postgres;
+try {
+  postgres = require('postgres');
+} catch (e) {
+  console.warn('[DB] postgres package not found. Running in fully offline/memory mode.');
+}
 const crypto = require('crypto');
 try {
   require('dotenv').config({ path: '.env.local' });
@@ -9,7 +14,7 @@ try {
 let sql = null;
 const databaseUrl = process.env.DATABASE_URL;
 
-if (databaseUrl) {
+if (databaseUrl && postgres) {
   try {
     const cleanedUrl = databaseUrl.replace(/"/g, '');
     sql = postgres(cleanedUrl, { prepare: false });
