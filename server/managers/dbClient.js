@@ -1,6 +1,10 @@
 const postgres = require('postgres');
 const crypto = require('crypto');
-require('dotenv').config({ path: '.env.local' });
+try {
+  require('dotenv').config({ path: '.env.local' });
+} catch (e) {
+  // Gracefully ignore if dotenv is not available in production
+}
 
 let sql = null;
 const databaseUrl = process.env.DATABASE_URL;
