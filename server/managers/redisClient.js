@@ -225,17 +225,52 @@ class RedisRESPClient {
   }
 }
 
+class MemoryRedisClient {
+  constructor() {
+    this.store = {};
+    this.hashStore = {};
+    this.listeners = [];
+  }
+  async get(key) { return this.store[key] || null; }
+  async set(key, value) { this.store[key] = String(value); return 'OK'; }
+  async del(key) { delete this.store[key]; return 1; }
+  async keys(pattern) { 
+    const regex = new RegExp('^' + pattern.replace(/\*/g, '.*') + '$');
+    const allKeys = [...Object.keys(this.store), ...Object.keys(this.hashStore)];
+    return [...new Set(allKeys)].filter(k => regex.test(k)); 
+  }
+  async hset(key, field, value) {
+    if (!this.hashStore[key]) this.hashStore[key] = {};
+    this.hashStore[key][field] = String(value);
+    return 1;
+  }
+  async hget(key, field) { return this.hashStore[key] ? (this.hashStore[key][field] || null) : null; }
+  async hdel(key, field) { if (this.hashStore[key]) delete this.hashStore[key][field]; return 1; }
+  async hgetall(key) { return this.hashStore[key] || {}; }
+  async subscribe(channel) { return 'OK'; }
+  async publish(channel, message) { 
+    this.listeners.forEach(cb => { try { cb(channel, message); } catch(e){} });
+    return 1; 
+  }
+  on(event, callback) { if (event === 'message') this.listeners.push(callback); }
+  async sendCommand(args) { 
+    if (args[0] === 'LRANGE') return []; 
+    return null; 
+  }
+}
+
 // Smart Hybrid Client Exporter
 let clientInstance;
 let subClientInstance;
 
 try {
   const ioredis = require('ioredis');
-  const url = process.env.REDIS_URL || 'redis://127.0.0.1:6379';
+  const url = process.env.REDIS_URL;
+  if (!url) throw new Error("No REDIS_URL provided");
+  
   clientInstance = new ioredis(url);
   subClientInstance = new ioredis(url);
 
-  // Register graceful connection error handlers to prevent unhandled 'error' crash events
   clientInstance.on('error', (err) => {
     console.error('[Redis Client] Connection error:', err.message);
   });
@@ -245,9 +280,10 @@ try {
 
   console.log('[Redis] Loaded production ioredis client & subClient successfully.');
 } catch (e) {
-  console.warn('[Redis] ioredis package not found offline. Falling back to native RESP TCP Clients...');
-  clientInstance = new RedisRESPClient();
-  subClientInstance = new RedisRESPClient();
+  console.warn('[Redis] External Redis not found or missing REDIS_URL. Running in fully offline/memory mode!');
+  // If Redis is not available, provide an in-memory fallback so the server never crashes!
+  clientInstance = new MemoryRedisClient();
+  subClientInstance = clientInstance; // share state
 }
 
 module.exports = {
