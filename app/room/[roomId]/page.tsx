@@ -342,7 +342,7 @@ export default function CoupleRoom({ params }: { params: Promise<{ roomId: strin
               <input 
                 type="text" 
                 readOnly 
-                value={`winkd.app/room/${roomId}`} 
+                value={typeof window !== 'undefined' ? `${window.location.host}/room/${roomId}` : `.../room/${roomId}`} 
                 className="bg-transparent flex-grow text-center text-xs font-mono text-white/60 outline-none ml-4"
               />
               <button 
