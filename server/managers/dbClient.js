@@ -26,13 +26,38 @@ if (databaseUrl && postgres) {
   console.warn('[DB] DATABASE_URL env variable not found.');
 }
 
+async function enqueueFailedWrite(operation, payload) {
+  try {
+    const { client: redis } = require('./redisClient');
+    if (redis) {
+      const queueItem = {
+        sessionId: payload.sessionId || null,
+        roomId: payload.roomId || null,
+        operation,
+        payload,
+        retryCount: 0,
+        createdAt: Date.now()
+      };
+      // Use sendCommand for LPUSH to be compatible with the hybrid client
+      await redis.sendCommand(['LPUSH', 'persistence:failed_writes', JSON.stringify(queueItem)]);
+      
+      const metricsManager = require('./metricsManager');
+      metricsManager.increment('persistenceFailures');
+      console.log(`[DB] Enqueued failed write for operation: ${operation}`);
+    }
+  } catch (err) {
+    console.error('[DB] Failed to enqueue failed write:', err);
+  }
+}
+
 async function createGameSession(gameSlug) {
   const sessionId = crypto.randomUUID();
   let coupleId = crypto.randomUUID(); // Fallback UUID
   let gameId = crypto.randomUUID();   // Fallback UUID
 
   if (!sql) {
-    console.log(`[DB] Offline fallback: Using generated sessionId: ${sessionId}`);
+    await enqueueFailedWrite('createGameSession', { gameSlug, sessionId, coupleId, gameId });
+    console.log(`[DB] Offline fallback: Using generated sessionId: ${sessionId} (Queued)`);
     return sessionId;
   }
 
@@ -67,9 +92,12 @@ async function createGameSession(gameSlug) {
     `;
 
     console.log(`[DB] Successfully created game_session record: ${session.id}`);
+    const metricsManager = require('./metricsManager');
+    metricsManager.increment('persistenceSuccess');
     return session.id;
   } catch (err) {
-    console.warn(`[DB] Error creating game session in DB: ${err.message}. Falling back to generated sessionId.`);
+    console.warn(`[DB] Error creating game session in DB: ${err.message}. Enqueuing fallback.`);
+    await enqueueFailedWrite('createGameSession', { gameSlug, sessionId, coupleId, gameId });
     return sessionId;
   }
 }
@@ -77,7 +105,8 @@ async function createGameSession(gameSlug) {
 async function endGameSession(sessionId, status = 'completed') {
   if (!sessionId) return;
   if (!sql) {
-    console.log(`[DB] Offline fallback: Ending sessionId: ${sessionId} with status: ${status}`);
+    await enqueueFailedWrite('endGameSession', { sessionId, status });
+    console.log(`[DB] Offline fallback: Ending sessionId: ${sessionId} with status: ${status} (Queued)`);
     return;
   }
 
@@ -88,8 +117,11 @@ async function endGameSession(sessionId, status = 'completed') {
       WHERE id = ${sessionId} AND status = 'active'
     `;
     console.log(`[DB] Successfully ended game_session ${sessionId} with status ${status}`);
+    const metricsManager = require('./metricsManager');
+    metricsManager.increment('persistenceSuccess');
   } catch (err) {
     console.warn(`[DB] Error ending game session in DB: ${err.message}`);
+    await enqueueFailedWrite('endGameSession', { sessionId, status });
   }
 }
 
@@ -137,9 +169,12 @@ async function saveMoment({ relationshipId, sessionId, roomId, gameId, promptTex
       RETURNING id
     `;
     console.log(`[DB] Successfully saved moment ${moment.id}`);
+    const metricsManager = require('./metricsManager');
+    metricsManager.increment('persistenceSuccess');
     return moment.id;
   } catch (err) {
-    console.warn(`[DB] Error saving moment in DB: ${err.message}. Falling back to generated momentId.`);
+    console.warn(`[DB] Error saving moment in DB: ${err.message}. Enqueuing fallback.`);
+    await enqueueFailedWrite('saveMoment', { relationshipId, sessionId, roomId, gameId, promptText, answerA, answerB, savedBy, momentId });
     return momentId;
   }
 }

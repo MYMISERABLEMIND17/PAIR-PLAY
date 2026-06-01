@@ -13,6 +13,9 @@ const stats = {
   broadcastSuccess: 0,
   broadcastFailures: 0,
   eventCount: 0,
+  persistenceSuccess: 0,
+  persistenceFailures: 0,
+  reconciliationSuccess: 0,
   startPeriod: Date.now()
 };
 
@@ -105,6 +108,11 @@ async function generateReport(redis) {
     broadcasts: {
       success: stats.broadcastSuccess,
       failures: stats.broadcastFailures
+    },
+    persistence: {
+      success: stats.persistenceSuccess,
+      failures: stats.persistenceFailures,
+      reconciliationSuccess: stats.reconciliationSuccess
     },
     memory: {
       rssMB: parseFloat((mem.rss / 1024 / 1024).toFixed(2)),

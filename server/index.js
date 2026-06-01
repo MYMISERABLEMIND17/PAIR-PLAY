@@ -469,3 +469,7 @@ setInterval(() => {
 server.listen(PORT, () => {
   console.log(`🚀 Winkd native WebSocket server started on ws://localhost:${PORT}`);
 });
+
+// Start background workers
+const { startReconciliationWorker } = require('./workers/persistenceReconciliationWorker');
+startReconciliationWorker();
